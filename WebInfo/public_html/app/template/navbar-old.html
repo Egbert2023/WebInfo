@@ -1,0 +1,73 @@
+<nav class="navbar navbar-expand-lg bg-light navbar-light sticky-top">
+  <div class="container-fluid">
+    <a class="navbar-brand"  href="#!/home">
+        <img class="eaLogo" src="content/fegh/navLogo.gif" alt="FEGH"/>
+    </a>
+    <button class="navbar-toggler" type="button" 
+            data-bs-toggle="collapse" 
+            data-bs-target="#navbarSupportedContent" 
+            aria-controls="navbarSupportedContent" 
+            aria-expanded="false" 
+            aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">        
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <spam ng-repeat="nav in navi">  
+            <li ng-show="nav.subm.length===0" class="nav-item">
+                <a class="nav-link active" aria-current="page" 
+                   ng-href="{{nav.href}}">{{nav.label}}</a>
+            </li>
+            <li ng-show="nav.subm.length>0" class="nav-item dropdown">                
+                <a class="nav-link dropdown-toggle" 
+                    ng-href="{{nav.href}}" 
+                    id="{{nav.id}}" 
+                    role="button" 
+                    data-toggle="dropdown" 
+                    >{{nav.label}}
+                </a>                
+                <ul class="dropdown-menu dropdown-submenu"                     
+                    aria-labelledby="{{nav.id}}">    
+                    
+                    <spam ng-repeat="submenu in nav.subm">    
+                        
+                        <li ng-show="submenu.subm===undefined" >
+                            <a class="nav-link dropdown-item" 
+                               ng-href="{{submenu.href}}">{{submenu.label}}
+                            </a> 
+                        </li>
+                        
+                        <li ng-show="submenu.subm!==undefined"                             
+                            class="nav-item dropdown">
+                            <a  class="nav-link dropdown-toggle" 
+                                
+                                data-toggle="dropdown" 
+                                ng-href="{{submenu.href}}" 
+                                id="{{submenu.id}}" 
+                                role="button" 
+                                >{{submenu.label}}
+                            </a>                
+                            <!--<ul class="dropdown-menu submenuClass"   -->
+                            <ul class="dropdown-menu dropdown-submenu"   
+                                
+                                aria-labelledby="{{submenu.id}}">
+                                
+                                <spam ng-repeat="sb in submenu.subm">
+                                    <li 
+                                        ng-show="sb.subm===undefined" >
+                                        <a class="nav-link dropdown-item" 
+                                            ng-href="{{sb.href}}">{{sb.label}}
+                                        </a> 
+                                    </li>
+                                </spam>
+                            </ul>
+                        </li>
+                    </spam>
+                </ul>                
+            </li>
+          </spam>    
+        </ul>
+    </div>
+  </div>
+</nav>

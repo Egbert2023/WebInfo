@@ -43,22 +43,39 @@
   background-color: #fefefe;
   margin: auto;
   padding: 0;
-  width: 95%;
+  width: 98%;
   /*max-width: 1200px;*/
   
   /* EA */
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, .25);
   box-shadow: 0 0 10px 1px rgba(0, 0, 0, .25);
-
+  height: max-content;
+}
+/* EA  */
+.modal-inner {
+    border: 1px solid #ddd;
+    padding-top: 15px;
+    padding-bottom: 5px;
+    margin: 10px;
+    width: 98%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, .45);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, .25);
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, .25);
+    backdrop-filter: blur(5px);
 }
 
 /* The Close Button */
 .close {
   color: #c0c0c0;
   position: absolute;
-  top: 10px;
-  right: 25px;
+  top: 5px;
+  right: 15px;
   font-size: 35px;
   font-weight: bold;
   z-index: 1051;
