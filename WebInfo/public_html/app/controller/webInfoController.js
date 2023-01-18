@@ -1,7 +1,7 @@
 'use strict';
 
 //var eaDemoController =  function($scope, $location, $http, $q, eaNavSrv, eaImgBoxSrv) {
-var eaDemoController =  function($scope, $location, $http, $q, eaNavSrv) {
+var webInfoController =  function($scope, $location, $http, $q, eaNavSrv) {
 
     $scope.navSrv = eaNavSrv;
     

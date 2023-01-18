@@ -1,0 +1,19 @@
+    <ea-path-link></ea-path-link> 
+    <div ng-init="accordion=1">   
+        <div ng-repeat="sub in {{cardObj}}" class="accordion" ng-class="{active:accordion==={{cardObj.idx}}}">
+            <h3>
+                <a href="" ng-click="accordion = (accordion!=={{cardObj.idx}})? {{cardObj.idx}}:-1">
+        {{cardObj.title}}
+                </a>
+            </h3>
+            <p ng-show="cardObj.url===''"  
+                class="eaContent" ng-show="accordion==={{cardObj.idx}}">
+        {{cardObj.body}}
+            </p>        
+            <p ng-show="{{cardObj.url}}!==''"
+               class="eaContent" ng-show="accordion==={{cardObj.idx}}"
+               ng-include="{{cardObj.url}}">
+            </p>        
+        </div>
+    </div>
+

@@ -3,13 +3,13 @@
 var eaCardDirektive = function($rootScope, $location) {
     var cardObjErg = [
         {idx: 1, title: "xx1", body: "dfdsfvb", url: ""},
-        {idx: 3, title: "xx3", body: "", url: "app/html/impressum"}
+        {idx: 3, title: "xx3", body: "", url: "content/html/impressum"}
     ];
     var cardObjHome = [
         {idx: 8, title: "xx8", body: "eqwgweg", url: ""},
         {idx: 1, title: "xx1", body: "dfdsfvb", url: ""},
         {idx: 2, title: "xx2", body: "fvdsfvb", url: ""},
-        {idx: 3, title: "xx3", body: "", url: "app/html/impressum"},
+        {idx: 3, title: "xx3", body: "", url: "content/html/impressum"},
         {idx: 4, title: "xx4", body: "gjgjhg", url: ""},
         {idx: 5, title: "xx5", body: "hgjhg", url: ""},
         {idx: 6, title: "xx6", body: "iuilui", url: ""},
