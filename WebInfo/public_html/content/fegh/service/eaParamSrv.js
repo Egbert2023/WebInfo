@@ -47,7 +47,7 @@ var getNewsList = function() {
                     "Das Treffen heute sowie das ganze Coaching haben viel Spaß gemacht und uns wirklich voran gebracht.",
                     "Besonders der Austausch mit den anderen Energiegenossenschaften war heute eine große Bereicherung."], 
             img: ["content/fegh/pictures/Coaching-Gruppe.jpg",
-                    "content/fegh/pictures/Coaching-Material.jpg",
+                    "content/fegh/pictures/Coaching-2Teilnehmer.jpg",
                     "content/fegh/pictures/Coaching-Programm.jpg",
                     "content/fegh/pictures/Coaching-Tafel.jpg"],
             imgBody: [],
