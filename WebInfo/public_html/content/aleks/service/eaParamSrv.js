@@ -42,14 +42,8 @@ var getNewsList = function() {
             newFrom: "2022-09-23",
             newTo: "2023-09-20",
             title: "Coaching-Abschluss in Kassel", 
-            body: ["Heute fand das Abschluss-Event unseres Coachings vom energewiende jetzt e.V. statt.",
-                    "Ingo und Fabian haben unsere Erfahrungen und Entwicklungen vorgestellt.",
-                    "Das Treffen heute sowie das ganze Coaching haben viel Spaß gemacht und uns wirklich voran gebracht.",
-                    "Besonders der Austausch mit den anderen Energiegenossenschaften war heute eine große Bereicherung."], 
-            img: ["content/fegh/pictures/Coaching-Gruppe.jpg",
-                    "content/fegh/pictures/Coaching-Material.jpg",
-                    "content/fegh/pictures/Coaching-Programm.jpg",
-                    "content/fegh/pictures/Coaching-Tafel.jpg"],
+            body: ["Heute fand das Abschluss-Event unseres Coachings vom energewiende jetzt e.V. statt. Ingo und Fabian haben unsere Erfahrungen und Entwicklungen vorgestellt. Das Treffen heute sowie das ganze Coaching haben viel Spaß gemacht und uns wirklich voran gebracht. Besonders der Austausch mit den anderen Energiegenossenschaften war heute eine große Bereicherung."], 
+            img: ["content/fegh/pictures/Coaching-Gruppe.jpg"],
             imgBody: [],
             href: ""
         },
@@ -91,7 +85,7 @@ var getNewsList = function() {
             body: ["Am Samstag, den 2. Juli 2022 um 15 Uhr findet im Mehrgenerationenhaus Ottelau ein Workshop für Frauen zu Balkonkraftwerken statt. Balkonkraftwerke sind Steckersolarmodule, die Strom aus Sonneneinstrahlung erzeugen. Bis zu 600 Watt Leistung können sie einfach in eine Steckdose gesteckt werden – wie ein Haushaltsgerät. Der Vorteil: damit kann eine Grundlast abgedeckt werden und die Stromrechnung sinkt. Außerdem trägt jedes Steckersolarmodul zum Klimaschutz bei. Es kann auch in den Garten gestellt werden oder auf die Terasse. Einige Formalien müssen beachtet und evtl. ein Zähler ausgetauscht werden.\n\nZiel des Workshops ist, dass jede Frau danach Bescheid weiß, wie das Gerät funktioniert, wie es installiert wird und wie die Anmeldung beim Netzbetreiber und Marktstammdatenregister gemacht wird."], 
             img: ["content/fegh/pictures/foto-mit-den-15-teilnehmenden-frauen-am-balkonkraftwerke-workshop-mit-balkonkraftwerk.jpg"],
             imgBody: ["...damit zukünftig mehr Frauen auf dem Bild zu sehen sind"],
-            href: "content/fegh/html/new/frauenBalkonkraftwerk-Referentin.html"
+            href: "app/html/new/frauenBalkonkraftwerk-Referentin.html"
         },
         {
             newFrom: "2022-05-01",
