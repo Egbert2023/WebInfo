@@ -12,9 +12,9 @@ var eaImg = function ( $rootScope ) {
         controller: function($scope) {
             /* https://www.w3schools.com/howto/howto_js_lightbox.asp */
             
-            // Test
-            console.log("controller:eaImg($scope, scope)");
-            console.log($scope);
+//            // Test
+//            console.log("controller:eaImg($scope, scope)");
+//            console.log($scope);
                        
             // Open the Modal
             $scope.openModal = function() {
@@ -33,12 +33,22 @@ var eaImg = function ( $rootScope ) {
         link: function (scope, ele, attrs) {      
             
             scope.imgBoxKey = attrs.imgBoxKey;
-            var obj = scope.imgBoxList.find(o => o.imgKey === scope.imgBoxKey); 
-            scope.imgArr = obj.imgList;
-            scope.imgBodyArr = obj.imgBodyList;
-            scope.imgBoxIdx = attrs.imgBoxIdx;
-            scope.imgBoxImg = scope.imgArr[scope.imgBoxIdx-1];
-            scope.imgBoxBody = scope.imgBodyArr[scope.imgBoxIdx-1];
+            if(scope.imgBoxKey === undefined) {
+                scope.imgArr = [];
+                scope.imgArr.push(attrs.img);
+                scope.imgBodyArr = [];
+                scope.imgBodyArr.push(attrs.alt);
+                scope.imgBoxIdx = 1;
+                scope.imgBoxImg = scope.imgArr[0];
+                scope.imgBoxBody = "";
+            } else {
+                var obj = scope.imgBoxList.find(o => o.imgKey === scope.imgBoxKey); 
+                scope.imgArr = obj.imgList;
+                scope.imgBodyArr = obj.imgBodyList;
+                scope.imgBoxIdx = attrs.imgBoxIdx;            
+                scope.imgBoxImg = scope.imgArr[scope.imgBoxIdx-1];
+                scope.imgBoxBody = scope.imgBodyArr[scope.imgBoxIdx-1];
+            }
         }
     };  // return
 };   // eaImgBox()

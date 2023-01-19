@@ -24,7 +24,7 @@ var eaImgBox = function ($compile, $rootScope) {
                 $scope.imgArrLen = opt.imgArr.length;
                 $scope.slideIndex = opt.imgBoxIdx;
                 $scope.slideIndexOld = $scope.slideIndex;
-                
+                 
                 // include iHtml into modal view
                 var modalContentInner = document.getElementById("myModalContent");
                 var ele = angular.element(modalContentInner);
@@ -109,7 +109,7 @@ var eaImgBox = function ($compile, $rootScope) {
                 for(let i = 0; i<len; i++) {
                     var idx = i+1;
                     var ht = '<div id="imgNumber' + idx.toString() + '" class="numbertext eaImgBoxItem">' + idx.toString() + ' / ' + len.toString() + '</div>' + 
-                            '<img id="imgPicture' + idx.toString() + '" ng-src="' + imgArr[i] + '" class="eaImgBoxItem" style="width:100%">';                            
+                            '<img id="imgPicture' + idx.toString() + '" ng-src="' + imgArr[i] + '" class="eaImgBoxItem img-fluid" >';                            
                     iHtml = iHtml + ht;
                 };
                 iHtml = iHtml + '</div>';
@@ -142,7 +142,13 @@ var eaImgBox = function ($compile, $rootScope) {
                 scope.imgBodyArr = obj.imgBodyList;
                 scope.imgBoxIdx = attrs.imgBoxIdx;
                 scope.imgBoxImg = scope.imgBoxArr[scope.imgBoxIdx-1];
-           }  // if(scope.imgBoxKey !== undefined)
+           } else {
+               scope.imgBoxArr = [];
+               scope.imgBoxArr.push(attrs.imgArr);
+               scope.imgBoxIdx = 1;
+               scope.imgBodyArr = [""];
+               scope.imgBoxImg = scope.imgBoxArr[0];
+           } // if(scope.imgBoxKey !== undefined)
         }  // link
     };  // return
 };   // eaImgBox()

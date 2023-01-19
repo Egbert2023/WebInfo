@@ -16,9 +16,10 @@
                                 <!--{{im = n.img[$index]}}-->
                                 
                                 <div>
-                                    <img class="img-fluid img-thumbnail" 
+                                    <!--<img class="img-fluid img-thumbnail" 
                                          ng-src="{{n.img[$index]}}" 
-                                         alt="{{n.imgBody[$index]}}"/>
+                                         alt="{{n.imgBody[$index]}}"/> -->
+                                    <div ea-img  data-img="{{n.img[$index]}}" data-alt="{{n.imgBody[$index]}}"></div>
                                 </div>
                                 
                                 <div class="eaImgBody">
@@ -35,10 +36,12 @@
                 
                 <div ng-show='n.body.length === 0 && n.img.length !== 0' >
                     <div ng-repeat="p in n.img">
-                        <img 
+                        <!--<img 
                             class="img-fluid img-thumbnail"
                             ng-src="{{p}}" alt="{{n.imgBody[$index]}}"
-                            />
+                            /> -->
+                        <div ea-img  data-img="{{p}}" data-alt="{{n.imgBody[$index]}}"></div>
+                                                
                         <div class="eaImgBody">
                             {{n.imgBody[$index]}}
                         </div>                        
