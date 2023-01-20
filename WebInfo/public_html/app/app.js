@@ -35,7 +35,7 @@ webInfo.directive('eaImg', ['$rootScope', eaImg]).$inject = ['$scope'];
 webInfo.config(['$routeProvider', eaNavConfig]);
 
 
-webInfo.controller('webInfoController', ['$scope', '$location', '$http', '$q', 'eaNavSrv', webInfoController])
+webInfo.controller('webInfoController', ['$scope', '$location', '$http', '$q', 'eaNavSrv', 'eaParamSrv', webInfoController])
         .$inject = ['$scope'];
 webInfo.controller('eaNaviController', ['$scope', '$location', 'eaParamSrv', eaNaviController])
         .$inject = ['$scope'];

@@ -1,11 +1,20 @@
 'use strict';
 
-var webInfoController =  function($scope, $location, $http, $q, eaNavSrv) {
+var webInfoController =  function($scope, $location, $http, $q, navSrv, paramSrv) {
 
     $scope.contentFolder = "content/fegh/service/eaParamSrv.js";
 
-    $scope.navSrv = eaNavSrv;
-    
+    // initialisatio of parameters
+    //$scope.objBg = paramSrv.getObjBg();
+    $scope.objBg = (typeof $scope.objBg !== 'undefined')? $scope.objBg : paramSrv.getObjBg();
+        
+    //$scope.newsList = paramSrv.getNewsList();
+    $scope.newsList = (typeof $scope.newsList !== 'undefined')? $scope.newsList : paramSrv.getNewsList();
+        
+    //$scope.imgBoxList = paramSrv.getImgBoxList();
+    $scope.imgBoxList = (typeof $scope.imgBoxList !== 'undefined')? $scope.imgBoxList : paramSrv.getImgBoxList();
+
+    $scope.navSrv = navSrv;
     $scope.isNew = function(d) {
         var ret = false;
         

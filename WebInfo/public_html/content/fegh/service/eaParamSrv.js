@@ -13,17 +13,21 @@ var getNewsList = function() {
 // ---------------------------------------------------------------------------
 //  img: (0ptional) ohne picture    |   body: (optional) Body text
 //  imgBody: Labeleing of picture   |   the following special characters can be used
-//            (optional)            |   /n - for new line and /t - for a tabulator
 // ---------------------------------------------------------------------------
 //  href:       Any HTML page can be integrated 
 // ---------------------------------------------------------------------------
+// Hints:
+// All texts are continuous texts without the possibility of inserting line breaks.
+// The arrays of the "body" and "img" parameters must have the same number of elements. 
+// If the texts in some "body" parameters remain empty, they must be defined in 
+// a different way (e.g. different number of spaces)
 // ---------------------------------------------------------------------------
     var newsList = [
         {
             newFrom: "2022-12-21",
             newTo: "2023-12-31",
             title: "Unsere nächste Generalversammlung", 
-            body: ["Hier zum Vormerken der Termin für unsere nächste Generalversammlung: \n\n16. Juni 2023"], 
+            body: ["Hier zum Vormerken der Termin für unsere nächste Generalversammlung: \n16. Juni 2023"], 
             img: [],
             imgBody: [],
             href: ""
@@ -42,10 +46,10 @@ var getNewsList = function() {
             newFrom: "2022-09-23",
             newTo: "2023-09-20",
             title: "Coaching-Abschluss in Kassel", 
-            body: ["Heute fand das Abschluss-Event unseres Coachings vom energewiende jetzt e.V. statt.",
-                    "Ingo und Fabian haben unsere Erfahrungen und Entwicklungen vorgestellt.",
-                    "Das Treffen heute sowie das ganze Coaching haben viel Spaß gemacht und uns wirklich voran gebracht.",
-                    "Besonders der Austausch mit den anderen Energiegenossenschaften war heute eine große Bereicherung."], 
+            body: ["Heute fand das Abschluss-Event unseres Coachings vom energewiende jetzt e.V. statt. \n\n\nIngo und Fabian haben unsere Erfahrungen und Entwicklungen vorgestellt. Das Treffen heute sowie das ganze Coaching haben viel Spaß gemacht und uns wirklich voran gebracht. Besonders der Austausch mit den anderen Energiegenossenschaften war heute eine große Bereicherung.",
+                    "",
+                    " ",
+                    "  "], 
             img: ["content/fegh/pictures/Coaching-Gruppe.jpg",
                     "content/fegh/pictures/Coaching-2Teilnehmer.jpg",
                     "content/fegh/pictures/Coaching-Programm.jpg",
@@ -163,11 +167,12 @@ var getNaviList = function() {
             ]},
 
         {id:"navSrv", label: "Service", href: "#!/srv", url: "content/fegh/html/service.html", 
-            subm: [ {label: "Beititt", href: "#!/srv/1", url: "content/fegh/html/srv/srv0001.html"},
-                    {label: "Anteilserhöhung", href: "#!/srv/2", url: "content/fegh/html/srv/srv0002.html"},
-                    {label: "Downloads", href: "#!/srv/3", url: "content/fegh/html/srv/srv0003.html"},
-                    {label: "Impressum", href: "#!/impressum", url: "content/fegh/html/Impressum.html"},
-                    {label: "Cookies", href: "#!/cookies", url: "content/fegh/html/CookiesNotRequired.html"}
+            subm: [ {label: "Beititt", href: "#!/srv/beitritt", url: "content/fegh/html/srv/srv0001.html"},
+                    {label: "Anteilserhöhung", href: "#!/srv/anteil", url: "content/fegh/html/srv/srv0002.html"},
+                    {label: "Downloads", href: "#!/srv/dolo", url: "content/fegh/html/srv/download.html"},
+                    {label: "Impressum", href: "#!/srv/imp", url: "content/fegh/html/Impressum.html"},
+                    {label: "SiteMap", href: "#!/srv/sitem", url: "app/template/siteMap.html"},
+                    {label: "Cookies", href: "#!/srv/cookies", url: "content/fegh/html/CookiesNotRequired.html"}
                   ]
         }
             
