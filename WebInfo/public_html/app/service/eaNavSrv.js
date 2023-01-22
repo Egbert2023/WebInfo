@@ -33,7 +33,7 @@ var getParamObject = function(paramName, scope, http) {
     var url = folder + "json/" + paramName + ".json";
     
     var callback = function(paramName, scope, json) {
-        const obj = JSON.parse(json);
+        const obj = json;
         scope[paramName] = obj.entrys;
         return obj.entrys;
     };
@@ -41,13 +41,13 @@ var getParamObject = function(paramName, scope, http) {
     http({
         url: url,
         method: 'GET'
-        }).then( function(response, status, headers, config) {
-            ret = callback(paramName, scope, response.data);
-        }),
-        function(errResp) {
+    }).then(function(response){
+        ret = callback(paramName, scope, response.data);
+    }, function(errResp){
             console.log("Error in $http get.");
             console.log(errResp);
-    };
+    });
+    
     return ret;
 };
 

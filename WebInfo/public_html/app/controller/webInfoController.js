@@ -6,7 +6,11 @@ var webInfoController =  function($scope, $location, $http, $q, navSrv, paramSrv
 
     // read from json files
     $scope.naviList = navSrv.getParamObject("naviList", $scope, $http);
-        
+    
+    // Test
+    // $scope.naviList can use in 
+    // 'eaNaviController' and 
+    // 'eaNavDirektive' (this call is too early)
     
 
 
