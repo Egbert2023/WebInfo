@@ -46,10 +46,12 @@ var getNewsList = function() {
             newFrom: "2022-09-23",
             newTo: "2023-09-20",
             title: "Coaching-Abschluss in Kassel", 
-            body: ["Heute fand das Abschluss-Event unseres Coachings vom energewiende jetzt e.V. statt. \n\n\nIngo und Fabian haben unsere Erfahrungen und Entwicklungen vorgestellt. Das Treffen heute sowie das ganze Coaching haben viel Spaß gemacht und uns wirklich voran gebracht. Besonders der Austausch mit den anderen Energiegenossenschaften war heute eine große Bereicherung.",
-                    "",
-                    " ",
-                    "  "], 
+
+            body: ["Heute fand das Abschluss-Event unseres Coachings vom energewiende jetzt e.V. statt.",
+                    "Ingo und Fabian haben unsere Erfahrungen und Entwicklungen vorgestellt.",
+                    "Das Treffen heute sowie das ganze Coaching haben viel Spaß gemacht und uns wirklich voran gebracht.",
+                    "Besonders der Austausch mit den anderen Energiegenossenschaften war heute eine große Bereicherung."], 
+
             img: ["content/fegh/pictures/Coaching-Gruppe.jpg",
                     "content/fegh/pictures/Coaching-2Teilnehmer.jpg",
                     "content/fegh/pictures/Coaching-Programm.jpg",
