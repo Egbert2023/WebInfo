@@ -16,18 +16,41 @@ var getHtml4Id = function(loc, paramSrv){
 var getHtml = function($http, $compile, scope, ele, url, callback) {
     var ret = "";
     //url: scope.url,
-        $http({
-            url: url,
-            method: 'GET'
+    $http({
+        url: url,
+        method: 'GET'
+    }).then( function(response, status, headers, config) {
+        ret = callback($http, $compile, scope, ele, response.data);
+    }),
+    function(errResp) {
+        console.log("Error in $http get.");
+    };
+    return ret;
+};
+
+var getParamObject = function(paramName, scope, http) {
+    var folder = scope.contentFolder;
+    var url = folder + "json/" + paramName + ".json";
+    
+    var callback = function(paramName, scope, json) {
+        const obj = JSON.parse(json);
+        scope[paramName] = obj.entrys;
+        return obj.entrys;
+    };
+    var ret = {};
+    http({
+        url: url,
+        method: 'GET'
         }).then( function(response, status, headers, config) {
-            ret = callback($http, $compile, scope, ele, response.data);
+            ret = callback(paramName, scope, response.data);
         }),
         function(errResp) {
             console.log("Error in $http get.");
-        };
+            console.log(errResp);
+    };
     return ret;
 };
-                      
+
 /*
  * objArr: Array with objects
  * sub:    the next deeper tier

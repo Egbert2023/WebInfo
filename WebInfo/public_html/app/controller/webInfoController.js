@@ -2,9 +2,15 @@
 
 var webInfoController =  function($scope, $location, $http, $q, navSrv, paramSrv) {
 
-    $scope.contentFolder = "content/fegh/service/eaParamSrv.js";
+    $scope.contentFolder = "content/fegh/";
 
-    // initialisatio of parameters
+    // read from json files
+    $scope.naviList = navSrv.getParamObject("naviList", $scope, $http);
+        
+    
+
+
+    // initialisation of parameters
     //$scope.objBg = paramSrv.getObjBg();
     $scope.objBg = (typeof $scope.objBg !== 'undefined')? $scope.objBg : paramSrv.getObjBg();
         
