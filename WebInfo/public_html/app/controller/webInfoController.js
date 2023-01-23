@@ -4,9 +4,12 @@ var webInfoController =  function($rootScope, $scope, $location, $http, $q, navS
 
     $rootScope.contentFolder = "content/fegh/";
 
+    // Test
     // read from json files
     //$scope.naviList = 
+    console.log("webInfoController call getParamObject()");
     navSrv.getParamObject("naviList", $rootScope, $http);
+        
     
     // Test
     // $scope.naviList can use in 
@@ -36,6 +39,11 @@ var webInfoController =  function($rootScope, $scope, $location, $http, $q, navS
         ret = (yy >= d.newFrom)? ret : false;
         return ret;
     };
+    
+    // Test
+    console.log("webInfoController($rootScope)");
+    console.log($rootScope);
+
     
     return false;
 };

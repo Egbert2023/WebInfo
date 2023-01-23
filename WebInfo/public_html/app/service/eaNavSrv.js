@@ -1,13 +1,15 @@
 'use strict';
 
-var getHtml4Id = function(loc, paramSrv){
+var getHtml4Id = function(rootScope, loc, paramSrv){
     
     var locArr = loc.split('/');
     var folder = locArr[1];
     var id = locArr[2];
     var ret = 'app/html/' + folder + '/' + folder + ('0000' + id).slice(('0000' + id).length-4,('0000' + id).length) + '.html';
     
-    var naviList = paramSrv.getNaviList();
+    //var naviList = paramSrv.getNaviList();
+    var naviList = rootScope.naviList;
+    
     var ret2 = getEntry("", naviList, "subm", "href", '#!' + loc, "url");
         
     return (ret2 !== "")? ret2 : ret;
@@ -35,6 +37,11 @@ var getParamObject = function(paramName, rootScope, http) {
     var callback = function(paramName, rootScope, json) {
         const obj = json;
         rootScope[paramName] = obj.entrys;
+        
+        // Test
+        console.log("getParamObject - callback($rootScope)");
+        console.log(rootScope);
+        
         return obj.entrys;
     };
     var newObject = rootScope[paramName];
@@ -51,6 +58,11 @@ var getParamObject = function(paramName, rootScope, http) {
                 console.log(errResp);
         });
     };
+    
+    // Test
+    console.log("getParamObject - end ($rootScope)");
+    console.log(rootScope);
+
     
     return newObject;
 };

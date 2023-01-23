@@ -10,7 +10,6 @@ configSrv.$inject = ['$scope'];
 
 var paramSrv = webInfo.service('eaParamSrv', [function(){
     this.getNewsList = getNewsList;
-    this.getNaviList = getNaviList;
     this.getProjectList = getProjectList;
     this.getObjBg = getObjBg;
     this.getCurrentLink = getCurrentLink;
@@ -24,9 +23,9 @@ var navSrv = webInfo.service('eaNavSrv', ['$q', function () {
     vm.getHtml = getHtml;
     vm.getParamObject = getParamObject;
 }]);
-navSrv.$inject = ['$scope'];
+navSrv.$inject = ['$scope', '$rootScope'];
 
-webInfo.directive('eaNavi', ['$rootScope', '$http', '$location', 'eaParamSrv', eaNavDirektive]).$inject = ['$scope'];
+webInfo.directive('eaNavi', ['$rootScope', '$http', '$location', 'eaParamSrv', 'eaNavSrv', eaNavDirektive]).$inject = ['$scope'];
 webInfo.directive('eaAddHtml', ['$compile', '$http', eaAddHtmlDirective]).$inject = ['$scope'];
 webInfo.directive('eaPathLink', eaPathLinkDirective).$inject = ['$scope'];
 webInfo.directive('eaFooter', eaFooterDirective).$inject = ['$scope'];

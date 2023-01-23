@@ -235,8 +235,9 @@ var getObjBg = function() {
     return objBg;
 };
 
-var getCurrentLink = function(path) {
-    var naviList = getNaviList();
+var getCurrentLink = function(rootScope, path) {
+    //var naviList = getNaviList();
+    var naviList = rootScope.naviList;
     var obj = {};
     var ret = [];
     
