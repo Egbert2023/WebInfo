@@ -1,11 +1,12 @@
 'use strict';
 
-var webInfoController =  function($scope, $location, $http, $q, navSrv, paramSrv) {
+var webInfoController =  function($rootScope, $scope, $location, $http, $q, navSrv, paramSrv) {
 
-    $scope.contentFolder = "content/fegh/";
+    $rootScope.contentFolder = "content/fegh/";
 
     // read from json files
-    $scope.naviList = navSrv.getParamObject("naviList", $scope, $http);
+    //$scope.naviList = 
+    navSrv.getParamObject("naviList", $rootScope, $http);
     
     // Test
     // $scope.naviList can use in 

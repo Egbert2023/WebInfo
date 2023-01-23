@@ -1,6 +1,6 @@
 'use strict';
 
-var eaNaviController =  function($scope, $location, paramSrv) {
+var eaNaviController =  function($rootScope, $scope, $location, paramSrv) {
     
     // prepare the news list
     $scope.newsList = $scope.$parent.newsList;

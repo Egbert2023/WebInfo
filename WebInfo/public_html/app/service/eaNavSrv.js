@@ -28,27 +28,31 @@ var getHtml = function($http, $compile, scope, ele, url, callback) {
     return ret;
 };
 
-var getParamObject = function(paramName, scope, http) {
-    var folder = scope.contentFolder;
+var getParamObject = function(paramName, rootScope, http) {
+    var folder = rootScope.contentFolder;
     var url = folder + "json/" + paramName + ".json";
     
-    var callback = function(paramName, scope, json) {
+    var callback = function(paramName, rootScope, json) {
         const obj = json;
-        scope[paramName] = obj.entrys;
+        rootScope[paramName] = obj.entrys;
         return obj.entrys;
     };
-    var ret = {};
-    http({
-        url: url,
-        method: 'GET'
-    }).then(function(response){
-        ret = callback(paramName, scope, response.data);
-    }, function(errResp){
-            console.log("Error in $http get.");
-            console.log(errResp);
-    });
+    var newObject = rootScope[paramName];
+    if(newObject === undefined 
+       || (newObject.constructor === Object && Object.entries(newObject).length === 0)) {
     
-    return ret;
+        http({
+            url: url,
+            method: 'GET'
+        }).then(function(response){
+            newObject = callback(paramName, rootScope, response.data);
+        }, function(errResp){
+                console.log("Error in $http get.");
+                console.log(errResp);
+        });
+    };
+    
+    return newObject;
 };
 
 /*

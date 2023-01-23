@@ -1,11 +1,18 @@
 'use strict';
     
-var eaNavDirektive = function($rootScope, $location, paramSrv) {
+var eaNavDirektive = function($rootScope, $http, $location, paramSrv) {
     return {
         restrict: 'E',
         templateUrl: "app/template/navbar.html",
         link: function (scope, element, attr) {
+            
+            // Test
+            //navSrv.getParamObject("naviList", $rootScope, $http);
+            //scope.navi = $rootScope.naviList;
             scope.navi = paramSrv.getNaviList();
+            
+            
+            
             scope.currentLink = paramSrv.getCurrentLink($location.path());
             scope.isActive = function(nav) {
                 return nav.href.indexOf(scope.location) === 1;

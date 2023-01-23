@@ -26,7 +26,7 @@ var navSrv = webInfo.service('eaNavSrv', ['$q', function () {
 }]);
 navSrv.$inject = ['$scope'];
 
-webInfo.directive('eaNavi', ['$rootScope', '$location', 'eaParamSrv', eaNavDirektive]).$inject = ['$scope'];
+webInfo.directive('eaNavi', ['$rootScope', '$http', '$location', 'eaParamSrv', eaNavDirektive]).$inject = ['$scope'];
 webInfo.directive('eaAddHtml', ['$compile', '$http', eaAddHtmlDirective]).$inject = ['$scope'];
 webInfo.directive('eaPathLink', eaPathLinkDirective).$inject = ['$scope'];
 webInfo.directive('eaFooter', eaFooterDirective).$inject = ['$scope'];
@@ -36,7 +36,7 @@ webInfo.directive('eaImg', ['$rootScope', eaImg]).$inject = ['$scope'];
 webInfo.config(['$routeProvider', eaNavConfig]);
 
 
-webInfo.controller('webInfoController', ['$scope', '$location', '$http', '$q', 'eaNavSrv', 'eaParamSrv', webInfoController])
+webInfo.controller('webInfoController', ['$rootScope', '$scope', '$location', '$http', '$q', 'eaNavSrv', 'eaParamSrv', webInfoController])
         .$inject = ['$scope'];
-webInfo.controller('eaNaviController', ['$scope', '$location', 'eaParamSrv', eaNaviController])
+webInfo.controller('eaNaviController', ['$rootScope', '$scope', '$location', 'eaParamSrv', eaNaviController])
         .$inject = ['$scope'];
