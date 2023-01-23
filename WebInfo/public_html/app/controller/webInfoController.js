@@ -1,12 +1,20 @@
 'use strict';
 
-var webInfoController =  function($scope, $location, $http, $q, navSrv, paramSrv) {
+var webInfoController =  function($rootScope, $scope, $location, $http, $q, navSrv, paramSrv) {
 
-    $scope.contentFolder = "content/fegh/";
+    $rootScope.contentFolder = "content/fegh/";
 
+    // Test
     // read from json files
-    $scope.naviList = navSrv.getParamObject("naviList", $scope, $http);
+    //$scope.naviList = 
+    console.log("webInfoController call getParamObject()");
+    navSrv.getParamObject("naviList", $rootScope, $http);
         
+    
+    // Test
+    // $scope.naviList can use in 
+    // 'eaNaviController' and 
+    // 'eaNavDirektive' (this call is too early)
     
 
 
@@ -31,6 +39,11 @@ var webInfoController =  function($scope, $location, $http, $q, navSrv, paramSrv
         ret = (yy >= d.newFrom)? ret : false;
         return ret;
     };
+    
+    // Test
+    console.log("webInfoController($rootScope)");
+    console.log($rootScope);
+
     
     return false;
 };

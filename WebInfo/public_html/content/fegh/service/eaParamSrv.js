@@ -248,41 +248,47 @@ var getObjBg = function() {
     return objBg;
 };
 
-var getCurrentLink = function(path) {
-    var naviList = getNaviList();
+var getCurrentLink = function(rootScope, path) {
+    //var naviList = getNaviList();
+    //var naviList = rootScope.naviList;
     var obj = {};
     var ret = [];
-    
-// href -> label
-// if( label in subm) --> label    
-    naviList.forEach(o => {
-        if(o.href === '#!' + path) {
-            obj = {label: o.label, href: o.href};
-            ret.push(obj);
-        };
-        
-        o.subm.forEach(os => {
-            if(os.href === '#!' + path) {
-                obj = {label: o.label, href: o.href};
-                ret.push(obj);
-                obj = {label: os.label, href: os.href};
-                ret.push(obj);
-            };
-            
-            if(os.subm !== undefined) {
-                os.subm.forEach(oss => {
-                    if(oss.href === '#!' + path) {
+    var naviList = rootScope.naviList;
+    rootScope.$watch('naviList', function(newVal, oldVal){
+        naviList = rootScope.naviList;
+   
+        // href -> label
+        // if( label in subm) --> label    
+            naviList.forEach(o => {
+                if(o.href === '#!' + path) {
+                    obj = {label: o.label, href: o.href};
+                    ret.push(obj);
+                };
+
+                o.subm.forEach(os => {
+                    if(os.href === '#!' + path) {
                         obj = {label: o.label, href: o.href};
                         ret.push(obj);
                         obj = {label: os.label, href: os.href};
                         ret.push(obj);
-                        obj = {label: oss.label, href: oss.href};
-                        ret.push(obj);                    
+                    };
+
+                    if(os.subm !== undefined) {
+                        os.subm.forEach(oss => {
+                            if(oss.href === '#!' + path) {
+                                obj = {label: o.label, href: o.href};
+                                ret.push(obj);
+                                obj = {label: os.label, href: os.href};
+                                ret.push(obj);
+                                obj = {label: oss.label, href: oss.href};
+                                ret.push(obj);                    
+                            }
+                        });
                     }
                 });
-            }
-        });
-    });
+            });
     
+    }, true);                        
+     
     return ret;
 };
