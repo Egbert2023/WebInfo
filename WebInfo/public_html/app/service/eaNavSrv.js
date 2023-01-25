@@ -33,14 +33,17 @@ var getHtml = function($http, $compile, scope, ele, url, callback) {
 var getParamObject = function(paramName, rootScope, http) {
     var folder = rootScope.contentFolder;
     var url = folder + "json/" + paramName + ".json";
+    rootScope["isLoaded-" + paramName] = false;
     
     var callback = function(paramName, rootScope, json) {
         const obj = json;
         rootScope[paramName] = obj.entrys;
-        
-        // Test
-        console.log("getParamObject - callback($rootScope)");
-        console.log(rootScope);
+        rootScope["isLoaded-" + paramName] = true;
+       
+//        // Test
+//        console.log("getParamObject - callback($rootScope)");
+//        console.log(paramName);
+//        console.log(rootScope);
         
         return obj.entrys;
     };
@@ -53,18 +56,23 @@ var getParamObject = function(paramName, rootScope, http) {
             method: 'GET'
         }).then(function(response){
             newObject = callback(paramName, rootScope, response.data);
+            var opt = {
+                paramName: paramName,
+                paramObj: newObject
+            };
+            rootScope.$emit("LoadJsonFile-" + paramName, opt);
+            
         }, function(errResp){
                 console.log("Error in $http get.");
                 console.log(errResp);
         });
     };
     
-    // Test
-    console.log("getParamObject - end ($rootScope)");
-    console.log(rootScope);
-
+//    // Test
+//    console.log("getParamObject - end ($rootScope)");
+//    console.log(rootScope);
     
-    return newObject;
+    return false;
 };
 
 /*
@@ -75,6 +83,7 @@ var getParamObject = function(paramName, rootScope, http) {
  * ret:    key of the searched entry for return * 
  * https://stackoverflow.com/questions/2641347/short-circuit-array-foreach-like-calling-break
  */
+
 
 var getEntry = function(inRt, objArr, sub, key, val, ret) {
 // https://stackoverflow.com/questions/2641347/short-circuit-array-foreach-like-calling-break

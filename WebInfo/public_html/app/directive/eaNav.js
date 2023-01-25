@@ -4,14 +4,19 @@ var eaNavDirektive = function($rootScope, $http, $location, paramSrv, navSrv) {
     return {
         restrict: 'E',
         templateUrl: "app/template/navbar.html",
-        controller: function($rootScope, $http) {
-            // Test
-            console.log("Controller in eaNavDirektive call getParamObject()");
-            navSrv.getParamObject("naviList", $rootScope, $http);
+        controller: function($rootScope, $scope, $http) {
             
-            // Test
-            console.log("eaNavDirektive - controller ($rootScope)");
-            console.log($rootScope);
+            $rootScope.$on("LoadJsonFile-naviList", function(evt, opt) {
+                $scope.navi = $rootScope.naviList;
+            });
+                        
+//            // Test
+//            console.log("Controller in eaNavDirektive call getParamObject()");
+//            navSrv.getParamObject("naviList", $rootScope, $http);
+//            
+//            // Test
+//            console.log("eaNavDirektive - controller ($rootScope)");
+//            console.log($rootScope);
         },      
         
         link: function (scope, element, attr) {

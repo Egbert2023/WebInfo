@@ -5,7 +5,7 @@ var eaNaviController =  function($rootScope, $scope, $location, paramSrv) {
     // prepare the news list
     $scope.newsList = $scope.$parent.newsList;
     
-    // prepare the Image box handling
+    // prepare the Image box handlingw
     $scope.imgBoxList = $scope.$parent.imgBoxList;
     $scope.imgBoxKey = "";
 
@@ -13,7 +13,8 @@ var eaNaviController =  function($rootScope, $scope, $location, paramSrv) {
     var pathArr = $location.path().split("/");
     $scope.url = $scope.navSrv.getHtml4Id($rootScope, $location.path(), paramSrv);
     $scope.htm = "";
-    $scope.currLink = getCurrentLink($rootScope, $location.path());
+    
+    //$scope.currLink = getCurrentLink($rootScope, $location.path());
     
     // compute the background picture
     $scope.objBg = $scope.$parent.objBg;

@@ -130,64 +130,66 @@ var getNewsList = function() {
     
 /*
  * When a navigation object has a sub menu then an id is nessesary! * 
- */        
-var getNaviList = function() {
-    var naviList = [
-        {id:"navStart", label: "Start", href: "#!/home", url: "content/fegh/html/home.html",
-            subm: []},
+//var getNaviList = function() {
+//    var naviList = [
+//        {id:"navStart", label: "Start", href: "#!/home", url: "content/fegh/html/home.html",
+//            subm: []},
+//
+//        {id:"navErg", label: "Öko-Energie", href: "#!/erg",  url: "content/fegh/html/erg.html",
+//            subm: [ {label: "Bürger-Ökostrom", href: "#!/erg/1", url: "content/fegh/html/erg/erg0001.html"},
+//                    {label: "Bürger-Ökogas", href: "#!/erg/2", url: "content/fegh/html/erg/erg0002.html"}                                                        
+//                                               ]},
+//        {id:"navWir", label: "Wir", href: "#!/wir", url: "content/fegh/html/wir.html",
+//            subm: [ {label: "Kontakt", href: "#!/wir/1", url: "content/fegh/html/wir/wir0001.html"},
+//                    {label: "Philosophie", href: "#!/wir/2", url: "content/fegh/html/wir/wir0002.html"}, 
+//                    {label: "Satzung", href: "#!/wir/3", url: "content/fegh/html/wir/wir0003.html"}
+//                                             ]},                                                    
+//        {id:"navNews", label: "News", href: "#!/new", url: "content/fegh/html/news.html", 
+//            subm: [ {label: "Archiv", href: "#!/new/1", url: "content/fegh/html/new/newArchiv.html"}]},
+//
+//        {id:"navProj", label: "Projekte", href: "#!/pro", url: "content/fegh/html/projects.html", 
+//            subm: [ {id: "navProHk", label: "Hainkamp", href: "#!/pro/hk", url: "content/fegh/html/pro/Hainkamp.html", 
+//                        subm: [{label: "Tagebuch", href: "#!/pro/hk/tb", url: "content/fegh/html/pro/HainkampTagebuch.html"}]},
+//                
+//                    {id: "navProD", label: "Bauschuttdeponie Reesberg", href: "#!/pro/1", url: "content/html/pro/Bauschuttdeponie-Reesberg.html", 
+//                        subm: [{label: "Projektbeschreibung", href: "#!/pro/1/1", url: "content/fegh/html/pro/ProjektbeschreibungR.html"}]},
+//                    {label: "Erich-Gutenberg- Berufskolleg", href: "#!/pro/2", url: "content/fegh/html/pro/pro0002.html"},
+//                    {label: "Bergs Hof", href: "#!/pro/3", url: "content/fegh/html/pro/pro0003.html"},
+//                    {label: "Kindergarten Haus Lukas", href: "#!/pro/4", url: "content/fegh/html/pro/pro0004.html"},
+//                    {label: "Kreissporthalle Herford", href: "#!/pro/5", url: "content/fegh/html/pro/pro0005.html"},
+//                    {label: "Luise Scheppler Kindergarten", href: "#!/pro/6", url: "content/fegh/html/pro/pro0006.html"},
+//                    {label: "B u. S Bünde", href: "#!/pro/7", url: "content/fegh/html/pro/pro0007.html"},
+//                    {label: "Gärtnerei Ulenburg und Familie Esser", href: "#!/pro/8", url: "content/fegh/html/pro/pro0008.html"},
+//                    {label: "Reiterhof Kahre", href: "#!/pro/9", url: "content/fegh/html/pro/pro0009.html"},
+//                    {label: "Bahnhof Bieren", href: "#!/pro/10", url: "content/fegh/html/pro/pro0010.html",
+//                        subm: [{label: "Details 1", href: "#!/pro/10/1", url: "content/fegh/html/pro/pro0010-1.html"},
+//                               {label: "Details 2", href: "#!/pro/10/2", url: "content/fegh/html/pro/pro0010-2.html"}]},
+//                    {label: "Familie Beversdorff", href: "#!/pro/XX", url: "content/fegh/html/pro/pro00XX.html"}
+//            ]},
+//
+//        {id:"navSrv", label: "Service", href: "#!/srv", url: "content/fegh/html/service.html", 
+//            subm: [ {label: "Beititt", href: "#!/srv/beitritt", url: "content/fegh/html/srv/srv0001.html"},
+//                    {label: "Anteilserhöhung", href: "#!/srv/anteil", url: "content/fegh/html/srv/srv0002.html"},
+//                    {label: "Downloads", href: "#!/srv/dolo", url: "content/fegh/html/srv/download.html"},
+//                    {label: "Impressum", href: "#!/srv/imp", url: "content/fegh/html/Impressum.html"},
+//                    {label: "SiteMap", href: "#!/srv/sitem", url: "app/template/siteMap.html"},
+//                    {label: "Cookies", href: "#!/srv/cookies", url: "content/fegh/html/CookiesNotRequired.html"}
+//                  ]
+//        }
+//            
+//    ];
+//    
+//    
+////    // Test
+////    let obj = naviList.find(o => o.id === 'navProj');
+////    console.log("naviList.id ==='navProj'");
+////    console.log(obj);
+//
+//    return naviList;
+//};
+ * 
+ */
 
-        {id:"navErg", label: "Öko-Energie", href: "#!/erg",  url: "content/fegh/html/erg.html",
-            subm: [ {label: "Bürger-Ökostrom", href: "#!/erg/1", url: "content/fegh/html/erg/erg0001.html"},
-                    {label: "Bürger-Ökogas", href: "#!/erg/2", url: "content/fegh/html/erg/erg0002.html"}                                                        
-                                               ]},
-        {id:"navWir", label: "Wir", href: "#!/wir", url: "content/fegh/html/wir.html",
-            subm: [ {label: "Kontakt", href: "#!/wir/1", url: "content/fegh/html/wir/wir0001.html"},
-                    {label: "Philosophie", href: "#!/wir/2", url: "content/fegh/html/wir/wir0002.html"}, 
-                    {label: "Satzung", href: "#!/wir/3", url: "content/fegh/html/wir/wir0003.html"}
-                                             ]},                                                    
-        {id:"navNews", label: "News", href: "#!/new", url: "content/fegh/html/news.html", 
-            subm: [ {label: "Archiv", href: "#!/new/1", url: "content/fegh/html/new/newArchiv.html"}]},
-
-        {id:"navProj", label: "Projekte", href: "#!/pro", url: "content/fegh/html/projects.html", 
-            subm: [ {id: "navProHk", label: "Hainkamp", href: "#!/pro/hk", url: "content/fegh/html/pro/Hainkamp.html", 
-                        subm: [{label: "Tagebuch", href: "#!/pro/hk/tb", url: "content/fegh/html/pro/HainkampTagebuch.html"}]},
-                
-                    {id: "navProD", label: "Bauschuttdeponie Reesberg", href: "#!/pro/1", url: "content/html/pro/Bauschuttdeponie-Reesberg.html", 
-                        subm: [{label: "Projektbeschreibung", href: "#!/pro/1/1", url: "content/fegh/html/pro/ProjektbeschreibungR.html"}]},
-                    {label: "Erich-Gutenberg- Berufskolleg", href: "#!/pro/2", url: "content/fegh/html/pro/pro0002.html"},
-                    {label: "Bergs Hof", href: "#!/pro/3", url: "content/fegh/html/pro/pro0003.html"},
-                    {label: "Kindergarten Haus Lukas", href: "#!/pro/4", url: "content/fegh/html/pro/pro0004.html"},
-                    {label: "Kreissporthalle Herford", href: "#!/pro/5", url: "content/fegh/html/pro/pro0005.html"},
-                    {label: "Luise Scheppler Kindergarten", href: "#!/pro/6", url: "content/fegh/html/pro/pro0006.html"},
-                    {label: "B u. S Bünde", href: "#!/pro/7", url: "content/fegh/html/pro/pro0007.html"},
-                    {label: "Gärtnerei Ulenburg und Familie Esser", href: "#!/pro/8", url: "content/fegh/html/pro/pro0008.html"},
-                    {label: "Reiterhof Kahre", href: "#!/pro/9", url: "content/fegh/html/pro/pro0009.html"},
-                    {label: "Bahnhof Bieren", href: "#!/pro/10", url: "content/fegh/html/pro/pro0010.html",
-                        subm: [{label: "Details 1", href: "#!/pro/10/1", url: "content/fegh/html/pro/pro0010-1.html"},
-                               {label: "Details 2", href: "#!/pro/10/2", url: "content/fegh/html/pro/pro0010-2.html"}]},
-                    {label: "Familie Beversdorff", href: "#!/pro/XX", url: "content/fegh/html/pro/pro00XX.html"}
-            ]},
-
-        {id:"navSrv", label: "Service", href: "#!/srv", url: "content/fegh/html/service.html", 
-            subm: [ {label: "Beititt", href: "#!/srv/beitritt", url: "content/fegh/html/srv/srv0001.html"},
-                    {label: "Anteilserhöhung", href: "#!/srv/anteil", url: "content/fegh/html/srv/srv0002.html"},
-                    {label: "Downloads", href: "#!/srv/dolo", url: "content/fegh/html/srv/download.html"},
-                    {label: "Impressum", href: "#!/srv/imp", url: "content/fegh/html/Impressum.html"},
-                    {label: "SiteMap", href: "#!/srv/sitem", url: "app/template/siteMap.html"},
-                    {label: "Cookies", href: "#!/srv/cookies", url: "content/fegh/html/CookiesNotRequired.html"}
-                  ]
-        }
-            
-    ];
-    
-    
-//    // Test
-//    let obj = naviList.find(o => o.id === 'navProj');
-//    console.log("naviList.id ==='navProj'");
-//    console.log(obj);
-
-    return naviList;
-};
 
 var getImgBoxList = function() {
     var imgBoxList = [
@@ -209,25 +211,21 @@ var getImgBoxList = function() {
         }
     ];
     var ret = imgBoxList;
-//    for(let i=0; i<imgBoxList.length; i++) {
-//        if(imgBoxList[i].imgGroup === imgGroup) {
-//            ret = imgBoxList[i];
-//        }
-//    }
+
     return ret;
 }; 
 
-var getProjectList = function() {
-    var projectList = [
-        {
-            title: "ERICH-GUTENBERG- BERUFSKOLLEG",
-            href: "#!/pro/1",
-            templateUrl: "content/fegh/html/pro/pro0001"
-        }
-
-    ];            
-    return projectList;
-};
+//var getProjectList = function() {
+//    var projectList = [
+//        {
+//            title: "ERICH-GUTENBERG- BERUFSKOLLEG",
+//            href: "#!/pro/1",
+//            templateUrl: "content/fegh/html/pro/pro0001"
+//        }
+//
+//    ];            
+//    return projectList;
+//};
 
 // Baground pictures
 var getObjBg = function() {        
@@ -254,41 +252,45 @@ var getCurrentLink = function(rootScope, path) {
     var obj = {};
     var ret = [];
     var naviList = rootScope.naviList;
-    rootScope.$watch('naviList', function(newVal, oldVal){
-        naviList = rootScope.naviList;
-   
-        // href -> label
-        // if( label in subm) --> label    
-            naviList.forEach(o => {
-                if(o.href === '#!' + path) {
+
+    var computeLink = function(naviList) {
+        naviList.forEach(o => {
+            if(o.href === '#!' + path) {
+                obj = {label: o.label, href: o.href};
+                ret.push(obj);
+            };
+
+            o.subm.forEach(os => {
+                if(os.href === '#!' + path) {
                     obj = {label: o.label, href: o.href};
+                    ret.push(obj);
+                    obj = {label: os.label, href: os.href};
                     ret.push(obj);
                 };
 
-                o.subm.forEach(os => {
-                    if(os.href === '#!' + path) {
-                        obj = {label: o.label, href: o.href};
-                        ret.push(obj);
-                        obj = {label: os.label, href: os.href};
-                        ret.push(obj);
-                    };
-
-                    if(os.subm !== undefined) {
-                        os.subm.forEach(oss => {
-                            if(oss.href === '#!' + path) {
-                                obj = {label: o.label, href: o.href};
-                                ret.push(obj);
-                                obj = {label: os.label, href: os.href};
-                                ret.push(obj);
-                                obj = {label: oss.label, href: oss.href};
-                                ret.push(obj);                    
-                            }
-                        });
-                    }
-                });
+                if(os.subm !== undefined) {
+                    os.subm.forEach(oss => {
+                        if(oss.href === '#!' + path) {
+                            obj = {label: o.label, href: o.href};
+                            ret.push(obj);
+                            obj = {label: os.label, href: os.href};
+                            ret.push(obj);
+                            obj = {label: oss.label, href: oss.href};
+                            ret.push(obj);                    
+                        }
+                    });
+                }
             });
+        });
+    };
     
-    }, true);                        
-     
+    if(naviList === undefined || JSON.stringify(naviList) === '{}') {
+        rootScope.$watch('naviList', function(newVal, oldVal){
+            naviList = rootScope.naviList;
+            ret = computeLink(naviList);
+        }, true);                        
+    } else {
+        ret = computeLink(naviList);
+    }
     return ret;
 };
