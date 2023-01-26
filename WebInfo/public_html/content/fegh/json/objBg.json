@@ -1,0 +1,28 @@
+{"entries":
+    [
+       {
+           "key": "home",
+           "pic": "url(content/fegh/pictures/Solardach-mit-Blume.jpg)"
+       },
+       {
+           "key": "erg",
+           "pic": "url(content/fegh/pictures/Solaranlage-mit-hängenden-Kablen.jpg)"
+       },
+       {
+           "key": "wir",
+           "pic": "url(content/fegh/pictures/Solardach-im-Winter.jpg)"
+       },
+       {
+           "key": "new",
+           "pic": "url( content/fegh/pictures/Lichter-am-Haus.jpg)"
+       },
+       {
+           "key": "pro",
+           "pic": "url( content/fegh/pictures/große-photovoltaik-anlage.jpg)"
+       },
+       {
+           "key": "srv",
+           "pic": "url( content/fegh/pictures/Solarreinigung-auf-einem-Dach-Download.jpg)"
+       }
+    ]
+}

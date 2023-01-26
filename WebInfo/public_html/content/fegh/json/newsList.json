@@ -1,0 +1,106 @@
+{"entries":   
+    [
+        {
+            "newFrom": "2022-12-21",
+            "newTo": "2023-12-31",
+            "title": "Unsere nächste Generalversammlung", 
+            "body": ["Hier zum Vormerken der Termin für unsere nächste Generalversammlung: \n16. Juni 2023"], 
+            "img": [],
+            "imgBody": [],
+            "href": ""
+        },
+
+        {
+            "newFrom": "2022-09-30",
+            "newTo": "2023-03-30",
+            "title": "Wir erhalten Landesförderung!", 
+            "body": ["Mit unserer geplanten Photovoltaik-Freiflächenanlage in Herford-Diebrock geht es voran. \nNachdem der Bau- und Umweltausschuss bereits am 8. September einstimmig den nächsten Schritt im Genehmigungsverfahren ermöglicht und die Auslegung des Vorentwurfs zur Flächennutzungsplanänderung beschlossen hat, können wir uns nun auch über eine Förderzusage des Landes NRW freuen. In der vergangenen Woche traf der Förderbescheid über rund 372.000 Euro ein. Die Förderung erfolgt über das Programm 'progres.nrw', das den Bau von Freiflächen-Photovoltaikanlagen außerhalb des Erneuerbare-Energien-Gesetzes (EEG) - also ohne garantierte Einspeisevergütung - ermöglichen soll. Wir freuen uns sehr über die Förderzusage, da das Projekt mittlerweile Kosten von rund 2,4 Millionen Euro hat. Auch die bisher immer einstimmig gefallenen positiven Entscheidungen im Bau- und Umweltausschuss der Stadt Herford im Rahmen der bürokratischen Prozesse sind sehr ermutigend. Sie zeigen, dass die lokale Politik hinter unserem Engagement zum Ausbau der Erneuerbaren Energien steht."], 
+            "img": ["content/fegh/pictures/Landesfoerderung.jpg"],
+            "imgBody": [],
+            "href": ""
+        },
+        
+        {
+            "newFrom": "2022-09-23",
+            "newTo": "2023-09-20",
+            "title": "Coaching-Abschluss in Kassel", 
+
+            "body": ["Heute fand das Abschluss-Event unseres Coachings vom energewiende jetzt e.V. statt.",
+                    "Ingo und Fabian haben unsere Erfahrungen und Entwicklungen vorgestellt.",
+                    "Das Treffen heute sowie das ganze Coaching haben viel Spaß gemacht und uns wirklich voran gebracht.",
+                    "Besonders der Austausch mit den anderen Energiegenossenschaften war heute eine große Bereicherung."], 
+
+            "img": ["content/fegh/pictures/Coaching-Gruppe.jpg",
+                    "content/fegh/pictures/Coaching-2Teilnehmer.jpg",
+                    "content/fegh/pictures/Coaching-Programm.jpg",
+                    "content/fegh/pictures/Coaching-Tafel.jpg"],
+            "imgBody": [],
+            "href": ""
+        },
+        
+        {
+            "newFrom": "2022-08-28",
+            "newTo": "2022-12-24",
+            "title": "2. Radtour zum Reesberg und Hainkamp", 
+            "body": ["Heute fand unsere zweite Radtour vom Hainkamp in Herford Diebrock zum Reesberg in Kirchlengern statt. Barbara Rodi vom Vorstand erläuterte den aktuellen Stand zur geplanten großen 2,4 MegaWatt Photovoltaikanlage auf der ehemaligen Boden- und Bauschuttdeponie Am Hainkamp. Diese PV- Anlage wollen wir aus eigener Kraft finanzieren und werben fleißig um weitere Personen, die sich beteiligen möchten.",
+                   "Es war ideales Radelwetter. Auf dem Reesberg angekommen war die Gruppe kleiner, aber umso feiner! \nVor Ort wurde dem Vorstand direkt eine Beitrittserklärung überreicht und die Interessenbekundung, sich mit einem qualifizierten Nachrangdarlehen an der neuen großen Photvoltaikanlage beteiligen zu wollen."], 
+            "img": ["content/fegh/pictures/teilnehmende-der-radtour-stehen-im-kreis-um-barbara-rodi-vorstand-der-energiegenossenschaft.jpg",
+                  "content/fegh/pictures/6-personen-oben-auf-dem-reesberg-mit-solarmodulen-im-hintergrund-das-panorama-kirchlengern-und-löhne.jpg"],
+            "imgBody": ["Interessierte lauschen den Worten von Barbara Rodi zur geplanten PV- Anlage",
+                      "Am Ende der Führung auf dem Reesberg"],
+            "href": ""
+        },
+
+        {
+            "newFrom": "2022-07-28",
+            "newTo": "2022-12-25",
+            "title": "Interview mit Barbara Rodi bei Kanal-21", 
+            "body": ["Jörg Brökel, früherer Chefredakteur von Radio Herford, hat Barbara Rodi aus unserem Vorstand im Rahmen von 'gibt's', einer Sendung des Kanal-21 aus Bielefeld, zu den Themen Energiewende und Öko-Strom interviewt. Ab Minute 19 beginnt das Interview und dauert 10 Minuten.\nHier der Link zum Beitrag."], 
+            "img": ["content/fegh/pictures/Kanal21-Interview.png"],
+            "imgBody": [],
+            "href": ""
+        },
+        
+        {
+            "newFrom": "2022-07-28",
+            "newTo": "2022-12-19",
+            "title": "PRESSEARTIKEL VOM BALKONKRAFTWERKE-WORKSHOP FÜR FRAUEN", 
+            "body": [], 
+            "img": ["content/fegh/pictures/foto-mit-den-15-teilnehmenden-frauen-am-balkonkraftwerke-workshop-mit-balkonkraftwerk.jpg"],
+            "imgBody": [],
+            "href": ""
+        },
+        
+        {
+            "newFrom": "2022-05-01",
+            "newTo": "2022-06-27",
+            "title": "Workshop für Frauen zu Balkonkraftwerken am 2.7.22", 
+            "body": ["Am Samstag, den 2. Juli 2022 um 15 Uhr findet im Mehrgenerationenhaus Ottelau ein Workshop für Frauen zu Balkonkraftwerken statt. Balkonkraftwerke sind Steckersolarmodule, die Strom aus Sonneneinstrahlung erzeugen. Bis zu 600 Watt Leistung können sie einfach in eine Steckdose gesteckt werden – wie ein Haushaltsgerät. Der Vorteil: damit kann eine Grundlast abgedeckt werden und die Stromrechnung sinkt. Außerdem trägt jedes Steckersolarmodul zum Klimaschutz bei. Es kann auch in den Garten gestellt werden oder auf die Terasse. Einige Formalien müssen beachtet und evtl. ein Zähler ausgetauscht werden.\n\nZiel des Workshops ist, dass jede Frau danach Bescheid weiß, wie das Gerät funktioniert, wie es installiert wird und wie die Anmeldung beim Netzbetreiber und Marktstammdatenregister gemacht wird."], 
+            "img": ["content/fegh/pictures/foto-mit-den-15-teilnehmenden-frauen-am-balkonkraftwerke-workshop-mit-balkonkraftwerk.jpg"],
+            "imgBody": ["...damit zukünftig mehr Frauen auf dem Bild zu sehen sind"],
+            "href": "content/fegh/html/new/frauenBalkonkraftwerk-Referentin.html"
+        },
+        
+        {
+            "newFrom": "2022-05-01",
+            "newTo": "2022-05-30",
+            "title": "Radtour zum Reesberg und Hainkamp am 29.5.22", 
+            "body": [], 
+            "img": ["content/fegh/pictures/foto-mit-den-15-teilnehmenden-frauen-am-balkonkraftwerke-workshop-mit-balkonkraftwerk.jpg"],
+            "imgBody": ["Die \"Neue Westfälische\" vom 21. Mai 2022"],
+            "href": ""
+        },
+        
+        {
+            "newFrom": "2021-10-01",
+            "newTo": "2021-12-31",
+            "title": "UNSERE NÄCHSTE GROSSE PHOTOVOLTAIKANLAGE IST IN PLANUNG !", 
+            "body": ["Bei strahlendem Sonnenschein hatten sich Kinder mit ihren Eltern auf dem Gelände des zukünftigen Bürger*innsolarparks auf die Suche nach Ostereiern gemacht. Zwei Kinder fanden besonders markierte Eier, mit denen sie einen Anteil an unserer Bürgerenergiegenossenschaft geschenkt bekamen. Bei Kaffee und leckerem Kuchen der Biobäckerei Farina, der mit Bürger:innenstrom aus unseren PV-Anlagen gebacken wurde, wurde gefachsimpelt und über die FEGH erzählt. Auch Nachbar:innen der zukünftigen 2,4 MW großen PV-Anlage waren unserer Einladung gefolgt."], 
+            "img": ["content/fegh/pictures/ostereiersuche-am-ostermontag-mit-einigen-teilnehmenden-und-aktiven-der-fegh-eg.jpg"],
+            "imgBody": ["Ostereiersuche am Ostermontag mit einigen Teilnehmenden und Aktiven der FEGH eG"],
+            "href": ""
+        }
+        
+    ]
+
+}

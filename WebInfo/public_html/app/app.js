@@ -10,7 +10,7 @@ configSrv.$inject = ['$scope'];
 
 var paramSrv = webInfo.service('eaParamSrv', [function(){
     this.getNewsList = getNewsList;
-    this.getProjectList = getProjectList;
+    //this.getProjectList = getProjectList;
     this.getObjBg = getObjBg;
     this.getCurrentLink = getCurrentLink;
     this.getImgBoxList = getImgBoxList;
@@ -25,9 +25,10 @@ var navSrv = webInfo.service('eaNavSrv', ['$q', function () {
 }]);
 navSrv.$inject = ['$scope', '$rootScope'];
 
+webInfo.directive('eaLoadParams', ['$rootScope', eaLoadParams]).$inject = ['$scope'];
 webInfo.directive('eaNavi', ['$rootScope', '$http', '$location', 'eaParamSrv', 'eaNavSrv', eaNavDirektive]).$inject = ['$scope'];
 webInfo.directive('eaAddHtml', ['$compile', '$http', eaAddHtmlDirective]).$inject = ['$scope'];
-webInfo.directive('eaPathLink', eaPathLinkDirective).$inject = ['$scope'];
+webInfo.directive('eaPathLink', ['$rootScope', '$location', eaPathLinkDirective]).$inject = ['$scope'];
 webInfo.directive('eaFooter', eaFooterDirective).$inject = ['$scope'];
 webInfo.directive('eaImgBox', ['$compile', '$rootScope', eaImgBox]).$inject = ['$scope'];
 webInfo.directive('eaImg', ['$rootScope', eaImg]).$inject = ['$scope'];

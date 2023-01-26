@@ -1,8 +1,8 @@
-{"entrys" :
+{"entries" :
     [
         {"id":"navStart", "label": "Start", "href": "#!/home", "url": "content/fegh/html/home.html",
             "subm": []},
-
+ 
         {"id":"navErg", "label": "Öko-Energie", "href": "#!/erg",  "url": "content/fegh/html/erg.html",
             "subm": [ {"label": "Bürger-Ökostrom", "href": "#!/erg/1", "url": "content/fegh/html/erg/erg0001.html"},
                     {"label": "Bürger-Ökogas", "href": "#!/erg/2", "url": "content/fegh/html/erg/erg0002.html"}                                                        

@@ -1,0 +1,20 @@
+{"entries":
+[
+        {   "imgKey": "Hainkamp",
+            "imgBodyList": ["Luftaufnahme mit geplanter Panelen-Aufteilung",
+                           "Mitglieder mit Plakat",
+                           "Hainkamp Karte der Gemarkung"],
+            "imgList": ["content/fegh/pictures/pro/HainkampLuftaufnahme.png",
+                           "content/fegh/pictures/pro/GruppeMitLogoPlakat.jpg",
+                           "content/fegh/pictures/pro/HainkampKarte.png"]
+        },
+        {   "imgKey": "Home",
+            "imgBodyList": ["Mitglieder der Genossenschaft"],
+            "imgList": ["content/fegh/pictures/gruppenfoto-fegheg.jpg"]
+        },
+        {   "imgKey": "anyOther",
+            "imgBodyList": [],
+            "imgList": []
+        }
+    ]
+}
