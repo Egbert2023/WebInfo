@@ -45,9 +45,9 @@ var webInfoController =  function($rootScope, $scope, $location, $http, $q, navS
 //    }
 
     
-    //$scope.newsList = paramSrv.getNewsList();
-    $scope.newsList = (typeof $scope.newsList !== 'undefined')? $scope.newsList : paramSrv.getNewsList();
-        
+//    //$scope.newsList = paramSrv.getNewsList();
+//    $scope.newsList = (typeof $scope.newsList !== 'undefined')? $scope.newsList : paramSrv.getNewsList();
+//        
     //$scope.imgBoxList = paramSrv.getImgBoxList();
     $scope.imgBoxList = (typeof $scope.imgBoxList !== 'undefined')? $scope.imgBoxList : paramSrv.getImgBoxList();
 

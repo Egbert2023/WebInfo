@@ -39,24 +39,20 @@ var eaNaviController =  function($rootScope, $scope, $location, paramSrv) {
         $scope.imgBoxList = $rootScope.imgBoxList;
     });
 
-
     // prepare the link path viewer
-    var pathArr = $location.path().split("/");
-    $scope.url = $scope.navSrv.getHtml4Id($rootScope, $location.path(), paramSrv);
+    let pathArr = $location.path().split("/");
     $scope.htm = "";
-    
-    //$scope.currLink = getCurrentLink($rootScope, $location.path());   
-    
-    // prepare site map
-    //$scope.navi = paramSrv.getNaviList();
-    //$scope.navi = $rootScope.naviList;
+            
+    // prepare site map and HTML call
     if($rootScope.isLoaded_naviList) {
         $scope.navi = $rootScope.naviList;
         $scope.currLink = getCurrentLink($rootScope, $location.path());
+        $scope.url = $scope.navSrv.getHtml4Id($rootScope, $location.path(), paramSrv);
     } else {  $scope.navi = {};};
     $rootScope.$on("LoadJsonFile-naviList", function(evt, opt) {
         $scope.navi = $rootScope.naviList;
         $scope.currLink = getCurrentLink($rootScope, $location.path());
+        $scope.url = $scope.navSrv.getHtml4Id($rootScope, $location.path(), paramSrv);
     });
 
     // Test

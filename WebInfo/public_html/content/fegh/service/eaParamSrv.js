@@ -270,15 +270,9 @@ var getCurrentLink = function(rootScope, path) {
                 }
             });
         });
+        return ret;
     };
     
-    if(naviList === undefined || JSON.stringify(naviList) === '{}') {
-        rootScope.$watch('naviList', function(newVal, oldVal){
-            naviList = rootScope.naviList;
-            ret = computeLink(naviList);
-        }, true);                        
-    } else {
-        ret = computeLink(naviList);
-    }
+    ret = computeLink(naviList);
     return ret;
 };
