@@ -8,6 +8,12 @@ var eaLoadParams = function ( $rootScope ) {
         // local scope
         scope: true,
 
+        controller: function($scope) {
+            // Test
+            console.log("2 - controller - eaLoadParams($scope, scope)");
+            console.log($scope);
+        },
+        
 //        controller: function($scope) {
 //            
 ////            // Test
@@ -18,18 +24,18 @@ var eaLoadParams = function ( $rootScope ) {
 //            $scope.getParamObject = function(folder, paramName, rootScope, http) {
 //                var url = folder + "json/" + paramName + ".json";
 //                rootScope[paramName] = {};
-//                rootScope["isLoaded-" + paramName] = false;
+//                rootScope["isLoaded_" + paramName] = false;
 //                
 //                var callback = function(paramName, rootScope, json) {
 //                    const obj = json;
-//                    rootScope[paramName] = obj.entrys;
+//                    rootScope[paramName] = obj.entries;
 //                    
 ////                    // Test
 ////                    console.log("getParamObject - callback($rootScope)");
 ////                    console.log(paramName);
 ////                    console.log(rootScope);
 //
-//                    return obj.entrys;
+//                    return obj.entries;
 //                };
 //                
 //                var newObject = rootScope[paramName];
@@ -45,7 +51,7 @@ var eaLoadParams = function ( $rootScope ) {
 //                            paramName: paramName,
 //                            paramObj: newObject
 //                        };
-//                        rootScope["isLoaded-" + paramName] = true;
+//                        rootScope["isLoaded_" + paramName] = true;
 //                        rootScope.$emit("LoadJsonFile-" + paramName, opt);
 //                    }, function(errResp){
 //                            console.log("Error in $http get.");
@@ -59,6 +65,10 @@ var eaLoadParams = function ( $rootScope ) {
         link: function (scope, ele, attrs) {      
             $rootScope.folder = attrs.contentFolder;
             
+            // Test
+            console.log("3 - link - eaLoadParams($rootScope)");
+            console.log($rootScope);
+
 //            scope.getParamObject(folder, "naviList", $rootScope, $http);
 //            scope.getParamObject(folder, "objBg", $rootScope, $http);
 //            scope.getParamObject(folder, "imgBoxList", $rootScope, $http);

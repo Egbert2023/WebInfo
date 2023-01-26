@@ -4,23 +4,15 @@ var webInfoController =  function($rootScope, $scope, $location, $http, $q, navS
 
     // initialisation of parameters
     $rootScope.contentFolder = "content/fegh/";
+    
     navSrv.getParamObject("naviList", $rootScope, $http);
     navSrv.getParamObject("objBg", $rootScope, $http);
     navSrv.getParamObject("imgBoxList", $rootScope, $http);
     navSrv.getParamObject("newsList", $rootScope, $http);
     
+                     
 
-//    // Test
-//    // read from json files
-//    //$scope.naviList = 
-//    console.log("webInfoController call getParamObject()");
-//    navSrv.getParamObject("naviList", $rootScope, $http);
-//    $rootScope.$watch('naviList', function(newVal, oldVal){
-//        $scope.naviList = $rootScope.naviList;
-//        $scope.navi = $rootScope.naviList;
-//    }, true);                        
-
-    if($rootScope["isLoaded-naviList"]) {
+    if($rootScope["isLoaded_naviList"]) {
         $scope.naviList = $rootScope.naviList;
         $scope.navi = $rootScope.naviList;
     } else {
@@ -44,14 +36,13 @@ var webInfoController =  function($rootScope, $scope, $location, $http, $q, navS
 ////        $scope.objBg = $rootScope.objBg;
 ////    }, true);      
 
-    if($rootScope["isLoaded-objBg"]) {
-        $scope.objBg = $rootScope.objBg;
-    } else {
-        $rootScope.$watch('objBg', function(newVal, oldVal){
-            $scope.objBg = $rootScope.naviList;
-        }, true);                        
-    }
-
+//    if($rootScope["isLoaded_objBg"]) {
+//        $scope.objBg = $rootScope.objBg;
+//    } else {
+//        $rootScope.$watch('objBg', function(newVal, oldVal){
+//            $scope.objBg = $rootScope.objBg;
+//        }, true);                        
+//    }
 
     
     //$scope.newsList = paramSrv.getNewsList();
@@ -73,7 +64,7 @@ var webInfoController =  function($rootScope, $scope, $location, $http, $q, navS
     };
     
     // Test
-    console.log("webInfoController($rootScope, $scope)");
+    console.log("1 - webInfoController($rootScope, $scope)");
     console.log($rootScope);
     console.log($scope);
     

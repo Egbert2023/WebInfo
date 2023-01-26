@@ -1,4 +1,4 @@
-{"entrys" :
+{"entries" :
     [
         {"id":"navStart", "label": "Start", "href": "#!/home", "url": "content/fegh/html/home.html",
             "subm": []},

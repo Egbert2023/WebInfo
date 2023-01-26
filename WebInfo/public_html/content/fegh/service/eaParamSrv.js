@@ -215,18 +215,6 @@ var getImgBoxList = function() {
     return ret;
 }; 
 
-//var getProjectList = function() {
-//    var projectList = [
-//        {
-//            title: "ERICH-GUTENBERG- BERUFSKOLLEG",
-//            href: "#!/pro/1",
-//            templateUrl: "content/fegh/html/pro/pro0001"
-//        }
-//
-//    ];            
-//    return projectList;
-//};
-
 // Baground pictures
 var getObjBg = function() {        
     var key = ["home", "erg", "wir", "new", "pro", "srv", "impressum"];

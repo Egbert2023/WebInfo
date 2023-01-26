@@ -32,20 +32,21 @@ var getHtml = function($http, $compile, scope, ele, url, callback) {
 
 var getParamObject = function(paramName, rootScope, http) {
     var folder = rootScope.contentFolder;
+    
     var url = folder + "json/" + paramName + ".json";
-    rootScope["isLoaded-" + paramName] = false;
+    rootScope["isLoaded_" + paramName] = false;
     
     var callback = function(paramName, rootScope, json) {
         const obj = json;
-        rootScope[paramName] = obj.entrys;
-        rootScope["isLoaded-" + paramName] = true;
+        rootScope[paramName] = obj.entries;
+        rootScope["isLoaded_" + paramName] = true;
        
-//        // Test
-//        console.log("getParamObject - callback($rootScope)");
-//        console.log(paramName);
-//        console.log(rootScope);
+        // Test
+        console.log("7 - getParamObject - callback($rootScope)");
+        console.log(paramName);
+        console.log(rootScope);
         
-        return obj.entrys;
+        return obj.entries;
     };
     var newObject = rootScope[paramName];
     if(newObject === undefined 

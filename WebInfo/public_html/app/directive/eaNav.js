@@ -8,15 +8,16 @@ var eaNavDirektive = function($rootScope, $http, $location, paramSrv, navSrv) {
             
             $rootScope.$on("LoadJsonFile-naviList", function(evt, opt) {
                 $scope.navi = $rootScope.naviList;
+                $scope.naviList = $rootScope.naviList;
+                // Test
+                console.log("4 - $rootScope.$on('LoadJsonFile-naviList', evt, opt)");
+                console.log(evt);
+                console.log(opt);                
             });
-                        
-//            // Test
-//            console.log("Controller in eaNavDirektive call getParamObject()");
-//            navSrv.getParamObject("naviList", $rootScope, $http);
-//            
-//            // Test
-//            console.log("eaNavDirektive - controller ($rootScope)");
-//            console.log($rootScope);
+          
+            // Test
+            console.log("6 - eaNavDirektive - controller ($rootScope)");
+            console.log($rootScope);
         },      
         
         link: function (scope, element, attr) {
@@ -24,10 +25,14 @@ var eaNavDirektive = function($rootScope, $http, $location, paramSrv, navSrv) {
             //scope.navi = $rootScope.naviList;
             $rootScope.$watch('naviList', function(newVal, oldVal){
                 scope.navi = $rootScope.naviList;
+                scope.naviList = $rootScope.naviList;
             }, true);                        
-            //scope.navi = paramSrv.getNaviList();
-            
-            scope.currentLink = paramSrv.getCurrentLink($rootScope, $location.path());
+                        
+//            if($rootScope.isLoaded_naviList) {
+//                scope.currentLink = paramSrv.getCurrentLink($rootScope, $location.path());
+//            } else {
+//                scope.currentLink = {};
+//            };            
             
             scope.isActive = function(nav) {
                 return nav.href.indexOf(scope.location) === 1;
@@ -37,7 +42,7 @@ var eaNavDirektive = function($rootScope, $http, $location, paramSrv, navSrv) {
             });
             
             // Test
-            console.log("eaNavDirektive - link ($rootScope)");
+            console.log("5 - eaNavDirektive - link ($rootScope)");
             console.log($rootScope);
 
         }            
