@@ -7,10 +7,10 @@ var eaAddHtmlDirective = function ($compile, $http) {
     replace: true,
     link: function (scope, ele, attrs) {        
 
-        var url = attrs.eaAddHtml;
+        let url = attrs.eaAddHtml;
         
         // https://stackoverflow.com/questions/42066311/how-to-use-callback-in-http-angular-js
-        var callback = function($http, $compile, scope, ele, htm){
+        let callback = function($http, $compile, scope, ele, htm){
             scope.htm = htm; 
             if(htm !== ""){
                 ele.html(htm);
@@ -21,11 +21,6 @@ var eaAddHtmlDirective = function ($compile, $http) {
         if(url!=="") {
             scope.navSrv.getHtml($http, $compile, scope, ele, url, callback);
         }
-     
-//        // Test
-//        console.log("eaAddHtmlDirective.link(scope)");
-//        console.log(scope);
-
     }};
 };
 

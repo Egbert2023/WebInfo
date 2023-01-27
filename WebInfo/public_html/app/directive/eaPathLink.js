@@ -7,12 +7,12 @@ var eaPathLinkDirective = function ($rootScope, $location) {
     templateUrl: "app/template/pathLink.html",
     controller: function($scope) {
         if($rootScope.isLoaded_naviList) {
-            $scope.navi = $rootScope.naviList;
+            $scope.naviList = $rootScope.naviList;
             $scope.currLink = getCurrentLink($rootScope, $location.path());
             //scope.url = scope.navSrv.getHtml4Id($rootScope, $location.path(), paramSrv);
-        } else {  $scope.navi = {};};
+        } else {  $scope.naviList = {};};
         $rootScope.$on("LoadJsonFile-naviList", function(evt, opt) {
-            $scope.navi = $rootScope.naviList;
+            $scope.naviList = $rootScope.naviList;
             $scope.currLink = getCurrentLink($rootScope, $location.path());
             //scope.url = scope.navSrv.getHtml4Id($rootScope, $location.path(), paramSrv);
         });

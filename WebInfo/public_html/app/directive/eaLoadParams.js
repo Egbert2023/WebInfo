@@ -1,6 +1,6 @@
 'use strict';
 
-var eaLoadParams = function ( $rootScope ) {
+var eaLoadParams = function ( $rootScope, $http ) {
     return {
         restrict: 'E',
         replace: true,
@@ -9,70 +9,58 @@ var eaLoadParams = function ( $rootScope ) {
         scope: true,
 
         controller: function($scope) {
-            // Test
-            console.log("2 - controller - eaLoadParams($scope, scope)");
-            console.log($scope);
-        },
+            
+            $scope.getParamObject = function(folder, paramName, rootScope, http) {
+                var url = folder + "json/" + paramName + ".json";
+                rootScope["isLoaded_" + paramName] = false;
+
+                let callback = function(paramName, rootScope, json) {
+                    const obj = json;
+                    rootScope[paramName] = obj.entries;
+                    rootScope["isLoaded_" + paramName] = true;
+ 
+                    return obj.entries;
+                };
+                let newObject = rootScope[paramName];
+                if(newObject === undefined 
+                   || (newObject.constructor === Object && Object.entries(newObject).length === 0)) {
+
+                    http({
+                        url: url,
+                        method: 'GET'
+                    }).then(function(response){
+                        newObject = callback(paramName, rootScope, response.data);
+                        var opt = {
+                            paramName: paramName,
+                            paramObj: newObject
+                        };
+                        rootScope.$emit("LoadJsonFile-" + paramName, opt);
+
+                    }, function(errResp){
+                            console.log("Error in $http get.");
+                            console.log(errResp);
+                    });
+                };
+                return false;
+            };
+        }, // controller
         
-//        controller: function($scope) {
-//            
-////            // Test
-////            console.log("controller:eaImg($scope, scope)");
-////            console.log($scope);
-//                       
-//            // Load object from json file
-//            $scope.getParamObject = function(folder, paramName, rootScope, http) {
-//                var url = folder + "json/" + paramName + ".json";
-//                rootScope[paramName] = {};
-//                rootScope["isLoaded_" + paramName] = false;
-//                
-//                var callback = function(paramName, rootScope, json) {
-//                    const obj = json;
-//                    rootScope[paramName] = obj.entries;
-//                    
-////                    // Test
-////                    console.log("getParamObject - callback($rootScope)");
-////                    console.log(paramName);
-////                    console.log(rootScope);
-//
-//                    return obj.entries;
-//                };
-//                
-//                var newObject = rootScope[paramName];
-//                if(newObject === undefined 
-//                   || (newObject.constructor === Object && Object.entries(newObject).length === 0)) {
-//
-//                    http({
-//                        url: url,
-//                        method: 'GET'
-//                    }).then(function(response){
-//                        newObject = callback(paramName, rootScope, response.data);
-//                        var opt = {
-//                            paramName: paramName,
-//                            paramObj: newObject
-//                        };
-//                        rootScope["isLoaded_" + paramName] = true;
-//                        rootScope.$emit("LoadJsonFile-" + paramName, opt);
-//                    }, function(errResp){
-//                            console.log("Error in $http get.");
-//                            console.log(errResp);
-//                    });
-//                };
-//                return false;
-//            };
-//        },   // controller
+
         
         link: function (scope, ele, attrs) {      
-            $rootScope.folder = attrs.contentFolder;
+            $rootScope.contentFolder = attrs.contentFolder;
+            scope.$parent.footerUrl = attrs.contentFolder + "html/footer.html";
             
-            // Test
-            console.log("3 - link - eaLoadParams($rootScope)");
-            console.log($rootScope);
-
-//            scope.getParamObject(folder, "naviList", $rootScope, $http);
-//            scope.getParamObject(folder, "objBg", $rootScope, $http);
-//            scope.getParamObject(folder, "imgBoxList", $rootScope, $http);
-//            scope.getParamObject(folder, "newsList", $rootScope, $http);
+//            navSrv.getParamObject("naviList", $rootScope, $http);
+//            navSrv.getParamObject("objBg", $rootScope, $http);
+//            navSrv.getParamObject("imgBoxList", $rootScope, $http);
+//            navSrv.getParamObject("newsList", $rootScope, $http);
+            
+            let folder = $rootScope.contentFolder;
+            scope.getParamObject(folder, "naviList", $rootScope, $http);
+            scope.getParamObject(folder, "objBg", $rootScope, $http);
+            scope.getParamObject(folder, "imgBoxList", $rootScope, $http);
+            scope.getParamObject(folder, "newsList", $rootScope, $http);
             
         }
     };  // return
