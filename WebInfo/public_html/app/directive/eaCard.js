@@ -1,11 +1,13 @@
 'use strict';
 
+// not in use.
+
 var eaCardDirektive = function($rootScope, $location) {
-    var cardObjErg = [
+    let cardObjErg = [
         {idx: 1, title: "xx1", body: "dfdsfvb", url: ""},
         {idx: 3, title: "xx3", body: "", url: "content/html/impressum"}
     ];
-    var cardObjHome = [
+    let cardObjHome = [
         {idx: 8, title: "xx8", body: "eqwgweg", url: ""},
         {idx: 1, title: "xx1", body: "dfdsfvb", url: ""},
         {idx: 2, title: "xx2", body: "fvdsfvb", url: ""},

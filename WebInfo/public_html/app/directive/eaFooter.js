@@ -1,13 +1,14 @@
 'use strict';
 
-var eaFooterDirective = function () {
+//templateUrl: "app/template/footer.html",
+
+var eaFooterDirective = function ($rootScope) {
   return {
     restrict: 'E',
-    replace: true,
-    templateUrl: "app/template/footer.html",
-
-    link: function (scope, ele, attrs) {        
-        
-    }};
+    replace: false,
+    transclude: true,
+    template: '<div ea-add-html = "{{footerUrl}}"></div>',
+    link: function (scope, ele, attrs) {}
+  };
 };
 

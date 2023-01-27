@@ -11,10 +11,6 @@ var eaImg = function ( $rootScope ) {
 
         controller: function($scope) {
             /* https://www.w3schools.com/howto/howto_js_lightbox.asp */
-            
-//            // Test
-//            console.log("controller:eaImg($scope, scope)");
-//            console.log($scope);
                        
             // Open the Modal
             $scope.openModal = function() {

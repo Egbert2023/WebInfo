@@ -18,7 +18,7 @@ var eaImgBox = function ($compile, $rootScope) {
             $rootScope.$on("openModalImgBox", function(evt, opt) {
                 
                 // comput modal inner HTML 
-                var iHtml = $scope.getInnerHtml(opt);
+                let iHtml = $scope.getInnerHtml(opt);
                 
                 // init values
                 $scope.imgArrLen = opt.imgArr.length;
@@ -26,8 +26,8 @@ var eaImgBox = function ($compile, $rootScope) {
                 $scope.slideIndexOld = $scope.slideIndex;
                  
                 // include iHtml into modal view
-                var modalContentInner = document.getElementById("myModalContent");
-                var ele = angular.element(modalContentInner);
+                let modalContentInner = document.getElementById("myModalContent");
+                let ele = angular.element(modalContentInner);
                 $scope.setInnerHtml(ele, iHtml, $scope, $scope.slideIndex);
 
                 $scope.eleModalContent = ele;
@@ -40,7 +40,7 @@ var eaImgBox = function ($compile, $rootScope) {
             
             // Open the Modal
             $scope.openModal = function() {
-                var docModal = document.getElementById("myModal");
+                let docModal = document.getElementById("myModal");
                 if(docModal !== null) {
                     docModal.style.display = "block";
                 }  
@@ -49,7 +49,7 @@ var eaImgBox = function ($compile, $rootScope) {
 
             // Close the Modal
             $scope.closeModal = function () {
-                var docModal = document.getElementById("myModal");
+                let docModal = document.getElementById("myModal");
                 if(docModal !== null) {
                     docModal.style.display = "none";
                 }    
@@ -58,19 +58,19 @@ var eaImgBox = function ($compile, $rootScope) {
 
             // Next/previous controls
             $scope.plusSlides = function (n) {
-                var sIdx = parseInt($scope.slideIndex);
+                let sIdx = parseInt($scope.slideIndex);
                 
                 // Hide current picture
-                var idNum = "imgNumber" + sIdx.toString();
-                var idImg = "imgPicture" + sIdx.toString();
-                var docNum = document.getElementById(idNum);
-                var docImg = document.getElementById(idImg);
+                let idNum = "imgNumber" + sIdx.toString();
+                let idImg = "imgPicture" + sIdx.toString();
+                let docNum = document.getElementById(idNum);
+                let docImg = document.getElementById(idImg);
                 if(docNum !== null) {docNum.style.display = "none";}
                 if(docImg !== null) {docImg.style.display = "none";}
 
                 // compute the new slideIndex
-                var si = sIdx + parseInt(n);
-                var len = parseInt($scope.imgArrLen);
+                let si = sIdx + parseInt(n);
+                let len = parseInt($scope.imgArrLen);
                 si = (si>len)? si-len : si;
                 si = (si<1)? si+len : si;
                 $scope.slideIndex = parseInt(si);
@@ -89,10 +89,10 @@ var eaImgBox = function ($compile, $rootScope) {
             $scope.currentSlide = function (si) {
                 $scope.slideIndex = si;
                 
-                var idNum = "imgNumber" + si.toString();
-                var idImg = "imgPicture" + si.toString();
-                var docNum = document.getElementById(idNum);
-                var docImg = document.getElementById(idImg);
+                let idNum = "imgNumber" + si.toString();
+                let idImg = "imgPicture" + si.toString();
+                let docNum = document.getElementById(idNum);
+                let docImg = document.getElementById(idImg);
                 if(docNum !== null) {docNum.style.display = "block";}
                 if(docImg !== null) {docImg.style.display = "block";}
                 return false;
@@ -100,15 +100,15 @@ var eaImgBox = function ($compile, $rootScope) {
   
             // compute the innerr HTML for modal picture viewer
             $scope.getInnerHtml = function(opt) {
-                var imgArr = opt.imgArr;
-                var imgBodyArr = opt.imgBodyArr;
-                var len = imgArr.length;
-                var iHtml = "";
+                let imgArr = opt.imgArr;
+                let imgBodyArr = opt.imgBodyArr;
+                let len = imgArr.length;
+                let iHtml = "";
 
                 iHtml = '<div ><div class="mySlides" >' ;
                 for(let i = 0; i<len; i++) {
-                    var idx = i+1;
-                    var ht = '<div id="imgNumber' + idx.toString() + '" class="numbertext eaImgBoxItem">' + idx.toString() + ' / ' + len.toString() + '</div>' + 
+                    let idx = i+1;
+                    let ht = '<div id="imgNumber' + idx.toString() + '" class="numbertext eaImgBoxItem">' + idx.toString() + ' / ' + len.toString() + '</div>' + 
                             '<img id="imgPicture' + idx.toString() + '" ng-src="' + imgArr[i] + '" class="eaImgBoxItem img-fluid" >';                            
                     iHtml = iHtml + ht;
                 };

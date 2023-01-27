@@ -1,6 +1,18 @@
 'use strict';
 
-var eaNaviController =  function($rootScope, $scope, $location, paramSrv) {
+var eaNaviController =  function($rootScope, $scope, $location, eaNavSrv) {
+    
+    // prepare navagation menu, site map and HTML call
+    if($rootScope.isLoaded_naviList) {
+        $scope.naviList = $rootScope.naviList;
+        $scope.currLink = getCurrentLink($rootScope, $location.path());
+        $scope.url = $scope.navSrv.getHtml4Id($rootScope, $location.path(), eaNavSrv);
+    } else {  $scope.naviList = {};};
+    $rootScope.$on("LoadJsonFile-naviList", function(evt, opt) {
+        $scope.naviList = $rootScope.naviList;
+        $scope.currLink = getCurrentLink($rootScope, $location.path());
+        $scope.url = $scope.navSrv.getHtml4Id($rootScope, $location.path(), eaNavSrv);
+    });
     
     // prepare the news list
     //$scope.newsList = $scope.$parent.newsList;
@@ -30,8 +42,6 @@ var eaNaviController =  function($rootScope, $scope, $location, paramSrv) {
     });
     
     // prepare the Image box handlingw
-//    $scope.imgBoxList = $scope.$parent.imgBoxList;
-//    $scope.imgBoxKey = "";
     if($rootScope.isLoaded_imgBoxList) {
         $scope.imgBoxList = $rootScope.imgBoxList;
     } else { $scope.imgBoxList = {};}
@@ -39,26 +49,8 @@ var eaNaviController =  function($rootScope, $scope, $location, paramSrv) {
         $scope.imgBoxList = $rootScope.imgBoxList;
     });
 
-    // prepare the link path viewer
-    let pathArr = $location.path().split("/");
     $scope.htm = "";
-            
-    // prepare site map and HTML call
-    if($rootScope.isLoaded_naviList) {
-        $scope.navi = $rootScope.naviList;
-        $scope.currLink = getCurrentLink($rootScope, $location.path());
-        $scope.url = $scope.navSrv.getHtml4Id($rootScope, $location.path(), paramSrv);
-    } else {  $scope.navi = {};};
-    $rootScope.$on("LoadJsonFile-naviList", function(evt, opt) {
-        $scope.navi = $rootScope.naviList;
-        $scope.currLink = getCurrentLink($rootScope, $location.path());
-        $scope.url = $scope.navSrv.getHtml4Id($rootScope, $location.path(), paramSrv);
-    });
 
-    // Test
-    console.log("7 - eaNaviController($rootScope)");
-    console.log($rootScope);
-    
     return false;
 };
 
