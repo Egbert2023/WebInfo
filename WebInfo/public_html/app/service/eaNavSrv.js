@@ -2,17 +2,19 @@
 
 var getHtml4Id = function(rootScope, loc, paramSrv){
     
-    let locArr = loc.split('/');
-    let folder = locArr[1];
-    let id = locArr[2];
-    let ret = 'app/html/' + folder + '/' + folder + ('0000' + id).slice(('0000' + id).length-4,('0000' + id).length) + '.html';
+//    let locArr = loc.split('/');
+//    let folder = locArr[1];
+//    let id = locArr[2];
+//    let ret = 'app/html/' + folder + '/' + folder + ('0000' + id).slice(('0000' + id).length-4,('0000' + id).length) + '.html';
     
     //var naviList = paramSrv.getNaviList();
     let naviList = rootScope.naviList;
+    let ret = "";
     
-    let ret2 = getEntry("", naviList, "subm", "href", '#!' + loc, "url");
-        
-    return (ret2 !== "")? ret2 : ret;
+    if(rootScope.isLoaded_naviList) {
+        ret = getEntry("", naviList, "subm", "href", '#!' + loc, "url");
+    }    
+    return ret;
 };
 
 var getHtml = function($http, $compile, scope, ele, url, callback) {
@@ -30,42 +32,43 @@ var getHtml = function($http, $compile, scope, ele, url, callback) {
     return ret;
 };
 
-var getParamObject = function(paramName, rootScope, http) {
-    let folder = rootScope.contentFolder;
-    
-    let url = folder + "json/" + paramName + ".json";
-    rootScope["isLoaded_" + paramName] = false;
-    
-    let callback = function(paramName, rootScope, json) {
-        const obj = json;
-        rootScope[paramName] = obj.entries;
-        rootScope["isLoaded_" + paramName] = true;
-        
-        return obj.entries;
-    };
-    let newObject = rootScope[paramName];
-    if(newObject === undefined 
-       || (newObject.constructor === Object && Object.entries(newObject).length === 0)) {
-    
-        http({
-            url: url,
-            method: 'GET'
-        }).then(function(response){
-            newObject = callback(paramName, rootScope, response.data);
-            var opt = {
-                paramName: paramName,
-                paramObj: newObject
-            };
-            rootScope.$emit("LoadJsonFile-" + paramName, opt);
-            
-        }, function(errResp){
-                console.log("Error in $http get.");
-                console.log(errResp);
-        });
-    };
-    return false;
-};
-
+/*
+//var getParamObject = function(paramName, rootScope, http) {
+//    let folder = rootScope.contentFolder;
+//    
+//    let url = folder + "json/" + paramName + ".json";
+//    rootScope["isLoaded_" + paramName] = false;
+//    
+//    let callback = function(paramName, rootScope, json) {
+//        const obj = json;
+//        rootScope[paramName] = obj.entries;
+//        rootScope["isLoaded_" + paramName] = true;
+//        
+//        return obj.entries;
+//    };
+//    let newObject = rootScope[paramName];
+//    if(newObject === undefined 
+//       || (newObject.constructor === Object && Object.entries(newObject).length === 0)) {
+//    
+//        http({
+//            url: url,
+//            method: 'GET'
+//        }).then(function(response){
+//            newObject = callback(paramName, rootScope, response.data);
+//            var opt = {
+//                paramName: paramName,
+//                paramObj: newObject
+//            };
+//            rootScope.$emit("LoadJsonFile-" + paramName, opt);
+//            
+//        }, function(errResp){
+//                console.log("Error in $http get.");
+//                console.log(errResp);
+//        });
+//    };
+//    return false;
+//};
+*/
 /*
  * objArr: Array with objects
  * sub:    the next deeper tier

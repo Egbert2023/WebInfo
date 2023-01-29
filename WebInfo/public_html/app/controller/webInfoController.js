@@ -1,7 +1,8 @@
 'use strict';
 
-var webInfoController =  function($rootScope, $scope, $location, $http, $q, navSrv, paramSrv) {
+var webInfoController =  function($rootScope, $scope, navSrv) {
 
+    $scope.Name = "webInfoController";
     $scope.navSrv = navSrv;
     $scope.isNew = function(d) {
         var ret = false;
@@ -13,6 +14,12 @@ var webInfoController =  function($rootScope, $scope, $location, $http, $q, navS
         ret = (yy >= d.newFrom)? ret : false;
         return ret;
     };
+   
+    $rootScope.firstCall = true;
+        
+    // Test
+    console.log("1 - webInfoController($scope)");
+    console.log($scope);
    
     return false;
 };

@@ -1,13 +1,23 @@
 'use strict';
     
-var eaNavDirektive = function($rootScope, $http, $location) {
+var eaNavDirektive = function($rootScope, $http, $location, eaNavSrv) {
     return {
         restrict: 'E',
         templateUrl: "app/template/navbar.html",
         controller: function($rootScope, $scope, $http) {
             
             $rootScope.$on("LoadJsonFile-naviList", function(evt, opt) {
+                
+                $scope.Name = "eaNavDirektive-Controller";
+                
                 $scope.naviList = $rootScope.naviList;
+                
+                $scope.url = $scope.navSrv.getHtml4Id($rootScope, $location.path(), eaNavSrv);
+                
+                // Test
+                console.log("4 - Directive-eaNavDirektive-Controller-$on('LoadJsonFile-naviList')($scope)");
+                console.log($scope);
+                
             });
         },      
         

@@ -2,6 +2,8 @@
 
 var eaNaviController =  function($rootScope, $scope, $location, eaNavSrv) {
     
+    $scope.Name = "eaNaviController";
+    
     // prepare navagation menu, site map and HTML call
     if($rootScope.isLoaded_naviList) {
         $scope.naviList = $rootScope.naviList;
@@ -50,6 +52,16 @@ var eaNaviController =  function($rootScope, $scope, $location, eaNavSrv) {
     });
 
     $scope.htm = "";
+
+    // $rootScope.isLoaded_naviList
+    $scope.$watch($rootScope.isLoaded_naviList, function() {
+        $scope.url = $scope.navSrv.getHtml4Id($rootScope, $location.path(), eaNavSrv);
+    });
+
+
+    // Test
+    console.log("5 - eaNaviController($scope)");
+    console.log($scope);
 
     return false;
 };
