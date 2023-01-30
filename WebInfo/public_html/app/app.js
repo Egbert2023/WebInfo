@@ -12,7 +12,6 @@ var navSrv = webInfo.service('eaNavSrv', ['$q', function () {
     var vm = this;
     vm.getHtml4Id = getHtml4Id;
     vm.getHtml = getHtml;
-    //vm.getParamObject = getParamObject;
     vm.getCurrentLink = getCurrentLink;
 }]);
 navSrv.$inject = ['$scope', '$rootScope'];

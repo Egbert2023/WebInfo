@@ -1,0 +1,21 @@
+{"entries" :
+    [
+        {"id":"navStart", "label": "Home", "href": "#!/home", "url": "content/aleks/html/home.html",
+            "subm": []},
+ 
+        {"id":"navTravel", "label": "Reisen", "href": "#!/trav",  "url": "content/aleks/html/reisen.html",
+            "subm": [ {"label": "Lissabon", "href": "#!/trav/lsb", "url": "content/aleks/html/lissabon.html"},
+                    {"label": "Prerow", "href": "#!/trav/pre", "url": "content/fegh/aleks/prerow.html"}                                                        
+                                               ]},
+                                           
+        {"id":"navNews", "label": "News", "href": "#!/new", "url": "app/template/news/news.html", 
+            "subm": [ {"label": "Archiv", "href": "#!/new/1", "url": "app/template/news/newArchiv.html"}]},
+        
+        {"id":"navService", "label": "Service", "href": "#!/srv", "url": "content/aleks/html/service.html",
+            "subm": [ {"label": "Kontakt", "href": "#!/srv/kon", "url": "content/aleks/html/srv/kontakt.html"},
+                    {"label": "SiteMap", "href": "#!/srv/smap", "url": "app/template/siteMap.html"}, 
+                    {"label": "Hintergrund Bilder", "href": "#!/srv/pic", "url": "content/aleks/srv/backGround.html"}
+                                             ]}                                              
+        
+    ]
+}
