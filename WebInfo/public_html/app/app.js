@@ -12,23 +12,22 @@ var navSrv = webInfo.service('eaNavSrv', ['$q', function () {
     var vm = this;
     vm.getHtml4Id = getHtml4Id;
     vm.getHtml = getHtml;
-    vm.getParamObject = getParamObject;
+    //vm.getParamObject = getParamObject;
     vm.getCurrentLink = getCurrentLink;
 }]);
 navSrv.$inject = ['$scope', '$rootScope'];
 
 webInfo.directive('eaLoadParams', ['$rootScope', '$http', eaLoadParams]).$inject = ['$scope'];
-webInfo.directive('eaNavi', ['$rootScope', '$http', '$location', eaNavDirektive]).$inject = ['$scope'];
-webInfo.directive('eaAddHtml', ['$compile', '$http', eaAddHtmlDirective]).$inject = ['$scope'];
-webInfo.directive('eaPathLink', ['$rootScope', '$location', eaPathLinkDirective]).$inject = ['$scope'];
+webInfo.directive('eaNavi', ['$rootScope', '$http', '$location', 'eaNavSrv', eaNavDirektive]).$inject = ['$scope'];
+webInfo.directive('eaAddHtml', ['$rootScope', '$location', '$compile', '$http', 'eaNavSrv', eaAddHtmlDirective]).$inject = ['$scope'];
+webInfo.directive('eaPathLink', ['$rootScope', '$location', 'eaNavSrv', eaPathLinkDirective]).$inject = ['$scope'];
 webInfo.directive('eaFooter', ['$rootScope', eaFooterDirective]).$inject = ['$scope'];
 webInfo.directive('eaImgBox', ['$compile', '$rootScope', eaImgBox]).$inject = ['$scope'];
 webInfo.directive('eaImg', ['$rootScope', eaImg]).$inject = ['$scope'];
 
 webInfo.config(['$routeProvider', eaNavConfig]);
 
-
-webInfo.controller('webInfoController', ['$rootScope', '$scope', '$location', '$http', '$q', 'eaNavSrv', webInfoController])
+webInfo.controller('webInfoController', ['$rootScope', '$scope', 'eaNavSrv', webInfoController])
         .$inject = ['$scope'];
 webInfo.controller('eaNaviController', ['$rootScope', '$scope', '$location', 'eaNavSrv', eaNaviController])
         .$inject = ['$scope'];

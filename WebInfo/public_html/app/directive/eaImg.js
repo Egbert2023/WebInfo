@@ -10,6 +10,9 @@ var eaImg = function ( $rootScope ) {
         scope: true,
 
         controller: function($scope) {
+            
+            $scope.scope_eaImgDirektive = $scope.url;    
+            
             /* https://www.w3schools.com/howto/howto_js_lightbox.asp */
                        
             // Open the Modal

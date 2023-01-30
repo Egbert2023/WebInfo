@@ -1,11 +1,13 @@
 'use strict';
 
-var eaAddHtmlDirective = function ($compile, $http) {
+var eaAddHtmlDirective = function ($rootScope, $location, $compile, $http, navSrv) {
     
   return {
     restrict: 'A',
     replace: true,
     link: function (scope, ele, attrs) {        
+        
+        scope.scope_eaAddHtmlDirective = scope.url;    
 
         let url = attrs.eaAddHtml;
         
@@ -15,12 +17,31 @@ var eaAddHtmlDirective = function ($compile, $http) {
             if(htm !== ""){
                 ele.html(htm);
                 $compile(ele.contents())(scope);
-            }
+            } else {console,log("Html is not available!");}
             return htm;
         };
-        if(url!=="") {
+        
+        if(url!=="") {         
             scope.navSrv.getHtml($http, $compile, scope, ele, url, callback);
-        }
-    }};
+            
+//    // Test
+//    console.log("6 - Directive-eaAddHtml-Link URL!==''($scope)");
+//    console.log(scope);
+
+        } else {
+//            scope.$watch(url, function(){
+//                //url = navSrv.getHtml4Id($rootScope, $location.path(), navSrv);
+//                scope.navSrv.getHtml($http, $compile, scope, ele, url, callback);
+//                
+//    // Test
+//    console.log("9 - Directive-eaAddHtml-Link URL==='' - watch(url) ($scope)");
+//    console.log(scope);
+//                
+//            }); // $watch
+            
+        };
+    }
+  };
 };
+
 

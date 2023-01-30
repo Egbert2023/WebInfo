@@ -12,8 +12,8 @@
                     {"label": "Philosophie", "href": "#!/wir/2", "url": "content/fegh/html/wir/wir0002.html"}, 
                     {"label": "Satzung", "href": "#!/wir/3", "url": "content/fegh/html/wir/wir0003.html"}
                                              ]},                                                    
-        {"id":"navNews", "label": "News", "href": "#!/new", "url": "content/fegh/html/news.html", 
-            "subm": [ {"label": "Archiv", "href": "#!/new/1", "url": "content/fegh/html/new/newArchiv.html"}]},
+        {"id":"navNews", "label": "News", "href": "#!/new", "url": "app/template/news/news.html", 
+            "subm": [ {"label": "Archiv", "href": "#!/new/1", "url": "app/template/news/newArchiv.html"}]},
 
         {"id":"navProj", "label": "Projekte", "href": "#!/pro", "url": "content/fegh/html/projects.html", 
             "subm": [ {"id": "navProHk", "label": "Hainkamp", "href": "#!/pro/hk", "url": "content/fegh/html/pro/Hainkamp.html", 

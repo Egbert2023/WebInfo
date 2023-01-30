@@ -166,12 +166,6 @@ var getNaviList = function() {
         }
             
     ];
-    
-    
-//    // Test
-//    let obj = naviList.find(o => o.id === 'navProj');
-//    console.log("naviList.id ==='navProj'");
-//    console.log(obj);
 
     return naviList;
 };

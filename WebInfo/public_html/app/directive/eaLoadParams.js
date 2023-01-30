@@ -10,6 +10,8 @@ var eaLoadParams = function ( $rootScope, $http ) {
 
         controller: function($scope) {
             
+            $scope.scope_eaLoadParams_Controller = $scope.url;    
+            
             $scope.getParamObject = function(folder, paramName, rootScope, http) {
                 var url = folder + "json/" + paramName + ".json";
                 rootScope["isLoaded_" + paramName] = false;
@@ -41,20 +43,19 @@ var eaLoadParams = function ( $rootScope, $http ) {
                             console.log(errResp);
                     });
                 };
+                
                 return false;
             };
-        }, // controller
-        
+            
+//            // Test
+//            console.log("2 - Directive-eaLoadParams-Controller($scope)");
+//            console.log($scope);
 
+        }, // controller        
         
         link: function (scope, ele, attrs) {      
             $rootScope.contentFolder = attrs.contentFolder;
             scope.$parent.footerUrl = attrs.contentFolder + "html/footer.html";
-            
-//            navSrv.getParamObject("naviList", $rootScope, $http);
-//            navSrv.getParamObject("objBg", $rootScope, $http);
-//            navSrv.getParamObject("imgBoxList", $rootScope, $http);
-//            navSrv.getParamObject("newsList", $rootScope, $http);
             
             let folder = $rootScope.contentFolder;
             scope.getParamObject(folder, "naviList", $rootScope, $http);
@@ -62,6 +63,10 @@ var eaLoadParams = function ( $rootScope, $http ) {
             scope.getParamObject(folder, "imgBoxList", $rootScope, $http);
             scope.getParamObject(folder, "newsList", $rootScope, $http);
             
+//            // Test
+//            console.log("3 - Directive-eaLoadParams-Link($scope)");
+//            console.log(scope);
+
         }
     };  // return
 };   // eaLoadParams()

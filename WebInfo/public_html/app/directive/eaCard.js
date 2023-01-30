@@ -28,17 +28,15 @@ var eaCardDirektive = function($rootScope, $location) {
         link: function (scope, element, attr) {
             scope.cardObj = cardObjHome;
 
-            // Test
-            console.log("eaNavDirektive -> scope");
-            console.log(scope);
+            scope.scope_eaCardDirektive = scope.url;    
+
+//            // Test
+//            console.log("eaNavDirektive -> scope");
+//            console.log(scope);
 
 
             scope.isActive = function(cardObj) {
-        //                // Test
-        //                console.log("isActive(nav) - ?");
-        //                console.log(nav.href.indexOf(scope.location) === 1);
-
-                return cardObjHome.idx.indexOf(scope.location) === 1;
+                 return cardObjHome.idx.indexOf(scope.location) === 1;
             };
 
             $rootScope.$on("$locationChangeSuccess", function(event, next, current) {            

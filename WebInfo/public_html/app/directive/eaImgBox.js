@@ -9,6 +9,9 @@ var eaImgBox = function ($compile, $rootScope) {
         scope: true,
 
         controller: function($scope) {
+            
+            $scope.scope_eaImgBoxDirektive = $scope.url;    
+            
             /* https://www.w3schools.com/howto/howto_js_lightbox.asp */
             
             // Initialisation
