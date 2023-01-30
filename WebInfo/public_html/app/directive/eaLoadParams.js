@@ -10,7 +10,7 @@ var eaLoadParams = function ( $rootScope, $http ) {
 
         controller: function($scope) {
             
-            $scope.Name = "eaLoadParams-Controller";
+            $scope.scope_eaLoadParams_Controller = $scope.url;    
             
             $scope.getParamObject = function(folder, paramName, rootScope, http) {
                 var url = folder + "json/" + paramName + ".json";
@@ -47,9 +47,9 @@ var eaLoadParams = function ( $rootScope, $http ) {
                 return false;
             };
             
-            // Test
-            console.log("2 - Directive-eaLoadParams-Controller($scope)");
-            console.log($scope);
+//            // Test
+//            console.log("2 - Directive-eaLoadParams-Controller($scope)");
+//            console.log($scope);
 
         }, // controller        
         
@@ -63,9 +63,9 @@ var eaLoadParams = function ( $rootScope, $http ) {
             scope.getParamObject(folder, "imgBoxList", $rootScope, $http);
             scope.getParamObject(folder, "newsList", $rootScope, $http);
             
-            // Test
-            console.log("3 - Directive-eaLoadParams-Link($scope)");
-            console.log(scope);
+//            // Test
+//            console.log("3 - Directive-eaLoadParams-Link($scope)");
+//            console.log(scope);
 
         }
     };  // return

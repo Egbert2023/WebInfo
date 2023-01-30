@@ -6,6 +6,8 @@ var eaAddHtmlDirective = function ($rootScope, $location, $compile, $http, navSr
     restrict: 'A',
     replace: true,
     link: function (scope, ele, attrs) {        
+        
+        scope.scope_eaAddHtmlDirective = scope.url;    
 
         let url = attrs.eaAddHtml;
         
@@ -19,22 +21,27 @@ var eaAddHtmlDirective = function ($rootScope, $location, $compile, $http, navSr
             return htm;
         };
         
-        if(url!=="") {            
-            // Test
-            console.log("9 - Directive-eaAddHtml-Link URL=''($scope)");
-            console.log(scope);
-        } else {
-            scope.$watch(url, function(){
-                url = navSrv.getHtml4Id($rootScope, $location.path(), navSrv);
-            });
-        };
+        if(url!=="") {         
+            scope.navSrv.getHtml($http, $compile, scope, ele, url, callback);
             
-        // Test
-        console.log("6 - Directive-eaAddHtml-Link URL=''($scope)");
-        console.log(scope);
+//    // Test
+//    console.log("6 - Directive-eaAddHtml-Link URL!==''($scope)");
+//    console.log(scope);
 
-        }
-    };
+        } else {
+//            scope.$watch(url, function(){
+//                //url = navSrv.getHtml4Id($rootScope, $location.path(), navSrv);
+//                scope.navSrv.getHtml($http, $compile, scope, ele, url, callback);
+//                
+//    // Test
+//    console.log("9 - Directive-eaAddHtml-Link URL==='' - watch(url) ($scope)");
+//    console.log(scope);
+//                
+//            }); // $watch
+            
+        };
+    }
+  };
 };
 
 

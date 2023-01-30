@@ -10,13 +10,15 @@ var eaFooterDirective = function ($rootScope) {
     template: '<div ea-add-html = "{{footerUrl}}"></div>',
     link: function (scope, ele, attrs) {
         
-        // Test
-        console.log("7 - Directive-eaFooter-Link($scope)");
-        console.log(scope);        
-
-//        ele.ready(function(){
-//            scope.$apply();
-//        });        
+        scope.scope_eaFooterDirective = scope.url;    
+        
+//        // Test
+//        console.log("7 - Directive-eaFooter-Link($scope)");
+//        console.log(scope);        
+//
+////        ele.ready(function(){
+////            scope.$apply();
+////        });        
     }       
   };
 };

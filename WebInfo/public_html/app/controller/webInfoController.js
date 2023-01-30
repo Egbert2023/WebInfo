@@ -1,8 +1,6 @@
 'use strict';
 
 var webInfoController =  function($rootScope, $scope, navSrv) {
-
-    $scope.Name = "webInfoController";
     $scope.navSrv = navSrv;
     $scope.isNew = function(d) {
         var ret = false;
@@ -15,11 +13,11 @@ var webInfoController =  function($rootScope, $scope, navSrv) {
         return ret;
     };
    
-    $rootScope.firstCall = true;
+    $scope.scope_webInfoController = $scope.url;    
         
-    // Test
-    console.log("1 - webInfoController($scope)");
-    console.log($scope);
+//    // Test
+//    console.log("1 - webInfoController($scope)");
+//    console.log($scope);
    
     return false;
 };
