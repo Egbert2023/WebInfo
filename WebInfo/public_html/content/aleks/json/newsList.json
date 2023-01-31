@@ -2,7 +2,7 @@
    ["By default all News params are strings.",
     "img, body and imgBody are string arrays with the same length in one object (new).",
     "default is length===1)",
-    "newTo:      The last  day when this new will be show.",
+    "newTo:      The last day when this new will be show in 'news' but can show in 'new/archiv'.",
     "--------------------------------------------------------------------------",
     "title:      Title of new (large letters)",
     "newFrom:    The first day when this new will be show. (little letters)",
@@ -34,8 +34,8 @@
             "newFrom": "2022-07-30",
             "newTo": "2022-09-30",
             "title": "Wir wollen nach Lissabon", 
-            "body": ["Corona hatte uns einen Strich durch die Rechnung gemacht. Jetzt planen wir endlich den Triop nach Lissabon."], 
-            "img": ["content/aleks/pictures/Lissabon-Torre-de-Belem.jpg"],
+            "body": ["Corona hatte uns einen Strich durch die Rechnung gemacht. Jetzt planen wir endlich den Trip nach Lissabon."], 
+            "img": ["content/aleks/pictures/travel/Lissabon-Elevator.jpg"],
             "imgBody": [],
             "href": ""
         }

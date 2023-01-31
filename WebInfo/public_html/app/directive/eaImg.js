@@ -10,11 +10,8 @@ var eaImg = function ( $rootScope ) {
         scope: true,
 
         controller: function($scope) {
-            
             $scope.scope_eaImgDirektive = $scope.url;    
-            
-            /* https://www.w3schools.com/howto/howto_js_lightbox.asp */
-                       
+
             // Open the Modal
             $scope.openModal = function() {
                 var opt = {
@@ -24,13 +21,10 @@ var eaImg = function ( $rootScope ) {
                     imgBoxIdx: $scope.imgBoxIdx
                 };
                 $rootScope.$emit("openModalImgBox", opt);
-                // $rootScope.$broadcas("openModalImgBox", $scope.imgBoxKey);
             };
-                        
         },   // controller
         
         link: function (scope, ele, attrs) {      
-            
             scope.imgBoxKey = attrs.imgBoxKey;
             if(scope.imgBoxKey === undefined) {
                 scope.imgArr = [];
