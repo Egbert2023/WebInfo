@@ -2,20 +2,25 @@
     [
        {
            "key": "home",
+           "pic": "url(content/aleks/pictures/travel/Schwerin-Schloss.jpg)"
+       },
+
+        {
+           "key": "new",
            "pic": "url(content/aleks/pictures/travel/Prerow-Seebrücke.jpg)"
        },
        {
            "key": "srv",
            "pic": "url(content/aleks/pictures/travel/Lissabon-Brücke.jpg)"
        },
-       {
-           "key": "new",
-           "pic": "url(content/aleks/pictures/travel/Schwerin-Schloss.jpg)"
-       },
 
        {
            "key": "trav",
-           "pic": "url(content/aleks/pictures/travel/Lissabon-Praca-do-Comercio-vom Wasser.jpg)"
+           "pic": "url(content/aleks/pictures/travel/Lissabon-Praca-do-Comercio-vom-Wasser.jpg)"
+       },
+       {
+           "key": "prog",
+           "pic": "url(content/aleks/pictures/prog/Directive-eaImg.jpg)"
        }
       
     ]

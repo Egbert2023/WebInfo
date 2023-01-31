@@ -1,5 +1,17 @@
 {"entries":
 [
+        {   "imgKey": "Back",
+            "imgBodyList": ["Schloss in Schwerin, der Landeshauptstadt von Mecklenburg Vorpommern",
+                    "Seebrücke in Prerow auf der Halbinsel Darß",
+                    "Die Brücke 'Ponte 25 de Abril' überspannt den Tejo in Lissabon",
+                    "'Praça do Comércio' einer der wichtigsten Plätze im Lissaboner Stadteil Baixa und ein Blick auf die Alfama, die Altstadt.",
+                    "Ein Programmier-Beispiel, die AngularJs Directive 'eaImg'"],
+            "imgList": ["content/aleks/pictures/travel/Schwerin-Schloss.jpg",
+                        "content/aleks/pictures/travel/Prerow-Seebrücke.jpg",
+                        "content/aleks/pictures/travel/Lissabon-Brücke.jpg",
+                        "content/aleks/pictures/travel/Lissabon-Praca-do-Comercio-vom-Wasser.jpg",
+                        "content/aleks/pictures/prog/Directive-eaImg.jpg"]
+        },
         {   "imgKey": "anyOther",
             "imgBodyList": [],
             "imgList": []

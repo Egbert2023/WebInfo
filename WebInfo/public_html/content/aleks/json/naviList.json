@@ -5,17 +5,21 @@
  
         {"id":"navTravel", "label": "Reisen", "href": "#!/trav",  "url": "content/aleks/html/reisen.html",
             "subm": [ {"label": "Lissabon", "href": "#!/trav/lsb", "url": "content/aleks/html/lissabon.html"},
-                    {"label": "Prerow", "href": "#!/trav/pre", "url": "content/fegh/aleks/prerow.html"}                                                        
+                    {"label": "Prerow", "href": "#!/trav/pre", "url": "content/aleks/html/prerow.html"}
                                                ]},
+        {"id":"navProg", "label": "Programmieren", "href": "#!/prog", "url": "content/aleks/html/prog.html",
+            "subm": []},
                                            
         {"id":"navNews", "label": "News", "href": "#!/new", "url": "app/template/news/news.html", 
             "subm": [ {"label": "Archiv", "href": "#!/new/1", "url": "app/template/news/newArchiv.html"}]},
         
         {"id":"navService", "label": "Service", "href": "#!/srv", "url": "content/aleks/html/service.html",
-            "subm": [ {"label": "Kontakt", "href": "#!/srv/kon", "url": "content/aleks/html/srv/kontakt.html"},
-                    {"label": "SiteMap", "href": "#!/srv/smap", "url": "app/template/siteMap.html"}, 
-                    {"label": "Hintergrund Bilder", "href": "#!/srv/pic", "url": "content/aleks/srv/backGround.html"}
-                                             ]}                                              
+            "subm": [ {"label": "SiteMap", "href": "#!/srv/smap", "url": "app/template/sitemap.html"}, 
+                    {"label": "Cookies", "href": "#!/srv/cookies", "url": "content/aleks/html/CookiesNotRequired.html"}, 
+                    {"label": "Impressum", "href": "#!/srv/imp", "url": "content/aleks/html/impressum.html"}, 
+                    {"label": "Datenschutz", "href": "#!/srv/ds", "url": "content/aleks/html/datenschutz.html"}, 
+                    {"label": "Hintergrund Bilder", "href": "#!/srv/pic", "url": "content/aleks/html/srv/backGround.html"}
+            ]}                                              
         
     ]
 }
