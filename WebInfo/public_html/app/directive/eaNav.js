@@ -5,17 +5,11 @@ var eaNavDirektive = function($rootScope, $http, $location, eaNavSrv) {
         restrict: 'E',
         templateUrl: "app/template/navbar.html",
         controller: function($rootScope, $scope, $http) {
-            
-            
-            
             $rootScope.$on("LoadJsonFile-naviList", function(evt, opt) {
-                                
                 $scope.scope_eaNavDirektive_Controller = $scope.url;    
-                
                 $scope.naviList = $rootScope.naviList;
-                
                 $scope.url = $scope.navSrv.getHtml4Id($rootScope, $location.path(), eaNavSrv);
-                
+                                
 //                // Test
 //                console.log("4 - Directive-eaNavDirektive-Controller-$on('LoadJsonFile-naviList')($scope)");
 //                console.log($scope);
@@ -24,6 +18,16 @@ var eaNavDirektive = function($rootScope, $http, $location, eaNavSrv) {
         },      
         
         link: function (scope, element, attr) {
+            
+            // /pictures/navLogo.gif
+            let navLogo = attr.navLogo;
+            scope.$parent.navLogo = scope.$parent.contentFolder + navLogo;
+            
+            // Test
+            console.log("4.5 - Directive-eaNavDirektive-link($scope)");
+            console.log(scope);
+            
+            
             scope.isActive = function(nav) {
                 return nav.href.indexOf(scope.location) === 1;
             };
