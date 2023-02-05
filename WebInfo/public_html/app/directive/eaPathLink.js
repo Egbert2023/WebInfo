@@ -28,7 +28,7 @@ var eaPathLinkDirective = function ($rootScope, $location, navSrv) {
 //        // Test
 //        console.log("8 - Directive-eaPathLink-Controller($scope)");
 //        console.log($scope);        
-//        
+        
     },
 
     link: function (scope, ele, attrs) {        
