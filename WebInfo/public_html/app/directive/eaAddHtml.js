@@ -24,13 +24,19 @@ var eaAddHtmlDirective = function ($rootScope, $location, $compile, $http, navSr
         if(url!=="") {         
             scope.navSrv.getHtml($http, $compile, scope, ele, url, callback);
             
-//    // Test
-//    console.log("6 - Directive-eaAddHtml-Link URL!==''($scope)");
-//    console.log(scope);
+    // Test
+    console.log("6 - Directive-eaAddHtml-Link URL!==''($scope)");
+    console.log(scope);
 
         } else {
-//            scope.$watch(url, function(){
-//                //url = navSrv.getHtml4Id($rootScope, $location.path(), navSrv);
+            // event 'ReadUrlIsReady' is fired when url is readed.
+            $rootScope.$on("ReadUrlIsReady", function(evt, opt) {
+                scope.navSrv.getHtml($http, $compile, scope, ele, opt, callback);
+            });
+
+        }
+            
+//            scope.$watch(scope.urlIsReaded, function(){
 //                scope.navSrv.getHtml($http, $compile, scope, ele, url, callback);
 //                
 //    // Test
@@ -39,7 +45,8 @@ var eaAddHtmlDirective = function ($rootScope, $location, $compile, $http, navSr
 //                
 //            }); // $watch
             
-        };
+//        }; // if(url!=="")
+        
     }
   };
 };
