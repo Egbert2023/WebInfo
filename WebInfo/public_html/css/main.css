@@ -102,7 +102,10 @@ textarea {
 /* ea for Egbert Aleksander 
 url(../fotos/Solardach-mit-Blume.jpg) center / cover no-repeat fixed;
 */
-
+.eaExtern {
+    color: red;
+    font-weight:  bold;
+}
 .eaGlassMorph{
     color: #224;
     /*background-image: url(../fotos/Solardach-mit-Blume.jpg);*/
