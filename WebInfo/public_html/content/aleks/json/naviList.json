@@ -17,7 +17,7 @@
             "subm": [ {"label": "SiteMap", "href": "#!/srv/smap", "url": "app/template/sitemap.html"}, 
                     {"label": "Cookies", "href": "#!/srv/cookies", "url": "content/aleks/html/CookiesNotRequired.html"}, 
                     {"label": "Impressum", "href": "#!/srv/imp", "url": "content/aleks/html/impressum.html"}, 
-                    {"label": "Datenschutz", "href": "#!/srv/ds", "url": "content/aleks/html/datenschutz.html"}, 
+                    {"label": "Datenschutz", "href": "#!/srv/ds", "url": "content/aleks/html/datenschutz2.html"}, 
                     {"label": "Hintergrund Bilder", "href": "#!/srv/pic", "url": "content/aleks/html/srv/backGround.html"}
             ]}                                              
         
