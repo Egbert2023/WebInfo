@@ -12,6 +12,23 @@
                         "content/aleks/pictures/travel/Lissabon/Lissabon-Praca-do-Comercio-vom-Wasser.jpg",
                         "content/aleks/pictures/prog/Directive-eaImg.jpg"]
         },
+        {   "imgKey": "OTour",
+            "imgBodyList": ["Danzig vom Wasser",
+                            "Das Kranentor"],
+            "imgList": ["content/aleks/pictures/travel/Ostseetour/Danzig-2013-vom-Wasser.jpg",
+                        "content/aleks/pictures/travel/Ostseetour/Danzig-2013-vom-Wasser2",
+                        "content/aleks/pictures/travel/Ostseetour/Helsinki-2013-Felsendom",
+                        "content/aleks/pictures/travel/Ostseetour/Helsinki-2013-Sebelius-Denkmal",
+                        "content/aleks/pictures/travel/Ostseetour/Kopenhagen-2013-Innenstadt",
+                        "content/aleks/pictures/travel/Ostseetour/Kopenhagen-2013-Meerjungfrau",
+                        "content/aleks/pictures/travel/Ostseetour/Kopenhagen-2013-der-runde-Turm",
+                        "content/aleks/pictures/travel/Ostseetour/Petersburg-2013-Katarinenpalast",
+                        "content/aleks/pictures/travel/Ostseetour/Stockholm-2013-Altstadt",
+                        "content/aleks/pictures/travel/Ostseetour/Stockholm-2013-Springbrunnen-Stortorget-Square",
+                        "content/aleks/pictures/travel/Ostseetour/Tallin-2013-Altstadt",
+                        "content/aleks/pictures/travel/Ostseetour/Tallin-2013-Blick-von-der-Oberstadt" ]
+        },
+        
         {   "imgKey": "anyOther",
             "imgBodyList": [],
             "imgList": []
