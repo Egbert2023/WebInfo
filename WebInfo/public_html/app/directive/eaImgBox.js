@@ -97,7 +97,7 @@ var eaImgBox = function ($compile, $rootScope) {
                 let docNum = document.getElementById(idNum);
                 let docImg = document.getElementById(idImg);
                 if(docNum !== null) {docNum.style.display = "block";}
-                if(docImg !== null) {docImg.style.display = "block";}
+                if(docImg !== null) {docImg.style.display = "flex";}
                 return false;
             };
   
@@ -112,14 +112,14 @@ var eaImgBox = function ($compile, $rootScope) {
                 for(let i = 0; i<len; i++) {
                     let idx = i+1;
                     let ht = '<div id="imgNumber' + idx.toString() + '" class="numbertext eaImgBoxItem">' + idx.toString() + ' / ' + len.toString() + '</div>' + 
-                            '<img id="imgPicture' + idx.toString() + '" ng-src="' + imgArr[i] + '" class="eaImgBoxItem img-fluid" >';                            
+                            '<img id="imgPicture' + idx.toString() + '" ng-src="' + imgArr[i] + '" class="eaImgBoxItem img-fluid mx-auto" >';                            
                     iHtml = iHtml + ht;
                 };
                 iHtml = iHtml + '</div>';
 
                 iHtml = iHtml + '<!-- Next/previous controls -->' + 
-                '<a class="prev" ng-click="plusSlides(-1)">&#10094;</a>' +
-                '<a class="next" ng-click="plusSlides(1)">&#10095;</a>' ;
+                '<a class="prev float-left" ng-click="plusSlides(-1)">&#10094;</a>' +
+                '<a class="next float-right" ng-click="plusSlides(1)">&#10095;</a>' ;
 
                 iHtml = iHtml + '</div>';
                 
