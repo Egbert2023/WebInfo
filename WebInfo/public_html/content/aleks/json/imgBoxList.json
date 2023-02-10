@@ -39,6 +39,18 @@
                         "content/aleks/pictures/travel/Ostseetour/Tallin-2013-Blick-von-der-Oberstadt.jpg" ]
         },
         
+        {   "imgKey": "math",
+            "imgBodyList": ["So war die Tastatur aufgebaut. Irgendwie rückwärts."],
+            "imgList": ["content/aleks/pictures/math/Tastatur-Konkret-Taschenrechner.jpg",
+                        "content/aleks/pictures/math/Tastatur-Konkret-Taschenrechner-1397.jpg",
+                        "content/aleks/pictures/math/Tastatur-Konkret-Taschenrechner-6523.jpg",
+                        "content/aleks/pictures/math/Formalisierung-11.jpg",
+                        "content/aleks/pictures/math/Grundformel.jpg",
+                        "content/aleks/pictures/math/Formel-1.jpg",
+                        "content/aleks/pictures/math/Formel-2.jpg",
+                        "content/aleks/pictures/math/Formel-3.jpg"]
+        },
+        
         {   "imgKey": "anyOther",
             "imgBodyList": [],
             "imgList": []

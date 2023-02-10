@@ -1,0 +1,109 @@
+<div>
+    <div class="eaTitle">
+        Mathematik mit der Elf
+    </div>
+    <div ng-init="accordion=0">   
+
+        <!-- accordion = 0 -->
+        <div ng-class="{active:accordion===0}">
+            <div class="accordion">
+                <a href="" ng-click="accordion = (accordion!==0)? 0:-1">            
+                    <div class="eaSubTitle">
+                    Die Geschichte
+                    </div>
+                </a>
+            </div>
+
+            <div ng-show="accordion===0">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div ea-img data-img-box-idx="1" data-img-box-key = "math"></div>
+                </div>    
+                <div class="col-lg-8">
+                    <p>
+In den 70-ger Jahren studierte ich Mathematik und Physik, um Lehrer zu werden. In dieser Zeit gab es die ersten Taschenrechner. 
+Die konnten nicht viel, waren sehr teuer aber irgendwie bekam man sie doch in die Hände. 
+Ehrlich gesagt waren es keine großen Rechenhilfen als viel mehr interessante technische Spielzeuge. 
+So fanden wie damals einen dummen Fehler, der mit dem verwendeten Chip zu tun hatte. 
+Wenn man die 10 durch 3 teilte, kam 9,9999999 herraus. Das war soweit noch OK.
+Addierte man jetzt die 10 hinzu war das Ergebnis 120. 
+Diesen Fehler haben natürlich nicht nur wir gefunden: 
+<a class="eaExtern" href="https://www.tiffe.de/robotron/SBKAE/k600+B3-19Mv2.pdf">vgl.</a>.
+                </div>
+                
+                <div class="col-lg-4">
+                    <div ea-img data-img-box-idx="2" data-img-box-key = "math"></div>
+                    <div ea-img data-img-box-idx="3" data-img-box-key = "math"></div>
+                </div>    
+                <div class="col-lg-8">
+                    <p>
+Das Vertrauen, in die Richtigkeit der Ergebnisse war dadurch natürlich begrenzt.
+Bei der ganzen Spielerei mit dem Taschenrechner bin ich auf ein interessantes Phänomen gestoßen.
+Wenn man wie in den beiden Beispielen eine 4-stellige Zahl, wie ein Rechteck auf der Taqstatur tippt, ist diese immer durch 11 teilbar.
+Das war interessant aber war es auch immer korrekt? Vielleicht hat dieser Wunderrechner einfach mal die Nachkommastellen verschluckt.
+Aber immer, wenn ich eine neue Zahl tippte, war sie durch 11, ohne Rest teilbar.
+                    </p>
+                    <p>
+Die Jahre vergingen und in den 90-ger Jahren viel mir dieses Phänomen wieder ein. Ich probierte es ein par mal aus und die es war immer noch durch 11 teilbar.
+Nun gimg ich jedoch davon aus, dass die aktuellen Rechner durchaus korrekt rechneten. 
+Also musste man das ganze doch irgendwie beweisen können.
+                    </p>
+                </div>                
+            </div>
+
+        </div>
+        </div>
+
+        <!-- accordion = 1 -->
+        <div ng-class="{active:accordion===1}">
+            <div class="accordion">
+                <a href="" ng-click="accordion = (accordion!==1)? 1:-1">            
+                    <div class="eaSubTitle">
+                    Der Beweis
+                    </div>
+                </a>
+            </div>
+
+            <div ng-show="accordion===1">
+            <div class="row">
+                <div class="col-lg-4">                    
+                    <div ea-img data-img-box-idx="4" data-img-box-key = "math"></div>                                            
+                </div>    
+                <div class="col-lg-8">
+                    
+Zunächst musste das Phänomen irgendwie formalisiert werden. Also durch eine Formel mit möglichst wenigen Parametern ausgedrückt werden.
+Das Prinzip ist in dem Bild zu erkennen. Man legt zwei Zahlenreihen untereinander und verschiebt eine gegen die andere.
+Jetzt wird die 4-stellige Zahl wie folgt gebildet: 
+                    <ul>
+                        <li>Es wird in der oberen Zeile eine Zahl ausgewählt. (1)</li>
+                        <li>Addiert man nun die Zahl, um die verschoben wurde zur ersten dazu, entsteht die zweite Zahl (x+2=3)</li>
+                        <li>Nun bewegt man sich auf der Zahlenreihe einen beliebigen horizontalen Schritt nach links oder rechts (+ oder -) (3+6=9)</li>
+                        <li>Die letzte Zahl unserer vierstelligen Zahl entsteht nun, in dem man zur ersten Zahl den horizontalen Schritt von ebend gerade addiert. (1+6=7)</li>
+                        <li>Alternativ hätte man auch die Verschiebung von der letzten Zahl subtrahieren können. (9-2=7)</li>
+                    </ul>
+Die erste Möglichkeit wollen wir weiter verfolgen.<br/>
+Mit folgender Formel kann jede auf die beschriebene Weise erzeugte Zahl dargestellt werden. Dabei
+ist B die Basis des verwendeten Zahlensystems (im einfachen Fall das Dezimalsystem, also B=10).
+                    <div ea-img data-img-box-idx="5" data-img-box-key = "math"></div>
+Was jetzt noch bleibt, ist der Nachweis, dass jede dieser Zahlen durch 11 (wie auch immer diese Zahl in dem gewählten Zahlensysten genannt wird) teilbar ist.
+Das bedeutet, man muss (B+1) ausklammern können.
+                    <p>
+Die obige Zeile kann wie folgt umgewandelt werden:
+<div ea-img data-img-box-idx="6" data-img-box-key = "math"></div>
+<div ea-img data-img-box-idx="7" data-img-box-key = "math"></div>
+<div ea-img data-img-box-idx="8" data-img-box-key = "math"></div>
+                    </p>
+Die letzte Zeile zeigt das gewünschte Ergebnmis. Der Faktor (B+1) konnte ausgeklammert werden.                    
+                </div>
+            </div>
+
+        </div>
+        </div>
+
+
+
+
+    </div>
+
+    
+</div>
