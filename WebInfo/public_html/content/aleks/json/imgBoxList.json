@@ -5,11 +5,13 @@
                     "Seebrücke in Prerow auf der Halbinsel Darß",
                     "Die Brücke 'Ponte 25 de Abril' überspannt den Tejo in Lissabon",
                     "'Praça do Comércio' einer der wichtigsten Plätze im Lissaboner Stadteil Baixa und ein Blick auf die Alfama, die Altstadt.",
+                    "Sonnenuntergang an der Ostsee in Prerow auf dem Darß",
                     "Ein Programmier-Beispiel, die AngularJs Directive 'eaImg'"],
             "imgList": ["content/aleks/pictures/travel/Schwerin/Schwerin-Schloss.jpg",
                         "content/aleks/pictures/travel/Ostsee/Prerow-Seebrücke.jpg",
                         "content/aleks/pictures/travel/Lissabon/Lissabon-Brücke.jpg",
                         "content/aleks/pictures/travel/Lissabon/Lissabon-Praca-do-Comercio-vom-Wasser.jpg",
+                        "content/aleks/pictures/hobby/Sonnenuntergang.jpg",
                         "content/aleks/pictures/prog/Directive-eaImg.jpg"]
         },
         {   "imgKey": "OTour",
@@ -50,6 +52,15 @@
                         "content/aleks/pictures/math/Formel-2.jpg",
                         "content/aleks/pictures/math/Formel-3.jpg"]
         },
+        
+        {   "imgKey": "Garten",
+            "imgBodyList": ["Futterhaus",
+                            "Ein zu Hause für Meisen",
+                            "Nach der Größe des Einfluglöches (32mm) sollen es Blaumeisen sein."],
+            "imgList": ["content/aleks/pictures/hobby/Futterhaus-mit-Meise.jpg",
+                        "content/aleks/pictures/hobby/Meisen-Vogelhaus-im-Garten.jpg",
+                        "content/aleks/pictures/hobby/Meisen-Vogelhaus.jpg"]
+        },        
         
         {   "imgKey": "anyOther",
             "imgBodyList": [],
