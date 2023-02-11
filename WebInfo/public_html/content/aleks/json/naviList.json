@@ -19,8 +19,9 @@
                          {"label": "Tour Norwegen", "href": "#!/trav/eu/tn", "url": "content/aleks/html/Eu/Tour-Norwegen.html"},
                          {"label": "Tour Ostsee", "href": "#!/trav/eu/to", "url": "content/aleks/html/Eu/Tour-Ostsee.html"}]
                  }]},
-        {"id":"navProg", "label": "Programmieren", "href": "#!/prog", "url": "content/aleks/html/prog.html",
-            "subm": []},
+        {"id":"navHoby", "label": "Hobbies", "href": "#!/prog", "url": "content/aleks/html/Hobbies.html",
+            "subm": [ {"label": "Programmieren", "href": "#!/prog/p", "url": "content/aleks/html/prog.html"},
+                      {"label": "Mathematik", "href": "#!/prog/m", "url": "content/aleks/html/Mathe.html"}]},
                                            
         {"id":"navNews", "label": "News", "href": "#!/new", "url": "app/template/news/news.html", 
             "subm": [ {"label": "Archiv", "href": "#!/new/1", "url": "app/template/news/newArchiv.html"}]},
