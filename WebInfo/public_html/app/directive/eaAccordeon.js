@@ -30,29 +30,31 @@ var eaAccCoat = function ($compile, $rootScope) {
                 return sub;    
             };            
             
-            let setTransclude = function(html) {
-                let htmlAll = getInnerFromTag(html, "ea-acc-coat");
-                let htmlKey = "";
-                let len = 0;
-                let end = 0;
-            // Get all innerHtml's from the original Html code, 
-            // push it into the $rootScope.accKeysHtm array
-                do{
-                    htmlKey = getInnerFromTag(htmlAll, "ea-acc-key");
-                    len = htmlKey.length;
-                    if(len > 0) {
-                       $rootScope.accKeysHtm.push(htmlKey);
-                       // '<ea-acc-key data-title="...">'.length + len + '</ea-acc-key>'.length
-                       end = htmlAll.indexOf("</ea-acc-key") + 13;
-                       htmlAll = htmlAll.substring(end);
-                       //htmlAll = htmlAll.substring(len);
-                    }
-                } while (len > 0);
-                return false;
-            };
-            let htm = $scope.$parent.htm;
-            $rootScope.accKeysHtm = [];
-            setTransclude(htm);
+/*            
+//            let setTransclude = function(html) {
+//                let htmlAll = getInnerFromTag(html, "ea-acc-coat");
+//                let htmlKey = "";
+//                let len = 0;
+//                let end = 0;
+//            // Get all innerHtml's from the original Html code, 
+//            // push it into the $rootScope.accKeysHtm array
+//                do{
+//                    htmlKey = getInnerFromTag(htmlAll, "ea-acc-key");
+//                    len = htmlKey.length;
+//                    if(len > 0) {
+//                       $rootScope.accKeysHtm.push(htmlKey);
+//                       // '<ea-acc-key data-title="...">'.length + len + '</ea-acc-key>'.length
+//                       end = htmlAll.indexOf("</ea-acc-key") + 13;
+//                       htmlAll = htmlAll.substring(end);
+//                       //htmlAll = htmlAll.substring(len);
+//                    }
+//                } while (len > 0);
+//                return false;
+//            };
+//            let htm = $scope.$parent.htm;
+//            $rootScope.accKeysHtm = [];
+            //setTransclude(htm);
+ */
         },   // controller
         
         link: function (scope, ele, attrs) {      
@@ -65,16 +67,22 @@ var eaAccKey = function ($compile, $rootScope) {
     return {
         restrict: 'E',
         require : '^eaAccCoat',
-
-        template: "<div class='accordion'>" +
-                "<a href='' ng-click='setVisible(this)'>" + 
-                "<div class='eaSubTitle'>{{title}}</div></a>" + 
-                "<div ng-show='vis_{{accIdx}}'>" + 
-                "<div class='ea-transclude'>" + 
-                '<ng-transclude>XX</ng-transclude>' +
-                "</div></div></div>",
-        
         transclude: true,
+        //transclude: false,
+        template: "<div class='accordion'>" +
+                    "<a href='' ng-click='setVisible(this)'>" + 
+                        "<div class='eaSubTitle'>{{title}}" + 
+                            "<span ng-show='vis_{{accIdx}}' style='float: right'>-</span>" + 
+                            "<span ng-show='!vis_{{accIdx}}' style='float: right'>+</span>" + 
+                        "</div>" + 
+                    "</a>" + 
+                    "<div ng-show='vis_{{accIdx}}'>" + 
+                        "<ea-transclude>" + 
+                            "<ng-transclude></ng-transclude>" +
+                        "</ea-transclude>" + 
+                    "</div>" + 
+                  "</div>",
+
         // local scope
         scope: true,
 
@@ -105,17 +113,15 @@ var eaAccKey = function ($compile, $rootScope) {
             //scope.accId = attrs.accId;
             scope.title = attrs.title;
             
+/*            
             // put the code in the right place in the html document and run $compile()
-            let newInnerHtml = $rootScope.accKeysHtm[0];
-            let el = ele.find('ea-transclude');
-            el = el.innerHtml;
-            
-            // Test
-            console.log("ele");
-            console.log(ele);
-            
+//            let newInnerHtml = $rootScope.accKeysHtm[0];
+//            let el = ele.find('ea-transclude');
+//            //el = el.innerHtml;
+//            let newEle = el.html(el);
+//            $compile(newEle.contents())(scope);
             //el.replaceWith($compile(newInnerHtml)(scope));
-            
+*/          
         }  // link
     };  // return
 };   // eaAccKey()
