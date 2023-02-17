@@ -23,7 +23,10 @@ webInfo.directive('eaPathLink', ['$rootScope', '$location', 'eaNavSrv', eaPathLi
 webInfo.directive('eaFooter', ['$rootScope', eaFooterDirective]).$inject = ['$scope'];
 webInfo.directive('eaImgBox', ['$compile', '$rootScope', eaImgBox]).$inject = ['$scope'];
 webInfo.directive('eaImg', ['$rootScope', eaImg]).$inject = ['$scope'];
+webInfo.directive('eaAccCoat', ['$compile', '$rootScope', eaAccCoat]).$inject = ['$scope'];
+webInfo.directive('eaAccKey', ['$compile', '$rootScope', eaAccKey]).$inject = ['$scope'];
 
+// $compile, $rootScope
 webInfo.config(['$routeProvider', eaNavConfig]);
 
 webInfo.controller('webInfoController', ['$rootScope', '$scope', 'eaNavSrv', webInfoController])

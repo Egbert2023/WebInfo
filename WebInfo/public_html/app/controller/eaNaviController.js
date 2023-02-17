@@ -30,7 +30,14 @@ var eaNaviController =  function($rootScope, $scope, $location, eaNavSrv) {
             $scope.objBg.find(o => o.key === pathArr[1]).pic : "";
         let ngView = document.getElementById("ng-view");
         if(ngView!==null) {
-            if(ngView.style!==null) {ngView.style.backgroundImage = bg;}}        
+            if(ngView.style!==null) {
+                if(bg.substring(0,1) === '#') {
+                    ngView.style.backgroundColor = bg;
+                } else {
+                    ngView.style.backgroundImage = bg;
+                }
+            }
+        }
     };
     if($rootScope.isLoaded_objBg) {
         $scope.objBg = $rootScope.objBg;
