@@ -1,5 +1,8 @@
 {"entries":
     [
+        { 
+            "comment": "you can use püictures ('url(content/...') or colors ('#??????' only in Hex style) for background."
+        },
        {
            "key": "home",
            "pic": "url(content/aleks/pictures/travel/Schwerin/Schwerin-Schloss.jpg)"
@@ -20,7 +23,7 @@
        },
        {
            "key": "hobby",
-           "pic": "url(content/aleks/pictures/hobby/Sonnenuntergang.jpg)"
+           "pic": "#f2ffe6"
        },
        {
            "key": "prog",
