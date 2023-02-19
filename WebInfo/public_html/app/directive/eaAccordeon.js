@@ -18,6 +18,8 @@ var eaAccCoat = function ($compile, $rootScope) {
             $scope.accIdx = 0;
             $scope.vis_1 = true;
             
+            $scope.scope_eaAccCoat_controller = 0;
+            
             var getInnerFromTag = function(html, tag) {
                 let htmlWork = html;
                 let start = htmlWork.indexOf("<" + tag);
@@ -70,15 +72,14 @@ var eaAccKey = function ($compile, $rootScope) {
         //transclude: true,
         transclude: false,
         template: "<div class='eaContent'>" +
-                    "<a href='' ng-click='setVisible(this)'>" + 
-                        "<div class='eaSubTitle'>{{title}}" + 
+                    "<a class='eaNoDeco' href='' ng-click='setVisible(this)'>" + 
+                        "<div class='eaSubTitle bold'>{{title}}" + 
                             "<span ng-show='vis_{{accIdx}}' style='float: right'>-</span>" + 
                             "<span ng-show='!vis_{{accIdx}}' style='float: right'>+</span>" + 
                         "</div>" + 
                     "</a>" + 
                     "<div ng-show='vis_{{accIdx}}'>" + 
                         "<ea-transclude>" + 
-                            "X" +
                         "</ea-transclude>" + 
                     "</div>" + 
                   "</div>",
@@ -94,6 +95,14 @@ var eaAccKey = function ($compile, $rootScope) {
                 $scope["vis_1"] = true;
             };            
             
+            $scope.scope_eaAccKey_controller = idx;
+            
+            $rootScope.$on("setVisibleToNo", function(evt, opt) {
+                if(opt!==idx) {
+                    $scope["vis_" + idx.toString()] = false;
+                }                
+            });
+            
             $scope.setVisible = function(t) {
                 let idx = t.accIdx;
                 let varName = "vis_";
@@ -105,6 +114,9 @@ var eaAccKey = function ($compile, $rootScope) {
 //                    for(let i=1; i<$scope.$parent.$parent.accIdx; i++) {
 //                        $scope[varName + i.toString()] = false;
 //                    };
+
+                    $rootScope.$emit("setVisibleToNo", idx);
+                                        
                     $scope[varName + idx.toString()] = true;
                 };
                 return false;
