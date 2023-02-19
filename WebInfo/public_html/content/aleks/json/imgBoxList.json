@@ -63,7 +63,7 @@
         },        
         {   "imgKey": "prog",
             "imgBodyList": ["Struktur der Index.html. Nur diese Webseite wird angezeigt. Die Inhalts-Webseiten werden in den Div-Tag 'ng-view' dynamisch eingefügt."],
-            "imgList": ["content/aleks/pictures/prog/AngularJs-Index.jpg"]
+            "imgList": ["content/aleks/pictures/prog/AngularJs-Index-mit-HTML.jpg"]
         },
         
         {   "imgKey": "anyOther",

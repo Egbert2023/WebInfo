@@ -146,7 +146,7 @@ textarea {
 accordion
 http://jsfiddle.net/shanidkv/k8g5yehs/
 */
-.accordion a, .accA{
+.accordion a{
     padding: 5px;
     text-decoration: none;    
     margin-bottom: 1px;
@@ -204,6 +204,9 @@ http://jsfiddle.net/shanidkv/k8g5yehs/
 }
 .bold {
     font-weight:  bold;
+}
+.eaNoDeco{
+    text-decoration: none;
 }
 
 body {
