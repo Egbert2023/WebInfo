@@ -125,9 +125,9 @@ var eaAccKey = function ($compile, $rootScope) {
             $compile(el.contents())(scope);
             
             if(scope.txtLen){
-                let txt = el.InnerText;
+                let txt = el[0].innerText;
                 if(txt) {
-                    scope.txt = el.innerText.substring(0, parseInt(scope.txtLen)) + " ...";
+                    scope.txt = txt.substring(0, parseInt(scope.txtLen)) + " ...";
                 }
             }
         }  // link
