@@ -30,8 +30,7 @@ var eaAccCoat = function ($compile, $rootScope) {
                 let sub = htmlWork.substring(start, end);
                 
                 return sub;    
-            };            
-            
+            };       
             
             let setTransclude = function(html) {
                 let htmlAll = getInnerFromTag(html, "ea-acc-coat");
@@ -69,7 +68,6 @@ var eaAccKey = function ($compile, $rootScope) {
     return {
         restrict: 'E',
         require : '^eaAccCoat',
-        //transclude: true,
         transclude: false,
         template: "<div class='eaContent'>" +
                     "<a class='eaNoDeco' href='' ng-click='setVisible(this)'>" + 
@@ -78,15 +76,13 @@ var eaAccKey = function ($compile, $rootScope) {
                             "<span ng-show='!vis_{{accIdx}}' style='float: right'>+</span>" + 
                         "</div>" + 
                     "</a>" + 
+                    "<div ng-show='!vis_{{accIdx}}'>{{txt}}</div>" + 
                     "<div ng-show='vis_{{accIdx}}'>" + 
                         "<ea-transclude>" + 
                         "</ea-transclude>" + 
                     "</div>" + 
                   "</div>",
-
-        // local scope   -- <ng-transclude></ng-transclude>
         scope: true,
-
         controller: function($scope, $rootScope) {
             let idx = $scope.$parent.$parent.accIdx + 1;
             $scope.$parent.$parent.accIdx = idx;
@@ -110,13 +106,7 @@ var eaAccKey = function ($compile, $rootScope) {
                 if($scope[varName + idx.toString()]===true) {
                    $scope[varName + idx.toString()]=false; 
                 } else {
-                    // every accKey has their own scope
-//                    for(let i=1; i<$scope.$parent.$parent.accIdx; i++) {
-//                        $scope[varName + i.toString()] = false;
-//                    };
-
                     $rootScope.$emit("setVisibleToNo", idx);
-                                        
                     $scope[varName + idx.toString()] = true;
                 };
                 return false;
@@ -124,28 +114,22 @@ var eaAccKey = function ($compile, $rootScope) {
         },   // controller
         
         // scope,element,attrs,ctrl, transclude
-        link: function (scope, ele, attrs, ctrl, transclude) {      
-            //scope.accId = attrs.accId;
+        link: function (scope, ele, attrs) {      
             scope.title = attrs.title;
+            scope.txtLen = attrs.txtLen;
             
-//            // Test
-//            console.log("eaAccKey - link (ele, el)");
-//            console.log(ele);
-
             // put the code in the right place in the html document and run $compile()
             let newInnerHtml = scope.$parent.$parent.accKeysHtm[scope.accIdx - 1];
             let el = ele.find('ea-transclude');
-            //el.innerHTML = newInnerHtml;
             el.html(newInnerHtml);
-            
-//            // Test
-//            console.log(el);
-            
-            //let newEle = el.html();
             $compile(el.contents())(scope);
             
-            //el.replaceWith($compile(newInnerHtml)(scope));
-
+            if(scope.txtLen){
+                let txt = el[0].innerText;
+                if(txt) {
+                    scope.txt = txt.substring(0, parseInt(scope.txtLen)) + " ...";
+                }
+            }
         }  // link
     };  // return
 };   // eaAccKey()

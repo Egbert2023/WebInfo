@@ -1,5 +1,5 @@
 {"entries":
-[
+    [
         {   "imgKey": "Back",
             "imgBodyList": ["Schloss in Schwerin, der Landeshauptstadt von Mecklenburg Vorpommern",
                     "Seebrücke in Prerow auf der Halbinsel Darß",
@@ -62,8 +62,13 @@
                         "content/aleks/pictures/hobby/Meisen-Vogelhaus.jpg"]
         },        
         {   "imgKey": "prog",
-            "imgBodyList": ["Struktur der Index.html. Nur diese Webseite wird angezeigt. Die Inhalts-Webseiten werden in den Div-Tag 'ng-view' dynamisch eingefügt."],
-            "imgList": ["content/aleks/pictures/prog/AngularJs-Index-mit-HTML.jpg"]
+            "imgBodyList": [],
+            "imgList": ["content/aleks/pictures/prog/AngularJs-Index-mit-HTML.jpg",
+                        "content/aleks/pictures/prog/Directive-eaLoadParams.jpg",
+                        "content/aleks/pictures/prog/Beispiel-Akkordion-html.jpg",
+                        "content/aleks/pictures/prog/Img-eaImg-Html.jpg",
+                        "content/aleks/pictures/prog/ImgBox-Html.jpg",
+                        "content/aleks/pictures/prog/Beispiel-News-JSON.jpg"]
         },
         
         {   "imgKey": "anyOther",

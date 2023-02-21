@@ -1,58 +1,141 @@
 <div>
     <ea-acc-coat data-acc-title="Wie ist diese Anwendung programmiert?">
-        <ea-acc-key data-title="Grundsätzlicher Aufbau der Applikation">
+        <ea-acc-key data-title="Grundsätzlicher Aufbau der Applikation" data-txt-len="200">
             <div class="row">
                 <div class="col-lg-12">
-                    Bei der vorliegenden Applikation verwendet 2 Frameworks:
-                    <ul>
-                        <li>
-                            <a class=eaExtern href:"https://code.angularjs.org/1.7.9/docs/tutorial/step_09">AngularJs (Version 1.7.9)</a>
-                        </li>
-                        <li>
-                            <a class=eaExtern href:"https://getbootstrap.com/docs/5.2/getting-started/introduction/">Bootstrap 5</a>
-                        </li>
-                    </ul>
-                    Es handelt es sich um eine sogenannte "Single page applikation" (SPA).
+                    Diese WebInfo Webapplikation ist eine sogenannte "Single page applikation" (SPA).
                     Das bedeutet, dass diese Webanwendung nicht wie herkömmliche 
                     Webanwendungen aus mehrere Webseiten besteht, 
                     die durch Links (URL's) miteinander logisch verknüpft werden.  
                     Sondern sie besteht technisch gesehen nur aus einer Webseite, 
-                    die nur zur Laufzeit dynamisch ergänzt wird.
-                    Vorteile dieser Applikationsart (SPA) sind:
+                    deren Aussehen zur Laufzeit dynamisch ergänzt wird.
+                    Vorteile einer Singel Page Applikation (SPA) sind:
                     <ul>
-                        <li>Das Coding der Applikation findet im wesentlichen auf dem Client statt.</li>
-                        <li>Der Datenverkehr zwischen Server und Client und damit die Wartezeiten auf Serverantworten verringern sich.</li>
-                        <li>Der Zustand der Applikation kann auf dieser einen Webseite komplett abgebildet und gespeichert werden. Es kann z.B. auf Cookies verzichtet werden.</li>
-                        <li>Der Server wird entlastet, was für hoch frequentierte Apllikationen von Vorteil ist.</li>
-                        <li>Das verwendte Framework "AngularJs" bildet mit seinem Routing Mechanismus den Browserverlauf ab. Dadurch ist dieser oft genannte Nachteil von SPA's beseitigt. </li>
+                        <li>Das Coding der Applikation findet im wesentlichen auf dem 
+                            Client statt.</li>
+                        <li>Der Datenverkehr zwischen Server und Client und damit 
+                            die Wartezeiten auf Serverantworten verringern sich.</li>
+                        <li>Der Zustand der Applikation kann auf dieser einen Webseite 
+                            komplett abgebildet und gespeichert werden. 
+                            Es kann z.B. auf Cookies verzichtet werden.</li>
+                        <li>Der Server wird entlastet, was für hoch frequentierte 
+                            Apllikationen aber auch für das Anwenderfreundliche Verhalten 
+                            von Vorteil ist.</li>
+                        <li>Das verwendte Framework "AngularJs" bildet mit seinem 
+                            "Routing Mechanismus" den Browserverlauf ab. Dadurch ist 
+                            dieser oft genannte Nachteil von SPA's beseitigt.</li>
                     </ul>
                     Der einzig noch bekannte Nachteil ist, dass SPA-Anwendungen sich schlechter 
                     für die Suchmaschinen Optimierung (SEO) eignen. 
                     Hier bleibt nur "selber machen".
                     Erste Hinweise kann man z.B. hier finden. 
-                    "<a class=eaExtern href="https://www.seo-suedwest.de/seo-wissen/seo-selber-machen/2636-seo-selber-machen-diy-einfuehrung.html">SEO selber machen</a>"
+                    "<a class="eaExtern" target="_blank" href="https://www.seo-suedwest.de/seo-wissen/seo-selber-machen/2636-seo-selber-machen-diy-einfuehrung.html">SEO selber machen</a>"
                 </div>
                 <div class="col-lg-12">
+                    In der vorliegenden Applikation werden 2 Frameworks verwendet:
+                    <ul>
+                        <li>
+                            <a class="eaExtern" target="_blank" href:"https://code.angularjs.org/1.7.9/docs/tutorial/step_09">AngularJs (Version 1.7.9)</a>
+                        </li>
+                        <li>
+                            <a class="eaExtern" target="_blank" href:"https://getbootstrap.com/docs/5.2/getting-started/introduction/">Bootstrap 5</a>
+                        </li>
+                    </ul>
                     Im folgenden Bild ist der grundsätzliche Aufbau der "index.htnl" dargestellt, 
-                    der über die gesamte Lebensdauer der Applikation angezeigt wird.
-                    Wer sich für das komplette Coding der Applikation interessiert, 
-                    kann diese <a class=eaExtern href:"https://github.com/Egbert2023/WebInfo">WebInfo auf GitHub</a>
+                    der über die gesamte Lebensdauer der Applikation angezeigt und nicht verlassen 
+                    wird. Wer sich für das komplette Coding der Applikation interessiert, 
+                    kann diese <a class="eaExtern" target="_blank" href:"https://github.com/Egbert2023/WebInfo">WebInfo auf GitHub</a>
                     einsehen.
                     <div ea-img data-img-box-idx="1" data-img-box-key = "prog"></div>
                 </div>
             </div>
         </ea-acc-key>
-        <ea-acc-key data-title="Parametrisierung der Applikation">
-            <div class="eaExtern">Test 2</div>
+        <ea-acc-key data-title="Parametrisierung der Applikation" data-txt-len="200">
+            <div class="row">
+                <div class="col-lg-12 col-md-12">
+Ein Ziel beim Design der Applikation war die vollständige Trennung zwischen dem technischen und der Inhaltlichen Teil.
+Dies wurde einerseits durch eine strikte Trennung der Ressourcen erreicht. Die technische Umsetzung der Funktionalitäten ist im Verzeichnis '/app' abgelegt.
+die inhaltlichen Dateien befinden sich im Verzeichnis '/content'. Die Verbindung der Applikation mit dem Content erfolgt mit 
+Hilfe einer Direktive 'ea-load-params'. Beim Aufruf dieser Direktive wird der Pfad zum Content übergeben, der dann Applikationsweit zur Verfügung steht. 
+<span ea-img data-img-box-idx="2" data-img-box-key = "prog"></span>
+                </div>
+            </div>
         </ea-acc-key>
-        <ea-acc-key data-title="Die verwendeten Parameter-Dateien">
-            Test 3
+        <ea-acc-key data-title="Die verwendeten Parameter-Dateien" data-txt-len="200">
+            
+Ein potentieller Anwender dieser WebInfo Applikation sollte zwei Dinge können. 
+<br /> 1. Einfache HTML Dateien z.B. mit Unterstützung der Bootstrap-Klassen erstellen und 
+<br /> 2. <a class="eaExtern" target="_blank" href="https://www.opc-router.de/was-ist-json/">JSON Dateien</a> fehlerfrei ausfüllen.
+<br />Das reicht aus, um eine eigene Applikation zu erstellen. Das Codieren der Anwendung 
+mit dem AngularJs Framework ist erledigt. Es sind lediglich eigener Content anzulegen.
+<br />Folgende Parameter-Dateien sind im Content-Verzeichnis '.../json' zu erstellen:
+            <ul>
+                <li><strong>imgBoxList.json</strong> - Auflistung der Bilder, die auf den einzelnen Webseiten mit Hilfe der Direktive 'eaImg' angezeigt werden.</li>
+                <li><strong>naviList.json</strong> - Die gesamte Navigation über das Menü ist hier abgelegt</li>
+                <li><strong>newsList.json</strong> - Parameter für die Darstellung von 'News' rsp. 'Archiv' die automatisch nach Start- und Endedatum angezeigt werden.</li>
+                <li><strong>objBg.json</strong> - Liste der Hintergrundbilder oder -farben</li>
+            </ul>
+            
         </ea-acc-key>
-        <ea-acc-key data-title="Verwendete AngularJs-Directiven">
-            Test 4
+        <ea-acc-key data-title="Erstellte AngularJs-Directiven" data-txt-len="200">
+            <div class="row">
+                <div class="col-lg-4 col-md-12">
+Die erstellten Direktiven dienen einerseits der Übersichtlichkeit des Aufbaus der index.html und 
+sollen ein einheitliches Aussehen und Bedienungskonzept der Applikation unterstützen.
+                    
+                    
+                    
+                </div>
+                <div class="col-lg-8 col-md-12">
+                    
+                    <ul>
+                        <li><strong>eaAccCoat und eaAccKey</strong> - Die Akkordionfunktion wird mit zwei Tag's unterstützt. </li>
+                        <li><strong>eaAddHtml</strong> - Das Nachladen von Html Dateien wird für die Trennung von Applikation und Content benötigt</li>
+                        <li><strong>eaFooter</strong> - Stellt die Footer.html als fixen Footer dar.</li>
+                        <li><strong>eaImg und eaImgBox</strong> - Darstellung von Bilder oder Gruppen von Bildern (vgl. imgBoxList.json) in eigenen Html Dateien sowie deren Vollbilddarstellung</li>
+                        <li><strong>eaLoadParams</strong> - Liest alle JSON Dateien ein und legt sie in Javascript Objekten ab.</li>
+                        <li><strong>eaNav</strong> - Stellt mit der Datei 'naviList.json' die komplette Navigation bereit</li>
+                        <li><strong>eaPathLink</strong> - befindet sich in jeder Html-Seite am Anfang und stellt den aktuellen Link dar.</li>
+                    </ul>
+
+                    
+                </div>
+            </div>
         </ea-acc-key>
-        <ea-acc-key data-title="...">
-            Test ...
+        <ea-acc-key data-title="Spezielle Funktionalitäten" data-txt-len="200">
+            <div class="row">
+                <div class="col-lg-6 col-md-12">
+Das <strong>eaAccordion</strong> dient der einfachen Verwenung eines vordefinierten Accordeons mit lediglich zwei Html-Tag's.
+Folgendes Beispiel zeigt, wie diese beiden zusammengehörenden Direktiven verwendet werden können. 
+Dabei ist der erste AccKey mit einem etwas komplexeren Html-Code versehen. Der zweite AccKey ist eher schlicht gehalten, einfach nur Text.
+<div ea-img data-img-box-idx="3" data-img-box-key = "prog"></div>       
+Beide Direktiven verfügen über einen Titel-Parameter, der immer angezeigt wird. In der Key-Direktive gibt es zusätzlich den Parameter
+"data-txt-len". Dieser dient der Festlegung der Länger eines Vorschautextes, der aus dem zugeklappten Teil gelesen wird.
+Wenn man diese Funktionalität nicht wünscht, kann der Parameter weggelassen oder auf Null gesetzt werden.
+                </div>
+                <div class="col-lg-6 col-md-12">
+Die beiden Direktiven <strong>eaImg</strong> und <strong>eaImgBox</strong> dienen einerseits der 
+Darstellung von Bildern auf den eigenen Html-Seiten. 
+Verwendet man statt des normalen &lt;img ... &gt; Tags den &lt;eaImg ... &gt; Tag, ist die 
+Darstellung des Bildes im Vollbild schon mit dabei.
+Die Direktive "eaImg" kann auf zwei Arten verwendet werden.
+Zunächst kann sie wie der Standard-img Tag angewendet werden. 
+<div ea-img data-img-box-idx="4" data-img-box-key = "prog"></div>
+Die zweite Möglichkeit besteht in der Definition einer Bildergruppe in der Datei "imgBoxListe.json". Beispielhaft kann das wie folgt aussehen:
+<div ea-img data-img-box-idx="5" data-img-box-key = "prog"></div>
+Dann wird die gewünschte Imgedatei mit ihrer Indexnummer und dem Key (data-img-box-idx, data-img-box-key) angesprochen. 
+                </div>
+                <div class="col-lg-12">
+Der <strong>News-Mechanismus</strong> ist mit einer Parameter-Datei "newsList.json" und den beiden 
+Html-Dateien "news.html" und "newsArchiv.html" realisiert. 
+<div ea-img data-img-box-idx="6" data-img-box-key = "prog"></div>
+Wird die JSON-Datei "newsList.json" entsprechend dem Beispiel ausgefüllt, werden automatisch in der 
+Html-Datei "news.html" alle Einträge angezeigt, die das Datum "newFrom" erreicht und das Datum
+"newTo" noch nicht überschritten haben. Alle Einträge, bei denen das "newTo" Datum überschritten ist, werden automatisch 
+von der Datei "newsArchiv.html" dargestellt. Mit diesem Mechanismus kann die Pflege von News zeitlich entzerrt werden, 
+da "alte" Einträge von alleine aus dem Fokus der News-Datei verschwinden aber im Archiv immer noch verfügbar sind.
+                </div>
+            </div>
         </ea-acc-key>
     </ea-acc-coat>
 </div>
