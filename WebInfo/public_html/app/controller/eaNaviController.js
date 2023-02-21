@@ -33,6 +33,7 @@ var eaNaviController =  function($rootScope, $scope, $location, eaNavSrv) {
             if(ngView.style!==null) {
                 if(bg.substring(0,1) === '#') {
                     ngView.style.backgroundColor = bg;
+                    ngView.style.backgroundImage = "";
                 } else {
                     ngView.style.backgroundImage = bg;
                 }
