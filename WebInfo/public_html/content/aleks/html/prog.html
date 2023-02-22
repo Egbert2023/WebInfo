@@ -3,8 +3,8 @@
         <ea-acc-key data-title="Grundsätzlicher Aufbau der Applikation" data-txt-len="200">
             <div class="row">
                 <div class="col-lg-12">
-                    Diese WebInfo Webapplikation ist eine sogenannte "Single page applikation" (SPA).
-                    Das bedeutet, dass diese Webanwendung nicht wie herkömmliche 
+                    Diese "WebInfo" Webapplikation ist eine sogenannte "Single page application" (SPA).
+                    Das bedeutet, dass diese Anwendung nicht wie herkömmliche 
                     Webanwendungen aus mehrere Webseiten besteht, 
                     die durch Links (URL's) miteinander logisch verknüpft werden.  
                     Sondern sie besteht technisch gesehen nur aus einer Webseite, 
@@ -19,7 +19,7 @@
                             komplett abgebildet und gespeichert werden. 
                             Es kann z.B. auf Cookies verzichtet werden.</li>
                         <li>Der Server wird entlastet, was für hoch frequentierte 
-                            Apllikationen aber auch für das Anwenderfreundliche Verhalten 
+                            Apllikationen aber auch für das anwenderfreundliche Verhalten 
                             von Vorteil ist.</li>
                         <li>Das verwendte Framework "AngularJs" bildet mit seinem 
                             "Routing Mechanismus" den Browserverlauf ab. Dadurch ist 
@@ -56,7 +56,8 @@
 Ein Ziel beim Design der Applikation war die vollständige Trennung zwischen dem technischen und der Inhaltlichen Teil.
 Dies wurde einerseits durch eine strikte Trennung der Ressourcen erreicht. Die technische Umsetzung der Funktionalitäten ist im Verzeichnis '/app' abgelegt.
 die inhaltlichen Dateien befinden sich im Verzeichnis '/content'. Die Verbindung der Applikation mit dem Content erfolgt mit 
-Hilfe einer Direktive 'ea-load-params'. Beim Aufruf dieser Direktive wird der Pfad zum Content übergeben, der dann Applikationsweit zur Verfügung steht. 
+Hilfe einer Direktive 'ea-load-params'. Beim Aufruf dieser Direktive wird der Pfad zum Content 
+übergeben, der dann Applikationsweit zur Verfügung steht. 
 <span ea-img data-img-box-idx="2" data-img-box-key = "prog"></span>
                 </div>
             </div>
@@ -67,7 +68,7 @@ Ein potentieller Anwender dieser WebInfo Applikation sollte zwei Dinge können.
 <br /> 1. Einfache HTML Dateien z.B. mit Unterstützung der Bootstrap-Klassen erstellen und 
 <br /> 2. <a class="eaExtern" target="_blank" href="https://www.opc-router.de/was-ist-json/">JSON Dateien</a> fehlerfrei ausfüllen.
 <br />Das reicht aus, um eine eigene Applikation zu erstellen. Das Codieren der Anwendung 
-mit dem AngularJs Framework ist erledigt. Es sind lediglich eigener Content anzulegen.
+mit dem AngularJs Framework ist erledigt. Es ist lediglich eigener Content anzulegen.
 <br />Folgende Parameter-Dateien sind im Content-Verzeichnis '.../json' zu erstellen:
             <ul>
                 <li><strong>imgBoxList.json</strong> - Auflistung der Bilder, die auf den einzelnen Webseiten mit Hilfe der Direktive 'eaImg' angezeigt werden.</li>
@@ -117,7 +118,7 @@ Wenn man diese Funktionalität nicht wünscht, kann der Parameter weggelassen od
 Die beiden Direktiven <strong>eaImg</strong> und <strong>eaImgBox</strong> dienen einerseits der 
 Darstellung von Bildern auf den eigenen Html-Seiten. 
 Verwendet man statt des normalen &lt;img ... &gt; Tags den &lt;eaImg ... &gt; Tag, ist die 
-Darstellung des Bildes im Vollbild schon mit dabei.
+Darstellung des Bildes im Vollbild schon Codiert und funktioniert ohne weiteres Zutun.
 Die Direktive "eaImg" kann auf zwei Arten verwendet werden.
 Zunächst kann sie wie der Standard-img Tag angewendet werden. 
 <div ea-img data-img-box-idx="4" data-img-box-key = "prog"></div>
@@ -134,6 +135,12 @@ Html-Datei "news.html" alle Einträge angezeigt, die das Datum "newFrom" erreich
 "newTo" noch nicht überschritten haben. Alle Einträge, bei denen das "newTo" Datum überschritten ist, werden automatisch 
 von der Datei "newsArchiv.html" dargestellt. Mit diesem Mechanismus kann die Pflege von News zeitlich entzerrt werden, 
 da "alte" Einträge von alleine aus dem Fokus der News-Datei verschwinden aber im Archiv immer noch verfügbar sind.
+<br />
+Wenn beide Felder "body" und "img" angegeben sind, wird die Darstellung automatisch zweispatig.
+Ist nur eins der beiden Felder angegeben, erfolgt die Darstellungt in einer Spalte. 
+Das Feld "imgBody" wird als Bildunterschrift dargestellt. In dem Feld "href" kann eine 
+Html-Seite angegeben werden, die an ddn oben definierten Teil angehägt wird. Das kann notig werden,
+wenn z.B. ein Link dargestellt werden soll. Html Code kann im "Body" nicht dargestellt werden.
                 </div>
             </div>
         </ea-acc-key>
