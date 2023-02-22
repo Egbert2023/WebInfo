@@ -72,7 +72,7 @@ var eaAccKey = function ($compile, $rootScope) {
         template: "<div class='eaContent'>" +
                     "<a class='eaNoDeco' href='' ng-click='setVisible(this)'>" + 
                         "<div class='eaSubTitle bold'>{{title}}" + 
-                            "<span ng-show='vis_{{accIdx}}' style='float: right'>-</span>" + 
+                            "<span ng-show='vis_{{accIdx}}' style='float: right'>&hybull;</span>" + 
                             "<span ng-show='!vis_{{accIdx}}' style='float: right'>+</span>" + 
                         "</div>" + 
                     "</a>" + 

@@ -70,7 +70,14 @@
                         "content/aleks/pictures/prog/ImgBox-Html.jpg",
                         "content/aleks/pictures/prog/Beispiel-News-JSON.jpg"]
         },
-        
+        {   "imgKey": "sport",
+            "imgBodyList": ["Sommer 2022 'mal wieder auf dem Brett",
+                            "Der neue Trend aus den USA - 'Wing Foil' beim Starten",
+                            "Mit dem Wing auf dem Brett und los geht die Fahrt"],
+            "imgList": ["content/aleks/pictures/hobby/Surven-2022.jpg",
+                        "content/aleks/pictures/hobby/Wing-Start-2022.jpg",
+                        "content/aleks/pictures/hobby/Wing-Fahrt-2022.jpg"]
+        },        
         {   "imgKey": "anyOther",
             "imgBodyList": [],
             "imgList": []
