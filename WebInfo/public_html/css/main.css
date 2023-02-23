@@ -101,6 +101,7 @@ textarea {
    ========================================================================== */
 /* ea for Egbert Aleksander */
 
+/* extern links*/
 .eaExtern {
     color: red;
     font-weight:  bold;
@@ -113,7 +114,6 @@ textarea {
     background-size: cover;
     min-height: 150vh;
 }
-
 .eaMoveable {
    position: absolute; 
 }
@@ -141,6 +141,17 @@ textarea {
   box-shadow: 0 0 10px 1px rgba(0, 0, 0, .25);
   backdrop-filter: blur(5px);
 }
+
+.eaSwitch {
+    border: 2px solid rgba(155, 155, 255, .25);
+    border-radius: 10px;
+    float: right;
+    /*        o   r   u   l*/
+    padding: 0em 1em 0em 1em;
+}
+.eaSwitch:hover {
+    background-color: #ece1be;
+} 
 
 /*
 accordion
