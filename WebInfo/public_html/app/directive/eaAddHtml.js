@@ -24,9 +24,9 @@ var eaAddHtmlDirective = function ($rootScope, $location, $compile, $http, navSr
         if(url!=="") {         
             scope.navSrv.getHtml($http, $compile, scope, ele, url, callback);
             
-    // Test
-    console.log("6 - Directive-eaAddHtml-Link URL!==''($scope)");
-    console.log(scope);
+//    // Test
+//    console.log("6 - Directive-eaAddHtml-Link URL!==''($scope)");
+//    console.log(scope);
 
         } else {
             // event 'ReadUrlIsReady' is fired when url is readed.
