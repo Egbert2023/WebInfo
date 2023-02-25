@@ -95,8 +95,16 @@
                         "content/aleks/pictures/travel/Lissabon/Lissabon-Praca-do-Comercio-vom-Wasser.jpg"]
         },
         {   "imgKey": "DE-Landschaft",
-            "imgBodyList": [],
-            "imgList": []
+            "imgBodyList": ["Die Müritz mit ihrem Schloss in Klink",
+                            "Ein Blick auf Röbel an der Müritz",
+                            "Das Panorama von Waren an der Müritz",
+                            "Der Kyrilpfad bei Willingen im Sauerland im Jahre 2007, kurz nach dem Sturm",
+                            "Die Jahreswende 2007-08 in Willingen im Hochsauerland Hotel 2010"],
+            "imgList": ["content/aleks/pictures/travel/Mueritz/Klink-2019-Schloss.jpg",
+                        "content/aleks/pictures/travel/Mueritz/Röbel-2015-Blick.jpg",
+                        "content/aleks/pictures/travel/Mueritz/Waren-2019-Blick-vom-Wasser.jpg",
+                        "content/aleks/pictures/travel/Willingen/Willingen-2007-Kyrilpfad.jpg",
+                        "content/aleks/pictures/travel/Willingen/Willingen-Jahreswende-2007-08.jpg"]
         },
         {   "imgKey": "DE-Ostsee",
             "imgBodyList": [],

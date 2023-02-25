@@ -12,7 +12,6 @@
                     {"label": "Europa", "href": "#!/trav/eu", "url": "content/aleks/html/Eu/Europa.html",
                         "subm": [{"label": "Amsterdam", "href": "#!/trav/eu/am", "url": "content/aleks/html/Eu/Amsterdam.html"},
                          {"label": "Barcelona", "href": "#!/trav/eu/ba", "url": "content/aleks/html/Eu/Barcelona.html"},
-                         {"label": "Brüssel", "href": "#!/trav/eu/br", "url": "content/aleks/html/Eu/Bruessel.html"},
                          {"label": "Lissabon", "href": "#!/trav/eu/lb", "url": "content/aleks/html/Eu/Lissabon.html"},
                          {"label": "Paris", "href": "#!/trav/eu/pa", "url": "content/aleks/html/Eu/Paris.html"},
                          {"label": "Rom", "href": "#!/trav/eu/ro", "url": "content/aleks/html/Eu/Rom.html"},
@@ -33,7 +32,11 @@
                     {"label": "Cookies", "href": "#!/srv/cookies", "url": "content/aleks/html/CookiesNotRequired.html"}, 
                     {"label": "Impressum", "href": "#!/srv/imp", "url": "content/aleks/html/impressum.html"}, 
                     {"label": "Datenschutz", "href": "#!/srv/ds", "url": "content/aleks/html/datenschutz2.html"}, 
-                    {"label": "Hintergrund Bilder", "href": "#!/srv/pic", "url": "content/aleks/html/srv/backGround.html"}
+                    {"label": "Hintergrund Bilder", "href": "#!/srv/pic", "url": "content/aleks/html/srv/backGround.html"},
+                    {"label": "Lizenzen", "href": "#!/prog/license", "url": "LICENSE.html"}
+                    
+                    
+                    
             ]}                                              
         
     ]
