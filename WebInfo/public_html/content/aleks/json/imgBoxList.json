@@ -114,12 +114,14 @@
             "Seebrücke von Ahlbeck auf der Insel Usedom",
             "Luftaufnahme über die 3 Kaiserbäder auf Usedom - Ahlbeck, Heringsdorf und Bansin",
             "Blick vom Leuchtturm am Darßer Ort Richtung Weststrand",
-            "Die Seebrücke in Prerow, auf dem Darß"],
+            "Die Seebrücke in Prerow, auf dem Darß",
+            "So kann es aussehen, wenn man mit dem Wing auf dem Foil steht. Dann schwebt man über dem Wasser."],
             "imgList": ["content/aleks/pictures/travel/Ostsee/Usedom-2018-Meer-mit-Boot.jpg",
             "content/aleks/pictures/travel/Ostsee/Usedom-2018-von-oben1.jpg",
             "content/aleks/pictures/travel/Ostsee/Usedom-2018-von-oben2.jpg",
             "content/aleks/pictures/travel/Ostsee/Prerow-Blick-vom-Leuchtturm.jpg",
-            "content/aleks/pictures/travel/Ostsee/Prerow-Seebrücke.jpg"]
+            "content/aleks/pictures/travel/Ostsee/Prerow-Seebrücke.jpg",
+            "content/aleks/pictures/travel/Ostsee/Fehmarn-2021-Wing-Foil-Go.jpg"]
         },
         {   "imgKey": "DE-Nordsee",
             "imgBodyList": ["Das Wahrzeichen von Langeoog, der Wasserturm"],
