@@ -15,6 +15,13 @@ var webInfoController =  function($rootScope, $scope, navSrv) {
    
     $scope.scope_webInfoController = $scope.url;    
         
+    $scope.toggleMenu = function()
+    {
+        let x = document.getElementById("myToogle");
+        x.click();
+    };
+        
+        
 //    // Test
 //    console.log("1 - webInfoController($scope)");
 //    console.log($scope);

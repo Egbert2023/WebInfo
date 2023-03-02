@@ -90,5 +90,3 @@ var getCurrentLink = function(rootScope, path) {
     ret = computeLink(naviList);
     return ret;
 };
-
-

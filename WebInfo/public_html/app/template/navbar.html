@@ -10,7 +10,7 @@
             aria-controls="navbarSupportedContent" 
             aria-expanded="false" 
             aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+        <span id="myToogle" class="navbar-toggler-icon"></span>
     </button>
     
     <div class="collapse navbar-collapse" id="navbarSupportedContent">        
@@ -18,7 +18,7 @@
         <ul class="navbar-nav">    
           <spam ng-repeat="nav in naviList">  
             <li ng-show="nav.subm.length===0" class="nav-item">
-                <a class="nav-link active" aria-current="page" 
+                <a ng-click="toggleMenu()" class="nav-link active" aria-current="page" 
                    ng-href="{{nav.href}}">{{nav.label}}</a>
             </li>            
             
@@ -26,10 +26,8 @@
                 ng-show="nav.subm.length>0" class="nav-item dropdown">      
                 <a class="nav-link dropdown-toggle" 
                    ng-href="{{nav.href}}" 
-                   id="{{nav.id}}" 
-                   
-                   role="button"                  
-                   
+                   id="{{nav.id}}"                    
+                   role="button"                
                   >{{nav.label}}
                 </a>                
                 <ul class="dropdown-menu">    
@@ -37,7 +35,7 @@
                     <spam ng-repeat="submenu in nav.subm"> 
                         
                         <li ng-show="submenu.subm===undefined" >
-                            <a class="dropdown-item" 
+                            <a ng-click="toggleMenu()" class="dropdown-item" 
                                ng-href="{{submenu.href}}">{{submenu.label}}
                             </a> 
                         </li>
@@ -59,7 +57,7 @@
                                     <li ng-show="sb.subm===undefined"
                                         class="nav-item dropdown">
                                         
-                                        <a class="dropdown-item" 
+                                        <a ng-click="toggleMenu()" class="dropdown-item" 
                                             ng-href="{{sb.href}}">{{sb.label}}
                                         </a> 
                                     </li>
