@@ -83,7 +83,8 @@
                             "Die Jahreswende 2007/8 in Willingen",
                             "Rothenburg ob der Tauber im Jahr 2008",
                             "Ein Blick zum Brocken",
-                            "Ein Blick über Heidelberg am Neckar"],
+                            "Ein Blick über Heidelberg am Neckar",
+                            "Ein Blick über Heidelberg zur Burg"],
             "imgList": ["content/aleks/pictures/travel/Willingen/Willingen-2007-Kyrilpfad.jpg",
                         "content/aleks/pictures/travel/Willingen/Willingen-Jahreswende-2007-08.jpg",
                         "content/aleks/pictures/travel/Rothenburg/Rothenburg-o-d-T-2008-Nachtansicht.jpg",
@@ -117,11 +118,11 @@
             "Die Seebrücke in Prerow, auf dem Darß",
             "So kann es aussehen, wenn man mit dem Wing auf dem Foil steht. Dann schwebt man über dem Wasser."],
             "imgList": ["content/aleks/pictures/travel/Ostsee/Usedom-2018-Meer-mit-Boot.jpg",
-            "content/aleks/pictures/travel/Ostsee/Usedom-2018-von-oben1.jpg",
-            "content/aleks/pictures/travel/Ostsee/Usedom-2018-von-oben2.jpg",
-            "content/aleks/pictures/travel/Ostsee/Prerow-Blick-vom-Leuchtturm.jpg",
-            "content/aleks/pictures/travel/Ostsee/Prerow-Seebrücke.jpg",
-            "content/aleks/pictures/travel/Ostsee/Fehmarn-2021-Wing-Foil-Go.jpg"]
+                        "content/aleks/pictures/travel/Ostsee/Usedom-2018-von-oben1.jpg",
+                        "content/aleks/pictures/travel/Ostsee/Usedom-2018-von-oben2.jpg",
+                        "content/aleks/pictures/travel/Ostsee/Prerow-Blick-vom-Leuchtturm.jpg",
+                        "content/aleks/pictures/travel/Ostsee/Prerow-Seebrücke.jpg",
+                        "content/aleks/pictures/travel/Ostsee/Fehmarn-2021-Wing-Foil-Go.jpg"]
         },
         {   "imgKey": "DE-Nordsee",
             "imgBodyList": ["Das Wahrzeichen von Langeoog, der Wasserturm"],
@@ -130,22 +131,22 @@
         {   "imgKey": "TNorge",
             "imgBodyList": [],
             "imgList": ["content/aleks/pictures/travel/Norwegen/Alesund-2010-Übersicht.jpg",
-            "content/aleks/pictures/travel/Norwegen/Alesund-2010.jpg",
-            "content/aleks/pictures/travel/Norwegen/Alesund-Blick-aufs-Meer.jpg",
-            "content/aleks/pictures/travel/Norwegen/Bergen-2010-Ausblick.jpg",
-            "content/aleks/pictures/travel/Norwegen/Stavanger-2010-Prekestolen.jpg"]
+                        "content/aleks/pictures/travel/Norwegen/Alesund-2010.jpg",
+                        "content/aleks/pictures/travel/Norwegen/Alesund-Blick-aufs-Meer.jpg",
+                        "content/aleks/pictures/travel/Norwegen/Bergen-2010-Ausblick.jpg",
+                        "content/aleks/pictures/travel/Norwegen/Stavanger-2010-Prekestolen.jpg"]
         },
         {   "imgKey": "Amsterdam",
             "imgBodyList": ["Ein Haus aus den goldenen Zeiten von Amsterdam",
                             "Eine typische Gracht in der Niederländischen Hauptstadt."],
             "imgList": ["content/aleks/pictures/travel/Amsterdam/Amsterdam-2017-Altstadthaus.jpg",
-            "content/aleks/pictures/travel/Amsterdam/Amsterdam-2017-Gracht.jpg"]            
+                        "content/aleks/pictures/travel/Amsterdam/Amsterdam-2017-Gracht.jpg"]            
         },
         {   "imgKey": "Barca",
             "imgBodyList": ["Sagrada Familia, das beeindruckende Warzeichen von Barcelona. Es dauert noch einige Jahre, bis die aus Spenden finanzierte, von Antoni Gaudi entworfene Kirche fertiggestellt ist.",
             "Der Strand im Stadtteil Barceloneta."],
             "imgList": ["content/aleks/pictures/travel/Barcelona/Barcelona-2012-Sagra-Familia.jpg",
-            "content/aleks/pictures/travel/Barcelona/Barcelona-2012-Strand.jpg"]
+                        "content/aleks/pictures/travel/Barcelona/Barcelona-2012-Strand.jpg"]
         },
         {   "imgKey": "Paris",
             "imgBodyList": ["Ein Teil vom Eifelturm, den ganzen Turm kennt ja jeder.",
@@ -153,9 +154,9 @@
             "Ein Tunnel führt unter der Straße zum Triumpfbogen. So kann man ohne Risiko die Aussicht genießen.",
             "Das war 'Notre dame' vor dem verherenden Brand. Hier war noch alles in Ordnung."],
             "imgList": ["content/aleks/pictures/travel/Paris/Paris-2005-Eifelturm.jpg",
-            "content/aleks/pictures/travel/Paris/Paris-2005-Triumpfbogen.jpg",
-            "content/aleks/pictures/travel/Paris/Paris-2006-Blick-vom-Triumpfbogen.jpg",
-            "content/aleks/pictures/travel/Paris/Paris-2006-Notredame-vor-dem Feuer.jpg"]
+                        "content/aleks/pictures/travel/Paris/Paris-2005-Triumpfbogen.jpg",
+                        "content/aleks/pictures/travel/Paris/Paris-2006-Blick-vom-Triumpfbogen.jpg",
+                        "content/aleks/pictures/travel/Paris/Paris-2006-Notredame-vor-dem Feuer.jpg"]
         },
         {   "imgKey": "Rom",
             "imgBodyList": ["Ein Blick vom Dach des Petersdoms. Man konnte 2008 der katolischen Kirche auf's Dach steigen.",
@@ -195,13 +196,13 @@
             "Die Straßenbahn von Sollert im Jahre 2005",
             "Ein Blick über den Hafen von Soller"],
             "imgList": ["content/aleks/pictures/travel/Mittelmeer/Malta-2005-vom-Wasser.jpg",
-            "content/aleks/pictures/travel/Mittelmeer/Malta-2005-Blick-auf-den-Hafen.jpg",
-            "content/aleks/pictures/travel/Mittelmeer/Neapel-2005-Vesuv.jpg",
-            "content/aleks/pictures/travel/Mittelmeer/Palermo-2005-Alt-und-neu.jpg",
-            "content/aleks/pictures/travel/Mittelmeer/Palermo-in-der-Stadt.jpg",
-            "content/aleks/pictures/travel/Mittelmeer/Palma-2005-Kathedrale.jpg",
-            "content/aleks/pictures/travel/Mittelmeer/Soller-2005-Strassenbahn.jpg",
-            "content/aleks/pictures/travel/Mittelmeer/Soller-2005-Ueberblick.jpg"]
+                        "content/aleks/pictures/travel/Mittelmeer/Malta-2005-Blick-auf-den-Hafen.jpg",
+                        "content/aleks/pictures/travel/Mittelmeer/Neapel-2005-Vesuv.jpg",
+                        "content/aleks/pictures/travel/Mittelmeer/Palermo-2005-Alt-und-neu.jpg",
+                        "content/aleks/pictures/travel/Mittelmeer/Palermo-in-der-Stadt.jpg",
+                        "content/aleks/pictures/travel/Mittelmeer/Palma-2005-Kathedrale.jpg",
+                        "content/aleks/pictures/travel/Mittelmeer/Soller-2005-Strassenbahn.jpg",
+                        "content/aleks/pictures/travel/Mittelmeer/Soller-2005-Ueberblick.jpg"]
         },
         {   "imgKey": "Hobby",
             "imgBodyList": ["Eine Schiffsreise nach Norwegen",
@@ -209,15 +210,24 @@
             "Mein Aplfelbaum 2022. er ist 3 Jahre alt.",
             "Meine Gitarre.",
             "Die verrückte 11, ein mathematisches Phänomen.",
-            "So kann man eine Html Seite mit diser WebInfo-Applikation programmieren."],
+            "Ein Beispiel für eine Html Seite die man mit dieser WebInfo-Applikation programmieren kann."],
             "imgList": ["content/aleks/pictures/travel/Norwegen/Bergen-2010-Ausblick.jpg",
-            "content/aleks/pictures/hobby/Wing-Fahrt-2022.jpg",
-            "content/aleks/pictures/hobby/Mein-Apfelbaum.jpg",
-            "content/aleks/pictures/hobby/gitarre.jpg",
-            "content/aleks/pictures/math/Tastatur-Konkret-Taschenrechner-6523.jpg",
-            "content/aleks/pictures/prog/Beispiel-Akkordion-html.jpg"]
+                        "content/aleks/pictures/hobby/Wing-Fahrt-2022.jpg",
+                        "content/aleks/pictures/hobby/Mein-Apfelbaum.jpg",
+                        "content/aleks/pictures/hobby/gitarre.jpg",
+                        "content/aleks/pictures/math/Tastatur-Konkret-Taschenrechner-6523.jpg",
+                        "content/aleks/pictures/prog/Beispiel-Akkordion-html.jpg"]
             
         },
+        {   "imgKey": "Reisen",
+            "imgBodyList": ["Ein Haus aus den goldenen Zeiten von Amsterdam",
+                            "Ein Blick zum Brocken",
+                            "Die Müritz mit ihrem Schloss in Klink"],
+            "imgList": ["content/aleks/pictures/travel/Amsterdam/Amsterdam-2017-Altstadthaus.jpg",
+                        "content/aleks/pictures/travel/Heidelberg/Heidelberg-2005.jpg",
+                        "content/aleks/pictures/travel/Mueritz/Klink-2019-Schloss.jpg"]
+        },
+        
         {   "imgKey": "anyOther",
             "imgBodyList": [],
             "imgList": []

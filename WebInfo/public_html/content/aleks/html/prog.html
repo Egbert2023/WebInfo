@@ -58,7 +58,7 @@ Ein Ziel beim Design der Applikation war die vollständige Trennung zwischen dem
 Dies wurde einerseits durch eine strikte Trennung der Ressourcen erreicht. Die technische Umsetzung der Funktionalitäten ist im Verzeichnis '/app' abgelegt.
 die inhaltlichen Dateien befinden sich im Verzeichnis '/content'. Die Verbindung der Applikation mit dem Content erfolgt mit 
 Hilfe einer Direktive 'ea-load-params'. Beim Aufruf dieser Direktive wird der Pfad zum Content 
-übergeben, der dann Applikationsweit zur Verfügung steht. 
+übergeben, der dann applikationsweit zur Verfügung steht. 
 <span ea-img data-img-box-idx="2" data-img-box-key = "prog"></span>
                 </div>
             </div>
@@ -84,6 +84,7 @@ mit dem AngularJs Framework ist erledigt. Es ist lediglich eigener Content anzul
                 <div class="col-lg-4 col-md-12">
 Die erstellten Direktiven dienen einerseits der Übersichtlichkeit des Aufbaus der index.html und 
 sollen ein einheitliches Aussehen und Bedienungskonzept der Applikation unterstützen.
+Andererseits werden sie auch für die vollständige Trennung von Applikation uns Content benötigt.
                     
                     
                     
@@ -91,57 +92,72 @@ sollen ein einheitliches Aussehen und Bedienungskonzept der Applikation unterst�
                 <div class="col-lg-8 col-md-12">
                     
                     <ul>
-                        <li><strong>eaAccCoat und eaAccKey</strong> - Die Akkordionfunktion wird mit zwei Tag's unterstützt. </li>
+                        <li><strong>eaAccCoat und eaAccKey</strong> - Die Akkordionfunktion (z.B wie diese Webseite) wird mit zwei Tag's unterstützt. (&lt;ea-acc-coat .../&gt; und &lt;ea-acc-key .../&gt;)<br />vgl. "Spezielle Funktionen" auf dieser Seite unten.</li>
                         <li><strong>eaAddHtml</strong> - Das Nachladen von Html Dateien wird für die Trennung von Applikation und Content benötigt</li>
                         <li><strong>eaFooter</strong> - Stellt die Footer.html als fixen Footer dar.</li>
-                        <li><strong>eaImg und eaImgBox</strong> - Darstellung von Bilder oder Gruppen von Bildern (vgl. imgBoxList.json) in eigenen Html Dateien sowie deren Vollbilddarstellung</li>
-                        <li><strong>eaLoadParams</strong> - Liest alle JSON Dateien ein und legt sie in Javascript Objekten ab.</li>
-                        <li><strong>eaNav</strong> - Stellt mit der Datei 'naviList.json' die komplette Navigation bereit</li>
-                        <li><strong>eaPathLink</strong> - befindet sich in jeder Html-Seite am Anfang und stellt den aktuellen Link dar.</li>
+                        <li><strong>eaImg und eaImgBox</strong> - Darstellung von Bilder oder Gruppen von Bildern (vgl. imgBoxList.json) in eigenen Html Dateien sowie deren Vollbilddarstellung. <br />vgl. "Spezielle Funktionen" auf dieser Seite unten.</li>
+                        <li><strong>eaLoadParams</strong> - Liest alle JSON Dateien ein und legt sie in Javascript Objekten ab. Damit stehen sie für die Applikation jeder Zeit zur Verfügung.</li>
+                        <li><strong>eaNav</strong> - Stellt mit der Datei 'naviList.json' die komplette Navigation bereit und erzeugt das Navigationsmenü.</li>
+                        <li><strong>eaPathLink</strong> - Diese Direktive befindet sich am Anfang jeder Html-Seite und stellt den Link zu der aktuellen Seite mit seinen übergeordneten Seite dar.
+                            (z.B. Diese Seite <span class='eaCard' style="width: 215px; height: 40px; margin-left: 2px; min-height: 20px;">Hobbies &#10149; Programmieren</span></li>
                     </ul>
-
-                    
                 </div>
             </div>
         </ea-acc-key>
         <ea-acc-key data-title="Spezielle Funktionalitäten" data-txt-len="200">
             <div class="row">
                 <div class="col-lg-6 col-md-12">
-Das <strong>eaAccordion</strong> dient der einfachen Verwenung eines vordefinierten Accordeons mit lediglich zwei Html-Tag's.
+Das <strong>eaAccordion</strong> dient der einfachen Verwendung eines vordefinierten "Accordeons" mit lediglich zwei Html-Tag's.
 Folgendes Beispiel zeigt, wie diese beiden zusammengehörenden Direktiven verwendet werden können. 
 Dabei ist der erste AccKey mit einem etwas komplexeren Html-Code versehen. Der zweite AccKey ist eher schlicht gehalten, einfach nur Text.
 <div ea-img data-img-box-idx="3" data-img-box-key = "prog"></div>       
 Beide Direktiven verfügen über einen Titel-Parameter, der immer angezeigt wird. In der Key-Direktive gibt es zusätzlich den Parameter
-"data-txt-len". Dieser dient der Festlegung der Länge eines Vorschautextes, der aus dem zugeklappten Teil gelesen wird.
+"data-txt-len". Dieser dient der Festlegung der Länge eines Vorschautextes, der aus dem zugeklappten Teil gelesen und immer angezeigt wird.
+Auf dieser Seite habe ich für diesen Parameter 200 angegeben.
 Wenn man diese Funktionalität nicht wünscht, kann der Parameter weggelassen oder auf Null gesetzt werden.
+Für die Bedienung des Akkordions sind die beiden folgenden Zeichen vorgesehen:
+<span class="eaSwitch eaSubTitle bold" >+</span> <span class="eaSwitch  eaSubTitle bold" >-</span> 
+
                 </div>
                 <div class="col-lg-6 col-md-12">
-Die beiden Direktiven <strong>eaImg</strong> und <strong>eaImgBox</strong> dienen einerseits der 
-Darstellung von Bildern auf den eigenen Html-Seiten. 
+Die beiden Direktiven <strong>eaImg</strong> und <strong>eaImgBox</strong> 
+dienen einerseits der Darstellung von Bildern auf den eigenen Html-Seiten. 
 Verwendet man statt des normalen &lt;img ... &gt; Tags den &lt;eaImg ... &gt; Tag, ist die 
-Darstellung des Bildes im Vollbild schon Codiert und funktioniert ohne weiteres Zutun.
+Darstellung des Bildes im Vollbildmodus schon Codiert und funktioniert ohne 
+weiteres Zutun.
 Die Direktive "eaImg" kann auf zwei Arten verwendet werden.
 Zunächst kann sie wie der Standard-img Tag angewendet werden. 
 <div ea-img data-img-box-idx="4" data-img-box-key = "prog"></div>
-Die zweite Möglichkeit besteht in der Definition einer Bildergruppe in der Datei "imgBoxListe.json". Beispielhaft kann das wie folgt aussehen:
+Die zweite Möglichkeit besteht in der Definition einer Bildergruppe in der 
+Datei "imgBoxListe.json". Beispielhaft kann das wie folgt aussehen:
 <div ea-img data-img-box-idx="5" data-img-box-key = "prog"></div>
-Dann wird die gewünschte Imgedatei mit ihrer Indexnummer und dem Key (data-img-box-idx, data-img-box-key) angesprochen. 
+Dann wird die gewünschte Imgedatei mit ihrer Indexnummer und dem Key 
+(data-img-box-idx, data-img-box-key) angesprochen. 
+Im Falle einer Bildergruppe, kann nach dem Aufruf eines Bildes im Vollbildmodus 
+durch die gesamte definierte Gruppe navigiert werden.
                 </div>
                 <div class="col-lg-12">
-Der <strong>News-Mechanismus</strong> ist mit einer Parameter-Datei "newsList.json" und den beiden 
+                    <hr />
+Der <strong>News-Mechanismus</strong> ist mit einer Parameter-Datei 
+"newsList.json" und den beiden 
 Html-Dateien "news.html" und "newsArchiv.html" realisiert. 
 <div ea-img data-img-box-idx="6" data-img-box-key = "prog"></div>
-Wird die JSON-Datei "newsList.json" entsprechend dem Beispiel ausgefüllt, werden automatisch in der 
-Html-Datei "news.html" alle Einträge angezeigt, die das Datum "newFrom" erreicht und das Datum
-"newTo" noch nicht überschritten haben. Alle Einträge, bei denen das "newTo" Datum überschritten ist, werden automatisch 
-von der Datei "newsArchiv.html" dargestellt. Mit diesem Mechanismus kann die Pflege von News zeitlich entzerrt werden, 
-da "alte" Einträge von alleine aus dem Fokus der News-Datei verschwinden aber im Archiv immer noch verfügbar sind.
+Wird die JSON-Datei "newsList.json" entsprechend dem Beispiel ausgefüllt, 
+werden automatisch in der Html-Datei "news.html" alle Einträge angezeigt, die 
+das Datum "newFrom" erreicht und das Datum "newTo" noch nicht überschritten 
+haben. Alle Einträge, bei denen das "newTo" Datum überschritten ist, werden 
+automatisch von der Datei "newsArchiv.html" dargestellt. Mit diesem Mechanismus 
+kann die Pflege von News zeitlich entzerrt werden, da "alte" Einträge 
+von alleine aus dem Fokus der News-Datei verschwinden aber im Archiv immer 
+noch verfügbar sind.
 <br />
-Wenn beide Felder "body" und "img" angegeben sind, wird die Darstellung automatisch zweispaltig.
-Ist nur eins der beiden Felder angegeben, erfolgt die Darstellungt in einer Spalte. 
-Das Feld "imgBody" wird als Bildunterschrift dargestellt. In dem Feld "href" kann eine 
-Html-Seite angegeben werden, die an den oben definierten Teil angehägt wird. Das kann nötig werden,
-wenn z.B. ein Link dargestellt werden soll. Html Code kann im "Body" nicht dargestellt werden hier geht nur formatfreier Text.
+Wenn beide Felder "body" und "img" angegeben sind, wird die Darstellung 
+automatisch zweispaltig. Ist nur eins der beiden Felder angegeben, erfolgt die 
+Darstellungt in einer Spalte. Das Feld "imgBody" wird als Bildunterschrift 
+dargestellt. In dem Feld "href" kann eine Html-Seite angegeben werden, die 
+an den oben definierten Teil angehägt wird. Das kann nötig werden, wenn 
+z.B. ein Link dargestellt werden soll. Html Code kann im "Body" nicht 
+dargestellt werden hier geht nur formatfreier Text.
                 </div>
             </div>
         </ea-acc-key>
