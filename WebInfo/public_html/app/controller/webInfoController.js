@@ -18,7 +18,17 @@ var webInfoController =  function($rootScope, $scope, navSrv) {
     $scope.toggleMenu = function()
     {
         let x = document.getElementById("myToogle");
-        x.click();
+        if(x.parentNode){
+            if(x.parentNode.nextElementSibling){
+                if(x.parentNode.nextElementSibling.classList){
+                    if(x.parentNode.nextElementSibling.classList.length > 2){
+                        x.click();
+                    }
+                }
+            }
+            
+        };        
+        //x.click();
     };
         
         
