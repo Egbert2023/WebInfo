@@ -19,6 +19,8 @@ var eaImgBox = function ($compile, $rootScope) {
             
             //  listening to event "openModalImgBox" from directive "eaImg"
             $rootScope.$on("openModalImgBox", function(evt, opt) {
+                // when opt.key is undefined then do not show scroll icons
+                $scope.canScroll = (opt.key)? true : false;
                 
                 // comput modal inner HTML 
                 let iHtml = $scope.getInnerHtml(opt);
@@ -66,10 +68,13 @@ var eaImgBox = function ($compile, $rootScope) {
                 // Hide current picture
                 let idNum = "imgNumber" + sIdx.toString();
                 let idImg = "imgPicture" + sIdx.toString();
+                let idImgBody = "imgBody" + sIdx.toString();
                 let docNum = document.getElementById(idNum);
                 let docImg = document.getElementById(idImg);
+                let docImgBody = document.getElementById(idImgBody);
                 if(docNum !== null) {docNum.style.display = "none";}
                 if(docImg !== null) {docImg.style.display = "none";}
+                if(docImgBody !== null) {docImgBody.style.display = "none";}
 
                 // compute the new slideIndex
                 let si = sIdx + parseInt(n);
@@ -81,10 +86,13 @@ var eaImgBox = function ($compile, $rootScope) {
                 // show new picture
                 idNum = "imgNumber" + si.toString();
                 idImg = "imgPicture" + si.toString();
+                idImgBody = "imgBody" + si.toString();
                 docNum = document.getElementById(idNum);
                 docImg = document.getElementById(idImg);
+                docImgBody = document.getElementById(idImgBody);
                 if(docNum !== null) {docNum.style.display = "block";}
                 if(docImg !== null) {docImg.style.display = "block";}
+                if(docImgBody !== null) {docImgBody.style.display = "block";}
                 return false;
             };
 
@@ -94,10 +102,13 @@ var eaImgBox = function ($compile, $rootScope) {
                 
                 let idNum = "imgNumber" + si.toString();
                 let idImg = "imgPicture" + si.toString();
+                let idImgBody = "imgBody" + si.toString();
                 let docNum = document.getElementById(idNum);
                 let docImg = document.getElementById(idImg);
+                let docImgBody = document.getElementById(idImgBody);
                 if(docNum !== null) {docNum.style.display = "block";}
                 if(docImg !== null) {docImg.style.display = "flex";}
+                if(docImgBody !== null) {docImgBody.style.display = "block";}
                 return false;
             };
   
@@ -112,15 +123,25 @@ var eaImgBox = function ($compile, $rootScope) {
                 for(let i = 0; i<len; i++) {
                     let idx = i+1;
                     let ht = '<div id="imgNumber' + idx.toString() + '" class="numbertext eaImgBoxItem">' + idx.toString() + ' / ' + len.toString() + '</div>' + 
-                            '<img id="imgPicture' + idx.toString() + '" ng-src="' + imgArr[i] + '" class="eaImgBoxItem img-fluid mx-auto" >';                            
-                    iHtml = iHtml + ht;
+                            '<img id="imgPicture' + idx.toString() + '" ng-src="' + imgArr[i] + '" class="eaImgBoxItem img-fluid mx-auto" >';    
+                    
+                    let htt = "";
+                    if(imgBodyArr[i]) {
+                        htt = '<div id="imgBody' + idx.toString() + '" class="eaImgBody eaImgBoxItem">' + imgBodyArr[i] + '</div>';
+                    }
+                    
+                    iHtml = iHtml + ht + htt;
                 };
+                
+                
+                
                 iHtml = iHtml + '</div>';
 
-                iHtml = iHtml + '<!-- Next/previous controls -->' + 
-                '<a class="prev float-left" ng-click="plusSlides(-1)">&#10094;</a>' +
-                '<a class="next float-right" ng-click="plusSlides(1)">&#10095;</a>' ;
-
+                if($scope.canScroll){
+                    iHtml = iHtml + '<!-- Next/previous controls -->' + 
+                    '<a class="prev float-left" ng-click="plusSlides(-1)">&#10094;</a>' +
+                    '<a class="next float-right" ng-click="plusSlides(1)">&#10095;</a>' ;
+                };
                 iHtml = iHtml + '</div>';
                 
                 return iHtml;
