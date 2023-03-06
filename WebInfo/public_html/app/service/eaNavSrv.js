@@ -90,3 +90,60 @@ var getCurrentLink = function(rootScope, path) {
     ret = computeLink(naviList);
     return ret;
 };
+
+// read the naviList.json file and creat a sitemap.xml into a variable siteMapXML.
+// read the imgBoxList.json file and creat a sitemapimage.xml into a variable siteMapImageXML.
+// exported to console.log().
+// put this files to site root
+
+var computeSiteMaps = function(rootScope) {
+// Exampel of sitemap with images
+//    <?xml version="1.0" encoding="UTF-8"?>
+//    <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" 
+//      xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+//      <url>
+//        <loc>http://www.aleksander.de/index.html</loc>
+//        <image:image>
+//           <image:loc>http://www.aleksander.de/content/aleks/pictures/Mein-Apfelbaum.jpg</image:loc>
+//           <image:title>Title of picture</image:title>
+//        </image:image>
+//        <lastmod>2023-03-04</lastmod>
+//      </url>
+//    </urlset>
+
+    let contentFolder = rootScope.contentFolder;
+    let urlBase = "http://www.aleksander.de/index.html";
+    let siteMaps = {"siteMap":"", "siteMapImg": ""};
+    let naviList = rootScope.naviList;
+    let imgBoxList = rootScope.imgBoxList;
+    let sm  = '<?xml version="1.0" encoding="UTF-8"?>';
+    sm = sm + '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" ';
+    sm = sm + '    xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">';
+    
+    naviList.forEach(o => {
+        sm = sm + '  <url>';
+        sm = sm + '    <loc>' + urlBase + o.href + '</loc>';
+        sm = sm + '    <changefreq>weekly</changefreq>';
+        sm = sm + '  </url>';
+
+        if(o.subm) {
+           o.subm.forEach(p => {
+            sm = sm + '  <url>';
+            sm = sm + '    <loc>' + urlBase + p.href + '</loc>';
+            sm = sm + '    <changefreq>weekly</changefreq>';
+            sm = sm + '  </url>';
+
+            if(p.subm) {
+                p.subm.forEach(q => {
+                    sm = sm + '  <url>';
+                    sm = sm + '    <loc>' + urlBase + q.href + '</loc>';
+                    sm = sm + '    <changefreq>weekly</changefreq>';
+                    sm = sm + '  </url>';
+                });
+            }                
+        });
+    }});       
+    sm = sm + '</urlset>';
+    siteMaps.siteMap = sm;
+    return siteMaps;
+};
