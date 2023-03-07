@@ -111,39 +111,66 @@ var computeSiteMaps = function(rootScope) {
 //      </url>
 //    </urlset>
 
+    var oImgKeyArray = [];
+
+    var putUrlLoc = function(ob, sm) {
+        //let oImgKey = {"imgKey": "", "href":""};
+        
+        ob.forEach(o => {
+            let oImgKey = {};
+            sm = sm + '\n\t<url>';
+            sm = sm + '\n\t\t<loc>' + urlBase + o.href + '</loc>';
+            sm = sm + '\n\t\t<changefreq>weekly</changefreq>';
+            sm = sm + '\n\t</url>';
+            oImgKey.imgKey = o.imgKey;
+            oImgKey.href = urlBase + o.href;
+            oImgKeyArray.push(oImgKey);
+            if(o.subm) {
+                sm = putUrlLoc(o.subm, sm);
+            };
+        });
+        return sm;
+    }; // oImgKeyArray -->
+    
+    var putImgLoc = function(oi, si) {
+        let imgK = "";
+        let href = "";
+        oi.forEach(o => {
+            imgK = o.imgKey;
+            href = oImgKeyArray.find(h => h.imgKey===imgK).href;
+            for(let i=0; i<o.imgList; i++) {
+                si = si + '\n\t<url>';
+                si = si + '\n\t\t<loc>' + href + '</loc>';
+                si = si + '\n\t\t<image:image>';
+                si = si + '\n\t\t\t<image:loc>' + urlBase + o.imgList[i] +'</image:loc>';
+                if(o.imgBodyList[i]){
+                    si = si + '\n\t\t\t<image:title>' + o.imgBodyList[i] +'</image:title>';
+                };
+                si = si + '\n\t\t</image:image>';
+            }
+        });
+        return si;
+    };
+
+
     let contentFolder = rootScope.contentFolder;
     let urlBase = "http://www.aleksander.de/index.html";
     let siteMaps = {"siteMap":"", "siteMapImg": ""};
     let naviList = rootScope.naviList;
     let imgBoxList = rootScope.imgBoxList;
-    let sm  = '<?xml version="1.0" encoding="UTF-8"?>';
-    sm = sm + '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" ';
-    sm = sm + '    xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">';
     
-    naviList.forEach(o => {
-        sm = sm + '  <url>';
-        sm = sm + '    <loc>' + urlBase + o.href + '</loc>';
-        sm = sm + '    <changefreq>weekly</changefreq>';
-        sm = sm + '  </url>';
+    let sm  = '<?xml version="1.0" encoding="UTF-8"?>';
+    sm = sm + '\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">';
+    sm = putUrlLoc(naviList, sm);
+    sm = sm + '\n</urlset>';
 
-        if(o.subm) {
-           o.subm.forEach(p => {
-            sm = sm + '  <url>';
-            sm = sm + '    <loc>' + urlBase + p.href + '</loc>';
-            sm = sm + '    <changefreq>weekly</changefreq>';
-            sm = sm + '  </url>';
-
-            if(p.subm) {
-                p.subm.forEach(q => {
-                    sm = sm + '  <url>';
-                    sm = sm + '    <loc>' + urlBase + q.href + '</loc>';
-                    sm = sm + '    <changefreq>weekly</changefreq>';
-                    sm = sm + '  </url>';
-                });
-            }                
-        });
-    }});       
-    sm = sm + '</urlset>';
+    let smi  = '<?xml version="1.0" encoding="UTF-8"?>';
+    smi = smi + '\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" ';
+    smi = smi + '\n\t\t xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">';
+    smi = putImgLoc(imgBoxList, smi);
+    smi = smi + '\n</urlset>';
+    
     siteMaps.siteMap = sm;
+    siteMaps.siteMapImg = smi;
     return siteMaps;
 };

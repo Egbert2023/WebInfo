@@ -106,6 +106,14 @@ textarea {
     color: red;
     font-weight:  bold;
 }
+.eaImgBorderExtern {
+    border: 2px solid rgba(255, 1, 2, .99);
+    border-radius: 10px;
+    /*        o   r   u   l*/
+/*    padding: 1em 1em 1em 1em;*/
+    padding: 3px 3px 3px 3px;
+    background-color: rgba(255, 1, 2, .99);
+}
 .eaGlassMorph{
     color: #224;
     /*background-image: url(../fotos/Solardach-mit-Blume.jpg);*/

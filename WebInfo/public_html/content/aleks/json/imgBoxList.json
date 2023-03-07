@@ -163,7 +163,11 @@
             "content/aleks/pictures/travel/Nordsee/Amrum-2016-Duenen.jpg"]
         },
         {   "imgKey": "TNorge",
-            "imgBodyList": [],
+            "imgBodyList": ["Ein Blick über &Aring;lesund",
+            "Ein Blich aus dem Fjord vor &Aring;lesund",
+            "Blick zu vorgelagerten Insel von &Aring;lesund",
+            "Ein Blick über Bergen in Norwegen.",
+            "Der Preikestolen, ca. 600 Meter über dem Lysefjord."],
             "imgList": ["content/aleks/pictures/travel/Norwegen/Alesund-2010-Übersicht.jpg",
                         "content/aleks/pictures/travel/Norwegen/Alesund-2010.jpg",
                         "content/aleks/pictures/travel/Norwegen/Alesund-Blick-aufs-Meer.jpg",
