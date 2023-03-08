@@ -111,11 +111,10 @@ var computeSiteMaps = function(rootScope) {
 //      </url>
 //    </urlset>
 
+// The function putUrlLoc fiil out the array oImgKeyArray[] for use it 
+// for generate SiteMapImage.xml
     var oImgKeyArray = [];
-
     var putUrlLoc = function(ob, sm) {
-        //let oImgKey = {"imgKey": "", "href":""};
-        
         ob.forEach(o => {
             let oImgKey = {};
             sm = sm + '\n\t<url>';
@@ -132,33 +131,47 @@ var computeSiteMaps = function(rootScope) {
         return sm;
     }; // oImgKeyArray -->
     
+    // before call the function putImgLoc(), call function putUrlLoc() 
+    // for fill out the array oImgKeyArray[].
     var putImgLoc = function(oi, si) {
         let imgK = "";
         let href = "";
         oi.forEach(o => {
-            imgK = o.imgKey;
-            href = oImgKeyArray.find(h => h.imgKey===imgK).href;
-            for(let i=0; i<o.imgList; i++) {
-                si = si + '\n\t<url>';
-                si = si + '\n\t\t<loc>' + href + '</loc>';
-                si = si + '\n\t\t<image:image>';
-                si = si + '\n\t\t\t<image:loc>' + urlBase + o.imgList[i] +'</image:loc>';
-                if(o.imgBodyList[i]){
-                    si = si + '\n\t\t\t<image:title>' + o.imgBodyList[i] +'</image:title>';
-                };
-                si = si + '\n\t\t</image:image>';
-            }
+            imgK = o.imgKey.trim();
+            if(imgK!=="") {
+                href = "";
+                let imgO = oImgKeyArray.find(h => h.imgKey===imgK);
+                if(imgO) {
+                    if(imgO.href){
+                        href = imgO.href;            
+                        for(let i=0; i<o.imgList.length; i++) {
+                            si = si + '\n\t<url>';
+                            si = si + '\n\t\t<loc>' + href + '</loc>';
+                            si = si + '\n\t\t<image:image>';
+                            si = si + '\n\t\t\t<image:loc>' + baseDoman + "/" + o.imgList[i] +'</image:loc>';
+                            if(o.imgBodyList[i]){
+                                si = si + '\n\t\t\t<image:title>' + o.imgBodyList[i] +'</image:title>';
+                            };
+                            si = si + '\n\t\t</image:image>';
+                        }
+                    };      
+                }
+            }            
         });
         return si;
     };
 
-
     let contentFolder = rootScope.contentFolder;
-    let urlBase = "http://www.aleksander.de/index.html";
+    
     let siteMaps = {"siteMap":"", "siteMapImg": ""};
     let naviList = rootScope.naviList;
     let imgBoxList = rootScope.imgBoxList;
     
+    // get params from naviList
+    let baseDoman = rootScope.paramsApp[0].baseDoman;
+    let startFile = rootScope.paramsApp[0].startFile;
+    let urlBase = baseDoman + "/" + startFile;
+        
     let sm  = '<?xml version="1.0" encoding="UTF-8"?>';
     sm = sm + '\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">';
     sm = putUrlLoc(naviList, sm);

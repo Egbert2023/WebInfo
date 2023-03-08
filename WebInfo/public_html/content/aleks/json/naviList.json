@@ -1,4 +1,6 @@
-{"entries" :
+{"params" : [{"baseDoman" : "www.aleksander.de",
+              "startFile" : "index.html"}],
+ "entries" :
     [
         {"id":"navStart", "label": "Home", "href": "#!/home", "url": "content/aleks/html/home.html", "imgKey": "",
             "subm": []},

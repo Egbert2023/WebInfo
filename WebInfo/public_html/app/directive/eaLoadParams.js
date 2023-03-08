@@ -21,6 +21,10 @@ var eaLoadParams = function ( $rootScope, $http ) {
                     rootScope[paramName] = obj.entries;
                     rootScope["isLoaded_" + paramName] = true;
  
+                    if(obj.params) {
+                        rootScope["paramsApp"] = obj.params;
+                    }
+ 
                     return obj.entries;
                 };
                 let newObject = rootScope[paramName];
