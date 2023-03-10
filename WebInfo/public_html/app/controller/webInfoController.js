@@ -30,7 +30,15 @@ var webInfoController =  function($rootScope, $scope, navSrv) {
         };        
         //x.click();
     };
-        
+    
+    $scope.compSideMaps = function() {
+        let sm = {"siteMap":"", "siteMapImg": ""};
+        sm = $scope.navSrv.computeSiteMaps($rootScope);
+        console.log("siteMap.xml");
+        console.log(sm.siteMap);
+        console.log("siteMapImages.xml");
+        console.log(sm.siteMapImg);
+    };
         
 //    // Test
 //    console.log("1 - webInfoController($scope)");

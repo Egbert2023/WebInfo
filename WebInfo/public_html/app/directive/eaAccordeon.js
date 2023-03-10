@@ -7,7 +7,7 @@ var eaAccCoat = function ($compile, $rootScope) {
         restrict: 'E',
         transclude: true,
         template: '<div id="accId">' + 
-                    '<div class="eaTitle">{{accTitle}}</div>' + 
+                    '<h1>{{accTitle}}</h1>' + 
                     '<ng-transclude></ng-transclude>' +
                   '</div>',
 
@@ -69,19 +69,19 @@ var eaAccKey = function ($compile, $rootScope) {
         restrict: 'E',
         require : '^eaAccCoat',
         transclude: false,
-        template: "<div class='eaContent'>" +
+        template: "<div>" +
                     "<a class='eaNoDeco' href='' ng-click='setVisible(this)'>" + 
-                        "<div class='eaSubTitle bold'>{{title}}" + 
+                        "<h2>{{title}}" + 
                             "<span class='eaSwitch' ng-show='vis_{{accIdx}}'>-</span>" + 
                             "<span class='eaSwitch' ng-show='!vis_{{accIdx}}'>+</span>" + 
-                        "</div>" + 
+                        "</h2>" + 
                     "</a>" + 
                     "<div ng-show='!vis_{{accIdx}}'>{{txt}}</div>" + 
                     "<div ng-show='vis_{{accIdx}}'>" + 
                         "<ea-transclude>" + 
                         "</ea-transclude>" + 
                     "</div>" + 
-                  "</div>",
+                  "</div><hr />",
         scope: true,
         controller: function($scope, $rootScope) {
             let idx = $scope.$parent.$parent.accIdx + 1;

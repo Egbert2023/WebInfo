@@ -1,44 +1,43 @@
-{"entries" :
+{"params" : [{"baseDoman" : "www.aleksander.de",
+              "startFile" : "index.html"}],
+ "entries" :
     [
-        {"id":"navStart", "label": "Home", "href": "#!/home", "url": "content/aleks/html/home.html",
+        {"id":"navStart", "label": "Home", "href": "#!/home", "url": "content/aleks/html/home.html", "imgKey": "",
             "subm": []},
  
-        {"id":"navTravel", "label": "Reisen", "href": "#!/trav",  "url": "content/aleks/html/reisen.html",
-            "subm": [ {"label": "Detschland", "href": "#!/trav/de", "url": "content/aleks/html/De/Deutschland.html",
-                        "subm": [{"label": "Landschaften", "href": "#!/trav/de/l", "url": "content/aleks/html/De/Landschaften.html"},
-                         {"label": "Nordsee", "href": "#!/trav/de/n", "url": "content/aleks/html/De/Nordsee.html"},
-                         {"label": "Ostsee", "href": "#!/trav/de/o", "url": "content/aleks/html/De/Ostsee.html"}]
+        {"id":"navTravel", "label": "Reisen", "href": "#!/trav",  "url": "content/aleks/html/reisen.html", "imgKey": "Reisen",
+            "subm": [ {"label": "Detschland", "href": "#!/trav/de", "url": "content/aleks/html/De/Deutschland.html", "imgKey": "DE",
+                        "subm": [{"label": "Landschaften", "href": "#!/trav/de/l", "url": "content/aleks/html/De/Landschaften.html", "imgKey": "DE-Landschaft"},
+                         {"label": "Nordsee", "href": "#!/trav/de/n", "url": "content/aleks/html/De/Nordsee.html", "imgKey": "DE-Nordsee"},
+                         {"label": "Ostsee", "href": "#!/trav/de/o", "url": "content/aleks/html/De/Ostsee.html", "imgKey": "DE-Ostsee"}]
                  },
-                    {"label": "Europa", "href": "#!/trav/eu", "url": "content/aleks/html/Eu/Europa.html",
-                        "subm": [{"label": "Amsterdam", "href": "#!/trav/eu/am", "url": "content/aleks/html/Eu/Amsterdam.html"},
-                         {"label": "Barcelona", "href": "#!/trav/eu/ba", "url": "content/aleks/html/Eu/Barcelona.html"},
-                         {"label": "Lissabon", "href": "#!/trav/eu/lb", "url": "content/aleks/html/Eu/Lissabon.html"},
-                         {"label": "Paris", "href": "#!/trav/eu/pa", "url": "content/aleks/html/Eu/Paris.html"},
-                         {"label": "Rom", "href": "#!/trav/eu/ro", "url": "content/aleks/html/Eu/Rom.html"},
-                         {"label": "Tour Mittelmeer", "href": "#!/trav/Mittelmeer/tmm", "url": "content/aleks/html/Eu/Tour-Mittelmeer.html"},
-                         {"label": "Tour Norwegen", "href": "#!/trav/eu/tn", "url": "content/aleks/html/Eu/Tour-Norwegen.html"},
-                         {"label": "Tour Ostsee", "href": "#!/trav/eu/to", "url": "content/aleks/html/Eu/Tour-Ostsee.html"}]
+                    {"label": "Europa", "href": "#!/trav/eu", "url": "content/aleks/html/Eu/Europa.html", "imgKey": "EU",
+                        "subm": [{"label": "Amsterdam", "href": "#!/trav/eu/am", "url": "content/aleks/html/Eu/Amsterdam.html", "imgKey": "Amsterdam"},
+                         {"label": "Barcelona", "href": "#!/trav/eu/ba", "url": "content/aleks/html/Eu/Barcelona.html", "imgKey": "Barca"},
+                         {"label": "Lissabon", "href": "#!/trav/eu/lb", "url": "content/aleks/html/Eu/Lissabon.html", "imgKey": "Lissabon"},
+                         {"label": "Paris", "href": "#!/trav/eu/pa", "url": "content/aleks/html/Eu/Paris.html", "imgKey": "Paris"},
+                         {"label": "Rom", "href": "#!/trav/eu/ro", "url": "content/aleks/html/Eu/Rom.html", "imgKey": "Rom"},
+                         {"label": "Tour Mittelmeer", "href": "#!/trav/Mittelmeer/tmm", "url": "content/aleks/html/Eu/Tour-Mittelmeer.html", "imgKey": "TourMM"},
+                         {"label": "Tour Norwegen", "href": "#!/trav/eu/tn", "url": "content/aleks/html/Eu/Tour-Norwegen.html", "imgKey": "TNorge"},
+                         {"label": "Tour Ostsee", "href": "#!/trav/eu/to", "url": "content/aleks/html/Eu/Tour-Ostsee.html", "imgKey": "OTour"}]
                  }]},
-        {"id":"navHoby", "label": "Hobbies", "href": "#!/prog", "url": "content/aleks/html/Hobbies.html",
-            "subm": [ {"label": "Programmieren", "href": "#!/prog/p", "url": "content/aleks/html/prog.html"},
-                      {"label": "Mathematik", "href": "#!/prog/m", "url": "content/aleks/html/Mathe.html"},
-                      {"label": "Sport", "href": "#!/prog/sp", "url": "content/aleks/html/Sport.html"},
-                      {"label": "Garten", "href": "#!/hobby/garten", "url": "content/aleks/html/Garten.html"}]},
+         
+        {"id":"navHoby", "label": "Hobbies", "href": "#!/prog", "url": "content/aleks/html/Hobbies.html", "imgKey": "Hobby",
+            "subm": [ {"label": "Programmieren", "href": "#!/prog/p", "url": "content/aleks/html/prog.html", "imgKey": "prog"},
+                      {"label": "Mathematik", "href": "#!/prog/m", "url": "content/aleks/html/Mathe.html", "imgKey": "math"},
+                      {"label": "Sport", "href": "#!/prog/sp", "url": "content/aleks/html/Sport.html", "imgKey": "sport"},
+                      {"label": "Garten", "href": "#!/hobby/garten", "url": "content/aleks/html/Garten.html", "imgKey": "Garten"}]},
                                            
-        {"id":"navNews", "label": "News", "href": "#!/new", "url": "app/template/news/news.html", 
-            "subm": [ {"label": "Archiv", "href": "#!/new/1", "url": "app/template/news/newArchiv.html"}]},
+        {"id":"navNews", "label": "News", "href": "#!/new", "url": "app/template/news/news.html", "imgKey": "",
+            "subm": [ {"label": "Archiv", "href": "#!/new/1", "url": "app/template/news/newArchiv.html", "imgKey": ""}]},
         
-        {"id":"navService", "label": "Service", "href": "#!/srv", "url": "content/aleks/html/service.html",
-            "subm": [ {"label": "SiteMap", "href": "#!/srv/smap", "url": "app/template/sitemap.html"}, 
-                    {"label": "Cookies", "href": "#!/srv/cookies", "url": "content/aleks/html/CookiesNotRequired.html"}, 
-                    {"label": "Impressum", "href": "#!/srv/imp", "url": "content/aleks/html/impressum.html"}, 
-                    {"label": "Datenschutz", "href": "#!/srv/ds", "url": "content/aleks/html/datenschutz2.html"}, 
-                    {"label": "Hintergrund Bilder", "href": "#!/srv/pic", "url": "content/aleks/html/srv/backGround.html"},
-                    {"label": "Software-Lizenzen", "href": "#!/prog/license", "url": "LICENSE.html"}
-                    
-                    
-                    
+        {"id":"navService", "label": "Service", "href": "#!/srv", "url": "content/aleks/html/service.html", "imgKey": "",
+            "subm": [ {"label": "SiteMap", "href": "#!/srv/smap", "url": "app/template/sitemap.html", "imgKey": ""}, 
+                    {"label": "Cookies", "href": "#!/srv/cookies", "url": "content/aleks/html/CookiesNotRequired.html", "imgKey": ""}, 
+                    {"label": "Impressum", "href": "#!/srv/imp", "url": "content/aleks/html/impressum.html", "imgKey": ""}, 
+                    {"label": "Datenschutz", "href": "#!/srv/ds", "url": "content/aleks/html/datenschutz2.html", "imgKey": ""}, 
+                    {"label": "Hintergrund Bilder", "href": "#!/srv/pic", "url": "content/aleks/html/srv/backGround.html", "imgKey": "Back"},
+                    {"label": "Software-Lizenzen", "href": "#!/prog/license", "url": "LICENSE.html", "imgKey": ""}
             ]}                                              
-        
     ]
 }
