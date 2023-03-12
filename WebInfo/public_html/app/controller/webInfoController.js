@@ -39,19 +39,26 @@ var webInfoController =  function($rootScope, $scope, navSrv) {
         console.log("sitemapimages.xml");
         console.log(sm.siteMapImg);
     };
-    $scope.downloadSiteMaps = function() {
+    $scope.downloadSiteMaps = function() {        
+        // init params
         let sm = {"siteMap":"", "siteMapImg": ""};
         sm = $scope.navSrv.computeSiteMaps($rootScope);
-        let xml = sm.siteMap;
-        let fileName = "sitemap.xml";
+        
+        // define a help function
         var dwn = function(fileName, xml) {
-            // https://stackoverflow.com/questions/25631738/using-javascript-to-store-a-file-to-a-local-machine-downloading
-            a = document.createElement('a');
-            a.setAttribute("href", "data:application/xml;charset=utf-8," + xml);
-            a.setAttribute("download", fileName);
-            a.click();
+            //https://stackoverflow.com/questions/5143504/how-to-create-and-download-an-xml-file-on-the-fly-using-javascript
+            let a = document.createElement('a');
+            var bb = new Blob([xml], {type: 'text/plain'});
+            
+            a.setAttribute('href', window.URL.createObjectURL(bb));
+            a.setAttribute('download', fileName);
+            a.dataset.downloadurl = ['text/plain', a.download, a.href].join(':');
+            a.draggable = true; 
+            a.classList.add('dragout');
             a.click();
         };
+        
+        // do action
         dwn("sitemap.xml", sm.siteMap);
         dwn("sitemapimages.xml", sm.siteMapImg);
     };    
