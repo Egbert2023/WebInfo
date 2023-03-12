@@ -169,6 +169,12 @@
 			<image:title>Nach der Größe des Einfluglöches (32mm) sollen es Blaumeisen sein.</image:title>
 		</image:image>
 	<url>
+		<loc>www.aleksander.de/index.html#!/hobby/garten</loc>
+		<image:image>
+			<image:loc>www.aleksander.de/content/aleks/pictures/hobby/Mein-Apfelbaum.jpg</image:loc>
+			<image:title>Mein Apfelbaum im Jahr 2022. Nach einem Lehrgang konnte ich ihn auch korrekt beschneiden. Und siehe da, er trägt recht ordentlich.</image:title>
+		</image:image>
+	<url>
 		<loc>www.aleksander.de/index.html#!/prog/p</loc>
 		<image:image>
 			<image:loc>www.aleksander.de/content/aleks/pictures/prog/AngularJs-Index-mit-HTML.jpg</image:loc>
@@ -219,26 +225,8 @@
 	<url>
 		<loc>www.aleksander.de/index.html#!/trav/de</loc>
 		<image:image>
-			<image:loc>www.aleksander.de/content/aleks/pictures/travel/Willingen/Willingen-2007-Kyrilpfad.jpg</image:loc>
-			<image:title>Willingen im Sauerland im Kyril-Jahr 2007</image:title>
-		</image:image>
-	<url>
-		<loc>www.aleksander.de/index.html#!/trav/de</loc>
-		<image:image>
-			<image:loc>www.aleksander.de/content/aleks/pictures/travel/Willingen/Willingen-Jahreswende-2007-08.jpg</image:loc>
-			<image:title>Die Jahreswende 2007/8 in Willingen</image:title>
-		</image:image>
-	<url>
-		<loc>www.aleksander.de/index.html#!/trav/de</loc>
-		<image:image>
 			<image:loc>www.aleksander.de/content/aleks/pictures/travel/Rothenburg/Rothenburg-o-d-T-2008-Nachtansicht.jpg</image:loc>
 			<image:title>Rothenburg ob der Tauber im Jahr 2008</image:title>
-		</image:image>
-	<url>
-		<loc>www.aleksander.de/index.html#!/trav/de</loc>
-		<image:image>
-			<image:loc>www.aleksander.de/content/aleks/pictures/travel/Harz/Braunlage-2016-Blick-zum-Brocken.jpg</image:loc>
-			<image:title>Ein Blick zum Brocken</image:title>
 		</image:image>
 	<url>
 		<loc>www.aleksander.de/index.html#!/trav/de</loc>
@@ -255,12 +243,6 @@
 	<url>
 		<loc>www.aleksander.de/index.html#!/trav/de</loc>
 		<image:image>
-			<image:loc>www.aleksander.de/content/aleks/pictures/travel/Harz/Braunlage-2017-Brockenbahn.jpg</image:loc>
-			<image:title>Die Brockenbahn fährt mit viel Dampf zum Brocken hoch</image:title>
-		</image:image>
-	<url>
-		<loc>www.aleksander.de/index.html#!/trav/de</loc>
-		<image:image>
 			<image:loc>www.aleksander.de/content/aleks/pictures/travel/Schwerin/Schwerin-2022-Schloss-mit-Kreuzkanal.jpg</image:loc>
 			<image:title>Ein Blick üpber den Kreuzkanal zum Schweriner Schloss</image:title>
 		</image:image>
@@ -269,6 +251,18 @@
 		<image:image>
 			<image:loc>www.aleksander.de/content/aleks/pictures/travel/Ostsee/Warnemünde-2018-Teepott.jpg</image:loc>
 			<image:title>Die Wahrzeichen von Warnemünde, der Teepott und der Leuchtturm</image:title>
+		</image:image>
+	<url>
+		<loc>www.aleksander.de/index.html#!/trav/de</loc>
+		<image:image>
+			<image:loc>www.aleksander.de/content/aleks/pictures/travel/Mueritz/Klink-2019-Schloss.jpg</image:loc>
+			<image:title>Die Müritz mit ihrem Schloss in Klink</image:title>
+		</image:image>
+	<url>
+		<loc>www.aleksander.de/index.html#!/trav/de</loc>
+		<image:image>
+			<image:loc>www.aleksander.de/content/aleks/pictures/travel/Mueritz/Waren-2019-Blick-vom-Wasser.jpg</image:loc>
+			<image:title>Das Panorama von Waren an der Müritz</image:title>
 		</image:image>
 	<url>
 		<loc>www.aleksander.de/index.html#!/trav/eu</loc>
@@ -285,8 +279,14 @@
 	<url>
 		<loc>www.aleksander.de/index.html#!/trav/de/l</loc>
 		<image:image>
-			<image:loc>www.aleksander.de/content/aleks/pictures/travel/Mueritz/Klink-2019-Schloss.jpg</image:loc>
-			<image:title>Die Müritz mit ihrem Schloss in Klink</image:title>
+			<image:loc>www.aleksander.de/content/aleks/pictures/travel/Willingen/Willingen-2007-Kyrilpfad.jpg</image:loc>
+			<image:title>Willingen im Sauerland im Kyril-Jahr 2007</image:title>
+		</image:image>
+	<url>
+		<loc>www.aleksander.de/index.html#!/trav/de/l</loc>
+		<image:image>
+			<image:loc>www.aleksander.de/content/aleks/pictures/travel/Harz/Braunlage-2017-Brockenbahn.jpg</image:loc>
+			<image:title>Die Brockenbahn fährt mit viel Dampf zum Brocken hoch</image:title>
 		</image:image>
 	<url>
 		<loc>www.aleksander.de/index.html#!/trav/de/l</loc>
@@ -297,26 +297,20 @@
 	<url>
 		<loc>www.aleksander.de/index.html#!/trav/de/l</loc>
 		<image:image>
-			<image:loc>www.aleksander.de/content/aleks/pictures/travel/Mueritz/Waren-2019-Blick-vom-Wasser.jpg</image:loc>
-			<image:title>Das Panorama von Waren an der Müritz</image:title>
+			<image:loc>www.aleksander.de/content/aleks/pictures/travel/Harz/Braunlage-2016-Blick-zum-Brocken.jpg</image:loc>
+			<image:title>Ein Blick zum Brocken</image:title>
 		</image:image>
 	<url>
 		<loc>www.aleksander.de/index.html#!/trav/de/l</loc>
 		<image:image>
-			<image:loc>www.aleksander.de/content/aleks/pictures/travel/Willingen/Willingen-2007-Kyrilpfad.jpg</image:loc>
-			<image:title>Der Kyrilpfad bei Willingen im Sauerland im Jahre 2007, kurz nach dem Sturm</image:title>
+			<image:loc>www.aleksander.de/content/aleks/pictures/travel/Harz/Braunlage-2017-Brocken-im-Winter.jpg</image:loc>
+			<image:title>Der Brocken im Wenter 2005</image:title>
 		</image:image>
 	<url>
 		<loc>www.aleksander.de/index.html#!/trav/de/l</loc>
 		<image:image>
-			<image:loc>www.aleksander.de/content/aleks/pictures/travel/Willingen/Willingen-Jahreswende-2007-08.jpg</image:loc>
-			<image:title>Die Jahreswende 2007-08 in Willingen im Hochsauerland Hotel 2010</image:title>
-		</image:image>
-	<url>
-		<loc>www.aleksander.de/index.html#!/trav/de/l</loc>
-		<image:image>
-			<image:loc>www.aleksander.de/content/aleks/pictures/travel/Harz/Braunlage-2017-Brockenbahn.jpg</image:loc>
-			<image:title>Die Brockenbahn 2017</image:title>
+			<image:loc>www.aleksander.de/content/aleks/pictures/travel/Harz/Harz-2017-Wander-Wegweiser.jpg</image:loc>
+			<image:title>Ein Wanderwegweiser im Harz im Jahr 2005</image:title>
 		</image:image>
 	<url>
 		<loc>www.aleksander.de/index.html#!/trav/de/o</loc>
@@ -370,7 +364,7 @@
 		<loc>www.aleksander.de/index.html#!/trav/de/o</loc>
 		<image:image>
 			<image:loc>www.aleksander.de/content/aleks/pictures/travel/Ostsee/Goehren-2021-Ruderfaehre.jpg</image:loc>
-			<image:title>Wenn man auf Rügen mit dem Rad unterwegs ist, trifft man in Moritzdorf auf eine nostalgische Rudefähre.</image:title>
+			<image:title>Wenn man auf Rügen mit dem Rad unterwegs ist, trifft man in Moritzdorf auf eine nostalgische Ruderfähre.</image:title>
 		</image:image>
 	<url>
 		<loc>www.aleksander.de/index.html#!/trav/de/o</loc>
@@ -436,25 +430,25 @@
 		<loc>www.aleksander.de/index.html#!/trav/de/n</loc>
 		<image:image>
 			<image:loc>www.aleksander.de/content/aleks/pictures/travel/Nordsee/Amrum-2016-Duenen.jpg</image:loc>
-			<image:title>Die Dünen vonb Amrum, einer schönen Nordseeinsel</image:title>
+			<image:title>Die Dünen von Amrum, einer schönen Nordseeinsel</image:title>
 		</image:image>
 	<url>
 		<loc>www.aleksander.de/index.html#!/trav/eu/tn</loc>
 		<image:image>
 			<image:loc>www.aleksander.de/content/aleks/pictures/travel/Norwegen/Alesund-2010-Übersicht.jpg</image:loc>
-			<image:title>Ein Blick über &Aring;lesund</image:title>
+			<image:title>Ein Blick über Alesund</image:title>
 		</image:image>
 	<url>
 		<loc>www.aleksander.de/index.html#!/trav/eu/tn</loc>
 		<image:image>
 			<image:loc>www.aleksander.de/content/aleks/pictures/travel/Norwegen/Alesund-2010.jpg</image:loc>
-			<image:title>Ein Blich aus dem Fjord vor &Aring;lesund</image:title>
+			<image:title>Ein Blich aus dem Fjord vor Alesund</image:title>
 		</image:image>
 	<url>
 		<loc>www.aleksander.de/index.html#!/trav/eu/tn</loc>
 		<image:image>
 			<image:loc>www.aleksander.de/content/aleks/pictures/travel/Norwegen/Alesund-Blick-aufs-Meer.jpg</image:loc>
-			<image:title>Blick zu vorgelagerten Insel von &Aring;lesund</image:title>
+			<image:title>Blick zu vorgelagerten Insel von Alesund</image:title>
 		</image:image>
 	<url>
 		<loc>www.aleksander.de/index.html#!/trav/eu/tn</loc>
@@ -538,7 +532,7 @@
 		<loc>www.aleksander.de/index.html#!/trav/eu/lb</loc>
 		<image:image>
 			<image:loc>www.aleksander.de/content/aleks/pictures/travel/Lissabon/Lissabon-Torre-de-Belem.jpg</image:loc>
-			<image:title>Das Tor zu Lissabon vom Wasser aus der Torre de Belem</image:title>
+			<image:title>Das Tor zu Lissabon am Tejo, der Torre de Belem</image:title>
 		</image:image>
 	<url>
 		<loc>www.aleksander.de/index.html#!/trav/eu/lb</loc>
@@ -550,7 +544,7 @@
 		<loc>www.aleksander.de/index.html#!/trav/eu/lb</loc>
 		<image:image>
 			<image:loc>www.aleksander.de/content/aleks/pictures/travel/Lissabon/Lissabon-Elevator.jpg</image:loc>
-			<image:title>Der Berühmte Elevator oder auch Fahrstuhl.</image:title>
+			<image:title>Der Berühmte 'Elevador de Santa Justa' oder auch Fahrstuhl.</image:title>
 		</image:image>
 	<url>
 		<loc>www.aleksander.de/index.html#!/trav/eu/lb</loc>
@@ -592,13 +586,13 @@
 		<loc>www.aleksander.de/index.html#!/trav/Mittelmeer/tmm</loc>
 		<image:image>
 			<image:loc>www.aleksander.de/content/aleks/pictures/travel/Mittelmeer/Malta-2005-vom-Wasser.jpg</image:loc>
-			<image:title>Malte 2005 vom Wasser aus</image:title>
+			<image:title>Malta 2005 vom Wasser aus</image:title>
 		</image:image>
 	<url>
 		<loc>www.aleksander.de/index.html#!/trav/Mittelmeer/tmm</loc>
 		<image:image>
 			<image:loc>www.aleksander.de/content/aleks/pictures/travel/Mittelmeer/Malta-2005-Blick-auf-den-Hafen.jpg</image:loc>
-			<image:title>Blick auf den Hafen von Valetta, der Hauütstadt von Malte</image:title>
+			<image:title>Blick auf den Hafen von Valetta, der Hauütstadt von Malta</image:title>
 		</image:image>
 	<url>
 		<loc>www.aleksander.de/index.html#!/trav/Mittelmeer/tmm</loc>

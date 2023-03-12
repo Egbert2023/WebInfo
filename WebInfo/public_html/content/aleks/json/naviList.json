@@ -6,7 +6,7 @@
             "subm": []},
  
         {"id":"navTravel", "label": "Reisen", "href": "#!/trav",  "url": "content/aleks/html/reisen.html", "imgKey": "Reisen",
-            "subm": [ {"label": "Detschland", "href": "#!/trav/de", "url": "content/aleks/html/De/Deutschland.html", "imgKey": "DE",
+            "subm": [ {"label": "Deutschland", "href": "#!/trav/de", "url": "content/aleks/html/De/Deutschland.html", "imgKey": "DE",
                         "subm": [{"label": "Landschaften", "href": "#!/trav/de/l", "url": "content/aleks/html/De/Landschaften.html", "imgKey": "DE-Landschaft"},
                          {"label": "Nordsee", "href": "#!/trav/de/n", "url": "content/aleks/html/De/Nordsee.html", "imgKey": "DE-Nordsee"},
                          {"label": "Ostsee", "href": "#!/trav/de/o", "url": "content/aleks/html/De/Ostsee.html", "imgKey": "DE-Ostsee"}]
