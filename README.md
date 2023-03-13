@@ -17,7 +17,8 @@ In order to connect the two parts, the path to the content must be specified in 
 ```
 
 The application part contains all the necessary functions and features to run the application. No adjustments are required here for use on a new website. (are of course possible) 
-The content part must be completely recreated when used for a new website.
+The content part must be completely recreated when used for a new website. An example of a web application created with this WebInfo application:
+[Link](http://aleksander.de/ "my home page").
 
 ### New content
 
@@ -46,6 +47,78 @@ To create new content, the following files must be created and exchanged.
         },   
 ```
 
- 
+### Special components
 
+To support the creation of HTML pages I have created the following AngularJs directives. 
+1. eaAccCoat and eaAccKey - An accordion functionality with two nested HTML tags is provided
+2. eaAddHtml - A html page is inserted into the code. This functionality is used for the parameterized generation of the menu and the news mechanism
+3. eaImg and eaImgBox - provides the functionality to display the images within the HTML pages and to display the images enlarged with a scrolling function
+4. eaLoadParams - Call in the index.html to read in all JSON files
+5. eaNavi - Generates the complete menu with one call
+6. eaFooter - Inserted the footer.html 
+
+#### eaAccCoat and eaAccKey
+
+An example of using the accordion functionality: 
+```html
+<div class='eaContent'>
+    <ea-acc-coat data-acc-title="How is this application programmed?">
+        <ea-acc-key data-title="Basic structure of the application" data-txt-len="200">
+            <div class="row">
+                <div class="col-lg-12">
+                    This "WebInfo" web application is a so-called "single page application" (SPA). ...
+				</div>
+                <div class="col-lg-12">
+                    Two frameworks are used in this application:
+					<ul>
+                        <li>
+                            <a class="eaExtern" target="_blank" 
+                            href:"https://code.angularjs.org/1.7.9/docs/tutorial/step_09">AngularJs (Version 1.7.9)</a>, 
+                            see also <a class="eaExtern" target="_blank" 
+                            href:"https://de.wikipedia.org/wiki/AngularJS">Wikipedia</a>, 
+                        </li>
+                        <li>
+                            <a class="eaExtern" target="_blank" 
+                            href:"https://getbootstrap.com/docs/5.2/getting-started/introduction/">
+                            Bootstrap 5
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </ea-acc-key>
+        <ea-acc-key data-title="Parameterization of the application" data-txt-len="200">
+            <div>
+	One goal when designing the application was the complete separation between the technical 
+            and the content part. On the one hand, this was achieved through a strict separation 
+            of resources. The technical implementation of the functionalities is stored in the 
+            '/app' directory. The content files are located in the '/content' directory. ...
+            </div>
+        </ea-acc-key>
+    </ea-acc-coat>
+</div>
+```
+See also [Link](http://www.aleksander.de/index.html#!/prog/p "http://www.aleksander.de").
+
+#### eaAddHtml
+
+Thise is the central html document in which all content html pages are inserted.
+The tag 'ea-add-html' started the functionality to import the given url '{{url}}'.
+```html
+<div class="eaCard">
+    <ea-path-link></ea-path-link> 
+    <div class="eaContent">
+        <div ea-add-html = "{{url}}"></div>
+    </div>
+</div>
+```
+Since the directive **'eaPathLink'** is used at the beginning of the page in this central component, it is ensured that every HTML page of this application displays this link.
+
+#### eaImg and eaImgBox
+
+#### eaLoadParams
+
+#### eaNavi
+
+#### eaFooter
 
