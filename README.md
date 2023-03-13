@@ -65,10 +65,10 @@ An example of using the accordion functionality:
     <ea-acc-coat data-acc-title="How is this application programmed?">
         <ea-acc-key data-title="Basic structure of the application" data-txt-len="200">
             <div class="row">
-                <div class="col-lg-12">
+                <div class="col-lg-6">
                     This "WebInfo" web application is a so-called "single page application" (SPA). ...
 				</div>
-                <div class="col-lg-12">
+                <div class="col-lg-6">
                     Two frameworks are used in this application:
 					<ul>
                         <li>
@@ -98,11 +98,11 @@ An example of using the accordion functionality:
     </ea-acc-coat>
 </div>
 ```
-See also [Link](http://www.aleksander.de/index.html#!/prog/p "http://www.aleksander.de").
+See also [My home page serves as an example](http://www.aleksander.de/index.html#!/prog/p "http://www.aleksander.de").
 
 #### eaAddHtml
 
-Thise is the central html document in which all content html pages are inserted.
+This is the central html document in which all content html pages are inserted.
 The tag 'ea-add-html' started the functionality to import the given url '{{url}}'.
 ```html
 <div class="eaCard">
