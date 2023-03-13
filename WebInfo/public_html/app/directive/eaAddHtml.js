@@ -23,30 +23,12 @@ var eaAddHtmlDirective = function ($rootScope, $location, $compile, $http, navSr
         
         if(url!=="") {         
             scope.navSrv.getHtml($http, $compile, scope, ele, url, callback);
-            
-//    // Test
-//    console.log("6 - Directive-eaAddHtml-Link URL!==''($scope)");
-//    console.log(scope);
-
         } else {
             // event 'ReadUrlIsReady' is fired when url is readed.
             $rootScope.$on("ReadUrlIsReady", function(evt, opt) {
                 scope.navSrv.getHtml($http, $compile, scope, ele, opt, callback);
             });
-
         }
-            
-//            scope.$watch(scope.urlIsReaded, function(){
-//                scope.navSrv.getHtml($http, $compile, scope, ele, url, callback);
-//                
-//    // Test
-//    console.log("9 - Directive-eaAddHtml-Link URL==='' - watch(url) ($scope)");
-//    console.log(scope);
-//                
-//            }); // $watch
-            
-//        }; // if(url!=="")
-        
     }
   };
 };
