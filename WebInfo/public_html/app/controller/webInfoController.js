@@ -14,7 +14,8 @@ var webInfoController =  function($rootScope, $scope, navSrv) {
     };
    
     $scope.scope_webInfoController = $scope.url;    
-        
+       
+    // +/- Toggle for accordion
     $scope.toggleMenu = function()
     {
         let x = document.getElementById("myToogle");
@@ -28,9 +29,9 @@ var webInfoController =  function($rootScope, $scope, navSrv) {
             }
             
         };        
-        //x.click();
     };
     
+    // Export siteMap.xml and siteMapImages.xml to console.log();
     $scope.compSideMaps = function() {
         let sm = {"siteMap":"", "siteMapImg": ""};
         sm = $scope.navSrv.computeSiteMaps($rootScope);
@@ -39,6 +40,8 @@ var webInfoController =  function($rootScope, $scope, navSrv) {
         console.log("sitemapimages.xml");
         console.log(sm.siteMapImg);
     };
+    
+    // Download siteMap.xml and siteMapImages.xml to download folder on local;
     $scope.downloadSiteMaps = function() {        
         // init params
         let sm = {"siteMap":"", "siteMapImg": ""};
@@ -62,7 +65,16 @@ var webInfoController =  function($rootScope, $scope, navSrv) {
         dwn("sitemap.xml", sm.siteMap);
         dwn("sitemapimages.xml", sm.siteMapImg);
     };    
-        
+    
+    // Check if application is started with parameter
+    $scope.getUrlParam = function() {
+        let loc = window.location;
+        let href = loc.href;
+        let arr = href.split("?");
+        let ret = (arr.length>0)? arr[1] : "";
+        return ret;        
+    };
+    
 //    // Test
 //    console.log("1 - webInfoController($scope)");
 //    console.log($scope);

@@ -1,11 +1,11 @@
 <div class="eaContent">
   <div class="container-fluid">
     <div>    
-        <button type="button" ng-click="downloadSiteMaps()" class="btn btn-light bold">
-            SiteMap &nbsp;
-            <i class="bi-download" style="font-size: 1.5rem; color: green;"></i>
-        </button>
-        
+        <h1>SiteMap
+            <button ng-show="getUrlParam()==='Admin'" type="button" ng-click="downloadSiteMaps()" class="btn btn-light">
+                <i class="bi-download" style="font-size: 1.6rem; color: #21a828;"></i>
+            </button>
+        </h1>
         <ul class="sitemap">    
           <spam ng-repeat="nav in naviList">  
             <li class="sitemap-item"
