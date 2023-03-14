@@ -1,0 +1,51 @@
+<div>
+    <ea-acc-coat data-acc-title="{{title}}">
+        <div ng-repeat="n in news">
+            <ea-acc-key data-title="{{n.title}}" data-txt-len="{{n.len}}">
+                <div class="eaLinkPath">{{n.newFrom}}</div>
+                
+                <div ng-show='n.body.length !== 0 && n.img.length !== 0' >
+                    <div ng-repeat="nn in n.body">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div>
+                                    <div ea-img  data-img="{{n.img[$index]}}" data-alt="{{n.imgBody[$index]}}"></div>
+                                </div>                                
+                                <div class="eaImgBody">
+                                    {{n.imgBody[$index]}}
+                                </div>                        
+                            </div>    
+                            <div class="col-lg-6">
+                                {{nn}}
+                            </div>
+                        </div>
+
+                    </div>
+                </div>                
+                
+                <div ng-show='n.body.length === 0 && n.img.length !== 0' >
+                    <div ng-repeat="p in n.img">
+                        <div ea-img  data-img="{{p}}" data-alt="{{n.imgBody[$index]}}"></div>
+                        <div class="eaImgBody">
+                            {{n.imgBody[$index]}}
+                        </div>                        
+                    </div>
+                </div>
+                                
+                <div ng-show='n.body.length !== 0 && n.img.length === 0'>
+                    <div ng-repeat="b in n.body">
+                        {{b}}
+                    </div>
+                </div>
+                                
+                <div ng-show="n.href !== ''" >
+                    <br />
+                    <div ea-add-html="{{n.href}}"></div> 
+                </div>
+                
+                <hr />                
+                
+            </ea-acc-key>
+        </div>
+    </ea-acc-coat>
+</div>

@@ -26,6 +26,7 @@ webInfo.directive('eaImgBox', ['$compile', '$rootScope', eaImgBox]).$inject = ['
 webInfo.directive('eaImg', ['$rootScope', eaImg]).$inject = ['$scope'];
 webInfo.directive('eaAccCoat', ['$compile', '$rootScope', eaAccCoat]).$inject = ['$scope'];
 webInfo.directive('eaAccKey', ['$compile', '$rootScope', eaAccKey]).$inject = ['$scope'];
+webInfo.directive('eaNews', ['$rootScope', eaNews]).$inject = ['$scope'];
 
 // $compile, $rootScope
 webInfo.config(['$routeProvider', eaNavConfig]);

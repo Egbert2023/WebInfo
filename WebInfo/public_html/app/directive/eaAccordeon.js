@@ -18,6 +18,11 @@ var eaAccCoat = function ($compile, $rootScope) {
             $scope.accIdx = 0;
             $scope.vis_1 = true;
             
+            if($rootScope.globalArcIdx) {
+                $scope.accIdx = $rootScope.globalArcIdx;
+                $scope.vis_1 = false;
+            }
+            
             $scope.scope_eaAccCoat_controller = 0;
             
             var getInnerFromTag = function(html, tag) {
@@ -60,6 +65,8 @@ var eaAccCoat = function ($compile, $rootScope) {
         
         link: function (scope, ele, attrs) {      
             scope.accTitle = attrs.accTitle;
+            
+            $rootScope.globalArcIdx = undefined;
         }  // link
     };  // return
 };   // eaAccCoat()
