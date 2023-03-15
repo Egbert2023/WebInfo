@@ -4,20 +4,24 @@ var webInfoController =  function($rootScope, $scope, navSrv) {
     $scope.navSrv = navSrv;
     $scope.isNew = function(d) {
         var ret = false;
-        
         let yourDate = new Date();
         let yy = yourDate.toISOString().split('T')[0];
-        
-        ret = (yy <= d.newTo)? true : false;
-        ret = (yy >= d.newFrom)? ret : false;
+        ret = (yy <= d.newTo)? true : false;   // to late
+        ret = (yy >= d.newFrom)? ret : false;  // to early
+        return ret;
+    };
+    $scope.isToEarly = function(d) {
+        var ret = true;
+        let yourDate = new Date();
+        let yy = yourDate.toISOString().split('T')[0];
+        ret = (yy < d.newFrom)? true : false;
         return ret;
     };
    
     $scope.scope_webInfoController = $scope.url;    
        
     // +/- Toggle for accordion
-    $scope.toggleMenu = function()
-    {
+    $scope.toggleMenu = function() {
         let x = document.getElementById("myToogle");
         if(x.parentNode){
             if(x.parentNode.nextElementSibling){
@@ -26,8 +30,7 @@ var webInfoController =  function($rootScope, $scope, navSrv) {
                         x.click();
                     }
                 }
-            }
-            
+            }            
         };        
     };
     
@@ -74,10 +77,6 @@ var webInfoController =  function($rootScope, $scope, navSrv) {
         let ret = (arr.length>0)? arr[1] : "";
         return ret;        
     };
-    
-//    // Test
-//    console.log("1 - webInfoController($scope)");
-//    console.log($scope);
-   
+  
     return false;
 };
