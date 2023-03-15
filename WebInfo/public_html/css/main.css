@@ -219,8 +219,13 @@ http://jsfiddle.net/shanidkv/k8g5yehs/
 }
 .eaSubTitle, h2 {
     color: #21a828;
+    font-size: larger;
+}
+.eaSubSubTitle, h3 {
+    color: #21a828;
     font-size: large;
 }
+
 .bold {
     font-weight:  bold;
 }
