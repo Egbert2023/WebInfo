@@ -21,8 +21,7 @@ var webInfoController =  function($rootScope, $scope, navSrv) {
     $scope.scope_webInfoController = $scope.url;    
        
     // +/- Toggle for accordion
-    $scope.toggleMenu = function()
-    {
+    $scope.toggleMenu = function() {
         let x = document.getElementById("myToogle");
         if(x.parentNode){
             if(x.parentNode.nextElementSibling){
@@ -31,8 +30,7 @@ var webInfoController =  function($rootScope, $scope, navSrv) {
                         x.click();
                     }
                 }
-            }
-            
+            }            
         };        
     };
     
@@ -79,10 +77,6 @@ var webInfoController =  function($rootScope, $scope, navSrv) {
         let ret = (arr.length>0)? arr[1] : "";
         return ret;        
     };
-    
-//    // Test
-//    console.log("1 - webInfoController($scope)");
-//    console.log($scope);
-   
+  
     return false;
 };

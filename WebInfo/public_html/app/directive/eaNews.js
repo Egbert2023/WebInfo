@@ -14,28 +14,43 @@ var eaNews = function ( $rootScope ) {
 
             // get al params
             $scope.newsAll = $rootScope.newsList;
-            
+         
+            var varName = "vis_";
+//            for(let i=0; i<$scope.news.length; i++) {
+//                $scope[varName + i]=false; 
+//            };
+                        
+            $scope.setVisible = function(t) {
+                let idx = 0;   
+                idx = t.$index + 1;   
+                let av = $scope[varName + idx];
+                
+                for(let i=0; i<$scope.news.length; i++) {
+                    $scope[varName + (i + 1).toString()]=false; 
+                };                
+                                
+                $scope[varName + idx]=(av)? false: true; 
+
+                return false;
+            };           
         },   // controller
         
         // <ea-news data-news-title="News" 
         //          data-news-mode="all" | "new" | "arc"
-        //          data-news-limit="3"
+        //          data-news-limit="0" | "1" | "2" ...
         //          data-news-init-idx = "0" | "1...n">
         //</ea-news>
         link: function (scope, ele, attrs) {      
            scope.title = attrs.newsTitle;
-           scope.mode = attrs.newsMode;
-           scope.limit = attrs.newsLimit;
-           scope.initIdx = attrs.newsInitIdx;
-           
-           if(scope.initIdx) {
-               $rootScope.globalArcIdx = scope.initIdx - 1;
-           }
+           let mode = attrs.newsMode;
+           let limit = attrs.newsLimit;
+           let initIdx = attrs.newsInitIdx;
+
            // compute current news
            // scope.mode==="all" then all without ToEarly
            // scope.mode==="new" then all by function isNew()
            // scope.mode==="arc" then all by function !isNew()
-           switch(scope.mode) {
+           switch(mode) {
                case "all": {
                    scope.news = scope.newsAll.filter(o => !scope.$parent.$parent.isToEarly(o));
                    break;
@@ -53,8 +68,12 @@ var eaNews = function ( $rootScope ) {
                    scope.news = scope.newsAll.filter(o => {scope.$parent.isNew(o);});
                }
            }
-           if(scope.limit) {
-               scope.news = scope.news.slide(0,scope.limit-1);
+           if(limit) {
+               scope.news = scope.news.slice(0,limit);
+           }
+           if(initIdx) {
+               let varName = "vis_";
+               scope[varName + initIdx]=true; 
            }
         }
     };  // return
