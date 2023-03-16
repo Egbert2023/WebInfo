@@ -153,6 +153,7 @@ var computeSiteMaps = function(rootScope) {
                                 si = si + '\n\t\t\t<image:title>' + o.imgBodyList[i] +'</image:title>';
                             };
                             si = si + '\n\t\t</image:image>';
+                            si = si + '\n\t</url>';
                         }
                     };      
                 }

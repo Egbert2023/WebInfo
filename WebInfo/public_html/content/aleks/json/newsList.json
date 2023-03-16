@@ -5,18 +5,18 @@
     "newTo:      The last day when this new will be show in 'news' but can show in 'new/archiv'.",
     "--------------------------------------------------------------------------",
     "title:      Title of new (large letters)",
-    "newFrom:    The first day when this new will be show. (little letters)",
+    "newFrom:    The first day when this new is shown. (little letters)",
     "---------------------------------------------------------------------------",
     "img: (0ptional) ohne picture    |   body: (optional) Body text",
-    "imgBody: Labeleing of picture   |   the following special characters can be used",
+    "imgBody: Labeling of picture    |   the following special characters can be used",
     "---------------------------------------------------------------------------",
     "href:       Any HTML page can be integrated ",
     "---------------------------------------------------------------------------",
     "Hints:",
     "All texts are continuous texts without the possibility of inserting line breaks.",
     "The arrays of the 'body' and 'img' parameters must have the same number of elements. ",
-    "If the texts in some 'body' parameters remain empty, they must be defined in ",
-    "a different way (e.g. different number of spaces)"],
+    "If the texts in some 'body' parameters remain empty, they MUST BE DEFINED IN ",
+    "A DIFFERENT WAY (e.g. different number of spaces)"],
         
 "entries":   
     [
@@ -45,7 +45,7 @@
             "newFrom": "2022-07-30",
             "newTo": "2022-09-30",
             "title": "Wir wollen nach Lissabon", 
-            "body": ["Corona hatte uns einen Strich durch die Rechnung gemacht. Jetzt planen wir endlich den Trip nach Lissabon."], 
+            "body": ["Corona hatte uns einen Strich durch die Rechnung gemacht. Jetzt planen wir endlich den Trip nach Lissabon. Im Oktober 2022 war es endlich soweit."], 
             "img": ["content/aleks/pictures/travel/Lissabon/Lissabon-Praca-do-Comercio-vom-Wasser.jpg"],
             "imgBody": ["Ein Blick auf die Alfama, ein Teil der Altstadt von Lissabon vom Wasser aus"],
             "href": ""
