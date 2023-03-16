@@ -9,7 +9,6 @@
         </a>
         <div ng-show='!vis_{{$index+1}}'>{{n.txtShort}}</div>
         <div ng-show='vis_{{$index+1}}'>
-
             <div class="eaLinkPath">{{n.newFrom}}</div>
 
             <div ng-show='n.body.length !== 0 && n.img.length !== 0' >
@@ -27,7 +26,6 @@
                             {{nn}}
                         </div>
                     </div>
-
                 </div>
             </div>                
 
@@ -50,10 +48,7 @@
                 <br />
                 <div ea-add-html="{{n.href}}"></div> 
             </div>
-
-            <hr />                
-
         </div>
-    </div>
-    
+        <hr />                
+    </div>    
 </div>

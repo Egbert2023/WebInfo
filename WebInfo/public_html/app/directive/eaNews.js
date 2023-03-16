@@ -80,10 +80,14 @@ var eaNews = function ( $rootScope ) {
             if(txtLen){
                 scope.news.forEach(o => {
                     o.txtShort = "";
-                    o.body.forEach(oo => {
-                        o.txtShort = o.txtShort + " " + oo.substring(0, parseInt(txtLen));
+                    let txt = "";
+                    o.body.forEach(ob => {
+                        o.txtShort = o.txtShort + ob.substring(0, parseInt(txtLen)) + " ";
+                        txt = txt + ob;
                     });
-                    o.txtShort + (o.body.length>txtLen)? " ...":"";
+                    o.txtShort = o.txtShort.trim();
+                    let addTxt = (txt.length>parseInt(txtLen))? " ...":"";
+                    o.txtShort = o.txtShort + addTxt;
                 }); 
             }
 
