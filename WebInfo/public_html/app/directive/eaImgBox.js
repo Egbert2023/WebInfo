@@ -173,6 +173,14 @@ var eaImgBox = function ($compile, $rootScope) {
                scope.imgBodyArr = [""];
                scope.imgBoxImg = scope.imgBoxArr[0];
            } // if(scope.imgBoxKey !== undefined)
+           
+//           ele.bind("keydown keypress", function (event) {
+//                if (event.keyCode === 27) {
+//                    scope.closeModal();  
+//                }
+//                //scope.$apply();
+//            });  
+
         }  // link
     };  // return
 };   // eaImgBox()
