@@ -78,5 +78,9 @@ var webInfoController =  function($rootScope, $scope, navSrv) {
         return ret;        
     };
   
+    $scope.key = ($event) => {
+        console.log('got key ' + $event.code);
+    };
+
     return false;
 };

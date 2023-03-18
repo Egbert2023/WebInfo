@@ -39,7 +39,12 @@ var eaImgBox = function ($compile, $rootScope) {
               
                 // open Modal
                 $scope.openModal();
-                $scope.currentSlide($scope.slideIndex);
+                
+                // Set focus to image
+                let aDocImg = angular.element($scope.currentSlide($scope.slideIndex));
+                aDocImg.ready(function() {
+                    aDocImg[0].focus();
+                });
                 return false;
             });
             
@@ -91,7 +96,7 @@ var eaImgBox = function ($compile, $rootScope) {
                 docImg = document.getElementById(idImg);
                 docImgBody = document.getElementById(idImgBody);
                 if(docNum !== null) {docNum.style.display = "block";}
-                if(docImg !== null) {docImg.style.display = "block";}
+                if(docImg !== null) {docImg.style.display = "block";docImg.focus();}
                 if(docImgBody !== null) {docImgBody.style.display = "block";}
                 return false;
             };
@@ -107,9 +112,9 @@ var eaImgBox = function ($compile, $rootScope) {
                 let docImg = document.getElementById(idImg);
                 let docImgBody = document.getElementById(idImgBody);
                 if(docNum !== null) {docNum.style.display = "block";}
-                if(docImg !== null) {docImg.style.display = "flex";}
+                if(docImg !== null) {docImg.style.display = "block";}
                 if(docImgBody !== null) {docImgBody.style.display = "block";}
-                return false;
+                return docImg;
             };
   
             // compute the innerr HTML for modal picture viewer
@@ -156,6 +161,11 @@ var eaImgBox = function ($compile, $rootScope) {
                 }
                 return false;
             };
+            
+//            $scope.key = ($event) => {
+//                console.log('got key ' + $event.code);
+//            };
+            
         },   // controller
         
         link: function (scope, ele, attrs) {      
@@ -166,20 +176,23 @@ var eaImgBox = function ($compile, $rootScope) {
                 scope.imgBodyArr = obj.imgBodyList;
                 scope.imgBoxIdx = attrs.imgBoxIdx;
                 scope.imgBoxImg = scope.imgBoxArr[scope.imgBoxIdx-1];
-           } else {
-               scope.imgBoxArr = [];
-               scope.imgBoxArr.push(attrs.imgArr);
-               scope.imgBoxIdx = 1;
-               scope.imgBodyArr = [""];
-               scope.imgBoxImg = scope.imgBoxArr[0];
-           } // if(scope.imgBoxKey !== undefined)
+            } else {
+                scope.imgBoxArr = [];
+                scope.imgBoxArr.push(attrs.imgArr);
+                scope.imgBoxIdx = 1;
+                scope.imgBodyArr = [""];
+                scope.imgBoxImg = scope.imgBoxArr[0];
+            } // if(scope.imgBoxKey !== undefined)
            
-//           ele.bind("keydown keypress", function (event) {
-//                if (event.keyCode === 27) {
-//                    scope.closeModal();  
-//                }
-//                //scope.$apply();
-//            });  
+            ele.bind("keydown keypress", function (event) {
+                if (event.which === 27) {
+                    scope.closeModal();  
+                }
+                event.preventDefault();
+            });  
+
+            // Test
+            //ele.focus();
 
         }  // link
     };  // return
