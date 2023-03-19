@@ -17,7 +17,7 @@ var eaImgBox = function ($compile, $rootScope) {
             // Initialisation
             $scope.slideIndex = 1;
             
-            //  listening to event "openModalImgBox" from directive "eaImg"
+            // listening to event "openModalImgBox" from directive "eaImg"
             $rootScope.$on("openModalImgBox", function(evt, opt) {
                 // when opt.key is undefined then do not show scroll icons
                 $scope.canScroll = (opt.key)? true : false;
@@ -51,9 +51,26 @@ var eaImgBox = function ($compile, $rootScope) {
             // Open the Modal
             $scope.openModal = function() {
                 let docModal = document.getElementById("myModal");
+                let ele = {};
                 if(docModal !== null) {
                     docModal.style.display = "block";
-                }  
+                    
+                    // Preparing to close the modal window with the ESC key    
+                    ele = angular.element(docModal);
+                    ele.bind("keydown keypress", function (event) {
+                        if (event.which === 27) {
+                            $scope.closeModal();  
+                        }
+                        event.preventDefault();
+                    }); 
+                };                  
+                // Set focus to docModal 
+                // this is required for closing the modal window with the ESC key.
+                let aDocModal = angular.element(docModal);
+                aDocModal.ready(function() {
+                    aDocModal[0].focus();
+                });
+                
                 return false;
             };
 
@@ -137,9 +154,6 @@ var eaImgBox = function ($compile, $rootScope) {
                     
                     iHtml = iHtml + ht + htt;
                 };
-                
-                
-                
                 iHtml = iHtml + '</div>';
 
                 if($scope.canScroll){
@@ -161,11 +175,6 @@ var eaImgBox = function ($compile, $rootScope) {
                 }
                 return false;
             };
-            
-//            $scope.key = ($event) => {
-//                console.log('got key ' + $event.code);
-//            };
-            
         },   // controller
         
         link: function (scope, ele, attrs) {      
@@ -183,17 +192,6 @@ var eaImgBox = function ($compile, $rootScope) {
                 scope.imgBodyArr = [""];
                 scope.imgBoxImg = scope.imgBoxArr[0];
             } // if(scope.imgBoxKey !== undefined)
-           
-            ele.bind("keydown keypress", function (event) {
-                if (event.which === 27) {
-                    scope.closeModal();  
-                }
-                event.preventDefault();
-            });  
-
-            // Test
-            //ele.focus();
-
         }  // link
     };  // return
 };   // eaImgBox()
