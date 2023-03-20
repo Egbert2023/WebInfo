@@ -12,10 +12,6 @@ var eaVideo = function ( $rootScope ) {
         controller: function($scope) {
             $scope.scope_eaVideoDirektive = $scope.url;    
 
-// vdoSrc
-// vdoNo
-// vdoBody
-
             // get parameter vdoNo
             $scope.vdoNo = $rootScope.paramsApp[0].vdoNo;
         },   // controller
@@ -28,8 +24,6 @@ var eaVideo = function ( $rootScope ) {
         link: function (scope, ele, attrs) {      
             scope.vdoSrc = attrs.vdoSrc;
             scope.vdoBody = attrs.vdoBody;
-
-
         }
     };  // return
 };   // eaVideo()

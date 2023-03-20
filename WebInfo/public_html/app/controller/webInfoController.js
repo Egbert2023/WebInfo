@@ -2,6 +2,9 @@
 
 var webInfoController =  function($rootScope, $scope, navSrv) {
     $scope.navSrv = navSrv;
+    $scope.scope_webInfoController = $scope.url;
+    
+    // Functions for 'eaNews' directive
     $scope.isNew = function(d) {
         var ret = false;
         let yourDate = new Date();
@@ -16,10 +19,9 @@ var webInfoController =  function($rootScope, $scope, navSrv) {
         let yy = yourDate.toISOString().split('T')[0];
         ret = (yy < d.newFrom)? true : false;
         return ret;
-    };
-   
-    $scope.scope_webInfoController = $scope.url;    
-       
+    };   
+    
+    // Function for 'eaAccordion' directive
     // +/- Toggle for accordion
     $scope.toggleMenu = function() {
         let x = document.getElementById("myToogle");
@@ -34,17 +36,8 @@ var webInfoController =  function($rootScope, $scope, navSrv) {
         };        
     };
     
-    // Export siteMap.xml and siteMapImages.xml to console.log();
-    $scope.compSideMaps = function() {
-        let sm = {"siteMap":"", "siteMapImg": ""};
-        sm = $scope.navSrv.computeSiteMaps($rootScope);
-        console.log("sitemap.xml");
-        console.log(sm.siteMap);
-        console.log("sitemapimages.xml");
-        console.log(sm.siteMapImg);
-    };
-    
     // Download siteMap.xml and siteMapImages.xml to download folder on local;
+    // is used on siteMap.html page only with url-param '?Admin'
     $scope.downloadSiteMaps = function() {        
         // init params
         let sm = {"siteMap":"", "siteMapImg": ""};
@@ -67,9 +60,9 @@ var webInfoController =  function($rootScope, $scope, navSrv) {
         // do action
         dwn("sitemap.xml", sm.siteMap);
         dwn("sitemapimages.xml", sm.siteMapImg);
-    };    
-    
+    };        
     // Check if application is started with parameter
+    // Used for download siteMap.xml and siteMapImages.xml on siteMap.html page
     $scope.getUrlParam = function() {
         let loc = window.location;
         let href = loc.href;
@@ -77,10 +70,6 @@ var webInfoController =  function($rootScope, $scope, navSrv) {
         let ret = (arr.length>0)? arr[1] : "";
         return ret;        
     };
-  
-    $scope.key = ($event) => {
-        console.log('got key ' + $event.code);
-    };
-
+    
     return false;
 };

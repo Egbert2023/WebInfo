@@ -39,12 +39,8 @@ var eaImgBox = function ($compile, $rootScope) {
               
                 // open Modal
                 $scope.openModal();
+                $scope.currentSlide($scope.slideIndex);
                 
-                // Set focus to image
-                let aDocImg = angular.element($scope.currentSlide($scope.slideIndex));
-                aDocImg.ready(function() {
-                    aDocImg[0].focus();
-                });
                 return false;
             });
             
@@ -63,7 +59,8 @@ var eaImgBox = function ($compile, $rootScope) {
                         }
                         event.preventDefault();
                     }); 
-                };                  
+                };     
+                
                 // Set focus to docModal 
                 // this is required for closing the modal window with the ESC key.
                 let aDocModal = angular.element(docModal);
