@@ -1,0 +1,19 @@
+<div class="eaCard">
+    <h1>{{titleCookie}}</h1>
+    <div>
+        {{bodyCookie}}
+    </div>
+    <div class="row" ng-repeat="t in typesCookie">
+        <div class="col-lg-4 col-md-6 col-sm-12">
+            <input type="checkbox" id="{{t.id}}}" name="{{t.title}}" value="{{t.title}}">
+        </div>
+    </div>
+    
+    <button type="button" class="btn btn-primary" ng-click="saveCookies('cur')">Auswahl bestätigen</button>
+    <button type="button" class="btn btn-primary" ng-click="saveCookies('all')">Alle Bestätigen</button>
+    
+    <div>
+            
+    </div>
+    
+</div>
