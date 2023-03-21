@@ -1,7 +1,7 @@
 'use strict';
 
 //var eaDemo = angular.module("eaDemo", ["ngRoute", "ngAnimate"]);
-var webInfo = angular.module("webInfo", ["ngRoute"]);
+var webInfo = angular.module("webInfo", ["ngRoute", "ngCookies"]);
 
 var configSrv = webInfo.service('eaConfigSrv', [function($routeProvider){
     this.eaNavConfig = eaNavConfig;      
@@ -28,11 +28,12 @@ webInfo.directive('eaAccCoat', ['$compile', '$rootScope', eaAccCoat]).$inject = 
 webInfo.directive('eaAccKey', ['$compile', '$rootScope', eaAccKey]).$inject = ['$scope'];
 webInfo.directive('eaNews', ['$rootScope', eaNews]).$inject = ['$scope'];
 webInfo.directive('eaVideo', ['$rootScope', eaVideo]).$inject = ['$scope'];
+webInfo.directive('eaCookies', ['$rootScope', eaCookiesDirektive]).$inject = ['$scope'];
 
 // $compile, $rootScope
 webInfo.config(['$routeProvider', eaNavConfig]);
 
-webInfo.controller('webInfoController', ['$rootScope', '$scope', 'eaNavSrv', webInfoController])
+webInfo.controller('webInfoController', ['$rootScope', '$scope', '$cookies', 'eaNavSrv', webInfoController])
         .$inject = ['$scope'];
 webInfo.controller('eaNaviController', ['$rootScope', '$scope', '$location', 'eaNavSrv', eaNaviController])
         .$inject = ['$scope'];

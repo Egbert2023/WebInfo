@@ -10,34 +10,54 @@ var eaCookiesDirektive = function($rootScope) {
         scope: false,
         
         controller: function($scope) {
-            $scope.saveCookies = function(x) {
+            $scope.initCookies();
+                 
+            $scope.closeModalCookies = function(){
+                let doc = document.getElementById('modalCookies');
+                let target = angular.element(doc);
+                if(target) {
+                    target.css('display','none');
+                }
+            };
+            $scope.openModalCookies = function(){
+                let doc = document.getElementById('modalCookies');
+                let target = angular.element(doc);
+                if(target) {
+                    target.css('display','block');
+                }
+            };
+                        
+            $scope.saveCurrentCookies = function(x) {
                 switch(x) {
                     case "all":
-                        
+                        $scope.cookies.ana = true;
+                        $scope.cookies.ext = true;
                         break;
-                    case "cur":
-                        
+                    case "current":
+                        $scope.cookies.ana = true;
+                        $scope.cookies.ext = true;
                         break;
                     default:
-                                                
-                }
+                        $scope.cookies.ana = false;
+                        $scope.cookies.ext = false;
+                };
+                
+                // Close modal window
+                $scope.saveCookies();
+                $scope.closeModalCookies();
             };
         }, // controller
 
         link: function (scope, element, attr) {
             scope.scope_eaCookiesDirektive = scope.url;    
+            let paramCookies = {};
             
-            // Get params from JSON file
-            let paramCookies = $rootScope.paramsApp[0].cookies;
-            
-            // read from parameters
-            scope.titleCookie = paramCookies.title;
-            scope.bodyCookie = paramCookies.body;
-            scope.typesCookie = paramCookies.types;
-            scope.linksCookie = paramCookies.links;
-    
-    
-
+            // read from Tag parameter
+            scope.cookiesUsed = attr.cookiesUsed;
+            if(scope.cookiesUsed === "true") {
+                // modalCookies to show
+                scope.openModalCookies();
+            }
         }
     };
 };

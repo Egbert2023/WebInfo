@@ -1,9 +1,33 @@
 'use strict';
 
-var webInfoController =  function($rootScope, $scope, navSrv) {
+var webInfoController =  function($rootScope, $scope, $cookies, navSrv) {
     $scope.navSrv = navSrv;
     $scope.scope_webInfoController = $scope.url;
+    $scope.isCookieBannerShow = true;
     
+    // Initialization for cookies
+    $scope.initCookies = function() {
+        $scope.cookies = {};
+        var cooEss = $cookies.get("WebInfo_Cookie_Ess");
+        var cooAna = $cookies.get("WebInfo_Cookie_Ana");
+        var cooExt = $cookies.get("WebInfo_Cookie_Ext");
+        $scope.cookies = {
+            ess: true,
+            ana: false,
+            ext: false        
+        };    
+        if(cooAna) { $scope.cookies.ana = (cooAna==="true")? true : false;};
+        if(cooExt) { $scope.cookies.ext = (cooExt==="true")? true : false;};    
+            
+        return false;
+    };      
+    // Save all cookies by type
+    $scope.saveCookies = function() {
+        $cookies.put("WebInfo_Cookie_Ess", true);
+        $cookies.put("WebInfo_Cookie_Ana", ($scope.cookies.ana)? "true" : "false");
+        $cookies.put("WebInfo_Cookie_Ext", ($scope.cookies.ext)? "true" : "false");
+    };
+        
     // Functions for 'eaNews' directive
     $scope.isNew = function(d) {
         var ret = false;
