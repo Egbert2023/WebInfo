@@ -28,12 +28,12 @@ webInfo.directive('eaAccCoat', ['$compile', '$rootScope', eaAccCoat]).$inject = 
 webInfo.directive('eaAccKey', ['$compile', '$rootScope', eaAccKey]).$inject = ['$scope'];
 webInfo.directive('eaNews', ['$rootScope', eaNews]).$inject = ['$scope'];
 webInfo.directive('eaVideo', ['$rootScope', eaVideo]).$inject = ['$scope'];
-webInfo.directive('eaCookies', ['$rootScope', eaCookiesDirektive]).$inject = ['$scope'];
+webInfo.directive('eaCookies', ['$rootScope', '$cookies', '$compile', eaCookiesDirektive]).$inject = ['$scope'];
 
 // $compile, $rootScope
 webInfo.config(['$routeProvider', eaNavConfig]);
 
-webInfo.controller('webInfoController', ['$rootScope', '$scope', '$cookies', 'eaNavSrv', webInfoController])
+webInfo.controller('webInfoController', ['$rootScope', '$scope', 'eaNavSrv', webInfoController])
         .$inject = ['$scope'];
 webInfo.controller('eaNaviController', ['$rootScope', '$scope', '$location', 'eaNavSrv', eaNaviController])
         .$inject = ['$scope'];

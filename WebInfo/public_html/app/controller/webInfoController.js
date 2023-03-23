@@ -1,32 +1,8 @@
 'use strict';
 
-var webInfoController =  function($rootScope, $scope, $cookies, navSrv) {
+var webInfoController =  function($rootScope, $scope, navSrv) {
     $scope.navSrv = navSrv;
     $scope.scope_webInfoController = $scope.url;
-    $scope.isCookieBannerShow = true;
-    
-    // Initialization for cookies
-    $scope.initCookies = function() {
-        $scope.cookies = {};
-        var cooEss = $cookies.get("WebInfo_Cookie_Ess");
-        var cooAna = $cookies.get("WebInfo_Cookie_Ana");
-        var cooExt = $cookies.get("WebInfo_Cookie_Ext");
-        $scope.cookies = {
-            ess: true,
-            ana: false,
-            ext: false        
-        };    
-        if(cooAna) { $scope.cookies.ana = (cooAna==="true")? true : false;};
-        if(cooExt) { $scope.cookies.ext = (cooExt==="true")? true : false;};    
-            
-        return false;
-    };      
-    // Save all cookies by type
-    $scope.saveCookies = function() {
-        $cookies.put("WebInfo_Cookie_Ess", true);
-        $cookies.put("WebInfo_Cookie_Ana", ($scope.cookies.ana)? "true" : "false");
-        $cookies.put("WebInfo_Cookie_Ext", ($scope.cookies.ext)? "true" : "false");
-    };
         
     // Functions for 'eaNews' directive
     $scope.isNew = function(d) {
@@ -85,7 +61,7 @@ var webInfoController =  function($rootScope, $scope, $cookies, navSrv) {
         dwn("sitemap.xml", sm.siteMap);
         dwn("sitemapimages.xml", sm.siteMapImg);
     };        
-    // Check if application is started with parameter
+    // Check if application is started with parameter - ?Admin
     // Used for download siteMap.xml and siteMapImages.xml on siteMap.html page
     $scope.getUrlParam = function() {
         let loc = window.location;

@@ -1,37 +1,24 @@
 <div id="modalCookies" style="display: none;" class="modal">
+<!--<div id="modalCookies" ng-show="showCookies" class="modal">-->
     <div class="eaCard">
-        <div class="eaCard">
-            <h1>Ihre Cookie Einstellungen</h1>
+        <div class="modal-inner" style="padding-left: 2px; padding-right: 2px">
+            <h1>{{title}}</h1>
             <div>
-                Die Cookies werden verwendet, um die Funktion der Webseite sicherzustellen. Darüberhinaus werden Analyse-Cookies und Marketing-Cookies verwendet, um die Webseite für Anwender zu optimieren und personalisierte Werbung bereitzustellen.
+                {{body}}
             </div>
-            <div class="row">
-                <div class="col-lg-4 col-md-6 col-sm-12">
-                    <input type="checkbox" id="essId" name="ess" value="ess">
-                    <label for="ess">Essentiell</label>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12">
-                    <input type="checkbox" id="anaId" name="Analyse" value="ana">
-                    <label for="ess">Analyse</label>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12">
-                    <input type="checkbox" id="extId" name="Extern" value="ext">
-                    <label for="ess">Extern</label>
-                </div>
-            </div>
+            
+            <div class="row" id="eaInnerCookies"></div>
+                    
             <hr />
-            <div class="row">
-                <div class="col-lg-4 col-md-6 col-sm-12">
-                    <button type="button" class="btn btn-outline-success" ng-click="closeModalCookies()">Alle abwählen</button>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12">
-                    <button type="button" class="btn btn-outline-success" ng-click="saveCurrentCookies('current')">Auswahl bestätigen</button>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12">
-                    <button type="button" class="btn btn-outline-success" ng-click="saveCurrentCookies('all')">Alle Bestätigen</button>
-                </div>
+            
+            <div class="d-grid gap-2 d-md-block">
+                <button type="button" class="btn btn-outline-success" ng-click="closeModalCookies()">Alle abwählen</button>
+                <button type="button" class="btn btn-outline-success" ng-click="saveCurrentCookies('current')">Auswahl bestätigen</button>
+                <button type="button" class="btn btn-outline-success" ng-click="saveCurrentCookies('all')">Alle Bestätigen</button>
             </div>
-
+            
+            <div class="row" id="eaInnerCookiesLinks"></div>
+            
         </div>
     </div>
 </div>
