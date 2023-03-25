@@ -13,7 +13,7 @@ var eaVideo = function ( $rootScope ) {
             $scope.scope_eaVideoDirektive = $scope.url;    
 
             // get parameter vdoNo
-            $scope.vdoNo = $rootScope.paramsApp[0].vdoNo;
+            $scope.vdoNo = $rootScope.paramsApp.vdoNo;
         },   // controller
         
         // <ea-news data-news-title="News" 

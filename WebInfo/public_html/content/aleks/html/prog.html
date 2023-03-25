@@ -42,7 +42,7 @@
                             <a class="eaExtern" target="_blank" href:"https://getbootstrap.com/docs/5.2/getting-started/introduction/">Bootstrap 5</a>
                         </li>
                     </ul>
-                    Im folgenden Bild ist der grundsätzliche Aufbau der "index.htnl" dargestellt, 
+                    Im folgenden Bild ist der grundsätzliche Aufbau der "index.html" dargestellt, 
                     der über die gesamte Lebensdauer der Applikation angezeigt und nicht verlassen 
                     wird. Wer sich für das komplette Coding der Applikation interessiert, 
                     kann diese <a class="eaExtern" target="_blank" href:"https://github.com/Egbert2023/WebInfo">WebInfo auf GitHub</a>
@@ -54,11 +54,13 @@
         <ea-acc-key data-title="Parametrisierung der Applikation" data-txt-len="200">
             <div class="row">
                 <div class="col-lg-12 col-md-12">
-Ein Ziel beim Design der Applikation war die vollständige Trennung zwischen dem technischen und der Inhaltlichen Teil.
-Dies wurde einerseits durch eine strikte Trennung der Ressourcen erreicht. Die technische Umsetzung der Funktionalitäten ist im Verzeichnis '/app' abgelegt.
-die inhaltlichen Dateien befinden sich im Verzeichnis '/content'. Die Verbindung der Applikation mit dem Content erfolgt mit 
-Hilfe einer Direktive 'ea-load-params'. Beim Aufruf dieser Direktive wird der Pfad zum Content 
-übergeben, der dann applikationsweit zur Verfügung steht. 
+Ein Ziel beim Design der Applikation war die vollständige Trennung zwischen dem 
+technischen und der Inhaltlichen Teil. Dies wurde einerseits durch eine strikte 
+Trennung der Ressourcen erreicht. Die technische Umsetzung der Funktionalitäten 
+ist im Verzeichnis '/app' abgelegt. Die inhaltlichen Dateien befinden sich im 
+Verzeichnis '/content'. Die Verbindung der Applikation mit dem Content erfolgt 
+mit Hilfe einer Direktive 'ea-load-params'. Beim Aufruf dieser Direktive wird 
+der Pfad zum Content übergeben, der dann applikationsweit zur Verfügung steht. 
 <span ea-img data-img-box-idx="2" data-img-box-key = "prog"></span>
                 </div>
             </div>
@@ -66,10 +68,14 @@ Hilfe einer Direktive 'ea-load-params'. Beim Aufruf dieser Direktive wird der Pf
         <ea-acc-key data-title="Die verwendeten Parameter-Dateien" data-txt-len="200">
             
 Ein potentieller Anwender dieser WebInfo Applikation sollte zwei Dinge können. 
-<br /> 1. Einfache HTML Dateien z.B. mit Unterstützung der Bootstrap-Klassen erstellen und 
-<br /> 2. <a class="eaExtern" target="_blank" href="https://www.opc-router.de/was-ist-json/">JSON Dateien</a> fehlerfrei ausfüllen.
-<br />Das reicht aus, um eine eigene Applikation zu erstellen. Das Codieren der Anwendung 
-mit dem AngularJs Framework ist erledigt. Es ist lediglich eigener Content anzulegen.
+<br /> 1. Einfache HTML Dateien z.B. mit Unterstützung der Bootstrap-Klassen 
+erstellen und 
+<br /> 2. <a class="eaExtern" target="_blank" 
+             href="https://www.opc-router.de/was-ist-json/">JSON Dateien</a> 
+fehlerfrei ausfüllen.
+<br />Das reicht aus, um eine eigene Applikation zu erstellen. Das Codieren der 
+Anwendung mit dem AngularJs Framework ist erledigt. Es ist lediglich eigener 
+Content anzulegen.
 <br />Folgende Parameter-Dateien sind im Content-Verzeichnis '.../json' zu erstellen:
             <ul>
                 <li><strong>imgBoxList.json</strong> - Auflistung der Bilder, die auf den einzelnen Webseiten mit Hilfe der Direktive 'eaImg' angezeigt werden.</li>
@@ -82,24 +88,27 @@ mit dem AngularJs Framework ist erledigt. Es ist lediglich eigener Content anzul
         <ea-acc-key data-title="Erstellte AngularJs-Directiven" data-txt-len="200">
             <div class="row">
                 <div class="col-lg-4 col-md-12">
-Die erstellten Direktiven dienen einerseits der Übersichtlichkeit des Aufbaus der index.html und 
-sollen ein einheitliches Aussehen und Bedienungskonzept der Applikation unterstützen.
-Andererseits werden sie auch für die vollständige Trennung von Applikation uns Content benötigt.
-                    
-                    
-                    
+Die erstellten Direktiven dienen einerseits der Übersichtlichkeit des Aufbaus 
+der Applikation und sollen ein einheitliches Aussehen und Bedienungskonzept 
+unterstützen. Es sind eine Reihe von Direktiven bereitgestellt, die das 
+Erstellen von eigenen Html Seien vereinfachen sollen. Andererseits werden die 
+Direktiven aber auch für die vollständige Trennung von Applikation und Content 
+benötigt.           
                 </div>
                 <div class="col-lg-8 col-md-12">
                     
                     <ul>
-                        <li><strong>eaAccCoat und eaAccKey</strong> - Die Akkordionfunktion (z.B wie diese Webseite) wird mit zwei Tag's unterstützt. (&lt;ea-acc-coat .../&gt; und &lt;ea-acc-key .../&gt;)<br />vgl. "Spezielle Funktionen" auf dieser Seite unten.</li>
-                        <li><strong>eaAddHtml</strong> - Das Nachladen von Html Dateien wird für die Trennung von Applikation und Content benötigt</li>
-                        <li><strong>eaFooter</strong> - Stellt die Footer.html als fixen Footer dar.</li>
-                        <li><strong>eaImg und eaImgBox</strong> - Darstellung von Bilder oder Gruppen von Bildern (vgl. imgBoxList.json) in eigenen Html Dateien sowie deren Vollbilddarstellung. <br />vgl. "Spezielle Funktionen" auf dieser Seite unten.</li>
-                        <li><strong>eaLoadParams</strong> - Liest alle JSON Dateien ein und legt sie in Javascript Objekten ab. Damit stehen sie für die Applikation jeder Zeit zur Verfügung.</li>
-                        <li><strong>eaNav</strong> - Stellt mit der Datei 'naviList.json' die komplette Navigation bereit und erzeugt das Navigationsmenü.</li>
-                        <li><strong>eaPathLink</strong> - Diese Direktive befindet sich am Anfang jeder Html-Seite und stellt den Link zu der aktuellen Seite mit seinen übergeordneten Seite dar.
-                            <br /><br />z.B. Diese Seite 
+<li><strong>eaAccCoat und eaAccKey</strong> - Die Akkordionfunktion (z.B wie diese Webseite) wird mit zwei Tag's unterstützt. (&lt;ea-acc-coat .../&gt; und &lt;ea-acc-key .../&gt;)<br />vgl. "Spezielle Funktionen" auf dieser Seite unten.</li>
+<li><strong>eaAddHtml</strong> - Das Nachladen von Html Dateien wird für die Trennung von Applikation und Content benötigt</li>
+<li><strong>eaFooter</strong> - Stellt die Footer.html als fixen Footer dar.</li>
+<li><strong>eaImg und eaImgBox</strong> - Darstellung von Bilder oder Gruppen von Bildern (vgl. imgBoxList.json) in eigenen Html Dateien sowie deren Vollbilddarstellung. <br />vgl. "Spezielle Funktionen" auf dieser Seite unten.</li>
+<li><strong>eaLoadParams</strong> - Liest alle JSON Dateien ein und legt sie in Javascript Objekten ab. Damit stehen sie für die Applikation jeder Zeit zur Verfügung.</li>
+<li><strong>eaNav</strong> - Stellt mit der Datei 'naviList.json' die komplette Navigation bereit und erzeugt das Navigationsmenü.</li>
+<li><strong>eaVideo</strong> - Diese Direktive vereinfacht das Einbinden kleiner Videoa, die gemeinsam mit dem eigenen Kontent abgelegt sind.
+<li><strong>eaCookies</strong> - Diese Direktive unterstützt die Verwaltung von Cookies. Der gesamte Inhalt des Cookie-Banners ist in Parametern in der JSON Datei 'naviList.json' abgelegt. 
+                                 Mit dem Parameter (data-cookies-used="false") kann die Verwendung der Cookies ausgeschaltet werden.
+<li><strong>eaPathLink</strong> - Diese Direktive befindet sich am Anfang jeder Html-Seite und stellt den Link zu der aktuellen Seite mit seinen übergeordneten Seite dar.
+                                 <br /><br />z.B. Diese Seite 
                             <div class='eaCard' style="display:inline; width: 350px; margin-left: 5px; min-height: 14px;">
                                 <i style="text-decoration: underline">Hobbies</i> <i class="bi-arrow-return-right"></i> Programmieren
                             </div>                            
