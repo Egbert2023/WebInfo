@@ -165,27 +165,47 @@ als Überschrift dargestellt. Für den Parameter 'data-news-mode' sind folgende 
 </ul>
 Der Parameter 'data-news-txt-len' gibt die Anzahl der Zeichen an, die im zugeklappten Zustand des Newseintrages bereits angezeigt wird. 
 Dieser Wert kann von 0 bis beliebig gewählt werden.
+Der Parameter 'data-news-limit' begrenzt die Anzahl der angezeigten News auf die angegebene 
+Anzahl. Dies wird z.B. auf der Startseite verwendet.
 Der Parameter 'data-news-init-idx' gibt an, welcher Eintrag beim Start bereits aufgeklappt wird. 
 Dabei bedeutet 0, es wird kein Eintrag aufgeklappt. Alle Werte zwischen 1-n bewirken, dass der entsprechende Eintrag aufgeklappt wird.
-Das Aussehen und die Bedienung sind mit dem Akkordion identisch.
+Das Aussehen und die Bedienung sind mit dem Akkordion identisch. 
+<br />Im folgenden ist ein Auszug aus der News-JSON Datei und ein Beispiel 
+für einen Aufruf der eaNews Directive angegeben.  
 <div ea-img data-img-box-idx="6" data-img-box-key = "prog"></div>
-Wird die JSON-Datei "newsList.json" entsprechend dem Beispiel ausgefüllt, 
-werden die entsprechenden Datumabhängigen Einträge automatisch ermittelt 
-und entsprechend der gewählten Parameter angezeigt.
-Mit diesem Mechanismus kann die Pflege von News zeitlich entzerrt werden, 
-da "alte" Einträge von alleine aus dem Fokus der News-Datei verschwinden 
-aber im Archiv immer noch verfügbar sind. Um alle in der news-JSON Datei 
-erfassten Einträge anzuzeigen, muss der Author sicherstellen, dass mindestens 
-auf einer Html-Seite entweder der Modus 'all' verwendet wird oder auf 
-zwei Seiten einmal 'new' und einmal 'arc' ohne Einschränkung verwendet wird.
+Wird die JSON-Datei "newsList.json" wie in dem Beispiel ausgefüllt, 
+werden die datumabhängigen Einträge automatisch ermittelt und entsprechend der 
+gewählten Parameter angezeigt. Mit diesem Mechanismus kann die Pflege von News 
+zeitlich entzerrt werden, da "alte" Einträge automatisch aus dem Fokus 
+der News-Datei verschwinden aber dann im Archiv immer noch verfügbar sind. 
+Um alle in der news-JSON Datei erfassten Einträge anzuzeigen, muss der 
+Author sicherstellen, dass mindestens auf einer Html-Seite entweder der 
+Modus 'all' verwendet wird oder auf zwei Seiten einmal 'new' und einmal 'arc' 
+ohne Einschränkung ('data-news-limit') ausgewählt wird.
 <br />
-Wenn beide Felder "body" und "img" angegeben sind, wird die Darstellung 
-automatisch zweispaltig. Ist nur eins der beiden Felder angegeben, erfolgt die 
-Darstellungt in einer Spalte. Das Feld "imgBody" wird als Bildunterschrift 
-dargestellt. In dem Feld "href" kann eine Html-Seite angegeben werden, die 
-an den oben definierten Teil angehägt wird. Das kann nötig werden, wenn 
-z.B. ein Link dargestellt werden soll. Html Code kann im "Body" nicht 
-dargestellt werden hier geht nur formatfreier Text.
+Die Werte aus der JSON Datei werden nach folgender Vorschrift verarbeitet: 
+<ul>
+    <li>
+        Wenn beide Felder "body" und "img" angegeben sind, wird die Darstellung 
+        automatisch zweispaltig.
+    </li>
+    <li>
+        Ist nur eins der beiden Felder angegeben, erfolgt die Darstellungt in einer Spalte.
+    </li>
+    <li>
+        Das Feld "imgBody" wird in jedem Fall als Bildunterschrift dargestellt.
+    </li>
+    <li>
+        Ist keines der beiden Felder "body" und "img" angegeben, wird dieser 
+        Teil der Darstellungt unterdrückt. Dann sollte es ein "href" Eintrag geben.
+    </li>
+    <li>
+        In dem Feld "href" kann optional eine Html-Seite angegeben werden, die an 
+        den oben definierten Teil angehägt wird. Das kann nötig werden, wenn 
+        z.B. ein Link dargestellt werden soll. Html Code kann im Feld "body" nicht 
+        dargestellt werden hier kann nur formatfreier Text verwendet werden.
+    </li>
+</ul>
                 </div>
             </div>
         </ea-acc-key>

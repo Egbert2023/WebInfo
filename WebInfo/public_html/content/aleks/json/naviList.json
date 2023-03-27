@@ -57,11 +57,12 @@
         
         {"id":"navService", "label": "Service", "href": "#!/srv", "url": "content/aleks/html/service.html", "imgKey": "",
             "subm": [ {"label": "SiteMap", "href": "#!/srv/smap", "url": "app/template/sitemap.html", "imgKey": ""}, 
-                    {"label": "Cookies", "href": "#!/srv/cookies", "url": "content/aleks/html/CookiesNotRequired.html", "imgKey": ""}, 
+                    {"label": "Cookie Richtlinie", "href": "#!/srv/cookies", "url": "content/aleks/html/CookiesNotRequired.html", "imgKey": ""}, 
                     {"label": "Impressum", "href": "#!/srv/imp", "url": "content/aleks/html/impressum.html", "imgKey": ""}, 
                     {"label": "Datenschutz", "href": "#!/srv/ds", "url": "content/aleks/html/datenschutz2.html", "imgKey": ""}, 
                     {"label": "Hintergrund Bilder", "href": "#!/srv/pic", "url": "content/aleks/html/srv/backGround.html", "imgKey": "Back"},
                     {"label": "Software-Lizenzen", "href": "#!/prog/license", "url": "LICENSE.html", "imgKey": ""}
+                    
             ]}                                              
     ]
 }
