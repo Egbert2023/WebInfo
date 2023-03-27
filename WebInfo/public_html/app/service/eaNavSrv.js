@@ -169,8 +169,8 @@ var computeSiteMaps = function(rootScope) {
     let imgBoxList = rootScope.imgBoxList;
     
     // get params from naviList
-    let baseDoman = rootScope.paramsApp[0].baseDoman;
-    let startFile = rootScope.paramsApp[0].startFile;
+    let baseDoman = rootScope.paramsApp.baseDoman;
+    let startFile = rootScope.paramsApp.startFile;
     let urlBase = baseDoman + "/" + startFile;
         
     let sm  = '<?xml version="1.0" encoding="UTF-8"?>';

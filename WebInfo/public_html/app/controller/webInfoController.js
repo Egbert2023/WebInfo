@@ -3,7 +3,7 @@
 var webInfoController =  function($rootScope, $scope, navSrv) {
     $scope.navSrv = navSrv;
     $scope.scope_webInfoController = $scope.url;
-    
+        
     // Functions for 'eaNews' directive
     $scope.isNew = function(d) {
         var ret = false;
@@ -61,7 +61,7 @@ var webInfoController =  function($rootScope, $scope, navSrv) {
         dwn("sitemap.xml", sm.siteMap);
         dwn("sitemapimages.xml", sm.siteMapImg);
     };        
-    // Check if application is started with parameter
+    // Check if application is started with parameter - ?Admin
     // Used for download siteMap.xml and siteMapImages.xml on siteMap.html page
     $scope.getUrlParam = function() {
         let loc = window.location;

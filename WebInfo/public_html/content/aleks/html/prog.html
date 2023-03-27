@@ -42,7 +42,7 @@
                             <a class="eaExtern" target="_blank" href:"https://getbootstrap.com/docs/5.2/getting-started/introduction/">Bootstrap 5</a>
                         </li>
                     </ul>
-                    Im folgenden Bild ist der grundsätzliche Aufbau der "index.htnl" dargestellt, 
+                    Im folgenden Bild ist der grundsätzliche Aufbau der "index.html" dargestellt, 
                     der über die gesamte Lebensdauer der Applikation angezeigt und nicht verlassen 
                     wird. Wer sich für das komplette Coding der Applikation interessiert, 
                     kann diese <a class="eaExtern" target="_blank" href:"https://github.com/Egbert2023/WebInfo">WebInfo auf GitHub</a>
@@ -54,11 +54,13 @@
         <ea-acc-key data-title="Parametrisierung der Applikation" data-txt-len="200">
             <div class="row">
                 <div class="col-lg-12 col-md-12">
-Ein Ziel beim Design der Applikation war die vollständige Trennung zwischen dem technischen und der Inhaltlichen Teil.
-Dies wurde einerseits durch eine strikte Trennung der Ressourcen erreicht. Die technische Umsetzung der Funktionalitäten ist im Verzeichnis '/app' abgelegt.
-die inhaltlichen Dateien befinden sich im Verzeichnis '/content'. Die Verbindung der Applikation mit dem Content erfolgt mit 
-Hilfe einer Direktive 'ea-load-params'. Beim Aufruf dieser Direktive wird der Pfad zum Content 
-übergeben, der dann applikationsweit zur Verfügung steht. 
+Ein Ziel beim Design der Applikation war die vollständige Trennung zwischen dem 
+technischen und der Inhaltlichen Teil. Dies wurde einerseits durch eine strikte 
+Trennung der Ressourcen erreicht. Die technische Umsetzung der Funktionalitäten 
+ist im Verzeichnis '/app' abgelegt. Die inhaltlichen Dateien befinden sich im 
+Verzeichnis '/content'. Die Verbindung der Applikation mit dem Content erfolgt 
+mit Hilfe einer Direktive 'ea-load-params'. Beim Aufruf dieser Direktive wird 
+der Pfad zum Content übergeben, der dann applikationsweit zur Verfügung steht. 
 <span ea-img data-img-box-idx="2" data-img-box-key = "prog"></span>
                 </div>
             </div>
@@ -66,10 +68,14 @@ Hilfe einer Direktive 'ea-load-params'. Beim Aufruf dieser Direktive wird der Pf
         <ea-acc-key data-title="Die verwendeten Parameter-Dateien" data-txt-len="200">
             
 Ein potentieller Anwender dieser WebInfo Applikation sollte zwei Dinge können. 
-<br /> 1. Einfache HTML Dateien z.B. mit Unterstützung der Bootstrap-Klassen erstellen und 
-<br /> 2. <a class="eaExtern" target="_blank" href="https://www.opc-router.de/was-ist-json/">JSON Dateien</a> fehlerfrei ausfüllen.
-<br />Das reicht aus, um eine eigene Applikation zu erstellen. Das Codieren der Anwendung 
-mit dem AngularJs Framework ist erledigt. Es ist lediglich eigener Content anzulegen.
+<br /> 1. Einfache HTML Dateien z.B. mit Unterstützung der Bootstrap-Klassen 
+erstellen und 
+<br /> 2. <a class="eaExtern" target="_blank" 
+             href="https://www.opc-router.de/was-ist-json/">JSON Dateien</a> 
+fehlerfrei ausfüllen.
+<br />Das reicht aus, um eine eigene Applikation zu erstellen. Das Codieren der 
+Anwendung mit dem AngularJs Framework ist erledigt. Es ist lediglich eigener 
+Content anzulegen.
 <br />Folgende Parameter-Dateien sind im Content-Verzeichnis '.../json' zu erstellen:
             <ul>
                 <li><strong>imgBoxList.json</strong> - Auflistung der Bilder, die auf den einzelnen Webseiten mit Hilfe der Direktive 'eaImg' angezeigt werden.</li>
@@ -82,24 +88,27 @@ mit dem AngularJs Framework ist erledigt. Es ist lediglich eigener Content anzul
         <ea-acc-key data-title="Erstellte AngularJs-Directiven" data-txt-len="200">
             <div class="row">
                 <div class="col-lg-4 col-md-12">
-Die erstellten Direktiven dienen einerseits der Übersichtlichkeit des Aufbaus der index.html und 
-sollen ein einheitliches Aussehen und Bedienungskonzept der Applikation unterstützen.
-Andererseits werden sie auch für die vollständige Trennung von Applikation uns Content benötigt.
-                    
-                    
-                    
+Die erstellten Direktiven dienen einerseits der Übersichtlichkeit des Aufbaus 
+der Applikation und sollen ein einheitliches Aussehen und Bedienungskonzept 
+unterstützen. Es sind eine Reihe von Direktiven bereitgestellt, die das 
+Erstellen von eigenen Html Seien vereinfachen sollen. Andererseits werden die 
+Direktiven aber auch für die vollständige Trennung von Applikation und Content 
+benötigt.           
                 </div>
                 <div class="col-lg-8 col-md-12">
                     
                     <ul>
-                        <li><strong>eaAccCoat und eaAccKey</strong> - Die Akkordionfunktion (z.B wie diese Webseite) wird mit zwei Tag's unterstützt. (&lt;ea-acc-coat .../&gt; und &lt;ea-acc-key .../&gt;)<br />vgl. "Spezielle Funktionen" auf dieser Seite unten.</li>
-                        <li><strong>eaAddHtml</strong> - Das Nachladen von Html Dateien wird für die Trennung von Applikation und Content benötigt</li>
-                        <li><strong>eaFooter</strong> - Stellt die Footer.html als fixen Footer dar.</li>
-                        <li><strong>eaImg und eaImgBox</strong> - Darstellung von Bilder oder Gruppen von Bildern (vgl. imgBoxList.json) in eigenen Html Dateien sowie deren Vollbilddarstellung. <br />vgl. "Spezielle Funktionen" auf dieser Seite unten.</li>
-                        <li><strong>eaLoadParams</strong> - Liest alle JSON Dateien ein und legt sie in Javascript Objekten ab. Damit stehen sie für die Applikation jeder Zeit zur Verfügung.</li>
-                        <li><strong>eaNav</strong> - Stellt mit der Datei 'naviList.json' die komplette Navigation bereit und erzeugt das Navigationsmenü.</li>
-                        <li><strong>eaPathLink</strong> - Diese Direktive befindet sich am Anfang jeder Html-Seite und stellt den Link zu der aktuellen Seite mit seinen übergeordneten Seite dar.
-                            <br /><br />z.B. Diese Seite 
+<li><strong>eaAccCoat und eaAccKey</strong> - Die Akkordionfunktion (z.B wie diese Webseite) wird mit zwei Tag's unterstützt. (&lt;ea-acc-coat .../&gt; und &lt;ea-acc-key .../&gt;)<br />vgl. "Spezielle Funktionen" auf dieser Seite unten.</li>
+<li><strong>eaAddHtml</strong> - Das Nachladen von Html Dateien wird für die Trennung von Applikation und Content benötigt</li>
+<li><strong>eaFooter</strong> - Stellt die Footer.html als fixen Footer dar.</li>
+<li><strong>eaImg und eaImgBox</strong> - Darstellung von Bilder oder Gruppen von Bildern (vgl. imgBoxList.json) in eigenen Html Dateien sowie deren Vollbilddarstellung. <br />vgl. "Spezielle Funktionen" auf dieser Seite unten.</li>
+<li><strong>eaLoadParams</strong> - Liest alle JSON Dateien ein und legt sie in Javascript Objekten ab. Damit stehen sie für die Applikation jeder Zeit zur Verfügung.</li>
+<li><strong>eaNav</strong> - Stellt mit der Datei 'naviList.json' die komplette Navigation bereit und erzeugt das Navigationsmenü.</li>
+<li><strong>eaVideo</strong> - Diese Direktive vereinfacht das Einbinden kleiner Videos, die gemeinsam mit dem eigenen Content abgelegt sind.
+<li><strong>eaCookies</strong> - Diese Direktive unterstützt die Verwaltung von Cookies. Der gesamte Inhalt des Cookie-Banners ist in Parametern in der JSON Datei 'naviList.json' abgelegt. 
+                                 Mit dem Parameter (data-cookies-used="false") kann die Verwendung der Cookies ausgeschaltet werden.
+<li><strong>eaPathLink</strong> - Diese Direktive befindet sich am Anfang jeder Html-Seite und stellt den Link zu der aktuellen Seite mit seinen übergeordneten Seite dar.
+                                 <br /><br />z.B. Diese Seite 
                             <div class='eaCard' style="display:inline; width: 350px; margin-left: 5px; min-height: 14px;">
                                 <i style="text-decoration: underline">Hobbies</i> <i class="bi-arrow-return-right"></i> Programmieren
                             </div>                            
@@ -117,7 +126,7 @@ Diese Html-Seite ist mit dieser Technik erstellt und kann als Beispiel verwendet
 Im Beispiel auf dem Bild ist der erste AccKey mit einem etwas komplexeren Html-Code versehen. Der zweite AccKey ist eher schlicht gehalten, einfach nur Text.
 <div ea-img data-img-box-idx="3" data-img-box-key = "prog"></div>       
 Beide Direktiven verfügen über einen Titel-Parameter, der immer angezeigt wird. In der Key-Direktive gibt es zusätzlich den Parameter
-"data-txt-len". Dieser dient der Festlegung der Länge eines Vorschautextes, der aus dem zugeklappten Teil gelesen und immer angezeigt wird.
+"data-txt-len". Dieser dient der Festlegung der Länge eines Vorschautextes, der aus dem zugeklappten Teil gelesen und immer angezeigt werden.
 Auf dieser Seite habe ich für diesen Parameter 200 angegeben.
 Wenn man diese Funktionalität nicht wünscht, kann der Parameter weggelassen oder auf Null gesetzt werden.
 Für die Bedienung des Akkordions sind die beiden folgenden Zeichen vorgesehen:
@@ -144,25 +153,59 @@ durch die gesamte definierte Gruppe navigiert werden.
                 <div class="col-lg-12">
                     <hr />
 Der <strong>News-Mechanismus</strong> ist mit einer Parameter-Datei 
-"newsList.json" und den beiden 
-Html-Dateien "news.html" und "newsArchiv.html" realisiert. 
+"newsList.json" und dem Html-Tag 
+&lt;ea-news data-news-title="Aktuelles" data-news-mode="new" data-news-txt-len="200" data-news-init-idx = "1"&gt;
+&lt;/ea-news&gt; realisiert. 
+<br />Dabei wird der übergebene Parameter 'data-news-title' innerhalb des &lt;h1&gt;-Tags 
+als Überschrift dargestellt. Für den Parameter 'data-news-mode' sind folgende Werte möglich: 
+<ul>
+    <li>all - es werden alle Einträge bei denen das Datum 'newFrom' erreicht ist, unabhängig vom Datum 'newTo', angezeigt.</li>
+    <li>new - es werden alle Einträge angezeigt, bei denen das Datum 'newFrom' erreicht und 'newTo' noch nicht überschritten ist.</li>
+    <li>arc - es werden alle Einträge angezeigt, bei denen das Datum 'newFrom' erreicht und 'newTo' bereits überschritten ist.</li>
+</ul>
+Der Parameter 'data-news-txt-len' gibt die Anzahl der Zeichen an, die im zugeklappten Zustand des Newseintrages bereits angezeigt wird. 
+Dieser Wert kann von 0 bis beliebig gewählt werden.
+Der Parameter 'data-news-limit' begrenzt die Anzahl der angezeigten News auf die angegebene 
+Anzahl. Dies wird z.B. auf der Startseite verwendet.
+Der Parameter 'data-news-init-idx' gibt an, welcher Eintrag beim Start bereits aufgeklappt wird. 
+Dabei bedeutet 0, es wird kein Eintrag aufgeklappt. Alle Werte zwischen 1-n bewirken, dass der entsprechende Eintrag aufgeklappt wird.
+Das Aussehen und die Bedienung sind mit dem Akkordion identisch. 
+<br />Im folgenden ist ein Auszug aus der News-JSON Datei und ein Beispiel 
+für einen Aufruf der eaNews Directive angegeben.  
 <div ea-img data-img-box-idx="6" data-img-box-key = "prog"></div>
-Wird die JSON-Datei "newsList.json" entsprechend dem Beispiel ausgefüllt, 
-werden automatisch in der Html-Datei "news.html" alle Einträge angezeigt, die 
-das Datum "newFrom" erreicht und das Datum "newTo" noch nicht überschritten 
-haben. Alle Einträge, bei denen das "newTo" Datum überschritten ist, werden 
-automatisch von der Datei "newsArchiv.html" dargestellt. Mit diesem Mechanismus 
-kann die Pflege von News zeitlich entzerrt werden, da "alte" Einträge 
-von alleine aus dem Fokus der News-Datei verschwinden aber im Archiv immer 
-noch verfügbar sind.
+Wird die JSON-Datei "newsList.json" wie in dem Beispiel ausgefüllt, 
+werden die datumabhängigen Einträge automatisch ermittelt und entsprechend der 
+gewählten Parameter angezeigt. Mit diesem Mechanismus kann die Pflege von News 
+zeitlich entzerrt werden, da "alte" Einträge automatisch aus dem Fokus 
+der News-Datei verschwinden aber dann im Archiv immer noch verfügbar sind. 
+Um alle in der news-JSON Datei erfassten Einträge anzuzeigen, muss der 
+Author sicherstellen, dass mindestens auf einer Html-Seite entweder der 
+Modus 'all' verwendet wird oder auf zwei Seiten einmal 'new' und einmal 'arc' 
+ohne Einschränkung ('data-news-limit') ausgewählt wird.
 <br />
-Wenn beide Felder "body" und "img" angegeben sind, wird die Darstellung 
-automatisch zweispaltig. Ist nur eins der beiden Felder angegeben, erfolgt die 
-Darstellungt in einer Spalte. Das Feld "imgBody" wird als Bildunterschrift 
-dargestellt. In dem Feld "href" kann eine Html-Seite angegeben werden, die 
-an den oben definierten Teil angehägt wird. Das kann nötig werden, wenn 
-z.B. ein Link dargestellt werden soll. Html Code kann im "Body" nicht 
-dargestellt werden hier geht nur formatfreier Text.
+Die Werte aus der JSON Datei werden nach folgender Vorschrift verarbeitet: 
+<ul>
+    <li>
+        Wenn beide Felder "body" und "img" angegeben sind, wird die Darstellung 
+        automatisch zweispaltig.
+    </li>
+    <li>
+        Ist nur eins der beiden Felder angegeben, erfolgt die Darstellungt in einer Spalte.
+    </li>
+    <li>
+        Das Feld "imgBody" wird in jedem Fall als Bildunterschrift dargestellt.
+    </li>
+    <li>
+        Ist keines der beiden Felder "body" und "img" angegeben, wird dieser 
+        Teil der Darstellungt unterdrückt. Dann sollte es ein "href" Eintrag geben.
+    </li>
+    <li>
+        In dem Feld "href" kann optional eine Html-Seite angegeben werden, die an 
+        den oben definierten Teil angehägt wird. Das kann nötig werden, wenn 
+        z.B. ein Link dargestellt werden soll. Html Code kann im Feld "body" nicht 
+        dargestellt werden hier kann nur formatfreier Text verwendet werden.
+    </li>
+</ul>
                 </div>
             </div>
         </ea-acc-key>
