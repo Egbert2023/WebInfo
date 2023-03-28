@@ -1,119 +1,119 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
-		<loc>www.aleksander.de/index.html#!/home</loc>
+		<loc>www.aleksander.de/content/aleks/html/home.html</loc>
 		<changefreq>weekly</changefreq>
 	</url>
 	<url>
-		<loc>www.aleksander.de/index.html#!/trav</loc>
+		<loc>www.aleksander.de/content/aleks/html/reisen.html</loc>
 		<changefreq>weekly</changefreq>
 	</url>
 	<url>
-		<loc>www.aleksander.de/index.html#!/trav/de</loc>
+		<loc>www.aleksander.de/content/aleks/html/De/Deutschland.html</loc>
 		<changefreq>weekly</changefreq>
 	</url>
 	<url>
-		<loc>www.aleksander.de/index.html#!/trav/de/l</loc>
+		<loc>www.aleksander.de/content/aleks/html/De/Landschaften.html</loc>
 		<changefreq>weekly</changefreq>
 	</url>
 	<url>
-		<loc>www.aleksander.de/index.html#!/trav/de/n</loc>
+		<loc>www.aleksander.de/content/aleks/html/De/Nordsee.html</loc>
 		<changefreq>weekly</changefreq>
 	</url>
 	<url>
-		<loc>www.aleksander.de/index.html#!/trav/de/o</loc>
+		<loc>www.aleksander.de/content/aleks/html/De/Ostsee.html</loc>
 		<changefreq>weekly</changefreq>
 	</url>
 	<url>
-		<loc>www.aleksander.de/index.html#!/trav/eu</loc>
+		<loc>www.aleksander.de/content/aleks/html/Eu/Europa.html</loc>
 		<changefreq>weekly</changefreq>
 	</url>
 	<url>
-		<loc>www.aleksander.de/index.html#!/trav/eu/am</loc>
+		<loc>www.aleksander.de/content/aleks/html/Eu/Amsterdam.html</loc>
 		<changefreq>weekly</changefreq>
 	</url>
 	<url>
-		<loc>www.aleksander.de/index.html#!/trav/eu/ba</loc>
+		<loc>www.aleksander.de/content/aleks/html/Eu/Barcelona.html</loc>
 		<changefreq>weekly</changefreq>
 	</url>
 	<url>
-		<loc>www.aleksander.de/index.html#!/trav/eu/lb</loc>
+		<loc>www.aleksander.de/content/aleks/html/Eu/Lissabon.html</loc>
 		<changefreq>weekly</changefreq>
 	</url>
 	<url>
-		<loc>www.aleksander.de/index.html#!/trav/eu/pa</loc>
+		<loc>www.aleksander.de/content/aleks/html/Eu/Paris.html</loc>
 		<changefreq>weekly</changefreq>
 	</url>
 	<url>
-		<loc>www.aleksander.de/index.html#!/trav/eu/ro</loc>
+		<loc>www.aleksander.de/content/aleks/html/Eu/Rom.html</loc>
 		<changefreq>weekly</changefreq>
 	</url>
 	<url>
-		<loc>www.aleksander.de/index.html#!/trav/Mittelmeer/tmm</loc>
+		<loc>www.aleksander.de/content/aleks/html/Eu/Tour-Mittelmeer.html</loc>
 		<changefreq>weekly</changefreq>
 	</url>
 	<url>
-		<loc>www.aleksander.de/index.html#!/trav/eu/tn</loc>
+		<loc>www.aleksander.de/content/aleks/html/Eu/Tour-Norwegen.html</loc>
 		<changefreq>weekly</changefreq>
 	</url>
 	<url>
-		<loc>www.aleksander.de/index.html#!/trav/eu/to</loc>
+		<loc>www.aleksander.de/content/aleks/html/Eu/Tour-Ostsee.html</loc>
 		<changefreq>weekly</changefreq>
 	</url>
 	<url>
-		<loc>www.aleksander.de/index.html#!/prog</loc>
+		<loc>www.aleksander.de/content/aleks/html/Hobbies.html</loc>
 		<changefreq>weekly</changefreq>
 	</url>
 	<url>
-		<loc>www.aleksander.de/index.html#!/prog/p</loc>
+		<loc>www.aleksander.de/content/aleks/html/prog.html</loc>
 		<changefreq>weekly</changefreq>
 	</url>
 	<url>
-		<loc>www.aleksander.de/index.html#!/prog/m</loc>
+		<loc>www.aleksander.de/content/aleks/html/Mathe.html</loc>
 		<changefreq>weekly</changefreq>
 	</url>
 	<url>
-		<loc>www.aleksander.de/index.html#!/prog/sp</loc>
+		<loc>www.aleksander.de/content/aleks/html/Sport.html</loc>
 		<changefreq>weekly</changefreq>
 	</url>
 	<url>
-		<loc>www.aleksander.de/index.html#!/hobby/garten</loc>
+		<loc>www.aleksander.de/content/aleks/html/Garten.html</loc>
 		<changefreq>weekly</changefreq>
 	</url>
 	<url>
-		<loc>www.aleksander.de/index.html#!/new</loc>
+		<loc>www.aleksander.de/app/template/news/news.html</loc>
 		<changefreq>weekly</changefreq>
 	</url>
 	<url>
-		<loc>www.aleksander.de/index.html#!/new/1</loc>
+		<loc>www.aleksander.de/app/template/news/newArchiv.html</loc>
 		<changefreq>weekly</changefreq>
 	</url>
 	<url>
-		<loc>www.aleksander.de/index.html#!/srv</loc>
+		<loc>www.aleksander.de/content/aleks/html/service.html</loc>
 		<changefreq>weekly</changefreq>
 	</url>
 	<url>
-		<loc>www.aleksander.de/index.html#!/srv/smap</loc>
+		<loc>www.aleksander.de/app/template/sitemap.html</loc>
 		<changefreq>weekly</changefreq>
 	</url>
 	<url>
-		<loc>www.aleksander.de/index.html#!/srv/cookies</loc>
+		<loc>www.aleksander.de/content/aleks/html/CookiesNotRequired.html</loc>
 		<changefreq>weekly</changefreq>
 	</url>
 	<url>
-		<loc>www.aleksander.de/index.html#!/srv/imp</loc>
+		<loc>www.aleksander.de/content/aleks/html/impressum.html</loc>
 		<changefreq>weekly</changefreq>
 	</url>
 	<url>
-		<loc>www.aleksander.de/index.html#!/srv/ds</loc>
+		<loc>www.aleksander.de/content/aleks/html/datenschutz2.html</loc>
 		<changefreq>weekly</changefreq>
 	</url>
 	<url>
-		<loc>www.aleksander.de/index.html#!/srv/pic</loc>
+		<loc>www.aleksander.de/content/aleks/html/srv/backGround.html</loc>
 		<changefreq>weekly</changefreq>
 	</url>
 	<url>
-		<loc>www.aleksander.de/index.html#!/prog/license</loc>
+		<loc>www.aleksander.de/LICENSE.html</loc>
 		<changefreq>weekly</changefreq>
 	</url>
 </urlset>

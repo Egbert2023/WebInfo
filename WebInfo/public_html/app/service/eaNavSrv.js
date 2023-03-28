@@ -111,14 +111,14 @@ var computeSiteMaps = function(rootScope) {
 //      </url>
 //    </urlset>
 
-// The function putUrlLoc fiil out the array oImgKeyArray[] for use it 
+// The function putUrlLoc fill out the array oImgKeyArray[] for use it 
 // for generate SiteMapImage.xml
     var oImgKeyArray = [];
     var putUrlLoc = function(ob, sm) {
         ob.forEach(o => {
             let oImgKey = {};
             sm = sm + '\n\t<url>';
-            sm = sm + '\n\t\t<loc>' + urlBase + o.href + '</loc>';
+            sm = sm + '\n\t\t<loc>' + baseDoman + "/" + o.url + '</loc>';
             sm = sm + '\n\t\t<changefreq>weekly</changefreq>';
             sm = sm + '\n\t</url>';
             oImgKey.imgKey = o.imgKey;
@@ -172,6 +172,7 @@ var computeSiteMaps = function(rootScope) {
     let baseDoman = rootScope.paramsApp.baseDoman;
     let startFile = rootScope.paramsApp.startFile;
     let urlBase = baseDoman + "/" + startFile;
+    
         
     let sm  = '<?xml version="1.0" encoding="UTF-8"?>';
     sm = sm + '\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">';

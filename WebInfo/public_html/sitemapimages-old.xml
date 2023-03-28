@@ -7,687 +7,818 @@
 			<image:loc>www.aleksander.de/content/aleks/pictures/travel/Schwerin/Schwerin-Schloss.jpg</image:loc>
 			<image:title>Schloss in Schwerin, der Landeshauptstadt von Mecklenburg Vorpommern</image:title>
 		</image:image>
+	</url>
 	<url>
 		<loc>www.aleksander.de/index.html#!/srv/pic</loc>
 		<image:image>
 			<image:loc>www.aleksander.de/content/aleks/pictures/travel/Ostsee/Prerow-Seebrücke.jpg</image:loc>
 			<image:title>Seebrücke in Prerow auf der Halbinsel Darß</image:title>
 		</image:image>
+	</url>
 	<url>
 		<loc>www.aleksander.de/index.html#!/srv/pic</loc>
 		<image:image>
 			<image:loc>www.aleksander.de/content/aleks/pictures/travel/Lissabon/Lissabon-Brücke.jpg</image:loc>
 			<image:title>Die Brücke 'Ponte 25 de Abril' überspannt den Tejo in Lissabon</image:title>
 		</image:image>
+	</url>
 	<url>
 		<loc>www.aleksander.de/index.html#!/srv/pic</loc>
 		<image:image>
 			<image:loc>www.aleksander.de/content/aleks/pictures/travel/Lissabon/Lissabon-Praca-do-Comercio-vom-Wasser.jpg</image:loc>
 			<image:title>'Praça do Comércio' einer der wichtigsten Plätze im Lissaboner Stadteil Baixa und ein Blick auf die Alfama, die Altstadt.</image:title>
 		</image:image>
+	</url>
 	<url>
 		<loc>www.aleksander.de/index.html#!/srv/pic</loc>
 		<image:image>
 			<image:loc>www.aleksander.de/content/aleks/pictures/hobby/Sonnenuntergang.jpg</image:loc>
 			<image:title>Sonnenuntergang an der Ostsee in Prerow auf dem Darß</image:title>
 		</image:image>
+	</url>
 	<url>
 		<loc>www.aleksander.de/index.html#!/srv/pic</loc>
 		<image:image>
 			<image:loc>www.aleksander.de/content/aleks/pictures/prog/Directive-eaImg.jpg</image:loc>
 			<image:title>Ein Programmier-Beispiel, die AngularJs Directive 'eaImg'</image:title>
 		</image:image>
+	</url>
 	<url>
 		<loc>www.aleksander.de/index.html#!/trav/eu/to</loc>
 		<image:image>
 			<image:loc>www.aleksander.de/content/aleks/pictures/travel/Ostseetour/Danzig-2013-vom-Wasser.jpg</image:loc>
 			<image:title>Danzig vom Wasser</image:title>
 		</image:image>
+	</url>
 	<url>
 		<loc>www.aleksander.de/index.html#!/trav/eu/to</loc>
 		<image:image>
 			<image:loc>www.aleksander.de/content/aleks/pictures/travel/Ostseetour/Danzig-2013-vom-Wasser2.jpg</image:loc>
 			<image:title>Das Kranentor in Danzig</image:title>
 		</image:image>
+	</url>
 	<url>
 		<loc>www.aleksander.de/index.html#!/trav/eu/to</loc>
 		<image:image>
 			<image:loc>www.aleksander.de/content/aleks/pictures/travel/Ostseetour/Helsinki-2013-Felsendom.jpg</image:loc>
 			<image:title>Der Felsendom in Helsinki</image:title>
 		</image:image>
+	</url>
 	<url>
 		<loc>www.aleksander.de/index.html#!/trav/eu/to</loc>
 		<image:image>
 			<image:loc>www.aleksander.de/content/aleks/pictures/travel/Ostseetour/Helsinki-2013-Sebelius-Denkmal.jpg</image:loc>
 			<image:title>Jan Sebelius Denkmal in Helsinki</image:title>
 		</image:image>
+	</url>
 	<url>
 		<loc>www.aleksander.de/index.html#!/trav/eu/to</loc>
 		<image:image>
 			<image:loc>www.aleksander.de/content/aleks/pictures/travel/Ostseetour/Kopenhagen-2013-Innenstadt.jpg</image:loc>
 			<image:title>Kopenhagener Altstadt</image:title>
 		</image:image>
+	</url>
 	<url>
 		<loc>www.aleksander.de/index.html#!/trav/eu/to</loc>
 		<image:image>
 			<image:loc>www.aleksander.de/content/aleks/pictures/travel/Ostseetour/Kopenhagen-2013-Meerjungfrau.jpg</image:loc>
 			<image:title>Die Meeresjungfrau in Kopenhagen</image:title>
 		</image:image>
+	</url>
 	<url>
 		<loc>www.aleksander.de/index.html#!/trav/eu/to</loc>
 		<image:image>
 			<image:loc>www.aleksander.de/content/aleks/pictures/travel/Ostseetour/Kopenhagen-2013-der-runde-Turm.jpg</image:loc>
 			<image:title>Der Rundturm, ein Turm, den jedes Kind in Dänemark kennt.</image:title>
 		</image:image>
+	</url>
 	<url>
 		<loc>www.aleksander.de/index.html#!/trav/eu/to</loc>
 		<image:image>
 			<image:loc>www.aleksander.de/content/aleks/pictures/travel/Ostseetour/Petersburg-2013-Katarinenpalast.jpg</image:loc>
 			<image:title>Katarinenpalast in Sankt Petersburg</image:title>
 		</image:image>
+	</url>
 	<url>
 		<loc>www.aleksander.de/index.html#!/trav/eu/to</loc>
 		<image:image>
 			<image:loc>www.aleksander.de/content/aleks/pictures/travel/Ostseetour/Stockholm-2013-Altstadt.jpg</image:loc>
 			<image:title>Die Altstadt von Stockholm</image:title>
 		</image:image>
+	</url>
 	<url>
 		<loc>www.aleksander.de/index.html#!/trav/eu/to</loc>
 		<image:image>
 			<image:loc>www.aleksander.de/content/aleks/pictures/travel/Ostseetour/Stockholm-2013-Springbrunnen-Stortorget-Square.jpg</image:loc>
 			<image:title>Springbrunnen 'Stortorget Square' nahe des Königspalastes in der Stockholmer Altstadt</image:title>
 		</image:image>
+	</url>
 	<url>
 		<loc>www.aleksander.de/index.html#!/trav/eu/to</loc>
 		<image:image>
 			<image:loc>www.aleksander.de/content/aleks/pictures/travel/Ostseetour/Tallin-2013-Altstadt.jpg</image:loc>
 			<image:title>Blick in die Altstadt von Tallin</image:title>
 		</image:image>
+	</url>
 	<url>
 		<loc>www.aleksander.de/index.html#!/trav/eu/to</loc>
 		<image:image>
 			<image:loc>www.aleksander.de/content/aleks/pictures/travel/Ostseetour/Tallin-2013-Blick-von-der-Oberstadt.jpg</image:loc>
 			<image:title>Blick auf die Altstadt von Tallin</image:title>
 		</image:image>
+	</url>
 	<url>
 		<loc>www.aleksander.de/index.html#!/prog/m</loc>
 		<image:image>
 			<image:loc>www.aleksander.de/content/aleks/pictures/math/Tastatur-Konkret-Taschenrechner.jpg</image:loc>
 			<image:title>So sind noch heute die Tastaturen aufgebaut.</image:title>
 		</image:image>
+	</url>
 	<url>
 		<loc>www.aleksander.de/index.html#!/prog/m</loc>
 		<image:image>
 			<image:loc>www.aleksander.de/content/aleks/pictures/math/Tastatur-Konkret-Taschenrechner-1397.jpg</image:loc>
 		</image:image>
+	</url>
 	<url>
 		<loc>www.aleksander.de/index.html#!/prog/m</loc>
 		<image:image>
 			<image:loc>www.aleksander.de/content/aleks/pictures/math/Tastatur-Konkret-Taschenrechner-6523.jpg</image:loc>
 		</image:image>
+	</url>
 	<url>
 		<loc>www.aleksander.de/index.html#!/prog/m</loc>
 		<image:image>
 			<image:loc>www.aleksander.de/content/aleks/pictures/math/Formalisierung-11.jpg</image:loc>
 		</image:image>
+	</url>
 	<url>
 		<loc>www.aleksander.de/index.html#!/prog/m</loc>
 		<image:image>
 			<image:loc>www.aleksander.de/content/aleks/pictures/math/Grundformel.jpg</image:loc>
 		</image:image>
+	</url>
 	<url>
 		<loc>www.aleksander.de/index.html#!/prog/m</loc>
 		<image:image>
 			<image:loc>www.aleksander.de/content/aleks/pictures/math/Formel-1.jpg</image:loc>
 		</image:image>
+	</url>
 	<url>
 		<loc>www.aleksander.de/index.html#!/prog/m</loc>
 		<image:image>
 			<image:loc>www.aleksander.de/content/aleks/pictures/math/Formel-2.jpg</image:loc>
 		</image:image>
+	</url>
 	<url>
 		<loc>www.aleksander.de/index.html#!/prog/m</loc>
 		<image:image>
 			<image:loc>www.aleksander.de/content/aleks/pictures/math/Formel-3.jpg</image:loc>
 		</image:image>
+	</url>
 	<url>
 		<loc>www.aleksander.de/index.html#!/hobby/garten</loc>
 		<image:image>
 			<image:loc>www.aleksander.de/content/aleks/pictures/hobby/Futterhaus-mit-Meise.jpg</image:loc>
 			<image:title>Futterhaus</image:title>
 		</image:image>
+	</url>
 	<url>
 		<loc>www.aleksander.de/index.html#!/hobby/garten</loc>
 		<image:image>
 			<image:loc>www.aleksander.de/content/aleks/pictures/hobby/Meisen-Vogelhaus-im-Garten.jpg</image:loc>
 			<image:title>Ein zu Hause für Meisen</image:title>
 		</image:image>
+	</url>
 	<url>
 		<loc>www.aleksander.de/index.html#!/hobby/garten</loc>
 		<image:image>
 			<image:loc>www.aleksander.de/content/aleks/pictures/hobby/Meisen-Vogelhaus.jpg</image:loc>
 			<image:title>Nach der Größe des Einfluglöches (32mm) sollen es Blaumeisen sein.</image:title>
 		</image:image>
+	</url>
 	<url>
 		<loc>www.aleksander.de/index.html#!/hobby/garten</loc>
 		<image:image>
 			<image:loc>www.aleksander.de/content/aleks/pictures/hobby/Mein-Apfelbaum.jpg</image:loc>
 			<image:title>Mein Apfelbaum im Jahr 2022. Nach einem Lehrgang konnte ich ihn auch korrekt beschneiden. Und siehe da, er trägt recht ordentlich.</image:title>
 		</image:image>
+	</url>
 	<url>
 		<loc>www.aleksander.de/index.html#!/prog/p</loc>
 		<image:image>
 			<image:loc>www.aleksander.de/content/aleks/pictures/prog/AngularJs-Index-mit-HTML.jpg</image:loc>
 		</image:image>
+	</url>
 	<url>
 		<loc>www.aleksander.de/index.html#!/prog/p</loc>
 		<image:image>
 			<image:loc>www.aleksander.de/content/aleks/pictures/prog/Directive-eaLoadParams.jpg</image:loc>
 		</image:image>
+	</url>
 	<url>
 		<loc>www.aleksander.de/index.html#!/prog/p</loc>
 		<image:image>
 			<image:loc>www.aleksander.de/content/aleks/pictures/prog/Beispiel-Akkordion-html.jpg</image:loc>
 		</image:image>
+	</url>
 	<url>
 		<loc>www.aleksander.de/index.html#!/prog/p</loc>
 		<image:image>
 			<image:loc>www.aleksander.de/content/aleks/pictures/prog/Img-eaImg-Html.jpg</image:loc>
 		</image:image>
+	</url>
 	<url>
 		<loc>www.aleksander.de/index.html#!/prog/p</loc>
 		<image:image>
 			<image:loc>www.aleksander.de/content/aleks/pictures/prog/ImgBox-Html.jpg</image:loc>
 		</image:image>
+	</url>
 	<url>
 		<loc>www.aleksander.de/index.html#!/prog/p</loc>
 		<image:image>
 			<image:loc>www.aleksander.de/content/aleks/pictures/prog/Beispiel-News-JSON.jpg</image:loc>
 		</image:image>
+	</url>
 	<url>
 		<loc>www.aleksander.de/index.html#!/prog/sp</loc>
 		<image:image>
 			<image:loc>www.aleksander.de/content/aleks/pictures/hobby/Surven-2022.jpg</image:loc>
 			<image:title>Sommer 2022 'mal wieder auf dem Brett</image:title>
 		</image:image>
+	</url>
 	<url>
 		<loc>www.aleksander.de/index.html#!/prog/sp</loc>
 		<image:image>
 			<image:loc>www.aleksander.de/content/aleks/pictures/hobby/Wing-Start-2022.jpg</image:loc>
 			<image:title>Der neue Trend aus den USA - 'Wing Foil' beim Starten</image:title>
 		</image:image>
+	</url>
 	<url>
 		<loc>www.aleksander.de/index.html#!/prog/sp</loc>
 		<image:image>
 			<image:loc>www.aleksander.de/content/aleks/pictures/hobby/Wing-Fahrt-2022.jpg</image:loc>
 			<image:title>Mit dem Wing auf dem Brett und los geht die Fahrt</image:title>
 		</image:image>
+	</url>
 	<url>
 		<loc>www.aleksander.de/index.html#!/trav/de</loc>
 		<image:image>
 			<image:loc>www.aleksander.de/content/aleks/pictures/travel/Rothenburg/Rothenburg-o-d-T-2008-Nachtansicht.jpg</image:loc>
 			<image:title>Rothenburg ob der Tauber im Jahr 2008</image:title>
 		</image:image>
+	</url>
 	<url>
 		<loc>www.aleksander.de/index.html#!/trav/de</loc>
 		<image:image>
 			<image:loc>www.aleksander.de/content/aleks/pictures/travel/Heidelberg/Heidelberg-2005.jpg</image:loc>
 			<image:title>Ein Blick über Heidelberg am Neckar</image:title>
 		</image:image>
+	</url>
 	<url>
 		<loc>www.aleksander.de/index.html#!/trav/de</loc>
 		<image:image>
 			<image:loc>www.aleksander.de/content/aleks/pictures/travel/Heidelberg/Heidelberg-2005-Burg.jpg</image:loc>
 			<image:title>Ein Blick über Heidelberg zur Burg</image:title>
 		</image:image>
+	</url>
 	<url>
 		<loc>www.aleksander.de/index.html#!/trav/de</loc>
 		<image:image>
 			<image:loc>www.aleksander.de/content/aleks/pictures/travel/Schwerin/Schwerin-2022-Schloss-mit-Kreuzkanal.jpg</image:loc>
 			<image:title>Ein Blick üpber den Kreuzkanal zum Schweriner Schloss</image:title>
 		</image:image>
+	</url>
 	<url>
 		<loc>www.aleksander.de/index.html#!/trav/de</loc>
 		<image:image>
 			<image:loc>www.aleksander.de/content/aleks/pictures/travel/Ostsee/Warnemünde-2018-Teepott.jpg</image:loc>
 			<image:title>Die Wahrzeichen von Warnemünde, der Teepott und der Leuchtturm</image:title>
 		</image:image>
+	</url>
 	<url>
 		<loc>www.aleksander.de/index.html#!/trav/de</loc>
 		<image:image>
 			<image:loc>www.aleksander.de/content/aleks/pictures/travel/Mueritz/Klink-2019-Schloss.jpg</image:loc>
 			<image:title>Die Müritz mit ihrem Schloss in Klink</image:title>
 		</image:image>
+	</url>
 	<url>
 		<loc>www.aleksander.de/index.html#!/trav/de</loc>
 		<image:image>
 			<image:loc>www.aleksander.de/content/aleks/pictures/travel/Mueritz/Waren-2019-Blick-vom-Wasser.jpg</image:loc>
 			<image:title>Das Panorama von Waren an der Müritz</image:title>
 		</image:image>
+	</url>
 	<url>
 		<loc>www.aleksander.de/index.html#!/trav/eu</loc>
 		<image:image>
 			<image:loc>www.aleksander.de/content/aleks/pictures/travel/Austria/SalzburgerLand-Attasee.jpg</image:loc>
 			<image:title>Ein Blick über den Attasee im Salzburger Land</image:title>
 		</image:image>
+	</url>
 	<url>
 		<loc>www.aleksander.de/index.html#!/trav/eu</loc>
 		<image:image>
 			<image:loc>www.aleksander.de/content/aleks/pictures/travel/Lissabon/Lissabon-Praca-do-Comercio-vom-Wasser.jpg</image:loc>
 			<image:title>Ein Blick auf die Alfame, ein Stadtteil der Altstadt in Lissabon</image:title>
 		</image:image>
+	</url>
 	<url>
 		<loc>www.aleksander.de/index.html#!/trav/de/l</loc>
 		<image:image>
 			<image:loc>www.aleksander.de/content/aleks/pictures/travel/Willingen/Willingen-2007-Kyrilpfad.jpg</image:loc>
 			<image:title>Willingen im Sauerland im Kyril-Jahr 2007</image:title>
 		</image:image>
+	</url>
 	<url>
 		<loc>www.aleksander.de/index.html#!/trav/de/l</loc>
 		<image:image>
 			<image:loc>www.aleksander.de/content/aleks/pictures/travel/Harz/Braunlage-2017-Brockenbahn.jpg</image:loc>
 			<image:title>Die Brockenbahn fährt mit viel Dampf zum Brocken hoch</image:title>
 		</image:image>
+	</url>
 	<url>
 		<loc>www.aleksander.de/index.html#!/trav/de/l</loc>
 		<image:image>
 			<image:loc>www.aleksander.de/content/aleks/pictures/travel/Mueritz/Röbel-2015-Blick.jpg</image:loc>
 			<image:title>Ein Blick auf Röbel an der Müritz</image:title>
 		</image:image>
+	</url>
 	<url>
 		<loc>www.aleksander.de/index.html#!/trav/de/l</loc>
 		<image:image>
 			<image:loc>www.aleksander.de/content/aleks/pictures/travel/Harz/Braunlage-2016-Blick-zum-Brocken.jpg</image:loc>
 			<image:title>Ein Blick zum Brocken</image:title>
 		</image:image>
+	</url>
 	<url>
 		<loc>www.aleksander.de/index.html#!/trav/de/l</loc>
 		<image:image>
 			<image:loc>www.aleksander.de/content/aleks/pictures/travel/Harz/Braunlage-2017-Brocken-im-Winter.jpg</image:loc>
 			<image:title>Der Brocken im Wenter 2005</image:title>
 		</image:image>
+	</url>
 	<url>
 		<loc>www.aleksander.de/index.html#!/trav/de/l</loc>
 		<image:image>
 			<image:loc>www.aleksander.de/content/aleks/pictures/travel/Harz/Harz-2017-Wander-Wegweiser.jpg</image:loc>
 			<image:title>Ein Wanderwegweiser im Harz im Jahr 2005</image:title>
 		</image:image>
+	</url>
 	<url>
 		<loc>www.aleksander.de/index.html#!/trav/de/o</loc>
 		<image:image>
 			<image:loc>www.aleksander.de/content/aleks/pictures/travel/Ostsee/Usedom-2018-Meer-mit-Boot.jpg</image:loc>
 			<image:title>Ein Blick auf die Ostsee mit nichts außer einem Boot.</image:title>
 		</image:image>
+	</url>
 	<url>
 		<loc>www.aleksander.de/index.html#!/trav/de/o</loc>
 		<image:image>
 			<image:loc>www.aleksander.de/content/aleks/pictures/travel/Ostsee/Usedom-2018-von-oben1.jpg</image:loc>
 			<image:title>Seebrücke von Ahlbeck auf der Insel Usedom</image:title>
 		</image:image>
+	</url>
 	<url>
 		<loc>www.aleksander.de/index.html#!/trav/de/o</loc>
 		<image:image>
 			<image:loc>www.aleksander.de/content/aleks/pictures/travel/Ostsee/Usedom-2018-von-oben2.jpg</image:loc>
 			<image:title>Luftaufnahme über die 3 Kaiserbäder auf Usedom - Ahlbeck, Heringsdorf und Bansin</image:title>
 		</image:image>
+	</url>
 	<url>
 		<loc>www.aleksander.de/index.html#!/trav/de/o</loc>
 		<image:image>
 			<image:loc>www.aleksander.de/content/aleks/pictures/travel/Ostsee/Prerow-Blick-vom-Leuchtturm.jpg</image:loc>
 			<image:title>Blick vom Leuchtturm am Darßer Ort Richtung Weststrand</image:title>
 		</image:image>
+	</url>
 	<url>
 		<loc>www.aleksander.de/index.html#!/trav/de/o</loc>
 		<image:image>
 			<image:loc>www.aleksander.de/content/aleks/pictures/travel/Ostsee/Prerow-Seebrücke.jpg</image:loc>
 			<image:title>Die Seebrücke in Prerow, auf dem Darß</image:title>
 		</image:image>
+	</url>
 	<url>
 		<loc>www.aleksander.de/index.html#!/trav/de/o</loc>
 		<image:image>
 			<image:loc>www.aleksander.de/content/aleks/pictures/travel/Ostsee/Fehmarn-2021-Wing-Foil-Go.jpg</image:loc>
 			<image:title>So kann es aussehen, wenn man mit dem Wing auf dem Foil steht. Dann schwebt man über dem Wasser.</image:title>
 		</image:image>
+	</url>
 	<url>
 		<loc>www.aleksander.de/index.html#!/trav/de/o</loc>
 		<image:image>
 			<image:loc>www.aleksander.de/content/aleks/pictures/travel/Ostsee/Fehmarn-20021-Winger.jpg</image:loc>
 			<image:title>Noch einer, der es kann</image:title>
 		</image:image>
+	</url>
 	<url>
 		<loc>www.aleksander.de/index.html#!/trav/de/o</loc>
 		<image:image>
 			<image:loc>www.aleksander.de/content/aleks/pictures/travel/Ostsee/Goehren-2021-Wetter.jpg</image:loc>
 			<image:title>Auch so kann das es an der Ostsee aussehen.</image:title>
 		</image:image>
+	</url>
 	<url>
 		<loc>www.aleksander.de/index.html#!/trav/de/o</loc>
 		<image:image>
 			<image:loc>www.aleksander.de/content/aleks/pictures/travel/Ostsee/Goehren-2021-Ruderfaehre.jpg</image:loc>
 			<image:title>Wenn man auf Rügen mit dem Rad unterwegs ist, trifft man in Moritzdorf auf eine nostalgische Ruderfähre.</image:title>
 		</image:image>
+	</url>
 	<url>
 		<loc>www.aleksander.de/index.html#!/trav/de/o</loc>
 		<image:image>
 			<image:loc>www.aleksander.de/content/aleks/pictures/travel/Ostsee/Goehren-2021-Duene-und-Meer.jpg</image:loc>
 			<image:title>Auch dieser Blick ist an der Ostsee möglich, nichts als Dünen und Meer.</image:title>
 		</image:image>
+	</url>
 	<url>
 		<loc>www.aleksander.de/index.html#!/trav/de/n</loc>
 		<image:image>
 			<image:loc>www.aleksander.de/content/aleks/pictures/travel/Nordsee/Langeoog-2022-Wasserturm.jpg</image:loc>
 			<image:title>Das Wahrzeichen von Langeoog, der Wasserturm</image:title>
 		</image:image>
+	</url>
 	<url>
 		<loc>www.aleksander.de/index.html#!/trav/de/n</loc>
 		<image:image>
 			<image:loc>www.aleksander.de/content/aleks/pictures/travel/Nordsee/Langeoog-2022-Wasser.jpg</image:loc>
 			<image:title>Ein Blick übers Wasser, das macht eine Insel aus.</image:title>
 		</image:image>
+	</url>
 	<url>
 		<loc>www.aleksander.de/index.html#!/trav/de/n</loc>
 		<image:image>
 			<image:loc>www.aleksander.de/content/aleks/pictures/travel/Nordsee/Langeoog-2022-Strand.jpg</image:loc>
 			<image:title>Der Strand von Langeoog im Jahr 2022</image:title>
 		</image:image>
+	</url>
 	<url>
 		<loc>www.aleksander.de/index.html#!/trav/de/n</loc>
 		<image:image>
 			<image:loc>www.aleksander.de/content/aleks/pictures/travel/Nordsee/Langeoog-2022-Duenensingen.jpg</image:loc>
 			<image:title>Das Dünensingen auf Langeoog ist immer wieder ein Highlight.</image:title>
 		</image:image>
+	</url>
 	<url>
 		<loc>www.aleksander.de/index.html#!/trav/de/n</loc>
 		<image:image>
 			<image:loc>www.aleksander.de/content/aleks/pictures/travel/Nordsee/Langeoog-2017-Fata-Morgana.jpg</image:loc>
 			<image:title>2017 im Frühjahr auf Langeoog, das Wasser war eisekalt, die Luft schon recht warm. Dann sahen wir die "Fata Morgana". Das Fährschiff der "K-Linie" fuhr in der Fahrrinne von Hamburg kommend in Richtung Bremerhaven. Eigentlich viel zu weit weg, um es sehen zu können. Doch die Luftspiegelung machte es möglich.</image:title>
 		</image:image>
+	</url>
 	<url>
 		<loc>www.aleksander.de/index.html#!/trav/de/n</loc>
 		<image:image>
 			<image:loc>www.aleksander.de/content/aleks/pictures/travel/Nordsee/Bremerhaven-2019-Victoria-Highway.jpg</image:loc>
 			<image:title>In Bremerhaven bei einer Hafenrundfahrt haben wir die "Fata Morgana" (oder ein baugleiches Schiff) 2019 wiedergesehen.</image:title>
 		</image:image>
+	</url>
 	<url>
 		<loc>www.aleksander.de/index.html#!/trav/de/n</loc>
 		<image:image>
 			<image:loc>www.aleksander.de/content/aleks/pictures/travel/Nordsee/Helgoland-2019-Lange-Anna.jpg</image:loc>
 			<image:title>Ein beliebtes Fotomotiv auf der Nordseeinsel Helgoland, die 'Lange Anna'</image:title>
 		</image:image>
+	</url>
 	<url>
 		<loc>www.aleksander.de/index.html#!/trav/de/n</loc>
 		<image:image>
 			<image:loc>www.aleksander.de/content/aleks/pictures/travel/Nordsee/Bremerhaven-2019-Seute-Deern.jpg</image:loc>
 			<image:title>Dieses Schiff, hat es 2019 in Bremerhaven noch gegeben. "De Seute Deern". Mittlerweile ist es im Hafenbecken gesunken und konnte nicht mehr restauriert werden.</image:title>
 		</image:image>
+	</url>
 	<url>
 		<loc>www.aleksander.de/index.html#!/trav/de/n</loc>
 		<image:image>
 			<image:loc>www.aleksander.de/content/aleks/pictures/travel/Nordsee/Amrum-2016-Wind.jpg</image:loc>
 			<image:title>Der Wind auf Amrum</image:title>
 		</image:image>
+	</url>
 	<url>
 		<loc>www.aleksander.de/index.html#!/trav/de/n</loc>
 		<image:image>
 			<image:loc>www.aleksander.de/content/aleks/pictures/travel/Nordsee/Amrum-2016-Duenen.jpg</image:loc>
 			<image:title>Die Dünen von Amrum, einer schönen Nordseeinsel</image:title>
 		</image:image>
+	</url>
+	<url>
+		<loc>www.aleksander.de/index.html#!/trav/de/n</loc>
+		<image:image>
+			<image:loc>www.aleksander.de/content/aleks/pictures/travel/Nordsee/Norderney-2010-Schild.jpg</image:loc>
+			<image:title>Eine schon alte Besonderheit auf Norderney</image:title>
+		</image:image>
+	</url>
+	<url>
+		<loc>www.aleksander.de/index.html#!/trav/de/n</loc>
+		<image:image>
+			<image:loc>www.aleksander.de/content/aleks/pictures/travel/Nordsee/Norderney-2010-Turm.jpg</image:loc>
+			<image:title>Ein Nlick auf den Leuchtturm von Norderney</image:title>
+		</image:image>
+	</url>
 	<url>
 		<loc>www.aleksander.de/index.html#!/trav/eu/tn</loc>
 		<image:image>
 			<image:loc>www.aleksander.de/content/aleks/pictures/travel/Norwegen/Alesund-2010-Übersicht.jpg</image:loc>
 			<image:title>Ein Blick über Alesund</image:title>
 		</image:image>
+	</url>
 	<url>
 		<loc>www.aleksander.de/index.html#!/trav/eu/tn</loc>
 		<image:image>
 			<image:loc>www.aleksander.de/content/aleks/pictures/travel/Norwegen/Alesund-2010.jpg</image:loc>
 			<image:title>Ein Blich aus dem Fjord vor Alesund</image:title>
 		</image:image>
+	</url>
 	<url>
 		<loc>www.aleksander.de/index.html#!/trav/eu/tn</loc>
 		<image:image>
 			<image:loc>www.aleksander.de/content/aleks/pictures/travel/Norwegen/Alesund-Blick-aufs-Meer.jpg</image:loc>
 			<image:title>Blick zu vorgelagerten Insel von Alesund</image:title>
 		</image:image>
+	</url>
 	<url>
 		<loc>www.aleksander.de/index.html#!/trav/eu/tn</loc>
 		<image:image>
 			<image:loc>www.aleksander.de/content/aleks/pictures/travel/Norwegen/Bergen-2010-Ausblick.jpg</image:loc>
 			<image:title>Ein Blick über Bergen in Norwegen.</image:title>
 		</image:image>
+	</url>
 	<url>
 		<loc>www.aleksander.de/index.html#!/trav/eu/tn</loc>
 		<image:image>
 			<image:loc>www.aleksander.de/content/aleks/pictures/travel/Norwegen/Stavanger-2010-Prekestolen.jpg</image:loc>
 			<image:title>Der Preikestolen, ca. 600 Meter über dem Lysefjord.</image:title>
 		</image:image>
+	</url>
 	<url>
 		<loc>www.aleksander.de/index.html#!/trav/eu/am</loc>
 		<image:image>
 			<image:loc>www.aleksander.de/content/aleks/pictures/travel/Amsterdam/Amsterdam-2017-Altstadthaus.jpg</image:loc>
 			<image:title>Ein Haus aus den goldenen Zeiten von Amsterdam</image:title>
 		</image:image>
+	</url>
 	<url>
 		<loc>www.aleksander.de/index.html#!/trav/eu/am</loc>
 		<image:image>
 			<image:loc>www.aleksander.de/content/aleks/pictures/travel/Amsterdam/Amsterdam-2017-Gracht.jpg</image:loc>
 			<image:title>Eine typische Gracht in der Niederländischen Hauptstadt.</image:title>
 		</image:image>
+	</url>
 	<url>
 		<loc>www.aleksander.de/index.html#!/trav/eu/ba</loc>
 		<image:image>
 			<image:loc>www.aleksander.de/content/aleks/pictures/travel/Barcelona/Barcelona-2012-Sagra-Familia.jpg</image:loc>
 			<image:title>Sagrada Familia, das beeindruckende Warzeichen von Barcelona. Es dauert noch einige Jahre, bis die aus Spenden finanzierte, von Antoni Gaudi entworfene Kirche fertiggestellt ist.</image:title>
 		</image:image>
+	</url>
 	<url>
 		<loc>www.aleksander.de/index.html#!/trav/eu/ba</loc>
 		<image:image>
 			<image:loc>www.aleksander.de/content/aleks/pictures/travel/Barcelona/Barcelona-2012-Strand.jpg</image:loc>
 			<image:title>Der Strand im Stadtteil Barceloneta.</image:title>
 		</image:image>
+	</url>
 	<url>
 		<loc>www.aleksander.de/index.html#!/trav/eu/pa</loc>
 		<image:image>
 			<image:loc>www.aleksander.de/content/aleks/pictures/travel/Paris/Paris-2005-Eifelturm.jpg</image:loc>
 			<image:title>Ein Teil vom Eifelturm, den ganzen Turm kennt ja jeder.</image:title>
 		</image:image>
+	</url>
 	<url>
 		<loc>www.aleksander.de/index.html#!/trav/eu/pa</loc>
 		<image:image>
 			<image:loc>www.aleksander.de/content/aleks/pictures/travel/Paris/Paris-2005-Triumpfbogen.jpg</image:loc>
 			<image:title>Der Triumpfbogen in Paris. Ein Kreisverkehr, der einem Verkehrschaos gleicht. Wer bremst, verliert.</image:title>
 		</image:image>
+	</url>
 	<url>
 		<loc>www.aleksander.de/index.html#!/trav/eu/pa</loc>
 		<image:image>
 			<image:loc>www.aleksander.de/content/aleks/pictures/travel/Paris/Paris-2006-Blick-vom-Triumpfbogen.jpg</image:loc>
 			<image:title>Ein Tunnel führt unter der Straße zum Triumpfbogen. So kann man ohne Risiko die Aussicht genießen.</image:title>
 		</image:image>
+	</url>
 	<url>
 		<loc>www.aleksander.de/index.html#!/trav/eu/pa</loc>
 		<image:image>
 			<image:loc>www.aleksander.de/content/aleks/pictures/travel/Paris/Paris-2006-Notredame-vor-dem Feuer.jpg</image:loc>
 			<image:title>Das war 'Notre dame' vor dem verherenden Brand. Hier war noch alles in Ordnung.</image:title>
 		</image:image>
+	</url>
 	<url>
 		<loc>www.aleksander.de/index.html#!/trav/eu/ro</loc>
 		<image:image>
 			<image:loc>www.aleksander.de/content/aleks/pictures/travel/Rom/Rom-Okt-08-Blick-vom-Petersdom.jpg</image:loc>
 			<image:title>Ein Blick vom Dach des Petersdoms. Man konnte 2008 der katolischen Kirche auf's Dach steigen.</image:title>
 		</image:image>
+	</url>
 	<url>
 		<loc>www.aleksander.de/index.html#!/trav/eu/ro</loc>
 		<image:image>
 			<image:loc>www.aleksander.de/content/aleks/pictures/travel/Rom/Rom-Okt-08-Forum-Romanum.jpg</image:loc>
 			<image:title>Das Forum Romanum, ein Blick in das alte Rom.</image:title>
 		</image:image>
+	</url>
 	<url>
 		<loc>www.aleksander.de/index.html#!/trav/eu/ro</loc>
 		<image:image>
 			<image:loc>www.aleksander.de/content/aleks/pictures/travel/Rom/Rom-Okt-08-Kolosseum.jpg</image:loc>
 			<image:title>Das Kolloseum, das muss ich noch einmal besuchen. Ich war leider nicht drin.</image:title>
 		</image:image>
+	</url>
 	<url>
 		<loc>www.aleksander.de/index.html#!/trav/eu/lb</loc>
 		<image:image>
 			<image:loc>www.aleksander.de/content/aleks/pictures/travel/Lissabon/Lissabon-Torre-de-Belem.jpg</image:loc>
 			<image:title>Das Tor zu Lissabon am Tejo, der Torre de Belem</image:title>
 		</image:image>
+	</url>
 	<url>
 		<loc>www.aleksander.de/index.html#!/trav/eu/lb</loc>
 		<image:image>
 			<image:loc>www.aleksander.de/content/aleks/pictures/travel/Lissabon/Lissabon-Praca-do-Comercio-vom-Wasser.jpg</image:loc>
-			<image:title>Ein Blick auf die Alfame vom Wasser aus</image:title>
+			<image:title>Ein Blick auf die Alfama vom Wasser aus</image:title>
 		</image:image>
+	</url>
 	<url>
 		<loc>www.aleksander.de/index.html#!/trav/eu/lb</loc>
 		<image:image>
 			<image:loc>www.aleksander.de/content/aleks/pictures/travel/Lissabon/Lissabon-Elevator.jpg</image:loc>
 			<image:title>Der Berühmte 'Elevador de Santa Justa' oder auch Fahrstuhl.</image:title>
 		</image:image>
+	</url>
 	<url>
 		<loc>www.aleksander.de/index.html#!/trav/eu/lb</loc>
 		<image:image>
 			<image:loc>www.aleksander.de/content/aleks/pictures/travel/Lissabon/Lissabon-Elevator-von-hinten.jpg</image:loc>
 			<image:title>Der Blick von Hinten</image:title>
 		</image:image>
+	</url>
 	<url>
 		<loc>www.aleksander.de/index.html#!/trav/eu/lb</loc>
 		<image:image>
 			<image:loc>www.aleksander.de/content/aleks/pictures/travel/Lissabon/Lissabon-Elevator-Bahn.jpg</image:loc>
 			<image:title>Auch das wird in Lissabon Elevator genannt.</image:title>
 		</image:image>
+	</url>
 	<url>
 		<loc>www.aleksander.de/index.html#!/trav/eu/lb</loc>
 		<image:image>
 			<image:loc>www.aleksander.de/content/aleks/pictures/travel/Lissabon/Lissabon-Park-der-Nationen.jpg</image:loc>
 			<image:title>Der Park der Nationen. Aus Anlass der Weltausstellung September 1998.</image:title>
 		</image:image>
+	</url>
 	<url>
 		<loc>www.aleksander.de/index.html#!/trav/eu/lb</loc>
 		<image:image>
 			<image:loc>www.aleksander.de/content/aleks/pictures/travel/Lissabon/Lissabon-Brücke.jpg</image:loc>
 			<image:title>Ein Blick auf die "Ponte 25 de Abril" in Lissabon 2022 bei unserer Bootstour auf dem Tejo.</image:title>
 		</image:image>
+	</url>
 	<url>
 		<loc>www.aleksander.de/index.html#!/trav/eu/lb</loc>
 		<image:image>
 			<image:loc>www.aleksander.de/content/aleks/pictures/travel/Lissabon/Lissabon-AussichtFerienwohnung.jpg</image:loc>
 			<image:title>Diesen Blick hatten wir aus unserer Unterkunft</image:title>
 		</image:image>
+	</url>
 	<url>
 		<loc>www.aleksander.de/index.html#!/trav/eu/lb</loc>
 		<image:image>
 			<image:loc>www.aleksander.de/content/aleks/pictures/travel/Lissabon/Lissabon-Alfama-Zeichnung.jpg</image:loc>
 			<image:title>Kunst in der Alfama</image:title>
 		</image:image>
+	</url>
 	<url>
 		<loc>www.aleksander.de/index.html#!/trav/Mittelmeer/tmm</loc>
 		<image:image>
 			<image:loc>www.aleksander.de/content/aleks/pictures/travel/Mittelmeer/Malta-2005-vom-Wasser.jpg</image:loc>
 			<image:title>Malta 2005 vom Wasser aus</image:title>
 		</image:image>
+	</url>
 	<url>
 		<loc>www.aleksander.de/index.html#!/trav/Mittelmeer/tmm</loc>
 		<image:image>
 			<image:loc>www.aleksander.de/content/aleks/pictures/travel/Mittelmeer/Malta-2005-Blick-auf-den-Hafen.jpg</image:loc>
 			<image:title>Blick auf den Hafen von Valetta, der Hauütstadt von Malta</image:title>
 		</image:image>
+	</url>
 	<url>
 		<loc>www.aleksander.de/index.html#!/trav/Mittelmeer/tmm</loc>
 		<image:image>
 			<image:loc>www.aleksander.de/content/aleks/pictures/travel/Mittelmeer/Neapel-2005-Vesuv.jpg</image:loc>
 			<image:title>Ein Blick in den Vesuv bei Neapel</image:title>
 		</image:image>
+	</url>
 	<url>
 		<loc>www.aleksander.de/index.html#!/trav/Mittelmeer/tmm</loc>
 		<image:image>
 			<image:loc>www.aleksander.de/content/aleks/pictures/travel/Mittelmeer/Palermo-2005-Alt-und-neu.jpg</image:loc>
 			<image:title>Palermo 2005, die Mafia hatte über viele Jahre Renovierungen verhindert, um die Menschen an die Stadträder auf die lukrativen Grundstücke zu locken.</image:title>
 		</image:image>
+	</url>
 	<url>
 		<loc>www.aleksander.de/index.html#!/trav/Mittelmeer/tmm</loc>
 		<image:image>
 			<image:loc>www.aleksander.de/content/aleks/pictures/travel/Mittelmeer/Palermo-in-der-Stadt.jpg</image:loc>
 			<image:title>Mittlerweile gibt es in Palermo aber viele schöne Ecken.</image:title>
 		</image:image>
+	</url>
 	<url>
 		<loc>www.aleksander.de/index.html#!/trav/Mittelmeer/tmm</loc>
 		<image:image>
 			<image:loc>www.aleksander.de/content/aleks/pictures/travel/Mittelmeer/Palma-2005-Kathedrale.jpg</image:loc>
 			<image:title>Die Kathedrale von Palme de Mallorca 2005</image:title>
 		</image:image>
+	</url>
 	<url>
 		<loc>www.aleksander.de/index.html#!/trav/Mittelmeer/tmm</loc>
 		<image:image>
 			<image:loc>www.aleksander.de/content/aleks/pictures/travel/Mittelmeer/Soller-2005-Strassenbahn.jpg</image:loc>
 			<image:title>Die Straßenbahn von Sollert im Jahre 2005</image:title>
 		</image:image>
+	</url>
 	<url>
 		<loc>www.aleksander.de/index.html#!/trav/Mittelmeer/tmm</loc>
 		<image:image>
 			<image:loc>www.aleksander.de/content/aleks/pictures/travel/Mittelmeer/Soller-2005-Ueberblick.jpg</image:loc>
 			<image:title>Ein Blick über den Hafen von Soller</image:title>
 		</image:image>
+	</url>
 	<url>
 		<loc>www.aleksander.de/index.html#!/prog</loc>
 		<image:image>
 			<image:loc>www.aleksander.de/content/aleks/pictures/travel/Norwegen/Bergen-2010-Ausblick.jpg</image:loc>
 			<image:title>Eine Schiffsreise nach Norwegen</image:title>
 		</image:image>
+	</url>
 	<url>
 		<loc>www.aleksander.de/index.html#!/prog</loc>
 		<image:image>
 			<image:loc>www.aleksander.de/content/aleks/pictures/hobby/Wing-Fahrt-2022.jpg</image:loc>
 			<image:title>Eine neue Wassersportart 'Wing Foil'</image:title>
 		</image:image>
+	</url>
 	<url>
 		<loc>www.aleksander.de/index.html#!/prog</loc>
 		<image:image>
 			<image:loc>www.aleksander.de/content/aleks/pictures/hobby/Mein-Apfelbaum.jpg</image:loc>
 			<image:title>Mein Aplfelbaum 2022. er ist 3 Jahre alt.</image:title>
 		</image:image>
+	</url>
 	<url>
 		<loc>www.aleksander.de/index.html#!/prog</loc>
 		<image:image>
 			<image:loc>www.aleksander.de/content/aleks/pictures/hobby/gitarre.jpg</image:loc>
 			<image:title>Meine Gitarre.</image:title>
 		</image:image>
+	</url>
 	<url>
 		<loc>www.aleksander.de/index.html#!/prog</loc>
 		<image:image>
 			<image:loc>www.aleksander.de/content/aleks/pictures/math/Tastatur-Konkret-Taschenrechner-6523.jpg</image:loc>
 			<image:title>Die verrückte 11, ein mathematisches Phänomen.</image:title>
 		</image:image>
+	</url>
 	<url>
 		<loc>www.aleksander.de/index.html#!/prog</loc>
 		<image:image>
 			<image:loc>www.aleksander.de/content/aleks/pictures/prog/Beispiel-Akkordion-html.jpg</image:loc>
 			<image:title>Ein Beispiel für eine Html Seite die man mit dieser WebInfo-Applikation programmieren kann.</image:title>
 		</image:image>
+	</url>
 	<url>
 		<loc>www.aleksander.de/index.html#!/trav</loc>
 		<image:image>
 			<image:loc>www.aleksander.de/content/aleks/pictures/travel/Amsterdam/Amsterdam-2017-Altstadthaus.jpg</image:loc>
 			<image:title>Ein Haus aus den goldenen Zeiten von Amsterdam</image:title>
 		</image:image>
+	</url>
 	<url>
 		<loc>www.aleksander.de/index.html#!/trav</loc>
 		<image:image>
 			<image:loc>www.aleksander.de/content/aleks/pictures/travel/Heidelberg/Heidelberg-2005.jpg</image:loc>
 			<image:title>Ein Blick über Heidelberg am Neckar</image:title>
 		</image:image>
+	</url>
 	<url>
 		<loc>www.aleksander.de/index.html#!/trav</loc>
 		<image:image>
 			<image:loc>www.aleksander.de/content/aleks/pictures/travel/Mueritz/Klink-2019-Schloss.jpg</image:loc>
 			<image:title>Die Müritz mit ihrem Schloss in Klink</image:title>
 		</image:image>
+	</url>
 	<url>
 		<loc>www.aleksander.de/index.html#!/trav</loc>
 		<image:image>
 			<image:loc>www.aleksander.de/content/aleks/pictures/travel/Lissabon/Lissabon-Brücke.jpg</image:loc>
 			<image:title>Ein Blick auf die "Ponte 25 de Abril" in Lissabon 2022 bei unserer Bootstour auf dem Tejo.</image:title>
 		</image:image>
+	</url>
 </urlset>
