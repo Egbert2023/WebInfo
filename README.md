@@ -46,6 +46,11 @@ To create new content, the following files must be created and exchanged.
                         "content/aleks/pictures/hobby/Mein-Apfelbaum.jpg"]
         },   
 ```
+**an example for usind the imgBoxList.json file**
+You can use the following statement to show the second picture from example on a Html page.
+```xml
+<div ea-img data-img-box-idx="2" data-img-box-key = "Garten"></div>
+```
 
 ### Special components
 
@@ -54,8 +59,12 @@ To support the creation of HTML pages I have created the following AngularJs dir
 2. eaAddHtml - A html page is inserted into the code. This functionality is used for the parameterized generation of the menu and the news mechanism
 3. eaImg and eaImgBox - provides the functionality to display the images within the HTML pages and to display the images enlarged with a scrolling function
 4. eaLoadParams - Call in the index.html to read in all JSON files
-5. eaNavi - Generates the complete menu with one call
-6. eaFooter - Inserted the footer.html 
+5. eaNavi - Generates the complete menu with one call. This data are used for sitemap and PathInfo directive too.
+6. eaPathLink - The current path is displayed at the top of every page
+7. eaAccordeon - With two tags, an accordion is created that opens one entry and closes all others with one click
+8. eaVideo - With a tag, a video is integrated that, like the images, fits into the design of the pages.
+9. eaCookies - A cookie banner generated from the parameters is displayed when the program starts. If there is a corresponding entry in the menu, an editing option is also provided. This functionality can be enabled/disabled with one parameter in the directive tag.
+10. eaFooter - Inserted the footer.html 
 
 #### eaAccCoat and eaAccKey
 
