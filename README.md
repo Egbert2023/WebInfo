@@ -11,7 +11,7 @@ The following features are included
 ## Structure and components of the application
 
 The WebInfo application consists of two main components. The application part and the content part.
-In order to connect the two parts, the path to the content must be specified in the index.html in the AngularJs directive 'eaLoadParams' in the parameter 'data-content-folder'.
+In order to connect the two parts, the path to the content must be specified in the index.html in the tag of the AngularJs directive 'eaLoadParams' in the parameter 'data-content-folder'.
 ```html
 <ea-load-params data-content-folder="content/aleks/"></ea-load-params>
 ```
@@ -25,9 +25,9 @@ The content part must be completely recreated when used for a new website. An ex
 To create new content, the following files must be created and exchanged.
 1. All Html files, below the **content** folder. Here you can use bootstrap 5 classes.
 2. The **footer.html** can be adapted to your own needs.
-3. The favicon.ico and the apple-touch-icon.png should be replaced.
-4. when your application is complete, files sitemap.xml and sitemapimages.xml must be exchanged. 
-5. 4 json files are to be created according to the templates provided.
+3. The **favicon.ico** and the **apple-touch-icon.png** should be replaced.
+4. when your application is complete, files **sitemap.xml** and **sitemapimages.xml** must be exchanged. 
+5. **4 JSON files** are to be created according to the templates provided.
 >- imgBoxList.json - organizes all pictures 
 >- naviList.json - organizes the menu, the path-link in and sitemap 
 >- objBg.json - controls the background image or color
@@ -46,18 +46,27 @@ To create new content, the following files must be created and exchanged.
                         "content/aleks/pictures/hobby/Mein-Apfelbaum.jpg"]
         },   
 ```
+**an example for usind the imgBoxList.json file**
+You can use the following statement to show the second picture from example on a Html page.
+```xml
+<div ea-img data-img-box-idx="2" data-img-box-key = "Garten"></div>
+```
 
-### Special components
+#### Special components for creating HTML pages
 
 To support the creation of HTML pages I have created the following AngularJs directives. 
 1. eaAccCoat and eaAccKey - An accordion functionality with two nested HTML tags is provided
 2. eaAddHtml - A html page is inserted into the code. This functionality is used for the parameterized generation of the menu and the news mechanism
 3. eaImg and eaImgBox - provides the functionality to display the images within the HTML pages and to display the images enlarged with a scrolling function
 4. eaLoadParams - Call in the index.html to read in all JSON files
-5. eaNavi - Generates the complete menu with one call
-6. eaFooter - Inserted the footer.html 
+5. eaNavi - Generates the complete menu with one call. This data are used for sitemap and PathInfo directive too.
+6. eaPathLink - The current path is displayed at the top of every page
+7. eaAccordeon - With two tags, an accordion is created that opens one entry and closes all others with one click
+8. eaVideo - With a tag, a video is integrated that, like the images, fits into the design of the pages.
+9. eaCookies - A cookie banner generated from the parameters is displayed when the program starts. If there is a corresponding entry in the menu, an editing option is also provided. This functionality can be enabled/disabled with one parameter in the directive tag.
+10. eaFooter - Inserted the footer.html 
 
-#### eaAccCoat and eaAccKey
+##### eaAccCoat and eaAccKey
 
 An example of using the accordion functionality: 
 ```html
@@ -100,7 +109,23 @@ An example of using the accordion functionality:
 ```
 See also [My home page serves as an example](http://www.aleksander.de/index.html#!/prog/p "http://www.aleksander.de").
 
-#### eaAddHtml
+##### eaImg and eaImgBox
+
+
+##### eaVideo
+
+
+### The application 
+
+#### Special components for the structure and function of the application
+
+##### eaLoadParams
+
+
+##### eaCookies
+
+
+##### eaAddHtml
 
 This is the central html document in which all content html pages are inserted.
 The tag 'ea-add-html' started the functionality to import the given url '{{url}}'.
@@ -114,11 +139,10 @@ The tag 'ea-add-html' started the functionality to import the given url '{{url}}
 ```
 Since the directive **'eaPathLink'** is used at the beginning of the page in this central component, it is ensured that every HTML page of this application displays this link.
 
-#### eaImg and eaImgBox
+##### eaNavi
 
-#### eaLoadParams
 
-#### eaNavi
+##### eaFooter
 
-#### eaFooter
+
 
