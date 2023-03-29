@@ -52,7 +52,7 @@ You can use the following statement to show the second picture from example on a
 <div ea-img data-img-box-idx="2" data-img-box-key = "Garten"></div>
 ```
 
-### Special components
+#### Special components for creating HTML pages
 
 To support the creation of HTML pages I have created the following AngularJs directives. 
 1. eaAccCoat and eaAccKey - An accordion functionality with two nested HTML tags is provided
@@ -66,7 +66,7 @@ To support the creation of HTML pages I have created the following AngularJs dir
 9. eaCookies - A cookie banner generated from the parameters is displayed when the program starts. If there is a corresponding entry in the menu, an editing option is also provided. This functionality can be enabled/disabled with one parameter in the directive tag.
 10. eaFooter - Inserted the footer.html 
 
-#### eaAccCoat and eaAccKey
+##### eaAccCoat and eaAccKey
 
 An example of using the accordion functionality: 
 ```html
@@ -109,7 +109,23 @@ An example of using the accordion functionality:
 ```
 See also [My home page serves as an example](http://www.aleksander.de/index.html#!/prog/p "http://www.aleksander.de").
 
-#### eaAddHtml
+##### eaImg and eaImgBox
+
+
+##### eaVideo
+
+
+### The application 
+
+#### Special components for the structure and function of the application
+
+##### eaLoadParams
+
+
+##### eaCookies
+
+
+##### eaAddHtml
 
 This is the central html document in which all content html pages are inserted.
 The tag 'ea-add-html' started the functionality to import the given url '{{url}}'.
@@ -123,11 +139,10 @@ The tag 'ea-add-html' started the functionality to import the given url '{{url}}
 ```
 Since the directive **'eaPathLink'** is used at the beginning of the page in this central component, it is ensured that every HTML page of this application displays this link.
 
-#### eaImg and eaImgBox
+##### eaNavi
 
-#### eaLoadParams
 
-#### eaNavi
+##### eaFooter
 
-#### eaFooter
+
 
