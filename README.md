@@ -135,9 +135,7 @@ The standard text for browsers that do not support the HTML5 tag <video> is stor
 {"params" : { "baseDoman" : "www.aleksander.de",
               "startFile" : "index.html",
               "vdoNo" : "Ihr Browser kann dieses Video nicht wiedergeben.",
-...
 ```
-	
 	
 ##### eaFooter
 This is a simple direktive. You create a own footer.html. Put it into the html folder under root of your content. Then you can call it as follow in the index.html:
@@ -146,36 +144,76 @@ This is a simple direktive. You create a own footer.html. Put it into the html f
 ```
 
 #### JSON files defining the structure and appearance of the application
-The JSON files have a uniform structure.
+The JSON files have a uniform structure. The uniform key is always "entries". The value of this key is always an array []. The elements of this array are objects.
+The strukture of all objekts are "key", "value", "key": "value",... The values themselves can be either text or arrays again, in some cases.
 ```json
-
+"entries": 
+  [
+    {"id":"navStart", "label": "Home", "href": "#!/home", "url": "content/aleks/html/home.html", "imgKey": "", "subm": []},
+    {"id":"xxx", }
+  ]
 ```
 
 ##### imgBoxList.json - organizes all pictures 
 ```json
-
+{ "imgKey": "EU",
+  "imgBodyList": ["Ein Blick über den Attasee im Salzburger Land",
+                  "Ein Blick auf die Alfame, ein Stadtteil der Altstadt in Lissabon"],
+  "imgList": ["content/aleks/pictures/travel/Austria/SalzburgerLand-Attasee.jpg",
+              "content/aleks/pictures/travel/Lissabon/Lissabon-Praca-do-Comercio-vom-Wasser.jpg"]
+},
 ```
-
 
 ##### naviList.json - organizes the menu, the path-link in and sitemap 
 ```json
+"entries":
+    [
+        {"id":"navStart", "label": "Home", "href": "#!/home", "url": "content/aleks/html/home.html", "imgKey": "",
+            "subm": []},
+ 
+        {"id":"navTravel", "label": "Reisen", "href": "#!/trav",  "url": "content/aleks/html/reisen.html", "imgKey": "Reisen",
+            "subm": [ {"label": "Deutschland", "href": "#!/trav/de", "url": "content/aleks/html/De/Deutschland.html", "imgKey": "DE",
+                        "subm": [{"label": "Landschaften", "href": "#!/trav/de/l", "url": "content/aleks/html/De/Landschaften.html", "imgKey": "DE-Landschaft"},
+                         {"label": "Nordsee", "href": "#!/trav/de/n", "url": "content/aleks/html/De/Nordsee.html", "imgKey": "DE-Nordsee"},
+                         {"label": "Ostsee", "href": "#!/trav/de/o", "url": "content/aleks/html/De/Ostsee.html", "imgKey": "DE-Ostsee"}]
+                 },
 
 ```
-
 
 ##### objBg.json - controls the background image or color
+The background images or colors are determined using the called url. The url's have this structure "#!/**trav**/de/o". the second part will read and match the key. The "pic" give the background picture or collor.
 ```json
-
+{"entries":
+    [
+       {
+           "key": "home",
+           "pic": "url(content/aleks/pictures/travel/Schwerin/Schwerin-Schloss.jpg)"
+       },
+       {
+           "key": "hobby",
+           "pic": "#f2ffe6"
+       },
+       {
+           "key": "prog",
+           "pic": "#dae9f7"
+       }
+    ]
+}
 ```
-
 
 ##### newsList.json - generates a ready-made news or archi-news page
 ```json
-
+{
+  "newFrom": "2023-01-01",
+  "newTo": "2023-12-31",
+  "title": "Unsere nächste Reise", 
+  "body": ["Wir planen wieder eine Kurzreise. Diesmal soll es auf die Nordseeinsel Norderney gehen."], 
+  "img": [],
+  "imgBody": [],
+  "href": ""
+},
 ```
-
-
-
+	
 ### Components and features of the application
 #### Special components for the structure and functions of the application
 1. eaAddHtml - An html page is integrated into an existing html page. This functionality is used for the parameterized generation of the menu and the news mechanism
@@ -185,13 +223,21 @@ The JSON files have a uniform structure.
 9. eaCookies - A cookie banner generated from the parameters is displayed when the program starts. If there is a corresponding entry in the menu, an editing option is also provided. This functionality can be enabled/disabled with one parameter in the directive tag <ea-cookies...>.
 
 ##### eaLoadParams
-
-
+This tag is used once in the index.html and causes all specified JSON files to be imported and made available in the application.
+```html
+<ea-load-params data-content-folder="content/aleks/"></ea-load-params>	
+```
+	
 ##### eaCookies
+The cookie directive is called exactly once in index.html to activate the mechanism if necessary. On my home page this directive is disabled.
+```html
+<ea-cookies data-cookies-used="false"></ea-cookies>	
+```
 
+	
+	
 
 ##### eaAddHtml
-
 This is the central html document in which all content html pages are inserted.
 The tag 'ea-add-html' started the functionality to import the given url '{{url}}'.
 ```html
@@ -216,7 +262,7 @@ Since the directive **'eaPathLink'** is used at the beginning of the page in thi
 3. Use the automatically calculated sitemap in your navigation
 4. Create and download sitemap.xml and sitemapimage.xml for supporting the Google Index
 	
-##### eaNews on your Html pages
+##### eaNews on your Html pages	
 The news mechanism is equipped with a parameter file "newsList.json" and the Html tag <ea-news ...> </ea-news> realized.
 You can use the following tag in every Html page.
 ```html
@@ -227,7 +273,7 @@ You can use the following tag in every Html page.
 	 data-news-init-idx="0">
 </ea-news>
 ```
-The passed parameter 'data-news-title' is displayed as a headline within the <h1> tag. 
+The passed parameter 'data-news-title' is displayed as a headline within the 'h1' tag. 
 	
 The following values are possible for the 'data-news-mode' parameter:
 - all - es werden alle Einträge bei denen das Datum 'newFrom' erreicht ist, unabhängig vom Datum 'newTo', angezeigt.
@@ -241,15 +287,32 @@ The 'data-news-limit' parameter limits the number of news items displayed to the
 
 The 'data-news-init-idx' parameter specifies which entry is already expanded at startup. 0 means that no entry is expanded. All values between 1-n cause the corresponding entry to be expanded. The appearance and operation are the same as the accordion.	
 	
-The following is an excerpt from the News JSON file and an example of calling the eaNews Directive.
+The following is an excerpt from the News JSON file.
 ```json
-
-	
+{
+    "newFrom": "2023-03-15",
+    "newTo": "2023-12-31",
+    "title": "Der neue Brutkasten wird bezogen", 
+    "body": ["Wir liegen fast täglich mit dem Fotoapparat auf der Lauer. Jetzt haben wir ..."], 
+    "img": [],
+    "imgBody": [],
+    "href": "content/aleks/html/news/Nistkasten-2023.html"
+},	
 ```
+If the JSON file "newsList.json" is filled out as in the example, the date-dependent entries are determined automatically and displayed according to the selected parameters. With this mechanism, the maintenance of news can be straightened out in terms of time, since "old" entries automatically disappear from the focus of the news file but are still available in the archive. In order to display all entries recorded in the news JSON file, the author must ensure that either the 'all' mode is used on at least one HTML page or that 'new' and 'arc' are used on two pages without restriction ('data -news-limit') is selected.
 	
-	
+The values from the JSON file are processed according to the following rule:
+- If both fields "body" and "img" are specified, the display will automatically have two columns.
+- If only one of the two fields is specified, it is displayed in one column.
+- The "imgBody" field is always displayed as a caption.
+- If none of the two fields "body" and "img" are specified, this part of the display is suppressed. Then there should be an "href" entry.
+- In the "href" field, an optional HTML page can be specified, which is attached to the part defined above. This may be necessary if, for example, a link is to be displayed. Html code cannot be displayed in the "body" field, only format-free text can be used here.	
 	
 ##### eaAddHtml on your Html pages	
+This mechanism is used in several places in the application. But you can also build it into your HTML pages yourself. You only have to fill the variable url with a correct URL and the page will be imported.
+```html
+<div ea-add-html = "content/aleks/html/news/Nistkasten-2023.html"></div>	
+```
 	
 ##### automatically calculated sitemap
 Put the following entrie in your naviList.json file:
@@ -259,7 +322,10 @@ Put the following entrie in your naviList.json file:
 The HTML files stored in the Template directory are intended for use within the application. In general, no change is required.
 	
 ##### sitemap.xml and sitemapimage.xml
-In the 
+The export of the two files sitemap.xml and sitemapimages.xml is integrated in the SiteMap page. Add to the URL of your SiteMap page "?Admin" and call the page. The a picture button is displayed. Click on the picture an the bvoth files will exported. 
+for example: [www.aleksander.de/#!/srv/smap?Admin](www.aleksander.de/#!/srv/smap?Admin "http://www.aleksander.de")
+
+
 	
 	
 	
