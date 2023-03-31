@@ -1,4 +1,5 @@
 # WebInfo
+The WebInfo was developed to create a simple website that is only intended to provide information. User interactions and thus the collection of personal data are initially not planned.
 Website for parameter controlled content. HTML5 Boilerplate, AngularJs and Bootstrap 5 are using.
 
 The following features are included
