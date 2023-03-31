@@ -101,7 +101,7 @@ An example of a part of **imgBoxList.json** file
                         "content/aleks/pictures/hobby/Meisen-Vogelhaus.jpg",
                         "content/aleks/pictures/hobby/Mein-Apfelbaum.jpg"]
         },   
-...	
+...
 ```
 An example for using the imgBoxList.json file on Html site: 
 ```xml
@@ -130,6 +130,15 @@ The display of your own videos is based on Html-5 and only adapts the appearance
 	
     </div>
 ```
+The standard text for browsers that do not support the HTML5 tag <video> is stored in the parameter file naviList.json as "vdoNo".
+```json
+{"params" : { "baseDoman" : "www.aleksander.de",
+              "startFile" : "index.html",
+              "vdoNo" : "Ihr Browser kann dieses Video nicht wiedergeben.",
+...
+```
+	
+	
 ##### eaFooter
 This is a simple direktive. You create a own footer.html. Put it into the html folder under root of your content. Then you can call it as follow in the index.html:
 ```html
@@ -202,8 +211,56 @@ Since the directive **'eaPathLink'** is used at the beginning of the page in thi
 
 
 #### Special features of the application
-1. Create and download sitemap.xml and sitemapimage.xml for supporting the Google Index
-2. Use eaNews directive on any Html page (see: home.html)
-3. Use eaAddHtml directive on any Html page (see: eaCookies)
+1. Use eaNews directive on any Html page (see: home.html)
+2. Use eaAddHtml directive on any Html page (see: eaCookies)
+3. Use the automatically calculated sitemap in your navigation
+4. Create and download sitemap.xml and sitemapimage.xml for supporting the Google Index
+	
+##### eaNews on your Html pages
+The news mechanism is equipped with a parameter file "newsList.json" and the Html tag <ea-news ...> </ea-news> realized.
+You can use the following tag in every Html page.
+```html
+<ea-news data-news-title="News"	
+	 data-news-mode="new"
+	 data-news-limit="2"
+	 data-news-text-len="200"
+	 data-news-init-idx="0">
+</ea-news>
+```
+The passed parameter 'data-news-title' is displayed as a headline within the <h1> tag. 
+	
+The following values are possible for the 'data-news-mode' parameter:
+- all - es werden alle Einträge bei denen das Datum 'newFrom' erreicht ist, unabhängig vom Datum 'newTo', angezeigt.
+- new - es werden alle Einträge angezeigt, bei denen das Datum 'newFrom' erreicht und 'newTo' noch nicht überschritten ist.
+- arc - es werden alle Einträge angezeigt, bei denen das Datum 'newFrom' erreicht und 'newTo' bereits überschritten ist.
+	
+The 'data-news-txt-len' parameter specifies the number of characters that are already displayed when the news entry is collapsed. This value can be chosen from 0 to any value.
 
+The 'data-news-limit' parameter limits the number of news items displayed to the specified number. This is used e.g. on the 
+[start of my home page](http://www.aleksander.de/index.html "http://www.aleksander.de").
 
+The 'data-news-init-idx' parameter specifies which entry is already expanded at startup. 0 means that no entry is expanded. All values between 1-n cause the corresponding entry to be expanded. The appearance and operation are the same as the accordion.	
+	
+The following is an excerpt from the News JSON file and an example of calling the eaNews Directive.
+```json
+
+	
+```
+	
+	
+	
+##### eaAddHtml on your Html pages	
+	
+##### automatically calculated sitemap
+Put the following entrie in your naviList.json file:
+```json
+{"label": "SiteMap", "href": "#!/srv/smap", "url": "app/template/sitemap.html", "imgKey": ""}	
+```
+The HTML files stored in the Template directory are intended for use within the application. In general, no change is required.
+	
+##### sitemap.xml and sitemapimage.xml
+In the 
+	
+	
+	
+	
