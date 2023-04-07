@@ -1,6 +1,6 @@
 'use strict';
     
-var eaNavDirektive = function($rootScope, $http, $location, eaNavSrv) {
+var eaNavDirektive = function($rootScope, $http, $location, $compile, eaNavSrv) {
     
     //var urlIsReaded = false;
     
@@ -36,8 +36,8 @@ var eaNavDirektive = function($rootScope, $http, $location, eaNavSrv) {
      };
 };
 
-var eaNavDynDirektive = function($rootScope, $http, $location, eaNavSrv) {
-        return {
+var eaNavDynDirektive = function($rootScope, $http, $location, $compile, eaNavSrv) {
+    return {
         restrict: 'E',
         template: '<nav class="navbar navbar-expand-lg bg-light navbar-light sticky-top">' +
                   '\n\t<div class="container-fluid">' +
@@ -51,15 +51,18 @@ var eaNavDynDirektive = function($rootScope, $http, $location, eaNavSrv) {
                   '\n\t\t</button>' +
                   '\n\t\t<div class="collapse navbar-collapse" id="navbarSupportedContent">' +
                   '\n\t\t\t<ul class="navbar-nav">' +
-                  '\n\t\t\t\t<div id="eaInsertMenu"></div>' +
+                  
                   '\n\t\t\t</ul>' +
                   '\n\t\t</div>' +
                   '\n\t</div>' +
                   '\n</nav>',
         
-        controller: function($rootScope, $scope, $http) {
+        controller: function($rootScope, $scope, $compile) {
+            
+            // '\n\t\t\t\t<div id="eaInsertMenu"></div>' +
             
             $scope.scope_eaNavDirektive_Controller = $scope.url;
+            var html = '';
             
             $rootScope.$on("LoadJsonFile-naviList", function(evt, opt) {
                 $scope.scope_eaNavDirektive_Controller = $scope.url;    
@@ -68,35 +71,49 @@ var eaNavDynDirektive = function($rootScope, $http, $location, eaNavSrv) {
                                 
                 $rootScope.$emit("ReadUrlIsReady", $scope.url);
                 
-                $scope.addMenu("nav",$scope.naviList);
+                html = $scope.addMenu("nav", $scope.naviList, html);
+                //$scope.setMenuToTemplate('eaInsertMenu', html);
+                $scope.setMenuToTemplate('navbar-nav', html);                
             });
             
             $scope.getMenuItem = function(cls, naItem) {
-                return '<li class="' + cls + '-item"><a class="' + cls + '-link" href="' + naItem.href + '">' + naItem.label + '</a> </li>';
+                return '\n\t<li class="' + cls + '-item"><a class="' + cls + '-link" href="' + naItem.href + '">' + naItem.label + '</a>';
+            };
+            //eaInsertMenu
+            $scope.setMenuToTemplate = function(id, htm) {
+                //const doc = document.getElementById(id);
+                const doc = document.getElementsByClassName(id);
+                if(doc) {
+                    let aDoc = angular.element(doc);
+                    let html = $compile(htm)($scope);
+                    aDoc.append(html);
+                }
+                return false;
             };
             
-            $scope.addMenu = function(cls, naLi) {
+            $scope.addMenu = function(cls, naLi, htm) {
                 // {"id":"navStart", "label": "Home", "href": "#!/home", "url": "content/aleks/html/home.html", "imgKey": "",
                 //  "subm": []},
-                let htm = "";
+                let clss = cls;
                 naLi.forEach(o => {
-                    htm = htm + $scope.getMenuItem(cls, o);
+                    htm = htm + $scope.getMenuItem(clss, o);
                     if(o.subm) {
                         if(o.subm.length>0) {
-                            cls = (cls==="sitemap")? "sitemap":"dropdown";
-                            
-                            htm = htm + '<ul class="submenu dropdown-menu">';
-                            htm = htm + $scope.getMenuItem(cls, o.subm);
-                                                       
-                            htm = htm + $scope.addMenu(cls, o.subm);
-                            
-                            htm = htm + '</ul>';
+                            cls = (cls==="sitemap")? "sitemap":"hoverdown";
+                            htm = htm + '\n<ul class="' + cls + '-menu">';
+                             htm = $scope.addMenu(cls, o.subm, htm);
+                            htm = htm + '\n</ul>\n\t</li>';
+                        } else {
+                            htm = htm + '\n\t</li>';
                         };
-                    };
-                });
-            };
+                    }  else {
+                            htm = htm + '\n\t</li>';
+                        };
+                }); 
+                return htm;
+            }; // addMenu()
             
-        },      
+        },     // controller 
         
         link: function (scope, element, attr) {
             let navLogo = attr.navLogo;
