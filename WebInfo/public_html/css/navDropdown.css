@@ -122,18 +122,22 @@ pointer-events: none;
 	
 
  /*Dynamic menu*/
-.navbar .nav-item:hover .hoverdown-menu { display: block; }
-.navbar .nav-item:hover .hoverdown-item .hoverdown-menu{ display: none; }
-.hoverdown-menu > li > a:hover .hoverdown-menu{ display: block; }
-.hoverdown-menu > li > a:focus .hoverdown-menu{ display: block; }
+.navbar .nav-item:hover > ul { display: block; }
+/*.navbar .nav-item:hover .hoverdown-item .hoverdown-menu{ display: none; }*/
+.hoverdown-item:hover > ul { display: block; }
+ul:hover > li  { display: flow; }
 
+/*.hoverdown-menu > li > a:hover .hoverdown-menu{ display: block; }
+.hoverdown-menu > li > a:focus .hoverdown-menu{ display: block; }*/
 
 .hoverdown-menu {
     list-style: none;
     display: none;  
     position: absolute;
-    top: 60px;
+    top: 58px;
     left: auto;
+    
+    
     z-index: 1001;
     float: left;
     min-width: 160px;
