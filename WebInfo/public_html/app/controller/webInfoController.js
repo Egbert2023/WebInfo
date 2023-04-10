@@ -21,8 +21,8 @@ var webInfoController =  function($rootScope, $scope, navSrv) {
         return ret;
     };   
     
-    // Function for 'eaAccordion' directive
-    // +/- Toggle for accordion
+    // Function for 'eaNavi' directive
+    // +/- Toggle for close menu on select page when smal display is used
     $scope.toggleMenu = function() {
         let x = document.getElementById("myToogle");
         if(x.parentNode){

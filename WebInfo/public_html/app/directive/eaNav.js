@@ -76,8 +76,11 @@ var eaNavDynDirektive = function($rootScope, $http, $location, $compile, eaNavSr
                 $scope.setMenuToTemplate('navbar-nav', html);                
             });
             
-            $scope.getMenuItem = function(cls, naItem) {
-                return '\n\t<li class="' + cls + '-item"><a class="' + cls + '-link" href="' + naItem.href + '">' + naItem.label + '</a>';
+            $scope.getMenuItem = function(cls, naItem, addToogle) {
+                let cl = (cls + '-link ' + addToogle).trim();
+                //let cc = (addToogle==='')? ' ng-click="toggleMenu()"':'';
+                let cc = ' ng-click="toggleMenu()"';
+                return '\n\t<li class="' + cls + '-item"><a' + cc + ' class="' + cl + '" href="' + naItem.href + '">' + naItem.label + '</a>';
             };
             //eaInsertMenu
             $scope.setMenuToTemplate = function(id, htm) {
@@ -96,19 +99,22 @@ var eaNavDynDirektive = function($rootScope, $http, $location, $compile, eaNavSr
                 //  "subm": []},
                 let clss = cls;
                 naLi.forEach(o => {
-                    htm = htm + $scope.getMenuItem(clss, o);
+//                    htm = htm + $scope.getMenuItem(clss, o);
                     if(o.subm) {
                         if(o.subm.length>0) {
+                            htm = htm + $scope.getMenuItem(clss, o, "dropdown-toggle");
                             cls = (cls==="sitemap")? "sitemap":"hoverdown";
                             htm = htm + '\n<ul class="' + cls + '-menu">';
                              htm = $scope.addMenu(cls, o.subm, htm);
                             htm = htm + '\n</ul>\n\t</li>';
                         } else {
+                            htm = htm + $scope.getMenuItem(clss, o, "");
                             htm = htm + '\n\t</li>';
                         };
                     }  else {
-                            htm = htm + '\n\t</li>';
-                        };
+                        htm = htm + $scope.getMenuItem(clss, o, "");
+                        htm = htm + '\n\t</li>';
+                    };
                 }); 
                 return htm;
             }; // addMenu()
@@ -117,10 +123,20 @@ var eaNavDynDirektive = function($rootScope, $http, $location, $compile, eaNavSr
         
         link: function (scope, element, attr) {
             let navLogo = attr.navLogo;
-            scope.$parent.navLogo = scope.$parent.contentFolder + navLogo;
+            if(navLogo) {
+                scope.$parent.navLogo = scope.$parent.contentFolder + navLogo;
+            }
             scope.isActive = function(nav) {
                 return nav.href.indexOf(scope.location) === 1;
             };
+            
+            // siteMap
+            let sm = attr.siteMap;
+            if(sm) {
+                let html = '';
+                html = scope.addMenu("nav", scope.naviList, html);
+                scope.setMenuToTemplate('sitemap', html);
+            }
             
             $rootScope.$on("$locationChangeSuccess", function(event, next, current) {            
                 scope.location = $location.path();
