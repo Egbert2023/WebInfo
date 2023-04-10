@@ -123,9 +123,10 @@ pointer-events: none;
 
  /*Dynamic menu*/
 .navbar .nav-item:hover > ul { display: block; }
-/*.navbar .nav-item:hover .hoverdown-item .hoverdown-menu{ display: none; }*/
 .hoverdown-item:hover > ul { display: block; }
-ul:hover > li  { display: flow; }
+
+ul:hover > li {position: relative;}
+/*div > ul:hover > li {position: absolute; top: 58px;}*/
 
 /*.hoverdown-menu > li > a:hover .hoverdown-menu{ display: block; }
 .hoverdown-menu > li > a:focus .hoverdown-menu{ display: block; }*/
@@ -134,8 +135,11 @@ ul:hover > li  { display: flow; }
     list-style: none;
     display: none;  
     position: absolute;
-    top: 58px;
-    left: auto;
+/*    top: 58px;*/
+    top:  19px;
+    left: 50px;
+    
+    /*left: auto;*/
     
     
     z-index: 1001;
