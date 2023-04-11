@@ -6,14 +6,11 @@
     color: #333;
     white-space: nowrap;    
 }
-/*.sitemap .sitemap-item:hover ul { 
-    display: block; 
-}*/
 
  /* EA dynamic menu*/
  /* original Bootstrap 767px */
 /*https://bootstrap-menu.com/detail-basic-hover.html   992px*/
-@media (max-width: 992px) {
+@media (max-width: 767px) {
     .navbar .nav-item:hover > ul { display: block; }    
 }
 .navbar .nav-item:hover > ul { display: block; top: 28px; left: 10px;}
@@ -29,23 +26,20 @@ ul:hover > li {position: relative;}
     z-index: 1001;
     float: left;
     min-width: 150px;
-    padding: 5px 0;
+    padding: 5px 0;    
     margin: 2px 0 0;
     font-size: 14px;
     text-align: left;
     background-color: #fff;
-    -webkit-background-clip: padding-box;
     background-clip: padding-box;
-    /*border: 1px solid #ccc;*/
     border: 1px solid rgba(0, 0, 0, .15);
     border-radius: 4px;
-    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
     box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
 }
 
 .hoverdown-menu >  li > a {
   display: block;
-  padding: 3px 20px;
+  padding: 3px 12px;
   clear: both;
   font-weight: normal;
   line-height: 1.42857143;
@@ -62,5 +56,5 @@ ul:hover > li {position: relative;}
     font-size: 14px;
     text-align: left;
     text-decoration: none;
-    background-color: #fff;
+    background-color: #fff;    
 }
