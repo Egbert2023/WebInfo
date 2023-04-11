@@ -21,10 +21,6 @@ var eaLoadParams = function ( $rootScope, $http ) {
                     rootScope[paramName] = obj.entries;
                     rootScope["isLoaded_" + paramName] = true;
  
-                    if(obj.params) {
-                        rootScope["paramsApp"] = obj.params;
-                    }
- 
                     return obj.entries;
                 };
                 let newObject = rootScope[paramName];
@@ -50,11 +46,6 @@ var eaLoadParams = function ( $rootScope, $http ) {
                 
                 return false;
             };
-            
-//            // Test
-//            console.log("2 - Directive-eaLoadParams-Controller($scope)");
-//            console.log($scope);
-
         }, // controller        
         
         link: function (scope, ele, attrs) {      
@@ -66,11 +57,8 @@ var eaLoadParams = function ( $rootScope, $http ) {
             scope.getParamObject(folder, "objBg", $rootScope, $http);
             scope.getParamObject(folder, "imgBoxList", $rootScope, $http);
             scope.getParamObject(folder, "newsList", $rootScope, $http);
+            scope.getParamObject(folder, "paramsApp", $rootScope, $http);
             
-//            // Test
-//            console.log("3 - Directive-eaLoadParams-Link($scope)");
-//            console.log(scope);
-
         }
     };  // return
 };   // eaLoadParams()
