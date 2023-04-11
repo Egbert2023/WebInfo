@@ -1,12 +1,8 @@
 <div class="eaContent">
-  <div class="container-fluid">
-    <div>    
-        <h1>SiteMap
-            <button ng-show="getUrlParam()==='Admin'" type="button" ng-click="downloadSiteMaps()" class="btn btn-light">
-                <i class="bi-download" style="font-size: 1.6rem; color: #21a828;"></i>
-            </button>
-        </h1>
-        <ea-navi data-nav-logo="pictures/navLogo.jpg" data-site-map="sitemap"></ea-navi>
-    </div>
-  </div>
-</div>    
+    <h1>SiteMap
+        <button ng-show="getUrlParam()==='Admin'" type="button" ng-click="downloadSiteMaps()" class="btn btn-light">
+            <i class="bi-download" style="font-size: 1.6rem; color: #21a828;"></i>
+        </button>
+    </h1>
+    <ea-navi data-nav-mode="sitemap"></ea-navi>
+</div>

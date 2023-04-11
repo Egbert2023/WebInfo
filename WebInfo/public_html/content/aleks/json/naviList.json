@@ -59,7 +59,7 @@
             "subm": [ {"label": "Archiv", "href": "#!/new/1", "url": "app/template/news/newArchiv.html", "imgKey": ""}]},
         
         {"id":"navService", "label": "Service", "href": "#!/srv", "url": "content/aleks/html/service.html", "imgKey": "",
-            "subm": [ {"label": "SiteMap", "href": "#!/srv/smap", "url": "app/template/sitemap.html", "imgKey": ""}, 
+            "subm": [ {"label": "SiteMap", "href": "#!/srv/smap", "url": "app/template/siteMap2.html", "imgKey": ""}, 
                     {"label": "Cookie Richtlinie", "href": "#!/srv/cookies", "url": "content/aleks/html/CookiesNotRequired.html", "imgKey": ""}, 
                     {"label": "Impressum", "href": "#!/srv/imp", "url": "content/aleks/html/impressum.html", "imgKey": ""}, 
                     {"label": "Datenschutz", "href": "#!/srv/ds", "url": "content/aleks/html/datenschutz2.html", "imgKey": ""}, 

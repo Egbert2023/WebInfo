@@ -1,17 +1,14 @@
 /* EA - SiteMap*/
-.sitemap, .sitemap-item {
+.sitemap, .sitemap-item a {
     text-decoration: none;
     font-weight: normal;
     line-height: 1.42857143;
     color: #333;
     white-space: nowrap;    
 }
-.sitemap .sitemap-item:hover .sitemap-menu { 
+/*.sitemap .sitemap-item:hover ul { 
     display: block; 
-}
-.sitemap > spam > li:hover > .sitemap-menu {
-    display: none;
-}	
+}*/
 
  /* EA dynamic menu*/
  /* original Bootstrap 767px */
@@ -22,7 +19,6 @@
 .navbar .nav-item:hover > ul { display: block; top: 28px; left: 10px;}
 ul:hover > li {position: relative;}
 .hoverdown-item:hover > ul { display: block; }
-
 
 .hoverdown-menu {
     list-style: none;

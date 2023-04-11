@@ -37,9 +37,8 @@ var eaNavDirektive = function($rootScope, $http, $location, $compile, eaNavSrv) 
 };
 
 var eaNavDynDirektive = function($rootScope, $http, $location, $compile, eaNavSrv) {
-    return {
-        restrict: 'E',
-        template: '<nav class="navbar navbar-expand-lg bg-light navbar-light sticky-top">' +
+    
+    let tmplMenu ='<nav class="navbar navbar-expand-lg bg-light navbar-light sticky-top">' +
                   '\n\t<div class="container-fluid">' +
                   '\n\t\t<a class="navbar-brand"  href="#!/home">' +
                   '\n\t\t\t<img class="eaLogo" src="{{navLogo}}" alt=""/>' +
@@ -50,29 +49,30 @@ var eaNavDynDirektive = function($rootScope, $http, $location, $compile, eaNavSr
                   '\n\t\t<span id="myToogle" class="navbar-toggler-icon"></span>' +
                   '\n\t\t</button>' +
                   '\n\t\t<div class="collapse navbar-collapse" id="navbarSupportedContent">' +
-                  '\n\t\t\t<ul class="navbar-nav">' +
-                  
+                  '\n\t\t\t<ul class="navbar-nav">' +                  
                   '\n\t\t\t</ul>' +
                   '\n\t\t</div>' +
                   '\n\t</div>' +
-                  '\n</nav>',
-        
+                  '\n</nav>';
+    let tmplSiteMap =   '\n<div>' + 
+                        '\n\t<div class="container-fluid">' + 
+                        '\n\t\t<div class="sitemap"></div>' +
+                        '\n\t</div>' +
+                        '\n</div>';
+    return {
+        restrict: 'E',
         controller: function($rootScope, $scope, $compile) {
-            
-            // '\n\t\t\t\t<div id="eaInsertMenu"></div>' +
-            
             $scope.scope_eaNavDirektive_Controller = $scope.url;
             var html = '';
             
             $rootScope.$on("LoadJsonFile-naviList", function(evt, opt) {
                 $scope.scope_eaNavDirektive_Controller = $scope.url;    
                 $scope.naviList = $rootScope.naviList;
+                
                 $scope.url = $scope.navSrv.getHtml4Id($rootScope, $location.path(), eaNavSrv);
-                                
                 $rootScope.$emit("ReadUrlIsReady", $scope.url);
                 
                 html = $scope.addMenu("nav", $scope.naviList, html);
-                //$scope.setMenuToTemplate('eaInsertMenu', html);
                 $scope.setMenuToTemplate('navbar-nav', html);                
             });
             
@@ -122,22 +122,27 @@ var eaNavDynDirektive = function($rootScope, $http, $location, $compile, eaNavSr
         },     // controller 
         
         link: function (scope, element, attr) {
+            // manage Logo
             let navLogo = attr.navLogo;
             if(navLogo) {
-                scope.$parent.navLogo = scope.$parent.contentFolder + navLogo;
-            }
-            scope.isActive = function(nav) {
-                return nav.href.indexOf(scope.location) === 1;
-            };
-            
-            // siteMap
-            let sm = attr.siteMap;
-            if(sm) {
-                let html = '';
-                html = scope.addMenu("nav", scope.naviList, html);
-                scope.setMenuToTemplate('sitemap', html);
+                navLogo = scope.$parent.contentFolder + navLogo;
+            } else {
+                navLogo = '';
             }
             
+            // sitemap | menu
+            let mo = attr.navMode;
+            if(mo) {
+                if(mo==='sitemap') {
+                    element.append(tmplSiteMap);
+                    let html = '';
+                    html = scope.addMenu('sitemap', scope.naviList, html);
+                    scope.setMenuToTemplate('sitemap', html);                    
+                } else {
+                    let htmLogo = tmplMenu.replace("{{navLogo}}", navLogo);
+                    element.append(htmLogo);
+                }
+            }            
             $rootScope.$on("$locationChangeSuccess", function(event, next, current) {            
                 scope.location = $location.path();
             });
