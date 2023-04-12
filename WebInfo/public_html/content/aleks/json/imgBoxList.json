@@ -70,7 +70,8 @@
                         "content/aleks/pictures/prog/Beispiel-Akkordion-html.jpg",
                         "content/aleks/pictures/prog/Img-eaImg-Html.jpg",
                         "content/aleks/pictures/prog/ImgBox-Html.jpg",
-                        "content/aleks/pictures/prog/Beispiel-News-JSON.jpg"]
+                        "content/aleks/pictures/prog/Beispiel-News-JSON.jpg",
+                        "content/aleks/pictures/prog/robots-txt.jpg"]
         },
         {   "imgKey": "sport",
             "imgBodyList": ["Sommer 2022 'mal wieder auf dem Brett",
@@ -84,7 +85,7 @@
             "imgBodyList": ["Rothenburg ob der Tauber im Jahr 2008",
                             "Ein Blick über Heidelberg am Neckar",
                             "Ein Blick über Heidelberg zur Burg",
-                            "Ein Blick üpber den Kreuzkanal zum Schweriner Schloss",
+                            "Ein Blick über den Kreuzkanal zum Schweriner Schloss",
                             "Die Wahrzeichen von Warnemünde, der Teepott und der Leuchtturm",
                             "Die Müritz mit ihrem Schloss in Klink",
                             "Das Panorama von Waren an der Müritz"],

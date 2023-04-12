@@ -3,51 +3,55 @@
         <ea-acc-key data-title="Grundsätzlicher Aufbau der Applikation" data-txt-len="200">
             <div class="row">
                 <div class="col-lg-12">
-                    Diese "WebInfo" Webapplikation ist eine sogenannte "Single page application" (SPA).
-                    Das bedeutet, dass diese Anwendung nicht wie herkömmliche 
-                    Webanwendungen aus mehrere Webseiten besteht, 
-                    die durch Links (URL's) miteinander logisch verknüpft werden.  
-                    Sondern sie besteht technisch gesehen nur aus einer Webseite, 
-                    deren Aussehen zur Laufzeit dynamisch ergänzt wird.
-                    Vorteile einer Singel Page Applikation (SPA) sind:
-                    <ul>
-                        <li>Das Coding der Applikation findet im wesentlichen auf dem 
-                            Client statt.</li>
-                        <li>Der Datenverkehr zwischen Server und Client und damit 
-                            die Wartezeiten auf Serverantworten verringern sich.</li>
-                        <li>Der Zustand der Applikation kann auf dieser einen Webseite 
-                            komplett abgebildet und gespeichert werden. 
-                            Es kann z.B. auf Cookies verzichtet werden.</li>
-                        <li>Der Server wird entlastet, was für hoch frequentierte 
-                            Apllikationen aber auch für das anwenderfreundliche Verhalten 
-                            von Vorteil ist.</li>
-                        <li>Das verwendte Framework "AngularJs" bildet mit seinem 
-                            "Routing Mechanismus" den Browserverlauf ab. Dadurch ist 
-                            dieser oft genannte Nachteil von SPA's beseitigt.</li>
-                    </ul>
-                    Der einzig noch bekannte Nachteil ist, dass SPA-Anwendungen sich schlechter 
-                    für die Suchmaschinen Optimierung (SEO) eignen. 
-                    Hier bleibt nur "selber machen".
-                    Erste Hinweise kann man z.B. hier finden. 
-                    "<a class="eaExtern" target="_blank" href="https://www.seo-suedwest.de/seo-wissen/seo-selber-machen/2636-seo-selber-machen-diy-einfuehrung.html">SEO selber machen</a>"
-                </div>
-                <div class="col-lg-12">
-                    In der vorliegenden Applikation werden 2 Frameworks verwendet:
-                    <ul>
-                        <li>
-                            <a class="eaExtern" target="_blank" href:"https://code.angularjs.org/1.7.9/docs/tutorial/step_09">AngularJs (Version 1.7.9)</a>, 
-                            siehe auch <a class="eaExtern" target="_blank" href:"https://de.wikipedia.org/wiki/AngularJS">bei Wikipedia</a>, 
-                        </li>
-                        <li>
-                            <a class="eaExtern" target="_blank" href:"https://getbootstrap.com/docs/5.2/getting-started/introduction/">Bootstrap 5</a>
-                        </li>
-                    </ul>
-                    Im folgenden Bild ist der grundsätzliche Aufbau der "index.html" dargestellt, 
-                    der über die gesamte Lebensdauer der Applikation angezeigt und nicht verlassen 
-                    wird. Wer sich für das komplette Coding der Applikation interessiert, 
-                    kann diese <a class="eaExtern" target="_blank" href:"https://github.com/Egbert2023/WebInfo">WebInfo auf GitHub</a>
-                    einsehen.
-                    <div ea-img data-img-box-idx="1" data-img-box-key = "prog"></div>
+Diese "WebInfo" Webapplikation ist eine sogenannte "Single page application" (SPA).
+Das bedeutet, dass diese Anwendung nicht wie herkömmliche 
+Webanwendungen aus mehrere Webseiten besteht, 
+die durch Links (URL's) miteinander logisch verknüpft werden.  
+Sondern sie besteht technisch gesehen nur aus einer Webseite, 
+deren Aussehen zur Laufzeit dynamisch ergänzt wird.
+Vorteile einer Singel Page Applikation (SPA) sind:
+<ul>
+    <li>Das Coding der Applikation findet im wesentlichen auf dem 
+        Client statt.</li>
+    <li>Der Datenverkehr zwischen Server und Client und damit 
+        die Wartezeiten auf Serverantworten verringern sich.</li>
+    <li>Der Zustand der Applikation kann auf dieser einen Webseite 
+        komplett abgebildet und gespeichert werden. 
+        Es kann z.B. auf Cookies verzichtet werden.</li>
+    <li>Der Server wird entlastet, was für hoch frequentierte 
+        Apllikationen aber auch für das anwenderfreundliche Verhalten 
+        von Vorteil ist.</li>
+    <li>Das verwendte Framework "AngularJs" bildet mit seinem 
+        "Routing Mechanismus" den Browserverlauf ab. Dadurch ist 
+        dieser oft genannte Nachteil von SPA's beseitigt.</li>
+</ul>
+Der einzig noch bekannte Nachteil ist, dass SPA-Anwendungen sich schlechter 
+für die Suchmaschinen Optimierung (SEO) eignen. 
+Hier bleibt nur "selber machen".
+Erste Hinweise kann man z.B. hier finden. 
+"<a class="eaExtern" target="_blank" href="https://www.seo-suedwest.de/seo-wissen/seo-selber-machen/2636-seo-selber-machen-diy-einfuehrung.html">SEO selber machen</a>"
+Zur Unterstütztung habe ich eine Generierungsfunktion für die 
+von den Suchmaschinen verwendeten sitemap.xml Dateien integriert. 
+(vgl. 'Spezielle Funktionalitäten')
+
+        </div>
+        <div class="col-lg-12">
+In der vorliegenden Applikation werden 2 Frameworks verwendet:
+            <ul>
+                <li>
+                    <a class="eaExtern" target="_blank" href:"https://code.angularjs.org/1.7.9/docs/tutorial/step_09">AngularJs (Version 1.7.9)</a>, 
+                    siehe auch <a class="eaExtern" target="_blank" href:"https://de.wikipedia.org/wiki/AngularJS">bei Wikipedia</a>, 
+                </li>
+                <li>
+                    <a class="eaExtern" target="_blank" href:"https://getbootstrap.com/docs/5.2/getting-started/introduction/">Bootstrap 5</a>
+                </li>
+            </ul>
+Im folgenden Bild ist der grundsätzliche Aufbau der "index.html" dargestellt, 
+der über die gesamte Lebensdauer der Applikation angezeigt und nicht verlassen 
+wird. Wer sich für das komplette Coding der Applikation interessiert, 
+kann diese <a class="eaExtern" target="_blank" href:"https://github.com/Egbert2023/WebInfo">WebInfo auf GitHub</a>
+einsehen.
+        <div ea-img data-img-box-idx="1" data-img-box-key = "prog"></div>
                 </div>
             </div>
         </ea-acc-key>
@@ -77,12 +81,13 @@ fehlerfrei ausfüllen.
 Anwendung mit dem AngularJs Framework ist erledigt. Es ist lediglich eigener 
 Content anzulegen.
 <br />Folgende Parameter-Dateien sind im Content-Verzeichnis '.../json' zu erstellen:
-            <ul>
-                <li><strong>imgBoxList.json</strong> - Auflistung der Bilder, die auf den einzelnen Webseiten mit Hilfe der Direktive 'eaImg' angezeigt werden.</li>
-                <li><strong>naviList.json</strong> - Die gesamte Navigation über das Menü ist hier abgelegt</li>
-                <li><strong>newsList.json</strong> - Parameter für die Darstellung von 'News' rsp. 'Archiv' die automatisch nach Start- und Endedatum angezeigt werden.</li>
-                <li><strong>objBg.json</strong> - Liste der Hintergrundbilder oder -farben</li>
-            </ul>
+    <ul>
+        <li><strong>imgBoxList.json</strong> - Auflistung der Bilder, die auf den einzelnen Webseiten mit Hilfe der Direktive 'eaImg' angezeigt werden.</li>
+        <li><strong>naviList.json</strong> - Die gesamte Navigation über das Menü ist hier abgelegt</li>
+        <li><strong>newsList.json</strong> - Parameter für die Darstellung von 'News' rsp. 'Archiv' die automatisch nach Start- und Endedatum angezeigt werden.</li>
+        <li><strong>objBg.json</strong> - Liste der Hintergrundbilder oder -farben</li>
+        <li><strong>paramsApp.json</strong> - Alle sonstigen internen Parameter der Applikation zur Sicherstellung der Funktionalitäten</li>
+    </ul>
             
         </ea-acc-key>
         <ea-acc-key data-title="Erstellte AngularJs-Directiven" data-txt-len="200">
@@ -99,14 +104,14 @@ benötigt.
                     
                     <ul>
 <li><strong>eaAccCoat und eaAccKey</strong> - Die Akkordionfunktion (z.B wie diese Webseite) wird mit zwei Tag's unterstützt. (&lt;ea-acc-coat .../&gt; und &lt;ea-acc-key .../&gt;)<br />vgl. "Spezielle Funktionen" auf dieser Seite unten.</li>
-<li><strong>eaAddHtml</strong> - Das Nachladen von Html Dateien wird für die Trennung von Applikation und Content benötigt</li>
+<li><strong>eaAddHtml</strong> - Das Nachladen von Html Dateien wird für die Trennung von Applikation und Content benötigt.</li>
 <li><strong>eaFooter</strong> - Stellt die Footer.html als fixen Footer dar.</li>
 <li><strong>eaImg und eaImgBox</strong> - Darstellung von Bilder oder Gruppen von Bildern (vgl. imgBoxList.json) in eigenen Html Dateien sowie deren Vollbilddarstellung. <br />vgl. "Spezielle Funktionen" auf dieser Seite unten.</li>
 <li><strong>eaLoadParams</strong> - Liest alle JSON Dateien ein und legt sie in Javascript Objekten ab. Damit stehen sie für die Applikation jeder Zeit zur Verfügung.</li>
-<li><strong>eaNav</strong> - Stellt mit der Datei 'naviList.json' die komplette Navigation bereit und erzeugt das Navigationsmenü.</li>
+<li><strong>eaNav</strong> - Stellt mit der Datei 'naviList.json' die komplette Navigation bereit und erzeugt das Navigationsmenü. Alternativ kann eine SiteMap generiert werden, die zur Anzeige in der Applikation verwendet wird.</li>
 <li><strong>eaVideo</strong> - Diese Direktive vereinfacht das Einbinden kleiner Videos, die gemeinsam mit dem eigenen Content abgelegt sind.
-<li><strong>eaCookies</strong> - Diese Direktive unterstützt die Verwaltung von Cookies. Der gesamte Inhalt des Cookie-Banners ist in Parametern in der JSON Datei 'naviList.json' abgelegt. 
-                                 Mit dem Parameter (data-cookies-used="false") kann die Verwendung der Cookies ausgeschaltet werden.
+<li><strong>eaCookies</strong> - Diese Direktive unterstützt die Verwaltung von Cookies. Der gesamte Inhalt des Cookie-Banners ist in Parametern in der JSON Datei 'paramsApp.json' abgelegt. 
+                                 Mit dem Parameter (data-cookies-used="false") kann die Verwendung der Cookies ausgeschaltet werden. (Wie in dieser Applikation)
 <li><strong>eaPathLink</strong> - Diese Direktive befindet sich am Anfang jeder Html-Seite und stellt den Link zu der aktuellen Seite mit seinen übergeordneten Seite dar.
                                  <br /><br />z.B. Diese Seite 
                             <div class='eaCard' style="display:inline; width: 350px; margin-left: 5px; min-height: 14px;">
@@ -150,7 +155,7 @@ Dann wird die gewünschte Imgedatei mit ihrer Indexnummer und dem Key
 Im Falle einer Bildergruppe, kann nach dem Aufruf eines Bildes im Vollbildmodus 
 durch die gesamte definierte Gruppe navigiert werden.
                 </div>
-                <div class="col-lg-12">
+                <div class="col-lg-8 col-md-12">
                     <hr />
 Der <strong>News-Mechanismus</strong> ist mit einer Parameter-Datei 
 "newsList.json" und dem Html-Tag 
@@ -206,6 +211,17 @@ Die Werte aus der JSON Datei werden nach folgender Vorschrift verarbeitet:
         dargestellt werden hier kann nur formatfreier Text verwendet werden.
     </li>
 </ul>
+                </div>
+                <div class="col-lg-4 col-md-12">
+                    <hr />                    
+Zur Unterstützung der <strong>Suchmaschinen Optimierung (SEO)</strong> 
+ist auf der SiteMap Seite ein Button zur Generierung und dem Export der 
+beiden Dateien "sitemap.xml" und "sitemapimage.xml" vorgesehen. 
+Der Button wird sichtbar, wenn die SiteMap mit dem Parameter '?Admin' aufgerufen wird. 
+Das sieht für meine WebInfo wie folgt aus: <a href="www.aleksander.de/#!/srv/smap?Admin">www.aleksander.de/#!/srv/smap?Admin</a>
+Diese Dateien können dann in das Wurzelverzeichnis der Applikation kopiert werden. 
+Mit der Datei 'robots.txt' können dann die Suchmaschinen die Seiten und Bilder indizieren.
+<div ea-img data-img-box-idx="7" data-img-box-key = "prog"></div>
                 </div>
             </div>
         </ea-acc-key>
