@@ -42,8 +42,8 @@ var eaNavDynDirektive = function($rootScope, $http, $location, $compile, eaNavSr
             
             $scope.getMenuItem = function(cls, naItem, addToogle) {
                 let cl = (cls + '-link ' + addToogle).trim();
-                //let cc = (addToogle==='')? ' ng-click="toggleMenu()"':'';
-                let cc = ' ng-click="toggleMenu()"';
+                let cc = (addToogle==='')? ' ng-click="toggleMenu()"':'';
+                //let cc = ' ng-click="toggleMenu()"';
                 return '\n\t<li class="' + cls + '-item"><a' + cc + ' class="' + cl + '" href="' + naItem.href + '">' + naItem.label + '</a>';
             };
             //eaInsertMenu
