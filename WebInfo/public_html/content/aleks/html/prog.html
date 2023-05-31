@@ -22,8 +22,9 @@ Vorteile einer Singel Page Applikation (SPA) sind:
         Apllikationen aber auch für das anwenderfreundliche Verhalten 
         von Vorteil ist.</li>
     <li>Das verwendte Framework "AngularJs" bildet mit seinem 
-        "Routing Mechanismus" den Browserverlauf ab. Dadurch ist 
-        dieser oft genannte Nachteil von SPA's beseitigt.</li>
+        "Routing Mechanismus" den Browserverlauf ab. Es kann also im Browser vor 
+        und zurück geplättert werden. Dadurch ist dieser oft genannte Nachteil 
+        von SPA's beseitigt.</li>
 </ul>
 Der einzig noch bekannte Nachteil ist, dass SPA-Anwendungen sich schlechter 
 für die Suchmaschinen Optimierung (SEO) eignen. 
@@ -43,7 +44,7 @@ In der vorliegenden Applikation werden 2 Frameworks verwendet:
                     siehe auch <a class="eaExtern" target="_blank" href:"https://de.wikipedia.org/wiki/AngularJS">bei Wikipedia</a>, 
                 </li>
                 <li>
-                    <a class="eaExtern" target="_blank" href:"https://getbootstrap.com/docs/5.2/getting-started/introduction/">Bootstrap 5</a>
+                    und <a class="eaExtern" target="_blank" href:"https://getbootstrap.com/docs/5.2/getting-started/introduction/">Bootstrap 5</a>
                 </li>
             </ul>
 Im folgenden Bild ist der grundsätzliche Aufbau der "index.html" dargestellt, 
@@ -59,7 +60,7 @@ einsehen.
             <div class="row">
                 <div class="col-lg-12 col-md-12">
 Ein Ziel beim Design der Applikation war die vollständige Trennung zwischen dem 
-technischen und der Inhaltlichen Teil. Dies wurde einerseits durch eine strikte 
+technischen und dem Inhaltlichen Teil. Dies wurde einerseits durch eine strikte 
 Trennung der Ressourcen erreicht. Die technische Umsetzung der Funktionalitäten 
 ist im Verzeichnis '/app' abgelegt. Die inhaltlichen Dateien befinden sich im 
 Verzeichnis '/content'. Die Verbindung der Applikation mit dem Content erfolgt 
@@ -108,7 +109,7 @@ benötigt.
 <li><strong>eaFooter</strong> - Stellt die Footer.html als fixen Footer dar.</li>
 <li><strong>eaImg und eaImgBox</strong> - Darstellung von Bilder oder Gruppen von Bildern (vgl. imgBoxList.json) in eigenen Html Dateien sowie deren Vollbilddarstellung. <br />vgl. "Spezielle Funktionen" auf dieser Seite unten.</li>
 <li><strong>eaLoadParams</strong> - Liest alle JSON Dateien ein und legt sie in Javascript Objekten ab. Damit stehen sie für die Applikation jeder Zeit zur Verfügung.</li>
-<li><strong>eaNav</strong> - Stellt mit der Datei 'naviList.json' die komplette Navigation bereit und erzeugt das Navigationsmenü. Alternativ kann eine SiteMap generiert werden, die zur Anzeige in der Applikation verwendet wird.</li>
+<li><strong>eaNav</strong> - Stellt mit der Datei 'naviList.json' und der Css-Datei 'navDropdown.css' die komplette Navigation bereit und erzeugt das Navigationsmenü. Alternativ kann eine SiteMap generiert werden, die zur Anzeige in der Applikation verwendet wird.</li>
 <li><strong>eaVideo</strong> - Diese Direktive vereinfacht das Einbinden kleiner Videos, die gemeinsam mit dem eigenen Content abgelegt sind.
 <li><strong>eaCookies</strong> - Diese Direktive unterstützt die Verwaltung von Cookies. Der gesamte Inhalt des Cookie-Banners ist in Parametern in der JSON Datei 'paramsApp.json' abgelegt. 
                                  Mit dem Parameter (data-cookies-used="false") kann die Verwendung der Cookies ausgeschaltet werden. (Wie in dieser Applikation)
@@ -125,25 +126,30 @@ benötigt.
         <ea-acc-key data-title="Spezielle Funktionalitäten" data-txt-len="200">
             <div class="row">
                 <div class="col-lg-6 col-md-12">
+                    <hr />
 Das <strong>eaAccordion</strong> dient der einfachen Verwendung eines vordefinierten "Accordeons" mit lediglich zwei Html-Tag's.
 Folgendes Beispiel zeigt, wie diese beiden zusammengehörenden Direktiven verwendet werden können. 
 Diese Html-Seite ist mit dieser Technik erstellt und kann als Beispiel verwendet werden.
 Im Beispiel auf dem Bild ist der erste AccKey mit einem etwas komplexeren Html-Code versehen. Der zweite AccKey ist eher schlicht gehalten, einfach nur Text.
 <div ea-img data-img-box-idx="3" data-img-box-key = "prog"></div>       
 Beide Direktiven verfügen über einen Titel-Parameter, der immer angezeigt wird. In der Key-Direktive gibt es zusätzlich den Parameter
-"data-txt-len". Dieser dient der Festlegung der Länge eines Vorschautextes, der aus dem zugeklappten Teil gelesen und immer angezeigt werden.
+"data-txt-len". Dieser dient der Festlegung der Länge eines Vorschautextes, der aus 
+dem zugeklappten Teil gelesen und immer angezeigt wird. 
 Auf dieser Seite habe ich für diesen Parameter 200 angegeben.
-Wenn man diese Funktionalität nicht wünscht, kann der Parameter weggelassen oder auf Null gesetzt werden.
-Für die Bedienung des Akkordions sind die beiden folgenden Zeichen vorgesehen:
+Wenn man diese Funktionalität nicht wünscht, kann der Parameter weggelassen oder 
+auf Null gesetzt werden. Für die Bedienung des Akkordions sind die beiden 
+folgenden Zeichen vorgesehen:
 <span class="eaSwitch eaSubTitle bold" >+</span> <span class="eaSwitch  eaSubTitle bold" >-</span> 
-
                 </div>
                 <div class="col-lg-6 col-md-12">
+                    <hr />
 Die beiden Direktiven <strong>eaImg</strong> und <strong>eaImgBox</strong> 
 dienen einerseits der Darstellung von Bildern auf den eigenen Html-Seiten. 
 Verwendet man statt des normalen &lt;img ... &gt; Tags den &lt;eaImg ... &gt; Tag, ist die 
 Darstellung des Bildes im Vollbildmodus schon Codiert und funktioniert ohne 
-weiteres Zutun.
+weiteres Zutun. Um den Vollbildmodus aufzurufen, ist ein nur Click auf das 
+anzuzeigende Bild erforderlich.
+<br />
 Die Direktive "eaImg" kann auf zwei Arten verwendet werden.
 Zunächst kann sie wie der Standard-img Tag angewendet werden. 
 <div ea-img data-img-box-idx="4" data-img-box-key = "prog"></div>
