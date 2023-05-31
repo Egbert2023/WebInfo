@@ -32,13 +32,13 @@
         },
         
         {
-            "newFrom": "2023-01-01",
+            "newFrom": "2023-05-31",
             "newTo": "2023-12-31",
-            "title": "Unsere nächste Reise", 
-            "body": ["Wir planen wieder eine Kurzreise. Diesmal soll es auf die Nordseeinsel Norderney gehen."], 
+            "title": "Kurzreise nach Norderney", 
+            "body": ["Anfang Mai im Jahr 2023 waren wir auf Norderney. Es war an den meißten Tagen sehr sonnig aber immer sehr kalt. Der Wind tat sein Übriges."], 
             "img": [],
             "imgBody": [],
-            "href": ""
+            "href": "content/aleks/html/news/newNorderney2023.html"
         },
 
         {
