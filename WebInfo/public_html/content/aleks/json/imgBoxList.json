@@ -103,6 +103,57 @@
             "imgList": ["content/aleks/pictures/travel/Austria/SalzburgerLand-Attasee.jpg",
                         "content/aleks/pictures/travel/Lissabon/Lissabon-Praca-do-Comercio-vom-Wasser.jpg"]
         },
+        
+        {   "imgKey": "DE-Staedte",
+            "imgBodyList": ["Meine Heimatstadt Schwerin - Das war für mich immer der Maßstab für ein Schloss. Alles, was sich noch so Schloss nannte, darüber musste ich als Kind immer lächeln.",
+                            "Heidelbaerg 2005 - Eine schöne Stadt, die eine Reise wert ist. Sie wurde im Krieg auch nicht zerstört, weil die Amerikaner für die Verwaltung vernüftige Unterkünfte benötigten.",
+                            "Leipzig 2023 - Wir besuchten diese Stadt an dem Wochenende, an dem RB das zweite mal den DFB Pokal gewann. Von der Feier haben wir jedoch nicht viel mitbekommen, da wir mit Kultur, dem 30. Stadtfest und einer Bootsfahrt gut zu tun hatten."],
+            "imgList": ["content/aleks/pictures/travel/Schwerin/Schwerin-Schloss.jpg",
+                        "content/aleks/pictures/travel/Heidelberg/Heidelberg-2005.jpg",
+                        "content/aleks/pictures/travel/Leipzig/2023-Leipzig-Zahn1.jpg"]
+        },
+
+        {   "imgKey": "DE-Schwerin",
+            "imgBodyList": ["Das Schloss ist das Wahrzeichen der Landeshauptstadt von MeckPom.",
+                            "Ein schönes Detail am Schgloss ist die Grotte. Das war für mich schon als Jugendlicher ein beliebtes Ausflugsziel.",
+                            "Nach der Wende wurde das Arsenal in dieser Farbe gestrichen. Ich kannte es nur in Weiß. Der Denkmalschutz hat es so gewollt, weil es uzrsprünglich so aussah. Ist aber auch OK für mich."],
+            "imgList": ["content/aleks/pictures/travel/Schwerin/Schwerin-2022-Schloss-mit-Kreuzkanal.jpg",
+                        "content/aleks/pictures/travel/Schwerin/Schwerin-2020-Grotte.jpg",
+                        "content/aleks/pictures/travel/Schwerin/Schwerin-2020-Arsenal.jpg"]
+        },
+        
+        {   "imgKey": "DE-Leipzig",
+            "imgBodyList": ["Ein Blick über Leipzig.",
+                            "Der höchste Aussichtspunkt im Zentrum. ",
+                            "Das neue Rathaus am Rande der Innenstadt. ",
+                            "Das alte Rathaus am Markt.",
+                            "Der 'Rathausbalkon'",
+                            "Das Gewandhaus bei Nacht.",
+                            "Der Specks Hof - eine Passage mit einem schickem Innenhof"],
+            "imgList": ["content/aleks/pictures/travel/Leipzig/2023-Leipzig-Panorama-vom-Zahn.jpg",
+                        "content/aleks/pictures/travel/Leipzig/2023-Leipzig-Zahn2.jpg",
+                        "content/aleks/pictures/travel/Leipzig/2023-Leipzig-Neues-Rathaus.jpg",
+                        "content/aleks/pictures/travel/Leipzig/2023-Leipzig-Altes-Rarhaus.jpg",
+                        "content/aleks/pictures/travel/Leipzig/2023-Leipzig-Beamtenlaufbahn.jpg",
+                        "content/aleks/pictures/travel/Leipzig/2023-Leipzig-Gewandhaus-nachts.jpg",
+                        "content/aleks/pictures/travel/Leipzig/2023-Leipzig-Specks-Hof-innen.jpg"]
+        },        
+
+        {   "imgKey": "DE-Bremerhaven",
+            "imgBodyList": ["Das Conerence Hotel. Es gibt eine prima Aussichtsplattform. Das Klimahaus auf dem 8. Längengrad. Ein tolles Museum.",
+                            "Das ist die Aussicht nach Norden.",
+                            "Das ist die Aussicht nach Süden.",
+                            "Auch in Bremerhaven gibt es einen kleinen aber feinen Leuchtturm.",
+                            "Die Seute Deern ist mitlerweile leider gesunken.",
+                            "Von hier kann man mit einem Ausflusdampfer die einzige deutsche Hochseeinsel - Helgoland - besuchen."],
+            "imgList": ["content/aleks/pictures/travel/Bremerhaven/bremerhaven-2019-Klimahaus.jpg",
+                        "content/aleks/pictures/travel/Bremerhaven/bremerhaven-2019-Aussicht-N.jpg",
+                        "content/aleks/pictures/travel/Bremerhaven/bremerhaven-2019-AussichtS.jpg",                        
+                        "content/aleks/pictures/travel/Bremerhaven/bremerhaven-2019-Leuchtturm.jpg",
+                        "content/aleks/pictures/travel/Bremerhaven/bremerhaven-2019-Seute-Deern.jpg",
+                        "content/aleks/pictures/travel/Bremerhaven/bremerhaven-2019-Helgoland.jpg"]
+        },        
+        
         {   "imgKey": "DE-Landschaft",
             "imgBodyList": ["Willingen im Sauerland im Kyril-Jahr 2007",
                 "Die Brockenbahn fährt mit viel Dampf zum Brocken hoch",
