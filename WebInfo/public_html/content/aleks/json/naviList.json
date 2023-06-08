@@ -31,9 +31,13 @@
  
         {"id":"navTravel", "label": "Reisen", "href": "#!/trav",  "url": "content/aleks/html/reisen.html", "imgKey": "Reisen",
             "subm": [ {"label": "Deutschland", "href": "#!/trav/de", "url": "content/aleks/html/De/Deutschland.html", "imgKey": "DE",
-                        "subm": [{"label": "Landschaften", "href": "#!/trav/de/l", "url": "content/aleks/html/De/Landschaften.html", "imgKey": "DE-Landschaft"},
-                         {"label": "Nordsee", "href": "#!/trav/de/n", "url": "content/aleks/html/De/Nordsee.html", "imgKey": "DE-Nordsee"},
-                         {"label": "Ostsee", "href": "#!/trav/de/o", "url": "content/aleks/html/De/Ostsee.html", "imgKey": "DE-Ostsee"}]
+                        "subm": [{"label": "Städte", "href": "#!/trav/de/staedte", "url": "content/aleks/html/De/StaedteDE.html", "imgKey": "DE-Staedte",
+                                "subm": [{"label": "Schwerin", "href": "#!/trav/de/schw", "url": "content/aleks/html/De/Schwerin.html", "imgKey": "DE-Schwerin"},
+                                         {"label": "Bremerhaven", "href": "#!/trav/de/brhv", "url": "content/aleks/html/De/Bremerhaven.html", "imgKey": "DE-Bremerhaven"},
+                                         {"label": "Leipzig", "href": "#!/trav/de/Leip", "url": "content/aleks/html/De/Leipzig.html", "imgKey": "DE-Leipzig"}]},
+                                {"label": "Landschaften", "href": "#!/trav/de/l", "url": "content/aleks/html/De/Landschaften.html", "imgKey": "DE-Landschaft"},
+                                {"label": "Nordsee", "href": "#!/trav/de/n", "url": "content/aleks/html/De/Nordsee.html", "imgKey": "DE-Nordsee"},
+                                {"label": "Ostsee", "href": "#!/trav/de/o", "url": "content/aleks/html/De/Ostsee.html", "imgKey": "DE-Ostsee"}]
                  },
                     {"label": "Europa", "href": "#!/trav/eu", "url": "content/aleks/html/Eu/Europa.html", "imgKey": "EU",
                         "subm": [{"label": "Amsterdam", "href": "#!/trav/eu/am", "url": "content/aleks/html/Eu/Amsterdam.html", "imgKey": "Amsterdam"},
