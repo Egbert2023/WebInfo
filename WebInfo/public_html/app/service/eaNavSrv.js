@@ -151,10 +151,24 @@ var computeSiteMaps = function(rootScope) {
         return si;
     };
 
+    let addNewToNaviList = function(nw) {
+        nw.forEach(o => {
+            let oEntr = {};
+            oEntr.url = o.href;
+            oEntr.imgKey = o.imgKey;
+            oEntr.href = newUrl;
+            if(o.href !== "") {
+                naviList.push(oEntr);
+            }
+        });        
+    };
+
     let contentFolder = rootScope.contentFolder;
     
     let siteMaps = {"siteMap":"", "siteMapImg": ""};
     let naviList = rootScope.naviList;
+    let newUrl = rootScope.paramsApp.newUrl;
+    addNewToNaviList(rootScope.newsList);
     let imgBoxList = rootScope.imgBoxList;
     
     // get params from naviList
