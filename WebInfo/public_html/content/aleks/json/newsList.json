@@ -23,7 +23,7 @@
     [
         {
             "newFrom": "2023-03-15",
-            "newTo": "2023-12-31",
+            "newTo": "2023-07-31",
             "title": "Der neue Brutkasten wird bezogen", 
             "body": ["Wir liegen fast täglich mit dem Fotoapparat auf der Lauer. Jetzt haben wir eine relative Gewißheit, dass der Nistkasten angenommen wird. Es geht im Munutentakt rein und raus. Da wir wohl ein Nest gebaut?"], 
             "img": [],
@@ -52,6 +52,17 @@
             "imgBody": ["Ein Blick auf die Alfama, ein Teil der Altstadt von Lissabon vom Wasser aus"],
             "href": "",
             "imgKey": ""
-        }
+        },
+        {
+            "newFrom": "2023-06-30",
+            "newTo": "2023-12-31",
+            "title": "Urlaub in Heiligenhafen", 
+            "body": ["Das erste mal in Heiligenhafen. Der sogenannte Binnensee ist ein schönes Revier für Surf- und Segelanfänger. Ansonsten kann man diesen Ort für einen Sommerurlaub nur empfehlen. Noch etwas meht Kultur und es währe gar nicht mehr auszuhalten."], 
+            "img": [],
+            "imgBody": [],
+            "href": "content/aleks/html/news/newHeiligenhafen.html",
+            "imgKey": "HeiH"
+        }        
+        
     ]
 }
