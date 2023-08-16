@@ -165,21 +165,29 @@ durch die gesamte definierte Gruppe navigiert werden.
                     <hr />
 Der <strong>News-Mechanismus</strong> ist mit einer Parameter-Datei 
 "newsList.json" und dem Html-Tag 
-&lt;ea-news data-news-title="Aktuelles" data-news-mode="new" data-news-txt-len="200" data-news-init-idx = "1"&gt;
+&lt;ea-news data-news-title="Aktuelles" data-news-mode="new" data-news-txt-len="200" 
+data-news-init-idx = "1"&gt;
 &lt;/ea-news&gt; realisiert. 
 <br />Dabei wird der übergebene Parameter 'data-news-title' innerhalb des &lt;h1&gt;-Tags 
 als Überschrift dargestellt. Für den Parameter 'data-news-mode' sind folgende Werte möglich: 
 <ul>
-    <li>all - es werden alle Einträge bei denen das Datum 'newFrom' erreicht ist, unabhängig vom Datum 'newTo', angezeigt.</li>
-    <li>new - es werden alle Einträge angezeigt, bei denen das Datum 'newFrom' erreicht und 'newTo' noch nicht überschritten ist.</li>
-    <li>arc - es werden alle Einträge angezeigt, bei denen das Datum 'newFrom' erreicht und 'newTo' bereits überschritten ist.</li>
+    <li>all - es werden alle Einträge bei denen das Datum 'newFrom' erreicht ist, 
+        unabhängig vom Datum 'newTo', angezeigt.</li>
+    <li>new - es werden alle Einträge angezeigt, bei denen das Datum 'newFrom' 
+        erreicht und 'newTo' noch nicht überschritten ist.</li>
+    <li>arc - es werden alle Einträge angezeigt, bei denen das Datum 'newFrom' 
+        erreicht und 'newTo' bereits überschritten ist.</li>
 </ul>
-Der Parameter 'data-news-txt-len' gibt die Anzahl der Zeichen an, die im zugeklappten Zustand des Newseintrages bereits angezeigt wird. 
+Der Parameter 'data-news-txt-len' gibt die Anzahl der Zeichen an, die im 
+zugeklappten Zustand des Newseintrages bereits angezeigt wird. 
 Dieser Wert kann von 0 bis beliebig gewählt werden.
-Der Parameter 'data-news-limit' begrenzt die Anzahl der angezeigten News auf die angegebene 
+Der Parameter 'data-news-limit' begrenzt die Anzahl der angezeigten News auf die 
+angegebene 
 Anzahl. Dies wird z.B. auf der Startseite verwendet.
-Der Parameter 'data-news-init-idx' gibt an, welcher Eintrag beim Start bereits aufgeklappt wird. 
-Dabei bedeutet 0, es wird kein Eintrag aufgeklappt. Alle Werte zwischen 1-n bewirken, dass der entsprechende Eintrag aufgeklappt wird.
+Der Parameter 'data-news-init-idx' gibt an, welcher Eintrag beim Start bereits 
+aufgeklappt wird. 
+Dabei bedeutet 0, es wird kein Eintrag aufgeklappt. Alle Werte zwischen 1-n 
+bewirken, dass der entsprechende Eintrag aufgeklappt wird.
 Das Aussehen und die Bedienung sind mit dem Akkordion identisch. 
 <br />Im folgenden ist ein Auszug aus der News-JSON Datei und ein Beispiel 
 für einen Aufruf der eaNews Directive angegeben.  
