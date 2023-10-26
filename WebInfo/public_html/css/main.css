@@ -100,6 +100,40 @@ textarea {
    Author's custom styles
    ========================================================================== */
 /* ea for Egbert Aleksander */
+.eaClass00 {line-height: 0.0; font-size: 0.0rem;}
+.eaClass01 {line-height: 0.1; font-size: 0.1rem;}
+/*.eaClass02 {line-height: 0.2; font-size: 0.2rem;}*/
+.eaClass02 {line-height: 0.4; font-size: 0.4rem;}
+/*.eaClass03 {line-height: 0.3; font-size: 0.3rem;}*/
+.eaClass03 {line-height: 0.6; font-size: 0.6rem;}
+/*.eaClass04 {line-height: 0.4; font-size: 0.4rem;}*/
+.eaClass04 {line-height: 0.7; font-size: 0.7rem;}
+/*.eaClass05 {line-height: 0.5; font-size: 0.5rem;}*/
+.eaClass05 {line-height: 0.8; font-size: 0.8rem;}
+/*.eaClass06 {line-height: 0.6; font-size: 0.6rem;}*/
+.eaClass06 {line-height: 0.9; font-size: 0.9rem;}
+/*.eaClass07 {line-height: 0.7; font-size: 0.7rem;}*/
+.eaClass07 {line-height: 0.9; font-size: 0.9rem;}
+/*.eaClass08 {line-height: 0.8; font-size: 0.8rem;}*/
+.eaClass08 {line-height: 1.0; font-size: 1.0rem;}
+/*.eaClass09 {line-height: 0.9; font-size: 0.9rem;}*/
+.eaClass09 {line-height: 1.0; font-size: 1.0rem;}
+.eaClass10 {line-height: 1.0; font-size: 1.0rem;}
+
+.eaProcButton {
+    font-size: 2.0rem;
+    color: green;
+    display: flex;
+    align-items: center;
+    justify-content: center
+    /*display: inline;*/
+}
+.eaOneRow {
+    display: flex;
+    flex-flow: row;
+    text-align: center;
+    vertical-align: middle;
+}
 
 /* extern links*/
 .eaExtern {
@@ -113,31 +147,24 @@ textarea {
     padding: 3px 3px 3px 3px;
     background-color: rgba(255, 1, 2, .99);
 }
+
+/* my style for glasmorphism */
 .eaGlassMorph{
     color: #224;
-    /*background-image: url(../fotos/Solardach-mit-Blume.jpg);*/
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 150vh;
 }
-.eaMoveable {
-   position: absolute; 
-}
 .eaCard{
   position: relative;
-    
   margin-left: auto;
   margin-right: auto;
   margin-bottom: auto;
   margin-top: 5px;
   z-index: 2;
   min-height: 200px;
-  
-  /*left: 2%;*/
-  /*width: 96%;*/
   max-width: 950px;
-  
   padding: 5px;
   display: flex;
   flex-direction: column;
@@ -148,7 +175,6 @@ textarea {
   box-shadow: 0 0 10px 1px rgba(0, 0, 0, .25);
   backdrop-filter: blur(5px);
 }
-
 .eaSwitch {
     border: 2px solid rgba(155, 155, 255, .25);
     border-radius: 10px;
@@ -158,33 +184,12 @@ textarea {
 }
 .eaSwitch:hover {
     background-color: #f2ffe6;
+    font-weight: 900;
 } 
-
-/*
-accordion
-http://jsfiddle.net/shanidkv/k8g5yehs/
-*/
-.accordion a{
-    padding: 5px;
-    text-decoration: none;    
-    margin-bottom: 1px;
-    
-    color: #21a828;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    background-color: rgba(255, 255, 255, .45);
-    border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, .25);
-    box-shadow: 0 0 10px 1px rgba(0, 0, 0, .25);
-    backdrop-filter: blur(5px);
-}
-
 .eaContent{
     border: 1px solid #ddd;
     padding: 5px;
-    margin: 1px 0;
-    
+    margin: 1px 0;    
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -193,16 +198,13 @@ http://jsfiddle.net/shanidkv/k8g5yehs/
     border: 1px solid rgba(255, 255, 255, .25);
     box-shadow: 0 0 10px 1px rgba(0, 0, 0, .25);
     backdrop-filter: blur(5px);
-
 }
-
 .eaLogo {
   height: 80px;
   padding: 5px;
   padding-left: 20%;
   justify-content: space-between;
 }
-
 .eaLinkPath {
     display: block;
     font-size: smaller;
@@ -211,43 +213,15 @@ http://jsfiddle.net/shanidkv/k8g5yehs/
     display: block;
     font-size: small;
     padding-left: 5px;
-    
     border-radius: 4px;
     border: 1px solid rgba(255, 255, 255, .25);
     box-shadow: 0 0 10px 1px rgba(0, 0, 0, .25);
-    
-    
 }
-.eaTitle, h1 {
-    color: #21a828;
-    font-size: xx-large;
-}
-.eaSubTitle, h2 {
-    color: #21a828;
-    font-size: larger;
-}
-.eaSubSubTitle, h3 {
-    color: #21a828;
-    font-size: large;
-}
-
 .bold {
     font-weight:  bold;
 }
 .eaNoDeco{
     text-decoration: none;
-}
-
-body {
-    margin-bottom: 30px; /* Margin bottom by footer height */
-}
-.footer {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  z-index: 99;
-  /*height: 30px; /* Set the fixed height of the footer here */
-  /*line-height: 60px; /* Vertically center the text there */
 }
 .eaFooterContent, .eaFooterContent a {
     background-color: #d9ebd2;
@@ -260,9 +234,37 @@ body {
 .eaFooterContent {
     padding-left: 25px;
 }
-/*.nav-link {
-    z-index: 50;
-}*/
+
+/* Default customization */
+h1 {
+    color: #21a828;
+    font-size: xx-large;
+}
+h2 {
+    color: #21a828;
+    font-size: larger;
+}
+h3 {
+    color: #21a828;
+    font-size: large;
+}
+body {
+    margin-bottom: 30px; /* Margin bottom by footer height */
+}
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 99;
+}
+
+/* Bootstrap customization */
+.alert {
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, .25);
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, .25);
+    backdrop-filter: blur(5px);    
+}
 
 /* ==========================================================================
    Helper classes
@@ -433,4 +435,3 @@ body {
         page-break-after: avoid;
     }
 }
-

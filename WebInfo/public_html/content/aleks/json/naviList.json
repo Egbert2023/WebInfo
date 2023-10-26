@@ -51,7 +51,9 @@
                  }]},
          
         {"id":"navHoby", "label": "Hobbies", "href": "#!/prog", "url": "content/aleks/html/Hobbies.html", "imgKey": "Hobby",
-            "subm": [ {"label": "Programmieren", "href": "#!/prog/p", "url": "content/aleks/html/prog.html", "imgKey": "prog"},
+            "subm": [ {"label": "Programmieren", "href": "#!/prog/p", "url": "content/aleks/html/prog.html", "imgKey": "prog",
+                        "subm": [{"label": "Deutschland Tarif", "href": "#!/prog/p/det", "url": "content/aleks/html/provideObjDeTicket.html", "imgKey": ""}]
+                      },
                       {"label": "Mathematik", "href": "#!/prog/m", "url": "content/aleks/html/Mathe.html", "imgKey": "math"},
                       {"label": "Sport", "href": "#!/prog/sp", "url": "content/aleks/html/Sport.html", "imgKey": "sport"},
                       {"label": "Garten", "href": "#!/hobby/garten", "url": "content/aleks/html/Garten.html", "imgKey": "Garten"}]},
