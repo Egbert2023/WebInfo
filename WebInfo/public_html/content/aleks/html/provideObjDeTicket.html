@@ -1,0 +1,338 @@
+<div>    
+    <ea-provide-obj data-provide-obj="newDeTicket" 
+                    data-arr-name="tickets" 
+                    ea-de-ticket="myDeTicket">
+
+        <!-- showSection===0 -->
+        <div ng-show="showSection===0">            
+            <ea-acc-coat data-acc-title="Motivation für diese Applikation">
+                <ea-acc-key data-title="Verkehrswende mit ÖPNV?!"
+                          data-txt-len="100">
+                                      
+Ist die Verkehrswende mit dem ÖPNV von den politisch Verantwortlichen gewollt oder nur "tolleriert"?
+Es bedarf der Festlegung von Anforderungen an einen ÖPNV, der eine Verkehrswende unterstützen kann. 
+<ul>
+    <li>Welcher Versorgungsgrad ist erforderlich?</li>
+    <li>Wie soll sich der Versorgungsgrad zukünftig weiterentwickeln?</li>
+    <li>Konkret: Wie eng muss das Haltestellennetz sein?</li>
+    <li>Konkret: Welche Taktzahlen sind bis ins kleinste Dorf versorgungstechnisch erforderlich?</li>
+</ul>
+                    
+                </ea-acc-key>
+                <ea-acc-key data-title="Organisation des ÖPNV"
+                            data-txt-len="100">
+Wir haben eine vielzahl von Universitäten, Hoch- und Fachschulen, die sich mit dem 
+Verkehrswesen auseinandersetzen. Dort könnten die Fragen beantwortet werden, 
+<ul>
+    <li>Welche Organisationsstruktur ist optimal für einen erfolgreichen ÖPNV?</li>
+    <li>Welcher Ressourceneinsatz ist für den politisch festgelegten Versorgunsgrad des ÖPNV erforderlich?</li>
+</ul>
+                </ea-acc-key>
+
+                <ea-acc-key data-title="Zugang zum ÖPNV"
+                            data-txt-len="100">
+Wir haben mit dem 9,-€ und 49,-€ resp. Deutschland-Ticket bewiesen, dass ein 
+einfacher, ohne Tarifgrenzen und unzähligen Sonderregelungen angebotenes Ticket einen 
+ausgezeichneten Zugang zum ÖPNV darstellt. Also kann es nur einen Weg geben, 
+der den ÖPNV zum Erfolg führt. 
+<strong>Keinen Tarifdschungel mehr</strong>
+<br />
+<strong>Einen Deutschlandtarif für den gesamten ÖPNV in Deutschland.</strong>
+<br />
+Der Weg dahin muss politisch gewollt, geregelt und organisatorisch begleitet werden. Aber es führt kein Weg daran vorbei, wenn man es ehrlich will.
+<br />
+Wie so ein Ticket aussehen kann habe ich mit der kleinen Applikation vorgeschlagen.
+<br />
+Damit der Deutschlandtarif auch im ländlichen Raum oder durch Touristen genutzt werden kann, 
+muss es mehr als einen Monatstarif geben.
+<div><strong><a href="#!/dirc/po/det" ng-click="setShowSection(1)">DE Tarif:</a></strong>
+    <ul>
+        <li>1 Tag z.B. {{settings.types[0].price}}€</li>
+        <li>7 Tage z.B. {{settings.types[1].price}}€</li>
+        <li>30 Tage z.B. {{settings.types[2].price}}€</li>
+        <li>360 Tage z.B. {{settings.types[3].price}}€</li>
+    </ul>
+</div>
+Die einzigen Sonderregelungen könnten für Kinder und ermäßigungsberechtigte Personen durch einen Preisnachlass erfolgen. 
+Fahrräder und Haustiere können den normalen oder ermäßigten Tarif zahlen. 
+<br />
+<strong>-Fertig-</strong>
+                    
+                </ea-acc-key>
+                
+                <ea-acc-key data-title="Der Weg dahin"
+                            data-txt-len="100">
+Der ÖPNV muss auskömmlich durchfinanziert werden und das darf nicht von der Kassenlage abhängig sein.
+Vielleicht braucht es ein "Grundrecht auf Transport im öffentlichen Raum"?
+<br />Was ist zu tun?
+<ul>
+    <li>Zunächst die Pendlerströme erfassen und angepasste ÖPNV-Angebote erarbeiten.</li>
+    <li>Fehlstellen im ÖPNV ermitteln und ÖPNV-Angebote schrittweise erweitern.</li>
+    <li>Struktur der Verkehrsbetriebe anpassen (nicht auf Basis ihrer eigenen Wünsche -da gibt es Interessenskonflikte- sondern wissenschaftlich fundiert, vgl. "Organisation des ÖPNV")</li>
+    <li>Der ÖPNV muss Angebote machen, dass der Individualverkehr Alternativen bekommt. Zunächst da, wo es viel Individualverkehr gibt, dann überall.</li>
+    <li>Neue Angebote müssen erarbeitet, getestet und umgesetzt werden. (z.B. On Demand in den Rand- oder Nachtzeite bzw. auf wenig frequentierten Strecken.)</li>
+</ul>
+Das Kriterium "Es rechnet sich nicht" Darf nicht der einzige Maßstab von Entscheidungen sein. 
+<div><strong>Die Verkehrswende ist ein Marathon mit vielen Beteiligten.</strong></div>
+                </ea-acc-key>
+                
+            </ea-acc-coat>            
+                
+        </div>
+        
+        <!-- showSection===1 -->
+        <div ng-show="showSection===1">
+        
+            <!-- https://www.w3schools.com/howto/howto_js_lightbox.asp 
+            Modal window for edit one ticket
+            -->        
+            <div id="myModalTicket" class="modal">
+                <div class="modal-inner text-center">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            &nbsp;<span class="close cursor" 
+                                  ng-click="closeModalTicket()">&times;</span>
+                        </div>
+
+                        <div class="rounded modal-body">
+                            <div class="row">
+                                <div class="col-lg-3 col-md-4 col-sm-6">
+                                    <label for="inputType" class="bold">Type:</label>
+                                    <select name="inputType"
+                                            id="inputType"
+                                            class="name-input form-control" 
+                                            ng-init="ticket.type || 'd'"
+                                            ng-change="setPriceAndEndDateByType(ticket.type)"
+                                            ng-model="ticket.type">
+                                        <option ng-repeat="typeItem in settings.types" value="{{typeItem.type}}">{{typeItem.label}}</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-3 col-md-4 col-sm-6">
+                                    <label for="inputStartDate" class="bold">Start Datum:</label>
+                                    <input id="inputStartDate"
+                                           type="date" 
+                                           class="name-input form-control" 
+                                           ng-model="ticket.startDate" />                                
+                                </div>
+
+                                <div class="col-lg-3 col-md-4 col-sm-6">
+                                    <label for="inputEndDateTime" class="bold">End Datum:</label>
+                                    <input id="inputEndDateTime"
+                                           type="date" 
+                                           readonly="readonly"
+                                           class="name-input form-control" 
+                                           ng-model="ticket.endDate" />                                
+                                </div>
+                                <div class="col-lg-3 col-md-4 col-sm-6">
+                                    <label for="inputEndDateTime" class="bold">Preis in €:</label>
+                                    <input id="inputEndDateTime"
+                                           type="text" 
+                                           readonly="readonly"
+                                           class="name-input form-control" 
+                                           ng-model="ticket.price" />                     
+                                </div>
+                            </div>                                
+                        </div>
+                        <div class="modal-footer" style="font-size: 1.6rem;">
+                            <button type="button" class="btn btn-success" ng-click="saveModalTicket()">
+                                <i class="bi bi-credit-card-2-front" color: white;"
+                                   data-toggle="tooltip" data-placement="top" title="Das Ticket bezahlen und speichern"></i>
+                            </button>
+                            <button type="button" class="btn btn-danger" ng-click="closeModalTicket()"
+                                    data-toggle="tooltip" data-placement="top" title="Neues Ticket verwerfen">
+                                <i class="bi bi-x-square" color: white;"></i>
+                            </button>                        
+                        </div> 
+
+                        <div ng-show="ticketsSuggestion.length > 0">
+                            <h2>Es gibt mehrere Optionen. Welches Ticket möchtest Du auswählen?</h2>
+                            <hr />
+                            <div class="row" ng-repeat="ticket in ticketsSuggestion">
+                                <div class="col-lg-3 col-md-6 col-sm-12 eaOneRow">
+                                    Ticket Typ:&nbsp;
+                                    <select name="inputTypeReadOnly"
+                                            disabled="true"
+                                            style="width: 100px;"
+                                            ng-model="ticket.type">
+                                        <option ng-repeat="typeItem in settings.types" value="{{typeItem.type}}">{{typeItem.label}}</option>
+                                    </select>                                
+                                </div>
+                                <div class="col-lg-3 col-md-6 col-sm-12">
+                                    Start Datum: {{ticket.startDate}}
+                                </div>
+                                <div class="col-lg-3 col-md-6 col-sm-12">
+                                    Ende Datum: {{ticket.endDate}}
+                                </div>
+                                <div class="col-lg-3 col-md-6 col-sm-12">
+                                    <button type="button" class="btn btn-success" ng-click="selectModalTicket($index)">
+                                        <i class="bi bi-check2-circle eaProcButton" style="font-size: 0.8rem; color: white;"
+                                           data-toggle="tooltip" data-placement="top" title="Ticket auswählen"></i>
+                                    </button>
+                                </div> 
+                                <hr />
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Header of ticket view -->
+            <div>
+                <h2>
+    Tickets für: {{settings.personalKey}}
+                </h2>
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <label for="inputToday" class="bold">Simulation - aktuelles Datum:</label>
+                        <div class="eaOneRow">
+                            <span class="bi bi-arrow-left-square-fill eaProcButton" 
+                                  ng-click="demoToday=addDays(demoToday, -1)"
+                                  data-toggle="tooltip" data-placement="top" title="Einen Tag zurückgehen"></span>
+                            <input id="inputToday"
+                                type="date" 
+                                class="name-input form-control"                             
+                                ng-model="demoToday" />
+                            <span class="bi bi-arrow-right-square-fill eaProcButton" 
+                                  ng-click="demoToday=addDays(demoToday, 1)"
+                                  data-toggle="tooltip" data-placement="top" title="Einen Tag weiter gehen"></span>   
+                        </div>
+                    </div>   
+                    <div class="col-lg-3 col-md-6 col-sm-12"></div>
+                    <div class="col-lg-3 col-md-6 col-sm-12"></div>
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <div>&nbsp;</div>
+                        <div class="eaOneRow">
+                            <span class="bi bi-arrow-up-square-fill eaProcButton" 
+                                      ng-click="addIdxOffset(1)"
+                                      data-toggle="tooltip" data-placement="top" title="Blättere ein Ticket in der Liste zurück"></span>
+                            <span class="bi bi-arrow-up-right-square-fill eaProcButton" 
+                                      ng-click="addIdxOffset(0)"
+                                      data-toggle="tooltip" data-placement="top" title="Blättere zum Anfang der Liste"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>        
+
+            <hr />
+
+            <!-- List of tickets class="name-input form-control"   -->
+            <div ng-repeat="ticket in objNewArr">
+                <div class="row" ng-class="getDynamicClass($index)" ng-show="isRowShown(this);">
+                    <div class="col-lg-3 col-md-6 col-sm-12 eaOneRow">
+                        <div>Ticket Typ:&nbsp; </div>
+                        <select name="inputTypeList"
+                                class=""
+                                style="width: 100px;"
+                                ng-init="ticket.type || 'd'"
+                                disabled="true"
+                                ng-model="ticket.type">
+                            <option ng-repeat="typeItem in settings.types" value="{{typeItem.type}}">{{typeItem.label}}</option>
+                        </select>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12">Start Datum: {{ticket.startDate}}</div>
+                    <div class="col-lg-3 col-md-6 col-sm-12">Ende Datum: {{ticket.endDate}}</div>
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        Preis: {{ticket.price}} € &nbsp;&nbsp;
+                        <span ng-show="isPaid($index)">
+                            <i class="bi bi-credit-card-2-front" ng-click="openModalTicket($index)" 
+                               style="font-size: 1.0rem; color: green;"
+                               data-toggle="tooltip" data-placement="top" title="Das Ticket ist bezahlt"></i>
+                        </span>
+                        <span ng-show="isEdit(ticket.startDate)">
+                            <i class="bi bi-pencil-fill" ng-click="openModalTicket($index)" 
+                               style="font-size: 1.0rem; color: green;"
+                               data-toggle="tooltip" data-placement="top" title="Ticket bearbeiten"></i>
+                            <i class="bi bi-trash3-fill" ng-click="deleteObjRow($index)" 
+                               style="font-size: 1.0rem; color: red;"
+                               data-toggle="tooltip" data-placement="top" title="Ticket löschen"></i>                        
+                        </span>
+                    </div>
+                    <hr style="margin: 10px; max-width: 95%"/>
+                </div>   
+            </div>
+
+            <!-- Buttons for list of tickets -->
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <button type="button" class="btn btn-success" ng-click="addObjRow()">
+                        <i class="bi bi-plus-lg" style="font-size: 1.6rem; color: white;"
+                           data-toggle="tooltip" data-placement="top" title="Ein neues Ticket hinzufügen"></i>
+                    </button>
+                    <button type="button" class="btn btn-success" ng-click="deleteUnPaid(saveObj);">
+                        <i class="bi bi-save" style="font-size: 1.6rem; color: white;"
+                           data-toggle="tooltip" data-placement="top" title="Speichere alle Änderungen (Es werden nur die bezahlten Tickets gespeichert.)"></i>
+                    </button>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12"></div>
+                <div class="col-lg-3 col-md-6 col-sm-12"></div>
+                <div class="col-lg-3 col-md-6 col-sm-12 eaOneRow">
+                    <span class="bi bi-arrow-down-square-fill eaProcButton" 
+                                  ng-click="addIdxOffset(-1)"
+                                  data-toggle="tooltip" data-placement="top" title="Blättere ein Ticket in der Liste vorwärts"></span>
+                    <span class="bi bi-arrow-down-right-square-fill eaProcButton" 
+                                  ng-click="idxOffset=0;"
+                                  data-toggle="tooltip" data-placement="top" title="Blättere an das Ende der Liste"></span>
+                </div>
+            </div>
+
+        </div>
+        
+        <!-- showSection===2 -->
+        <div ng-show="showSection===2">
+            <div>
+                <h2>
+    Einstellungen für: {{settings.personalKey}}
+                </h2>
+                
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Typ</th>
+                            <th scope="col">Periode</th>
+                            <th scope="col">Preis</th>
+                            
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="type in settings.types">
+                            <td>{{settings.types[$index].label}}</td>
+                            <td>{{settings.types[$index].period}} {{settings.labelPeriod}}</td>                        
+                            <td class="eaOneRow" style="width: 100px">
+                                <input type="text" 
+                                    class="name-input form-control" 
+                                    pattern="[0-9]+,[0-9]{2}"
+                                    ng-model="settings.types[$index].price" />€ 
+                            </td>                    
+                        </tr>
+                    </tbody>                    
+                </table>
+                
+            </div>
+        </div>
+        
+        <hr />
+        
+        <!-- Navigation footer -->
+        <div class="eaOneRow">
+            <button type="button" class="btn btn-light" ng-click="setShowSection(0);">
+                <i class="bi bi-filetype-doc" style="font-size: 1.6rem; color: gray;"
+                    data-toggle="tooltip" data-placement="top" title="Motivation für diese Applikation"></i>
+                Vorbemerkungen
+            </button> &nbsp;
+            
+            <button type="button" class="btn btn-light" ng-click="setShowSection(1);">
+                <i class="bi bi-bookmarks-fill" style="font-size: 1.6rem; color: gray;"
+                    data-toggle="tooltip" data-placement="top" title="Tickets kaufen und verwalten"></i>
+                Tickets
+            </button> &nbsp;
+            <button type="button" class="btn btn-light" ng-click="setShowSection(2);">
+                <i class="bi bi-gear-fill" style="font-size: 1.6rem; color: gray;"
+                    data-toggle="tooltip" data-placement="top" title="Einstellungen für die Preise der DE Tarif App"></i>
+                Einstellungen
+            </button>
+        </div>
+        
+    </ea-provide-obj>            
+</div>
