@@ -190,6 +190,25 @@
                 "content/aleks/pictures/travel/Harz/Braunlage-2017-Brocken-im-Winter.jpg",
                 "content/aleks/pictures/travel/Harz/Harz-2017-Wander-Wegweiser.jpg"]
         },
+        
+        {   "imgKey": "Mosel",
+            "imgBodyList": ["Ein Blick auf Cochem an der Mosel",
+                "Weicht man auf dem Weg nach Cochem vom Moselradweg ab, kann man die Burg Eltz erreichen. Die letzten 2,5km sind zu Fuß zu absolvieren.",
+                "Bernkastel-Kues, eigentlich Bernkastel ist ein nettes Fachwerkhaus Städchen. Kues ist eher sachlich, hat aber eine deutsche Bank Filiale. Das Bild zeigt das schmalste Haus am Platze, das Spitzhäuschen.",
+                "Der Bärenbrunnen, hat wohl mit dem Namen der Stadt zu tun?",
+                "Ein Blick auf Traben-Trarbach. Der Bindestrich steht wieder für die Brücke zwischen den beiden Ortsteilen.",
+                "Unzählige Weinberge links und rechts der Mosel. Dies ist ein Blick vom Weinberg des 'Pisporter Goldtröpfchens' zur Mosel",
+                "Die Porta Nigra in Trier ist das bekannteste von den Römern stammende Gebäude in der über 2000 Jahre alten Stadt."],
+            "imgList": ["content/aleks/pictures/travel/Mosel/2023-09-Panorama-Cochem.jpg",
+                "content/aleks/pictures/travel/Mosel/2023-09-Burg-Eltz.jpg",
+                "content/aleks/pictures/travel/Mosel/2023-09-Bernkastel-Kues-Spitzhaeuschen.jpg",
+                "content/aleks/pictures/travel/Mosel/2023-09-Bernkastel-Kues-Baerenbrunnen.jpg",
+                "content/aleks/pictures/travel/Mosel/2023-09-Traben-Trarbach.jpg",
+                "content/aleks/pictures/travel/Mosel/2023-09-Pisporter-Goldtropfen-Weinberg.jpg",
+                "content/aleks/pictures/travel/Mosel/2023-09-Porta-Nigra-Trier.jpg"]
+        },
+        
+        
         {   "imgKey": "DE-Ostsee",
             "imgBodyList": ["Ein Blick auf die Ostsee mit nichts außer einem Boot.",
             "Seebrücke von Ahlbeck auf der Insel Usedom",

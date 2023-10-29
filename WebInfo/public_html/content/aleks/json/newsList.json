@@ -22,6 +22,17 @@
 "entries":   
     [
         {
+            "newFrom": "2023-09-30",
+            "newTo": "2024-08-31",
+            "title": "Mit dem Rad an Mosel und Saar", 
+            "body": ["Unsere erste Reise mit Rad und Schiff. Von Koblenz nach Saarburg. Jeden Moregn nach dem Frühstück fuhren wir mit dem Rad los. Am Ziel wartete das Schiff auf uns. Wenn es zu viele Schleusen gab, mussten auch wir manchmal warten. Aber es hab genug anzuschauen."], 
+            "img": ["content/aleks/pictures/travel/Mosel/2023-09-Blick-auf-Cochem.jpg"],
+            "imgBody": ["Ein Blick vom Hausberg auf die Reichsburg von Cochem. Burgen und Burgruinen gibt es an der Mosel wie Sand am Meer."],
+            "href": "",
+            "imgKey": ""
+        },
+
+        {
             "newFrom": "2023-03-15",
             "newTo": "2023-07-31",
             "title": "Der neue Brutkasten wird bezogen", 
@@ -62,7 +73,7 @@
             "imgBody": [],
             "href": "content/aleks/html/news/newHeiligenhafen.html",
             "imgKey": "HeiH"
-        }        
+        }
         
     ]
 }
