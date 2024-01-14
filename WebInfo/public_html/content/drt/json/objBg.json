@@ -1,0 +1,19 @@
+{   "_comment": "you can use pictures ('url(content/...') or colors ('#??????' only in Hex style) for background.",
+    "entries":
+    [
+       {
+           "key": "home",
+           "pic": "url(content/drt/pictures/Schwerin-2022-Schloss-mit-Kreuzkanal.jpg)"
+       },
+
+       {
+           "key": "srv",
+           "pic": "#f2ffe6"
+       },
+      
+       {
+           "key": "dirc",
+           "pic": "#dae9f7"
+       }
+    ]
+}
