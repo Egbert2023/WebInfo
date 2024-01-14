@@ -1,5 +1,6 @@
 'use strict';
 
+// get the url from naviList by href (loc)
 var getHtml4Id = function(rootScope, loc, paramSrv){
     //var naviList = paramSrv.getNaviList();
     let naviList = rootScope.naviList;
@@ -12,6 +13,9 @@ var getHtml4Id = function(rootScope, loc, paramSrv){
             ret = getEntry("", naviList, "subm", "href", '#!' + loc, "url");
         });
     }   
+    if(!ret.startsWith("app")) {
+        ret = rootScope.contentFolder + "/" + ret;
+    }    
     return ret;
 };
 

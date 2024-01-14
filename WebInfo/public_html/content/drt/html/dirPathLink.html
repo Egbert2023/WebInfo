@@ -1,0 +1,79 @@
+<div>
+    <ea-acc-coat data-acc-title="eaPathLink">
+        <ea-acc-key data-title="Summary and applay the functionality"
+                    data-txt-len="200">
+            <div>
+The eaPathLink functionality is automatically used at the beginning of each HTML page
+                <p>
+The WebInfo application uses this directive when calling up the 
+Html pages in the menu in a parameterized manner as TemplateUrl 
+                </p>
+                <strong>'computed.html'</strong>. 
+                <ea-mask-code ea-mask-html>
+&lt;div class="eaCard">
+    &lt;ea-path-link>&lt;/ea-path-link> 
+    &lt;div class="eaContent">
+        &lt;div ea-add-html = "&lang;{url}}">&lt;/div>
+    &lt;/div>
+&lt;/div>
+                </ea-mask-code>
+You can see the result at the top of every html page.
+            </div>   
+        </ea-acc-key>
+        <ea-acc-key data-title="Technical implementation"
+                    data-txt-len="40">
+            <div>
+        The directive uses the following coding
+                <ea-mask-code ea-mask-js>
+'use strict';
+var eaPathLinkDirective = function ($rootScope, $location, navSrv) {
+  return {
+    restrict: 'E',
+    replace: true,
+    templateUrl: "app/template/pathLink.html",
+    controller: function($scope) {
+        if($rootScope.isLoaded_naviList) {
+            $scope.naviList = $rootScope.naviList;
+            $scope.currLink = getCurrentLink($rootScope, $location.path());
+            $scope.url = navSrv.getHtml4Id($rootScope, $location.path(), navSrv);
+        } else {  $scope.naviList = {};};
+        $rootScope.$on("LoadJsonFile-naviList", function(evt, opt) {
+            $scope.naviList = $rootScope.naviList;
+            $scope.currLink = getCurrentLink($rootScope, $location.path());
+            $scope.url = navSrv.getHtml4Id($rootScope, $location.path(), navSrv);
+        });
+    },
+
+    link: function (scope, ele, attrs) {        
+
+        // The last operation for include HTML home page 
+        // for the first call of application
+        ele.ready(function(){
+            scope.$parent.$apply();
+        });
+    }
+  };
+};          
+                </ea-mask-code>
+            </div>
+        
+            <div>
+The templateUrl: "app/template/pathLink.html" looks like this.
+            </div>
+
+            <ea-mask-code ea-mask-html>
+&lt;div class="eaLinkPath eaContent">
+    &lt;span ng-repeat="o in currLink">
+        &lt;a ng-show="&lang;{currLink.length}}>&lang;{$index+1}}"
+            style="color: #222" 
+            href="&lang;{o.href}}">&lang;{o.label}}
+        &lt;/a>&lt;span ng-show="&lang;{currLink.length}}>&lang;{$index+1}}"> 
+            <i class="bi-arrow-return-right"></i>
+        &lt;/span>&lt;span ng-show="&lang;{currLink.length}}===&lang;{$index+1}}">&lang;{o.label}}
+        &lt;/span>
+    &lt;/span>    
+&lt;/div>
+            </ea-mask-code>    
+        </ea-acc-key>
+    </ea-acc-coat>            
+</div>

@@ -1,0 +1,11 @@
+{   "_comment": "All image groups are described",
+    "entries":
+    [
+        {   "imgKey": "DE",
+            "imgBodyList": ["A view across the Kreuzkanal to Schwerin Castle",
+                            "The landmarks of Warnemünde, the Teepott and the Lighthouse"],
+            "imgList": ["content/drt/pictures/Schwerin-2022-Schloss-mit-Kreuzkanal.jpg",
+                        "content/drt/pictures/Warnemünde-2018-Teepott.jpg"]
+        }
+    ]
+}
