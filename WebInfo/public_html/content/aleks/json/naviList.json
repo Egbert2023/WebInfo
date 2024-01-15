@@ -54,7 +54,8 @@
          
         {"id":"navHoby", "label": "Hobbies", "href": "#!/prog", "url": "html/Hobbies.html", "imgKey": "Hobby",
             "subm": [ {"label": "Programmieren", "href": "#!/prog/p", "url": "html/prog.html", "imgKey": "prog",
-                        "subm": [{"label": "Deutschland Tarif", "href": "#!/prog/p/det", "url": "html/provideObjDeTicket.html", "imgKey": ""}]
+                        "subm": [{"label": "Deutschland Tarif", "href": "#!/prog/p/det", "url": "html/provideObjDeTicket.html", "imgKey": ""},
+                                 {"label": "Technische Grundlagen", "href": "#!/prog/p/drt", "url": "html/drtApplication.html", "imgKey": "drt"}]
                       },
                       {"label": "Mathematik", "href": "#!/prog/m", "url": "html/Mathe.html", "imgKey": "math"},
                       {"label": "Sport", "href": "#!/prog/sp", "url": "html/Sport.html", "imgKey": "sport"},

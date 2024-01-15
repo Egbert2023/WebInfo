@@ -378,6 +378,12 @@
                         "content/aleks/pictures/travel/Lissabon/Lissabon-Brücke.jpg"]
         },
         
+        
+        {   "imgKey": "drt",
+            "imgBodyList": ["Aufbau der beiden Applikationen. Der technische Unterbau ist nur einmal vorhanden und wird von beiden Applikationen mit verwendet. Lediglich die Inhalte der Applikationen (wie Html-Seiten, Bilder, Json-Dateien und Viodeos) sind getrennt abgelegt."],
+            "imgList": ["content/aleks/pictures/prog/WebInfo-Drt.jpg"]
+        },
+        
         {   "imgKey": "anyOther",
             "imgBodyList": [],
             "imgList": []
