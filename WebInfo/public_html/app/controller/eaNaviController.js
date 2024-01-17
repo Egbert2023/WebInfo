@@ -35,7 +35,7 @@ var eaNaviController =  function($rootScope, $scope, $location, eaNavSrv) {
                     ngView.style.backgroundColor = bg;
                     ngView.style.backgroundImage = "";
                 } else {
-                    ngView.style.backgroundImage = bg;
+                    ngView.style.backgroundImage = "url(" + $rootScope.contentFolder + "/" + bg + ")";
                 }
             }
         }
