@@ -13,8 +13,8 @@ var eaNews = function ( $rootScope ) {
             $scope.scope_eaNewsDirektive = $scope.url;    
 
             // get al params
-            $scope.newsAll = $rootScope.newsList;
-         
+            $scope.newsAll = $rootScope.newsList;            
+            
             var varName = "vis_";
 
             // Functions for 'eaNews' directive
@@ -93,6 +93,8 @@ var eaNews = function ( $rootScope ) {
            
             if(txtLen){
                 scope.news.forEach(o => {
+                    o.href = (o.href === "" || o.href.startsWith("app") || o.href.startsWith($rootScope.contentFolder))? o.href : $rootScope.contentFolder + o.href;
+                    
                     o.txtShort = "";
                     let txt = "";
                     o.body.forEach(ob => {

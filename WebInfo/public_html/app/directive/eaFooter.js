@@ -8,7 +8,7 @@ var eaFooterDirective = function ($rootScope) {
     link: function (scope, ele, attrs) {
         let inputFooterUrl = attrs.footerUrl;
         let contentFolder = scope.$root.contentFolder;
-        scope.footerUrl = contentFolder + "/" + inputFooterUrl;
+        scope.footerUrl = contentFolder + inputFooterUrl;
     }       
   };
 };

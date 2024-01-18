@@ -14,7 +14,7 @@ var getHtml4Id = function(rootScope, loc, paramSrv){
         });
     }   
     if(!ret.startsWith("app")) {
-        ret = rootScope.contentFolder + "/" + ret;
+        ret = rootScope.contentFolder + ret;
     }    
     return ret;
 };
@@ -111,7 +111,9 @@ var computeSiteMaps = function(rootScope) {
         ob.forEach(o => {
             let oImgKey = {};
             sm = sm + '\n\t<url>';
-            sm = sm + '\n\t\t<loc>' + baseDoman + "/" + o.url + '</loc>';
+            sm = sm + '\n\t\t<loc>' + baseDoman + "/" + 
+                    (o.url==="" || o.url.startsWith("app"))? o.url 
+                       : rootScope.contentFolder + o.url + '</loc>';
             sm = sm + '\n\t\t<changefreq>weekly</changefreq>';
             sm = sm + '\n\t</url>';
             oImgKey.imgKey = o.imgKey;
@@ -141,7 +143,8 @@ var computeSiteMaps = function(rootScope) {
                             si = si + '\n\t<url>';
                             si = si + '\n\t\t<loc>' + href + '</loc>';
                             si = si + '\n\t\t<image:image>';
-                            si = si + '\n\t\t\t<image:loc>' + baseDoman + "/" + o.imgList[i] +'</image:loc>';
+                            si = si + '\n\t\t\t<image:loc>' + baseDoman + "/" + 
+                                 rootScope.contentFolder +  o.imgList[i] +'</image:loc>';
                             if(o.imgBodyList[i]){
                                 si = si + '\n\t\t\t<image:title>' + o.imgBodyList[i] +'</image:title>';
                             };
