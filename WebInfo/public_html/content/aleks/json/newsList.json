@@ -26,7 +26,7 @@
             "newTo": "2024-08-31",
             "title": "Mit dem Rad an Mosel und Saar", 
             "body": ["Unsere erste Reise mit Rad und Schiff. Von Koblenz nach Saarburg. Jeden Morgen nach dem Frühstück fuhren wir mit dem Rad los. Am Ziel wartete das Schiff auf uns. Wenn es zu viele Schleusen gab, mussten auch wir manchmal warten. Aber es hab genug anzuschauen."], 
-            "img": ["content/aleks/pictures/travel/Mosel/2023-09-Blick-auf-Cochem.jpg"],
+            "img": ["pictures/travel/Mosel/2023-09-Blick-auf-Cochem.jpg"],
             "imgBody": ["Ein Blick vom Hausberg auf die Reichsburg von Cochem. Burgen und Burgruinen gibt es an der Mosel wie Sand am Meer."],
             "href": "",
             "imgKey": ""
@@ -39,7 +39,7 @@
             "body": ["Wir liegen fast täglich mit dem Fotoapparat auf der Lauer. Jetzt haben wir eine relative Gewißheit, dass der Nistkasten angenommen wird. Es geht im Munutentakt rein und raus. Da wir wohl ein Nest gebaut?"], 
             "img": [],
             "imgBody": [],
-            "href": "content/aleks/html/news/Nistkasten-2023.html",
+            "href": "html/news/Nistkasten-2023.html",
             "imgKey": ""
         },
         
@@ -50,7 +50,7 @@
             "body": ["Anfang Mai im Jahr 2023 waren wir auf Norderney. Es war an den meißten Tagen sehr sonnig aber immer sehr kalt. Der Wind tat sein Übriges."], 
             "img": [],
             "imgBody": [],
-            "href": "content/aleks/html/news/newNorderney2023.html",
+            "href": "html/news/newNorderney2023.html",
             "imgKey": "Ney"
         },
 
@@ -59,7 +59,7 @@
             "newTo": "2022-09-30",
             "title": "Wir wollen nach Lissabon", 
             "body": ["Corona hatte uns einen Strich durch die Rechnung gemacht. Jetzt planen wir endlich den Trip nach Lissabon. Im Oktober 2022 war es endlich soweit."], 
-            "img": ["content/aleks/pictures/travel/Lissabon/Lissabon-Praca-do-Comercio-vom-Wasser.jpg"],
+            "img": ["pictures/travel/Lissabon/Lissabon-Praca-do-Comercio-vom-Wasser.jpg"],
             "imgBody": ["Ein Blick auf die Alfama, ein Teil der Altstadt von Lissabon vom Wasser aus"],
             "href": "",
             "imgKey": ""
@@ -71,7 +71,7 @@
             "body": ["Das erste mal in Heiligenhafen. Der sogenannte Binnensee ist ein schönes Revier für Surf- und Segelanfänger. Ansonsten kann man diesen Ort für einen Sommerurlaub nur empfehlen. Noch etwas meht Kultur und es währe gar nicht mehr auszuhalten."], 
             "img": [],
             "imgBody": [],
-            "href": "content/aleks/html/news/newHeiligenhafen.html",
+            "href": "html/news/newHeiligenhafen.html",
             "imgKey": "HeiH"
         }
         
