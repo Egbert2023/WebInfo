@@ -22,6 +22,17 @@
 "entries":   
     [
         {
+            "newFrom": "2024-01-19",
+            "newTo": "2024-08-31",
+            "title": "Eine zweite WebInfo Applikation mit Programmierbeispielen", 
+            "body": ["In der zweiten WebInfo Applikation 'Meine Direktiven' werden alle von mir erstellten AngularJs Direktiven erläutert und am Beispiel gezeigt. Das besondere an dieser Applikation ist, dass nur die Daten (Html-Seiten, ...) neu erfasst sind. Die technische Basis wird einfach mit verwendet."], 
+            "img": [],
+            "imgBody": [],
+            "href": "html/drtApplication.html",
+            "imgKey": "drt"
+        },
+
+        {
             "newFrom": "2023-09-30",
             "newTo": "2024-08-31",
             "title": "Mit dem Rad an Mosel und Saar", 
