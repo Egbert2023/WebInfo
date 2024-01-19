@@ -4,7 +4,7 @@
                 "The parameter 'cookies' are used for compilation the cookie banner."
                ],
     "entries": 
-    {  "baseDoman": "www.aleksander.de",
+    {  "baseDoman": "https://www.aleksander.de",
        "startFile" : "indexDrt.html",
        "vdoNo" : "Your browser can not play this video.",
        "cookies" : 

@@ -111,9 +111,7 @@ var computeSiteMaps = function(rootScope) {
         ob.forEach(o => {
             let oImgKey = {};
             sm = sm + '\n\t<url>';
-            sm = sm + '\n\t\t<loc>' + baseDoman + "/" + 
-                    (o.url==="" || o.url.startsWith("app"))? o.url 
-                       : rootScope.contentFolder + o.url + '</loc>';
+            sm = sm + '\n\t\t<loc>' + baseDoman + "/" + ((o.url==="" || o.url.startsWith("app"))? o.url : rootScope.contentFolder + o.url) + '</loc>';
             sm = sm + '\n\t\t<changefreq>weekly</changefreq>';
             sm = sm + '\n\t</url>';
             oImgKey.imgKey = o.imgKey;
