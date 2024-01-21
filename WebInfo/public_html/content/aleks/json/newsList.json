@@ -22,10 +22,21 @@
 "entries":   
     [
         {
+            "newFrom": "2024-01-19",
+            "newTo": "2024-08-31",
+            "title": "Eine zweite WebInfo Applikation mit Programmierbeispielen", 
+            "body": ["In der zweiten WebInfo Applikation 'Meine Direktiven' werden alle von mir erstellten AngularJs Direktiven erläutert und am Beispiel gezeigt. Das besondere an dieser Applikation ist, dass nur die Daten (Html-Seiten, ...) neu erfasst sind. Die technische Basis wird einfach mit verwendet."], 
+            "img": [],
+            "imgBody": [],
+            "href": "html/drtApplication.html",
+            "imgKey": "drt"
+        },
+
+        {
             "newFrom": "2023-09-30",
             "newTo": "2024-08-31",
             "title": "Mit dem Rad an Mosel und Saar", 
-            "body": ["Unsere erste Reise mit Rad und Schiff. Von Koblenz nach Saarburg. Jeden Morgen nach dem Frühstück fuhren wir mit dem Rad los. Am Ziel wartete das Schiff auf uns. Wenn es zu viele Schleusen gab, mussten auch wir manchmal warten. Aber es hab genug anzuschauen."], 
+            "body": ["Unsere erste Reise mit Rad und Schiff. Von Koblenz nach Saarburg. Jeden Morgen nach dem Frühstück fuhren wir mit dem Rad los. Am Ziel wartete das Schiff auf uns. Wenn es zu viele Schleusen gab, mussten auch wir manchmal warten. Aber es gab genug anzuschauen."], 
             "img": ["pictures/travel/Mosel/2023-09-Blick-auf-Cochem.jpg"],
             "imgBody": ["Ein Blick vom Hausberg auf die Reichsburg von Cochem. Burgen und Burgruinen gibt es an der Mosel wie Sand am Meer."],
             "href": "",
