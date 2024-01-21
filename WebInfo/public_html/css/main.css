@@ -200,7 +200,7 @@ textarea {
     backdrop-filter: blur(5px);
 }
 .eaLogo {
-  height: 80px;
+  height: 50px;
   padding: 5px;
   padding-left: 20%;
   justify-content: space-between;
@@ -340,6 +340,12 @@ body {
     clear: both;
 }
 
+@media (max-width: 767px) {
+    .footer {
+        position: relative;    
+    }
+}
+
 /* ==========================================================================
    EXAMPLE Media Queries for Responsive Design.
    These examples override the primary ('mobile first') styles.
@@ -348,7 +354,7 @@ body {
 
 @media only screen and (min-width: 35em) {
     /* Style adjustments for viewports that meet the condition */
-}
+    }
 
 @media print,
        (-webkit-min-device-pixel-ratio: 1.25),
