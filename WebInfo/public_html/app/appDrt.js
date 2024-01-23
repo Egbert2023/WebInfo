@@ -3,10 +3,10 @@
 //var eaDir = angular.module("eaDir", ["ngRoute", "ngCookies"]);
 var eaDir = angular.module("eaDir", ["ngRoute"]);
 
-var configSrv = eaDir.service('eaConfigSrv', [function($routeProvider){
-    this.eaNavConfig = eaNavConfig;      
-}]);
-configSrv.$inject = ['$scope'];
+//var configSrv = eaDir.service('eaConfigSrv', [function($routeProvider){
+//    this.eaNavConfig = eaNavConfig;      
+//}]);
+//configSrv.$inject = ['$scope'];
 
 var navSrv = eaDir.service('eaNavSrv', ['$q', function () {
     var vm = this;
@@ -41,7 +41,7 @@ eaDir.directive('eaNews', ['$rootScope', eaNews]);
 
 //eaDir.directive('eaCookies', ['$rootScope', '$cookies', '$compile', eaCookiesDirektive]).$inject = ['$scope'];
 
-// $compile, $rootScope
+// eaConfigSrv.js is in eaNavConfig.js
 eaDir.config(['$routeProvider', eaNavConfig]);
 
 eaDir.controller('eaDirController', ['$rootScope', '$scope', 'eaNavSrv', eaDirController])

@@ -25,7 +25,7 @@ var eaAddHtmlDirective = function ($rootScope, $compile, $http) {
                     console.log("Error in $http get.");
                 };
                 return htm;
-            };  
+            };   
         },
         
         link: function (scope, ele, attrs) {        
