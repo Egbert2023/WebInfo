@@ -45,7 +45,8 @@ var eaNavDynDirektive = function($rootScope, $http, $location, $compile) {
                 } catch(e){
                     if (e !== BreakException) throw e;
                 };
-                return rt;
+                let r = (rt.startsWith("app") || rt.startsWith($rootScope.contentFolder))? rt : $rootScope.contentFolder + rt;
+                return r;
             };
             
             // wait until the JSON file "naviList.json" has finished reading

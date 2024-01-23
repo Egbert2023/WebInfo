@@ -1,10 +1,13 @@
 'use strict';
 
 var webInfo = angular.module("webInfo", ["ngRoute", "ngCookies"]);
-var configSrv = webInfo.service('eaConfigSrv', [function($routeProvider){
-    this.eaNavConfig = eaNavConfig;      
-}]);
-configSrv.$inject = ['$scope'];
+
+
+//var configSrv = webInfo.service('eaConfigSrv', [function($routeProvider){
+//    this.eaNavConfig = eaNavConfig;      
+//}]);
+//configSrv.$inject = ['$scope'];
+
 
 var navSrv = webInfo.service('eaNavSrv', ['$q', function () {
     var vm = this;
@@ -30,7 +33,7 @@ webInfo.directive('eaCookies', ['$rootScope', '$cookies', '$compile', eaCookiesD
 webInfo.directive('eaProvideObj', ['$rootScope', eaProvideObj]);
 webInfo.directive('eaDeTicket',  [eaDeTicket]);
 
-// $compile, $rootScope
+// eaConfigSrv.js is in eaNavConfig.js
 webInfo.config(['$routeProvider', eaNavConfig]);
 
 webInfo.controller('webInfoController', ['$rootScope', '$scope', 'eaNavSrv', webInfoController])
