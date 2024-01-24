@@ -10,7 +10,7 @@ var eaDir = angular.module("eaDir", ["ngRoute"]);
 
 var navSrv = eaDir.service('eaNavSrv', ['$q', function () {
     var vm = this;
-    vm.getHtml4Id = getHtml4Id;
+    vm.getUrlById = getUrlById;
     vm.getHtml = getHtml;
     vm.getCurrentLink = getCurrentLink;
     vm.computeSiteMaps = computeSiteMaps;

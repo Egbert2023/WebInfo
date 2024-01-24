@@ -6,12 +6,12 @@ var eaNaviController =  function($rootScope, $scope, $location, eaNavSrv) {
     if($rootScope.isLoaded_naviList) {
         $scope.naviList = $rootScope.naviList;
         $scope.currLink = getCurrentLink($rootScope, $location.path());
-        $scope.url = $scope.navSrv.getHtml4Id($rootScope, $location.path(), eaNavSrv);
+        $scope.url = $scope.navSrv.getUrlById($rootScope, $location.path(), eaNavSrv);
     } else {  $scope.naviList = {};};
     $rootScope.$on("LoadJsonFile-naviList", function(evt, opt) {
         $scope.naviList = $rootScope.naviList;
         $scope.currLink = getCurrentLink($rootScope, $location.path());
-        $scope.url = $scope.navSrv.getHtml4Id($rootScope, $location.path(), eaNavSrv);
+        $scope.url = $scope.navSrv.getUrlById($rootScope, $location.path(), eaNavSrv);
     });
     
     // prepare the news list

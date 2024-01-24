@@ -1,7 +1,7 @@
 'use strict';
 
 // get the url from naviList by href (loc)
-var getHtml4Id = function(rootScope, loc, paramSrv){
+var getUrlById = function(rootScope, loc, paramSrv){
     //var naviList = paramSrv.getNaviList();
     let naviList = rootScope.naviList;
     let ret = "";

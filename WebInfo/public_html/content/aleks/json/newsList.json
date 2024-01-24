@@ -22,6 +22,17 @@
 "entries":   
     [
         {
+            "newFrom": "2024-01-24",
+            "newTo": "2024-12-31",
+            "title": "Beispiel Applikation für einen fiktiven Deutschland Tarif", 
+            "body": [], 
+            "img": [],
+            "imgBody": [],
+            "href": "html/news/DeTarif.html",
+            "imgKey": ""
+        },
+
+        {
             "newFrom": "2024-01-19",
             "newTo": "2024-08-31",
             "title": "Eine zweite WebInfo Applikation mit Beispielen der Programmierung", 
@@ -31,6 +42,7 @@
             "href": "html/drtApplication.html",
             "imgKey": "drt"
         },
+
 
         {
             "newFrom": "2023-09-30",

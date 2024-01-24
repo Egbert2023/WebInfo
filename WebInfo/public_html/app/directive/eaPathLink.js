@@ -12,12 +12,10 @@ var eaPathLinkDirective = function ($rootScope, $location, navSrv) {
         if($rootScope.isLoaded_naviList) {
             $scope.naviList = $rootScope.naviList;
             $scope.currLink = getCurrentLink($rootScope, $location.path());
-            //$scope.url = navSrv.getHtml4Id($rootScope, $location.path(), navSrv);
         } else {  $scope.naviList = {};};
         $rootScope.$on("LoadJsonFile-naviList", function(evt, opt) {
             $scope.naviList = $rootScope.naviList;
             $scope.currLink = getCurrentLink($rootScope, $location.path());
-            //$scope.url = navSrv.getHtml4Id($rootScope, $location.path(), navSrv);
         });
     },
 
