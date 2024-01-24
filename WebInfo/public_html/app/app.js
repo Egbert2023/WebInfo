@@ -11,7 +11,7 @@ var webInfo = angular.module("webInfo", ["ngRoute", "ngCookies"]);
 
 var navSrv = webInfo.service('eaNavSrv', ['$q', function () {
     var vm = this;
-    vm.getHtml4Id = getHtml4Id;
+    vm.getUrlById = getUrlById;
     vm.getHtml = getHtml;
     vm.getCurrentLink = getCurrentLink;
     vm.computeSiteMaps = computeSiteMaps;
