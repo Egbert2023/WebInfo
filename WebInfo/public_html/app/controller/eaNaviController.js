@@ -60,6 +60,10 @@ var eaNaviController =  function($rootScope, $scope, $location, eaNavSrv) {
     $scope.htm = "";
     $scope.scope_eaNaviController = $scope.url;
 
+    //Test
+    //console.log("eaNaviController-$scope");
+    //console.log($scope);
+
     return false;
 };
 
