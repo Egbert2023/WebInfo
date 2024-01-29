@@ -13,7 +13,7 @@ var eaAddHtmlDirective = function ($rootScope, $compile, $http) {
         replace: true,
         scope: true,
         controller: function($scope, $http, $compile) {
-            var getHtml = function($http, $compile, scope, ele, url, callback) {
+            $scope.getHtml = function($http, $compile, scope, ele, url, callback) {
                 let htm = "";
                 $http({
                     url: url,
@@ -42,11 +42,11 @@ var eaAddHtmlDirective = function ($rootScope, $compile, $http) {
             };
 
             if(url!=="") {         
-                getHtml($http, $compile, scope, ele, url, callback);
+                scope.getHtml($http, $compile, scope, ele, url, callback);
             } else {
                 // event 'ReadUrlIsReady' is fired when url is ready.
                 $rootScope.$on("ReadUrlIsReady", function(evt, opt) {
-                    getHtml($http, $compile, scope, ele, opt, callback);
+                    scope.getHtml($http, $compile, scope, ele, opt, callback);
                 });
             }
         }
