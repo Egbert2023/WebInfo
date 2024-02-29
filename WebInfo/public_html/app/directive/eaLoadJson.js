@@ -25,24 +25,6 @@ var eaLoadJson = function ( $rootScope, $http ) {
                 if(newObject === undefined 
                    || (newObject.constructor === Object && Object.entries(newObject).length === 0)) 
                 {
-                    
-//                    http({
-//                        url: url,
-//                        method: 'GET'
-//                    }).then(function(response){
-//                        newObject = callback(paramName, rootScope, response.data);
-//                        var opt = {
-//                            paramName: paramName,
-//                            paramObj: newObject
-//                        };
-//                        rootScope.$emit("LoadJsonFile-" + paramName, opt);
-//
-//                    }, function(errResp){
-//                            console.log("Error in $http get.");
-//                            console.log(errResp);
-//                    });
-                    
-                    
                     fetch (url).then (function (response) {
                         return response.json();
                     }).then (function(response){
@@ -55,10 +37,7 @@ var eaLoadJson = function ( $rootScope, $http ) {
                     }).catch (function (error) {
                             console.log ("Fehler: " + error);
                         }); 
-                        
-
-                };
-                
+                };                
                 return false;
             };
         }, // controller        

@@ -110,6 +110,7 @@ Das Kriterium "Es rechnet sich nicht" Darf nicht der einzige Maßstab von Entsch
                                 <div class="col-lg-3 col-md-4 col-sm-6">
                                     <label for="inputStartDate" class="bold">Start Date:</label>
                                     <input id="inputStartDate"
+                                           name="inputStartDate"
                                            type="date" 
                                            ng-change="setPriceAndEndDateByType(ticket.type)"
                                            class="name-input form-control" 
@@ -119,6 +120,7 @@ Das Kriterium "Es rechnet sich nicht" Darf nicht der einzige Maßstab von Entsch
                                 <div class="col-lg-3 col-md-4 col-sm-6">
                                     <label for="inputEndDateTime" class="bold">End date:</label>
                                     <input id="inputEndDateTime"
+                                           name="inputEndDateTime"
                                            type="date" 
                                            readonly="readonly"
                                            class="name-input form-control" 
@@ -127,6 +129,7 @@ Das Kriterium "Es rechnet sich nicht" Darf nicht der einzige Maßstab von Entsch
                                 <div class="col-lg-3 col-md-4 col-sm-6">
                                     <label for="inputEndDateTime" class="bold">Price in €:</label>
                                     <input id="inputEndDateTime"
+                                           name="inputEndDateTime"
                                            type="text" 
                                            readonly="readonly"
                                            class="name-input form-control" 
@@ -191,9 +194,10 @@ Das Kriterium "Es rechnet sich nicht" Darf nicht der einzige Maßstab von Entsch
                                   ng-click="demoToday=addDays(demoToday, -1)"
                                   data-toggle="tooltip" data-placement="top" title="Subtract one day"></span>
                             <input id="inputToday"
-                                type="date" 
-                                class="name-input form-control"                             
-                                ng-model="demoToday" />
+                                   name="inputToday"
+                                   type="date" 
+                                   class="name-input form-control"                             
+                                   ng-model="demoToday" />
                             <span class="bi bi-arrow-right-square-fill eaProcButton" 
                                   ng-click="demoToday=addDays(demoToday, 1)"
                                   data-toggle="tooltip" data-placement="top" title="Add one day"></span>   
