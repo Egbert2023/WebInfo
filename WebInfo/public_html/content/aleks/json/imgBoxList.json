@@ -383,6 +383,27 @@
             "imgBodyList": ["Aufbau der beiden Applikationen. Der technische Unterbau ist nur einmal vorhanden und wird von beiden Applikationen mit verwendet. Lediglich die Inhalte der Applikationen (wie Html-Seiten, Bilder, Json-Dateien und Viodeos) sind getrennt abgelegt."],
             "imgList": ["pictures/prog/WebInfo-Drt.jpg"]
         },
+
+        {   "imgKey": "MLL",
+            "imgBodyList": ["Unser Hotel 'Es Port'",
+                            "Die Hotelanlage hatte neben viel Grün auch einen schönen Pool.",
+                            "Die Straßenbahn, die Soller mit Port de Soller verbindet war bei fast jeder Fahrt voller Touristen. Der stolze Preis für eine Fahrt: 9€.",
+                            "Ein Blick auf Port de Soller, bei einer unserer Wanderungen.",
+                            "So sahen die Wanderwege an allen Tagen aus. Wanderschuhe sind ein Muss.",
+                            "Das waren die spektakolären Ausblicke auf unseren Wanderungen.",
+                            "Noch ein toller Blick",
+                            "Wieder ein Weg mit Ausblick - einfach beeindruckend",
+                            "An einem Tag waren wir auch in der Inselhauptstadt, in Palma und besuchten ua. die Kathedrale der Heiligen Maria."],
+            "imgList": ["pictures/travel/Mallorca/2024-04-Mallorca-Hotell.jpg",
+                        "pictures/travel/Mallorca/2024-04-Mallorca-Hotelpool.jpg",
+                        "pictures/travel/Mallorca/2024-04-Mallorca-Strassenbahn.jpg",
+                        "pictures/travel/Mallorca/2024-04-Mallorca-Port-de-Soller.jpg",
+                        "pictures/travel/Mallorca/2024-04-Mallorca-Weg.jpg",
+                        "pictures/travel/Mallorca/2024-04-Mallorca-Ausblick.jpg",
+                        "pictures/travel/Mallorca/2024-04-Mallorca-Ausblick2.jpg",
+                        "pictures/travel/Mallorca/2024-04-Mallorca-Blick-Richtung-Port-de-Soller.jpg",
+                        "pictures/travel/Mallorca/2024-04-Mallorca-Catedrale.jpg"]
+        },
         
         {   "imgKey": "anyOther",
             "imgBodyList": [],

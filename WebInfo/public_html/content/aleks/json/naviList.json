@@ -49,7 +49,8 @@
                          {"label": "Rom", "href": "#!/trav/eu/ro", "url": "html/Eu/Rom.html", "imgKey": "Rom"},
                          {"label": "Tour Mittelmeer", "href": "#!/trav/Mittelmeer/tmm", "url": "html/Eu/Tour-Mittelmeer.html", "imgKey": "TourMM"},
                          {"label": "Tour Norwegen", "href": "#!/trav/eu/tn", "url": "html/Eu/Tour-Norwegen.html", "imgKey": "TNorge"},
-                         {"label": "Tour Ostsee", "href": "#!/trav/eu/to", "url": "html/Eu/Tour-Ostsee.html", "imgKey": "OTour"}]
+                         {"label": "Tour Ostsee", "href": "#!/trav/eu/to", "url": "html/Eu/Tour-Ostsee.html", "imgKey": "OTour"},
+                         {"label": "Mallorca", "href": "#!/trav/eu/mll", "url": "html/De/Mallorca.html", "imgKey": "MLL"}]
                  }]},
          
         {"id":"navHoby", "label": "Hobbies", "href": "#!/prog", "url": "html/Hobbies.html", "imgKey": "Hobby",
