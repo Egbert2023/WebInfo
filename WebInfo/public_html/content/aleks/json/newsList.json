@@ -22,6 +22,16 @@
 "entries":   
     [
         {
+            "newFrom": "2024-06-12",
+            "newTo": "2025-12-31",
+            "title": "Wanderungen auf Mallorca", 
+            "body": [], 
+            "img": [],
+            "imgBody": [],
+            "href": "html/De/Mallorca.html",
+            "imgKey": "MLL"
+        },
+        {
             "newFrom": "2024-01-24",
             "newTo": "2024-12-31",
             "title": "Beispiel Applikation für einen fiktiven Deutschland Tarif", 
