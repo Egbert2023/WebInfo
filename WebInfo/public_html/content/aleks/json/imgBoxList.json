@@ -405,6 +405,33 @@
                         "pictures/travel/Mallorca/2024-04-Mallorca-Catedrale.jpg"]
         },
         
+        {   "imgKey": "NL",
+            "imgBodyList": ["Rotterdam Markthalle, das Hauptportal",
+                            "Ein Blick in die Markthalle",
+                            "Gegenüber der Markthalle ein beeindruckender Häuserkomplex",
+                            "Unterwegs in Zeeland",
+                            "Eines von mehreren Sperrwerken. Dieses hat wohl 50 Tore.",
+                            "Kurzer Abstecher nach Zierikzee",
+                            "Abtei von Middelbourg",
+                            "Impressionen aus Middelbourg, der Hauptstadt von Zeeland",
+                            "Ein Blick über die Dächer von Middelbourg",
+                            "Hafenrundfahrt in Rotterdam",
+                            "Ein Blick vom Bahnhof in Amsterdam",  
+                            "Ein Blick unter den Bahnhof von Amsterdam, ein 'Fietsenstalling'"],
+            "imgList": ["pictures/travel/NL/2024-Rotterdam-Markthalle-von-aussen.jpg",
+                        "pictures/travel/NL/2024-Rotterdam-Markthalle-innen.jpg",
+                        "pictures/travel/NL/2024-Rotterdam-Wuerfelhaeuser.jpg",
+                        "pictures/travel/NL/2024-Unterwegs-in-Zeeland.jpg",
+                        "pictures/travel/NL/2024-Zeeland-Sperrwerk.jpg",
+                "pictures/travel/NL/2024-Unterwegs-in-Zeeland-2.jpg",
+                        "pictures/travel/NL/2024-Middelbourg-Impression-1.jpg",
+                        "pictures/travel/NL/2024-Middelbourg-Impression-2.jpg",
+                        "pictures/travel/NL/2024-Middelbourg-Impression-3.jpg",
+                        "pictures/travel/NL/2024-Rotterdam-Hafenrundfahrt-Rückweg.JPG",
+                        "pictures/travel/NL/2024-Amsterdam-hinterm-Bahnhof.jpg",
+                        "pictures/travel/NL/2024-Amsterdam-neuer Fietsen Stalling.jpg"]
+        },
+        
         {   "imgKey": "anyOther",
             "imgBodyList": [],
             "imgList": []
