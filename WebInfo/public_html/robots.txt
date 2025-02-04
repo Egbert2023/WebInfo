@@ -4,5 +4,6 @@
 User-agent: *
 Disallow:
 
+
 Sitemap: http://aleksander.de/sitemap.xml
 Sitemap: http://aleksander.de/sitemapimages.xml
