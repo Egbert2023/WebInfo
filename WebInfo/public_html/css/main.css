@@ -242,11 +242,17 @@ h1 {
 }
 h2 {
     color: #21a828;
-    font-size: larger;
+    font-size: x-large;
 }
 h3 {
     color: #21a828;
     font-size: large;
+}
+
+@media (max-width: 767px) {
+    h1 {font-size: x-large;}
+    h2 {font-size: large;}
+    h3 {font-size: medium;}
 }
 body {
     margin-bottom: 30px; /* Margin bottom by footer height */
