@@ -2,8 +2,10 @@
 
 # Allow crawling of all content
 User-agent: *
-Disallow:
 
+# Disallow application directories
+Disallow: /app/
+Disallow: /css/
 
 Sitemap: http://aleksander.de/sitemap.xml
 Sitemap: http://aleksander.de/sitemapimages.xml
