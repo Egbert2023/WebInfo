@@ -436,6 +436,19 @@
                         "pictures/travel/NL/2024-Amsterdam-neuer Fietsen Stalling.jpg"]
         },
         
+        {   "imgKey": "Mad",
+            "imgBodyList": ["Blick ins Tal: Die Insel Madeira besteht nur aus Bergrücken und den schmalen Tälern dazwischen. Eben wird es nur, wenn die Täler zum Meer breiter auslaufen.",
+            "Levada: Künstlicher Wassergraben zur Versorgung mit Wasser. Es führt immer ein Weg daneben, um die Lavada zu kontrollieren und ggf. nach Steinschlägen zu reparieren.",
+            "Blick auf das Tal von Ponta do Sol",
+            "Ein Wasserfall auf einer Wanderung nach reichlich Regen",
+            "Im Osten der Insel: Hier kann man mit dem Blick nach Osten gleichzeitig die nördliche und südliche Küstenlinie sehen."],
+            "imgList": ["pictures/travel/Madeira/2025-Madeira-Blick-ins-Tal.jpg",
+            "pictures/travel/Madeira/2025-Madeira-Levada.jpg",
+            "pictures/travel/Madeira/2025-Madeira-Ponto-do-Sol.jpg",
+            "pictures/travel/Madeira/2025-Madeira-Wasserfall.jpg",
+            "pictures/travel/Madeira/2025-Madeira-Osten.jpg"]
+        },
+        
         {   "imgKey": "anyOther",
             "imgBodyList": [],
             "imgList": []

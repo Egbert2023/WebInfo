@@ -22,6 +22,16 @@
 "entries":   
     [
         {
+            "newFrom": "2025-06-01",
+            "newTo": "2026-12-31",
+            "title": "Wanderungen auf Madeira", 
+            "body": [], 
+            "img": [],
+            "imgBody": [],
+            "href": "html/news/Madeira.html",
+            "imgKey": "Mad"
+        },
+        {
             "newFrom": "2024-06-12",
             "newTo": "2025-12-31",
             "title": "Wanderungen auf Mallorca", 
