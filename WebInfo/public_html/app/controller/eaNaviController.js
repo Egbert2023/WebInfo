@@ -65,8 +65,8 @@ var eaNaviController =  function($rootScope, $scope, $location, eaNavSrv) {
     // prepare background pictures
     var setBg = function(objBg) {
         let pathArr = $location.path().split("/");
-        let bg = ($scope.objBg[pathArr[1]] !== null)? 
-            $scope.objBg.find(o => o.key === pathArr[1]).pic : "";
+        let bg = ($scope.objBg[pathArr[1]] !== undefined)? 
+            $scope.objBg.find(o => o.key === pathArr[1]).pic : "#eeeeee";
         let ngView = document.getElementById("ng-view");
         if(ngView!==null) {
             if(ngView.style!==null) {
