@@ -51,7 +51,8 @@
                          {"label": "Tour Norwegen", "href": "#!/trav/eu/tn", "url": "html/Eu/Tour-Norwegen.html", "imgKey": "TNorge"},
                          {"label": "Tour Ostsee", "href": "#!/trav/eu/to", "url": "html/Eu/Tour-Ostsee.html", "imgKey": "OTour"},
                          {"label": "Mallorca", "href": "#!/trav/eu/mll", "url": "html/De/Mallorca.html", "imgKey": "MLL"},
-                         {"label": "Niederlande", "href": "#!/trav/eu/nl", "url": "html/eu/Niederlande.html", "imgKey": "NL"}]
+                         {"label": "Niederlande", "href": "#!/trav/eu/nl", "url": "html/eu/Niederlande.html", "imgKey": "NL"},
+                         {"label": "Madeira", "href": "#!/trav/eu/mad", "url": "html/news/Madeira.html", "imgKey": "Mad"}]
                  }]},
          
         {"id":"navHoby", "label": "Hobbies", "href": "#!/prog", "url": "html/Hobbies.html", "imgKey": "Hobby",
@@ -60,7 +61,17 @@
                                  {"label": "Technische Grundlagen", "href": "#!/prog/p/drt", "url": "html/drtApplication.html", "imgKey": "drt"}]
                       },
                       {"label": "Mathematik", "href": "#!/prog/m", "url": "html/Mathe.html", "imgKey": "math"},
-                      {"label": "Sport", "href": "#!/prog/sp", "url": "html/Sport.html", "imgKey": "sport"},
+                      
+                      {"label": "Sport", "href": "#!/hob/sp", "url": "html/hobby/Sport.html", "imgKey": "sprt",
+                        "subm": [{"label": "Laufen", "href": "#!/hob/sp/lfn", "url": "html/hobby/Laufen.html", "imgKey": "SpJg"},
+                                 {"label": "Fußball", "href": "#!/hob/sp/fbl", "url": "html/hobby/Fussball.html", "imgKey": "FBall"},
+                                 {"label": "Wassersport", "href": "#!/hob/sp/wsp", "url": "html/hobby/WasserSport.html", "imgKey": "WSprt"},
+                                 {"label": "Wandern", "href": "#!/hob/sp/wnd", "url": "html/hobby/Wandern.html", "imgKey": "Wand"},
+                                 {"label": "Rad fahren", "href": "#!/hob/sp/rad", "url": "html/hobby/Radfahren.html", "imgKey": "Rad"},
+                                 {"label": "Tanzen", "href": "#!/hobBBB/sp/tnz", "url": "html/hobby/Tanzen.html", "imgKey": ""}
+                                ]
+                      },                      
+                      
                       {"label": "Garten", "href": "#!/hobby/garten", "url": "html/Garten.html", "imgKey": "Garten"}]},
                                            
         {"id":"navNews", "label": "News", "href": "#!/new", "url": "app/template/news/news.html", "imgKey": "",
