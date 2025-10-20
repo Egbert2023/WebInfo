@@ -239,14 +239,17 @@ textarea {
 h1 {
     color: #21a828;
     font-size: xx-large;
+    tabindex: 0;
 }
 h2 {
     color: #21a828;
     font-size: x-large;
+    tabindex: 0;
 }
 h3 {
     color: #21a828;
     font-size: large;
+    tabindex: 0;
 }
 
 @media (max-width: 767px) {

@@ -12,27 +12,31 @@
 /*https://bootstrap-menu.com/detail-basic-hover.html   992px*/
 @media (max-width: 767px) {
     .navbar .nav-item:hover > ul { display: block; }    
+    .navbar .nav-item:focus > ul { display: block; }    
 }
 .navbar .nav-item:hover > ul { display: block; top: 28px; left: 10px;}
+.navbar .nav-item:focus > ul { display: block; top: 28px; left: 10px;}
 ul:hover > li {position: relative;}
+ul:focus > li {position: relative;}
 .hoverdown-item:hover > ul { display: block; }
+.hoverdown-item:focus > ul { display: block; }
 
 .hoverdown-menu {
     list-style: none;
     display: none;  
     position: absolute;
-    top:  20px;
-    left: 30px;    
+    top:  0px;
+    left: 140px;    
     z-index: 1001;
     float: left;
-    min-width: 150px;
+    min-width: 140px;
     padding: 5px 0;    
     margin: 2px 0 0;
     font-size: 14px;
     text-align: left;
     background-color: #fff;
     background-clip: padding-box;
-    border: 1px solid rgba(0, 0, 0, .15);
+    /*border: 1px solid rgba(0, 0, 0, .15);*/
     border-radius: 4px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
 }
