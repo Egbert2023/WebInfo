@@ -86,9 +86,9 @@ var eaNavDynDirektive = function($rootScope, $http, $location, $compile) {
                     if(o.subm) {
                         if(o.subm.length>0) {
                             htm = htm + $scope.getMenuItem(clss, o, "dropdown-toggle");
-                            cls = (cls==="sitemap")? "sitemap":"hoverdown";
+                            cls = (cls==="sitemap")? "sitemap":"hoverdown"; 
                             htm = htm + '\n<ul class="' + cls + '-menu">';
-                             htm = $scope.addMenu(cls, o.subm, htm);
+                            htm = $scope.addMenu(cls, o.subm, htm);
                             htm = htm + '\n</ul>\n\t</li>';
                         } else {
                             htm = htm + $scope.getMenuItem(clss, o, "");

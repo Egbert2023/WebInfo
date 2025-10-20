@@ -323,16 +323,16 @@
             "imgList": ["pictures/travel/Norwegen/Alesund-2010-Übersicht.jpg",
                         "pictures/travel/Norwegen/Alesund-2010.jpg",
                         "pictures/travel/Norwegen/Alesund-Blick-aufs-Meer.jpg",
-                        "pictures/travel/Norwegen/Bergen-2010-Ausblick.jpg",
-                        "pictures/travel/Norwegen/Stavanger-2010-Prekestolen.jpg"]
+                        "pictures/travel/Norwegen/Bergen-2010-Ausblick.JPG",
+                        "pictures/travel/Norwegen/Stavanger-2010-Prekestolen.JPG"]
         },
         {   "imgKey": "Amsterdam",
             "imgBodyList": ["Ein Haus aus den goldenen Zeiten von Amsterdam",
                             "Eine typische Gracht in der Niederländischen Hauptstadt.",
             "Ein Blick vom Hinterausgang des Hauptbahnhofs",
             "Das neue Fahrad-Parkhaus vor dem Bahnhof"],
-            "imgList": ["pictures/travel/Amsterdam/Amsterdam-2017-Altstadthaus.jpg",
-                        "pictures/travel/Amsterdam/Amsterdam-2017-Gracht.jpg",
+            "imgList": ["pictures/travel/Amsterdam/Amsterdam-2017-Altstadthaus.JPG",
+                        "pictures/travel/Amsterdam/Amsterdam-2017-Gracht.JPG",
             "pictures/travel/Amsterdam/2024-Amsterdam-hinterm-Bahnhof.jpg",
             "pictures/travel/Amsterdam/2024-Amsterdam-neuer Fietsen Stalling.jpg"]            
         },
@@ -406,7 +406,7 @@
                             "Meine Gitarre.",
                             "Die verrückte 11, ein mathematisches Phänomen.",
                             "Ein Beispiel für eine Html Seite die man mit dieser WebInfo-Applikation programmieren kann."],
-            "imgList": ["pictures/travel/Norwegen/Bergen-2010-Ausblick.jpg",
+            "imgList": ["pictures/travel/Norwegen/Bergen-2010-Ausblick.JPG",
                         "pictures/hobby/Wing-Fahrt-2022.jpg",
                         "pictures/hobby/Mein-Apfelbaum.jpg",
                         "pictures/hobby/gitarre.jpg",
@@ -419,7 +419,7 @@
                             "Ein Blick über Heidelberg am Neckar",
                             "Die Müritz mit ihrem Schloss in Klink",
                             "Ein Blick auf die \"Ponte 25 de Abril\" in Lissabon 2022 bei unserer Bootstour auf dem Tejo."],
-            "imgList": ["pictures/travel/Amsterdam/Amsterdam-2017-Altstadthaus.jpg",
+            "imgList": ["pictures/travel/Amsterdam/Amsterdam-2017-Altstadthaus.JPG",
                         "pictures/travel/Heidelberg/Heidelberg-2005.jpg",
                         "pictures/travel/Mueritz/Klink-2019-Schloss.jpg",
                         "pictures/travel/Lissabon/Lissabon-Brücke.jpg"]
