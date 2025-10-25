@@ -65,9 +65,17 @@ var eaNaviController =  function($rootScope, $scope, $location, eaNavSrv) {
     // prepare background pictures
     var setBg = function(objBg) {
         let pathArr = $location.path().split("/");
-        //let bg = ($scope.objBg[pathArr[1]] !== undefined)? 
-        let bg = (pathArr[1] !== undefined)? 
-            $scope.objBg.find(o => o.key === pathArr[1]).pic : "#eeeeee";
+        let bg = "#eeeeee";
+        if(pathArr[1] !== undefined) {            
+            try {
+                bg = $scope.objBg.find(o => o.key === pathArr[1]).pic;
+            }
+            catch(err) {
+                console.log("No pic attribute found for key='" + pathArr[1].toString() + 
+                        "' in objBg.json. This key is used in naviList.json as href. You can change it as href or add this key into objBg.json.");
+                bg = "#eeeeee";
+            }
+        }
         let ngView = document.getElementById("ng-view");
         if(ngView!==null) {
             if(ngView.style!==null) {
