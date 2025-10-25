@@ -68,7 +68,7 @@
                                  {"label": "Wassersport", "href": "#!/hob/sp/wsp", "url": "html/hobby/WasserSport.html", "imgKey": "WSprt"},
                                  {"label": "Wandern", "href": "#!/hob/sp/wnd", "url": "html/hobby/Wandern.html", "imgKey": "Wand"},
                                  {"label": "Rad fahren", "href": "#!/hob/sp/rad", "url": "html/hobby/Radfahren.html", "imgKey": "Rad"},
-                                 {"label": "Tanzen", "href": "#!/hobBBB/sp/tnz", "url": "html/hobby/Tanzen.html", "imgKey": ""}
+                                 {"label": "Tanzen", "href": "#!/hob/sp/tnz", "url": "html/hobby/Tanzen.html", "imgKey": ""}
                                 ]
                       },                      
                       
@@ -81,7 +81,7 @@
             "subm": [ {"label": "SiteMap", "href": "#!/srv/smap", "url": "app/template/siteMap2.html", "imgKey": ""}, 
                     {"label": "Cookie Richtlinie", "href": "#!/srv/cookies", "url": "html/CookiesNotRequired.html", "imgKey": ""}, 
                     {"label": "Impressum", "href": "#!/srv/imp", "url": "html/impressum.html", "imgKey": ""}, 
-                    {"label": "Datenschutz", "href": "#!/srv/ds", "url": "html/datenschutz2.html", "imgKey": ""}, 
+                    {"label": "Datenschutz", "href": "#!/srv/ds", "url": "html/Datenschutz2.html", "imgKey": ""}, 
                     {"label": "Hintergrund Bilder", "href": "#!/srv/pic", "url": "html/srv/backGround.html", "imgKey": "Back"},
                     {"label": "Software-Lizenzen", "href": "#!/prog/license", "url": "app/../LICENSE.html", "imgKey": ""}
                     
